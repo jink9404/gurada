@@ -254,6 +254,32 @@ ol {
 .element:last-child {
 	margin-bottom: 0;
 }
+/*---------------------
+  Login
+-----------------------*/
+.login-header{
+    padding-top: 38px;
+    padding-bottom: 38px;
+    padding-left: 45px;
+    padding-right: 45px;
+    display: inline-block;
+    width: 100%;
+    background-color: antiquewhite;
+}
+
+.login-header .login{
+    text-align: center;
+    display: inline-block;
+}
+
+.login-header .login tr:nth-of-type(3){
+    text-align: left;
+}
+
+.login-header .login input[type=text], .login-header .login input[type=password]{
+    border:none;
+}
+
 
 /*---------------------
   Header
@@ -265,7 +291,9 @@ ol {
 	padding-bottom: 24px;
 	padding-left: 45px;
 	padding-right: 45px;
+   
 }
+
 
 .inner-header .logo {
 	float: left;
