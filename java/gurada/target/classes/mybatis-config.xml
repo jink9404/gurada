@@ -5,9 +5,9 @@
 <configuration>
 
 	<!-- Alias 설정 -->
-	<typeAliases>
-		<typeAlias alias="board" type="com.javassem.domain.BoardVO" />		
-	</typeAliases>
+<!-- 	<typeAliases> -->
+<!-- 		<typeAlias alias="board" type="" />		 -->
+<!-- 	</typeAliases> -->
 
 
 </configuration>
