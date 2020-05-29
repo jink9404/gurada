@@ -311,7 +311,9 @@ ol {
     text-align: left;
 }
 
-
+#login {
+    cursor: pointer;
+}
 
 
 /*---------------------
@@ -2459,7 +2461,51 @@ ol {
 /*----------------------------------------*/
 /* JH
 /*----------------------------------------*/
+.shopping-jh2 th{
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.shopping-jh2 td:nth-of-type(1){
+    padding-left: 10px;
+}
 
+.shopping-jh2 td:nth-of-type(2){
+    text-align: right;
+    padding-right: 10px;
+}
+
+.shopping-jh2{
+    position: fixed;
+    left: 1100px;
+    top : 200px;
+    width : 300px;
+    height : 200px;
+    border-top : 1px solid;
+    border-left : 1px solid;
+    border-right : 1px solid;
+    border-bottom : 1px solid;
+}
+
+
+.rufwp{
+   margin-left: 1000px;
+    color: #1e1e1e;
+   background: transparent;
+   border: none;
+   font-size: 14px;
+   font-weight: 600;
+   padding: 16px;
+   border: 2px solid #1e1e1e;
+   border-radius: 50px;
+   cursor: pointer;
+   text-transform: uppercase;
+}
+.wnth{
+    width: 340px;
+}
+.tr{
+    padding-bottom: 20px;
+}
 .buybtn{
    color: #1e1e1e;
    background: transparent;
@@ -2472,13 +2518,9 @@ ol {
    cursor: pointer;
    text-transform: uppercase;
 }
-
 .buy{
     margin-left:200px;
 }
-
-    
-
 .a{
     color:#1e1e1e;
 }
@@ -2498,16 +2540,14 @@ ol {
 	border-radius: 50px;	
 	cursor: pointer;	
 	text-transform: uppercase;	
-    	
 }
 
 .contact-form1 input {	
-	width: 100%;	
-	font-size: 12px;	
+	font-size: 15px;	
 	font-weight: 600;	
 	color: #838383;	
 	border: 0;	
-	padding-bottom: 14px;	
+	padding-bottom: 10px;	
 	border-bottom: 2px solid #E7EBED;	
 	margin-bottom: 25px;	
 }
@@ -2517,7 +2557,11 @@ ol {
 /*----------------------------------------*/
 /* SH
 /*----------------------------------------*/
-
+.sh-width{
+    position: absolute;
+    left: 1300px;
+    top: 280px;
+}
 .a-href{color:#1e1e1e }
 .select-2{width: 150px;
 padding: .4em .1em;
@@ -2552,7 +2596,7 @@ border: 2px solid #999;
 left: 210%
 }
 .search-1{ position: relative;
-left: 5%;
+left: 8%;
     top:70%;
 }
 .td-a{position: relative; left: 150%;}
@@ -2562,8 +2606,15 @@ left: 5%;
     top: 75%;
 
 }
-.td-a2{position: relative; left: 95%;}
+<<<<<<< HEAD
+.td-a2{
+    position: relative;
+    left: 95%;
+=======
+.td-a2{position: relative; left: 45%;}
+>>>>>>> 2c0c1b1d6eb42a942d461dc49ab56c0629d731ad
 }
+
 
 .td-fix{
 	width: 700px;
@@ -2578,14 +2629,23 @@ border-bottom:1px solid #fff
     
 }
 
+
 @media only screen and (min-width: 1500px) and (max-width: 1920px) {
     .td-fix{
 	width: 700px;
 	table-layout: fixed;
     border-left:1px solid #fff;  
+        
+border-right:1px solid #fff;
+
+border-top:1px solid #fff
+
+border-bottom:1px solid #fff
+    
 }
     
-.addr-table {border-left:1px solid #fff;       
+.addr-table {
+border-left:1px solid #fff;       
 
 border-right:1px solid #fff;
 
