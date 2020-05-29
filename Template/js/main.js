@@ -10,6 +10,22 @@
 'use strict';
 
 (function ($) {
+var checkbox = $("input[name=checkboxName]:checked");
+ 
+var col1 = "";
+var col2 = "";
+var col3 = "";
+var col4 = "";
+ 
+checkbox.each(function (i) {
+    var tr = checkbox.parent().parent().eq(i);  // checkbox 태그의 두 단계 상위 태그가 tr이기 때문에
+    var td = tr.children();  // td 태그는 tr 태그의 하위에 있으므로
+ 
+    col1 = td.eq(1).text(); // 1번째 column(eq(0))은 체크박스 이므로 eq(1)부터 데이터를 받아줌
+    col2 = td.eq(2).text();
+    col3 = td.eq(3).text();
+    col4 = td.eq(4).text();
+});
 
     /*------------------
         Preloader
@@ -26,14 +42,7 @@
             var mixer = mixitup(containerEl);
         }
     });
-    
-    $("#login-header-up").click(function(){
-        $(".login-header").slideUp(500);
-    });
-    
-    $("#login").click(function(){
-        $(".login-header").slideDown(500);
-    });
+
     /*------------------
         Background Set
     --------------------*/
