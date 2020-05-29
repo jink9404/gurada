@@ -257,18 +257,53 @@ ol {
 /*---------------------
   Login
 -----------------------*/
+.text-white{
+    color: white;
+}
 .login-header{
     padding-top: 38px;
     padding-bottom: 38px;
     padding-left: 45px;
     padding-right: 45px;
-    display: inline-block;
+    display: none;
     width: 100%;
-    background-color: antiquewhite;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.login-header table{
+    text-align: center;
+    margin: auto;
+}
+
+.login-header table tr td{
+    padding: 10px;
+}
+
+.login-header>img{
+    float: right;
+}
+
+.login-header>img:hover{
+    cursor:pointer;
+}
+
+.login-btn{
+    float: right;
 }
 
 .login-header .login{
     text-align: center;
+    display: inline-block;
+    margin-right: 30px;
+}
+.login-header .social-login{
+    text-align: center;
+    display: inline-block;
+}
+.login-header .sign-up{
+    padding-top: 15px;
     display: inline-block;
 }
 
@@ -276,9 +311,7 @@ ol {
     text-align: left;
 }
 
-.login-header .login input[type=text], .login-header .login input[type=password]{
-    border:none;
-}
+
 
 
 /*---------------------
@@ -2389,4 +2422,37 @@ ol {
 	.header-info {
 		padding: 10px 0;
 	}
+}
+
+/*---------------------
+  signup-form
+-----------------------*/
+.signup-form{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 3%;
+}
+.signup-form .signup-check a:active, .signup-form .signup-check a:hover,
+.signup-form .signup-check a:visited{
+    color: blue;
+}
+
+.signup-form .signup-input tr td:nth-of-type(2){
+    padding-left: 80px;
+}
+.signup-btn{
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    left: 350px;
+}
+
+
+/*---------------------
+  update-user
+-----------------------*/
+.update-form{
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 3%;
 }
