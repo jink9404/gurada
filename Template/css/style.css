@@ -26,87 +26,7 @@
 10. Other Pages Style
 
 -------------------------------------------------------------------*/
-/*----------------------------------------*/
-/* SH
-/*----------------------------------------*/
 
-.a-href{color:#1e1e1e }
-.select-2{width: 150px;
-padding: .4em .1em;
-border: 2px solid #999;
-}
-.input-tx{ width: 350px; height: 37px}
-
-.small-button button{
-	color: #1e1e1e;
-	background: transparent;
-	border: none;
-	font-size: 14px;
-	font-weight: 600;
-	padding: 8px 25px;
-	border: 1px solid #1e1e1e;
-	border-radius: 50px;
-	cursor: pointer;
-	text-transform: uppercase;
-}
-.small-button2{color: #1e1e1e;
-	background: transparent;
-	border: none;
-	font-size: 14px;
-	font-weight: 600;
-	padding: 8px 25px;
-	border: 1px solid #1e1e1e;
-	border-radius: 50px;
-	cursor: pointer;
-	text-transform: uppercase;}
-
-.btn-2{position: relative;
-left: 210%
-}
-.search-1{ position: relative;
-left: 5%;
-    top:70%;
-}
-.td-a{position: relative; left: 150%;}
-.search-2{
-    position: relative;
-    left: 40%;
-    top: 75%;
-
-}
-.td-a2{position: relative; left: 95%;}
-}
-/*----------------------------------------*/
-/* JH
-/*----------------------------------------*/
-
-.buybtn{
-   color: #1e1e1e;
-   background: transparent;
-   border: none;
-   font-size: 14px;
-   font-weight: 600;
-   padding: 6px 40px;
-   border: 2px solid #1e1e1e;
-   border-radius: 50px;
-   cursor: pointer;
-   text-transform: uppercase;
-}
-.buy{
-    margin-left:200px;
-}
-
-    
-
-.a{
-    color:#1e1e1e
-}
-.total{
-    width: 80px;
-    border-radius: 50px;
-    margin-left: 150px;
-    border: 2px solid #1e1e1e;
-}
 /*----------------------------------------*/
 /* Template default CSS
 /*----------------------------------------*/
@@ -2535,4 +2455,87 @@ ol {
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 3%;
+}
+/*----------------------------------------*/
+/* JH
+/*----------------------------------------*/
+
+.buybtn{
+   color: #1e1e1e;
+   background: transparent;
+   border: none;
+   font-size: 14px;
+   font-weight: 600;
+   padding: 6px 40px;
+   border: 2px solid #1e1e1e;
+   border-radius: 50px;
+   cursor: pointer;
+   text-transform: uppercase;
+}
+
+.buy{
+    margin-left:200px;
+}
+
+    
+
+.a{
+    color:#1e1e1e;
+}
+.total{
+    width: 80px;
+    border-radius: 50px;
+    margin-left: 150px;
+    border: 2px solid #1e1e1e;
+}
+
+/*----------------------------------------*/
+/* SH
+/*----------------------------------------*/
+
+.a-href{color:#1e1e1e }
+.select-2{width: 150px;
+padding: .4em .1em;
+border: 2px solid #999;
+}
+.input-tx{ width: 350px; height: 37px}
+
+.small-button button{
+	color: #1e1e1e;
+	background: transparent;
+	border: none;
+	font-size: 14px;
+	font-weight: 600;
+	padding: 8px 25px;
+	border: 1px solid #1e1e1e;
+	border-radius: 50px;
+	cursor: pointer;
+	text-transform: uppercase;
+}
+.small-button2{color: #1e1e1e;
+	background: transparent;
+	border: none;
+	font-size: 14px;
+	font-weight: 600;
+	padding: 8px 25px;
+	border: 1px solid #1e1e1e;
+	border-radius: 50px;
+	cursor: pointer;
+	text-transform: uppercase;}
+
+.btn-2{position: relative;
+left: 210%
+}
+.search-1{ position: relative;
+left: 5%;
+    top:70%;
+}
+.td-a{position: relative; left: 150%;}
+.search-2{
+    position: relative;
+    left: 40%;
+    top: 75%;
+
+}
+.td-a2{position: relative; left: 95%;}
 }
