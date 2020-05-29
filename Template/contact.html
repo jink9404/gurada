@@ -42,42 +42,7 @@
 	<!-- Search model end -->
 
     <!-- Header Section Begin -->
-    <header class="header-section">
-        <div class="container-fluid">
-            <div class="inner-header">
-                <div class="logo">
-                    <a href="./index.html"><img src="img/logo.png" alt=""></a>
-                </div>
-                <div class="header-right">
-                    <img src="img/icons/search.png" alt="" class="search-trigger">
-                    <img src="img/icons/man.png" alt="">
-                    <a href="#">
-                        <img src="img/icons/bag.png" alt="">
-                        <span>2</span>
-                    </a>
-                </div>
-                <div class="user-access">
-                    <a href="#">Register</a>
-                    <a href="#" class="in">Sign in</a>
-                </div>
-                <nav class="main-menu mobile-menu">
-                    <ul>
-                        <li><a href="./index.html">Home</a></li>
-                        <li><a href="./categories.html">Shop</a>
-                            <ul class="sub-menu">
-                                <li><a href="product-page.html">Product Page</a></li>
-                                <li><a href="shopping-cart.html">Shopping Card</a></li>
-                                <li><a href="check-out.html">Check out</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="./product-page.html">About</a></li>
-                        <li><a href="./check-out.html">Blog</a></li>
-                        <li><a class="active" href="./contact.html">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
+  
     <!-- Header Info Begin -->
     <div class="header-info">
         <div class="container-fluid">
@@ -114,13 +79,14 @@
     <div class="container">
         <label><a href='*' class='a' style="font-size: 30px">장바구니로 돌아가기</a></label>
         <div>
-           <label>*항목은 필수입력입니다.</label><hr/>
+           <label style="font-size: 8px">*항목은 필수입력입니다.</label><hr/>
             <table class='contact-form1'>
                 <tr>
                     <td>
                        <input type="radio" name='radio' checked="checked"/>
-                        <label>집으로 배송받기</label>
+                        집으로 배송받기
                     </td>
+                    <td
                     <td>
                         <input type="radio" name='radio'/>
                         <label>가까운 매장픽업</label>
@@ -140,7 +106,7 @@
                         <input type="text" placeholder="주소">
                     </td>
                     <td>
-                        <button>우편번호 검색</button>
+                        <button class="결제">우편번호 검색</button>
                     </td>
                 </tr>
                 <tr>
@@ -170,107 +136,31 @@
                 </td>
             </tr>
             <tr>
-                <label>계좌이체</label>
-                <input type="radio" name="money"/>
+               <td>
+                    <label>계좌이체</label>
+                    <input type="radio" name="money"/>
+                </td>
             </tr>
             <tr>
+               <td>
                 <label>무통장 입금</label>
                 <input type="radio" name="money"/>
-            </tr>
+                </td>
+            </tr> 
             </table>
             
+            <div>
+               <br/>
+                <button class="rufwp">결제하기</button>
+            </div>
         </div>
+        
         
     </div>
     <!-- Contact Section End -->
 
     <!-- Footer Section Begin -->
-    <footer class="footer-section spad">
-        <div class="container">
-            <div class="newslatter-form">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <form action="#">
-                            <input type="text" placeholder="Your email address">
-                            <button type="submit">Subscribe to our newsletter</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-widget">
-                <div class="row">
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="single-footer-widget">
-                            <h4>About us</h4>
-                            <ul>
-                                <li>About Us</li>
-                                <li>Community</li>
-                                <li>Jobs</li>
-                                <li>Shipping</li>
-                                <li>Contact Us</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="single-footer-widget">
-                            <h4>Customer Care</h4>
-                            <ul>
-                                <li>Search</li>
-                                <li>Privacy Policy</li>
-                                <li>2019 Lookbook</li>
-                                <li>Shipping & Delivery</li>
-                                <li>Gallery</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="single-footer-widget">
-                            <h4>Our Services</h4>
-                            <ul>
-                                <li>Free Shipping</li>
-                                <li>Free Returnes</li>
-                                <li>Our Franchising</li>
-                                <li>Terms and conditions</li>
-                                <li>Privacy Policy</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-sm-6">
-                        <div class="single-footer-widget">
-                            <h4>Information</h4>
-                            <ul>
-                                <li>Payment methods</li>
-                                <li>Times and shipping costs</li>
-                                <li>Product Returns</li>
-                                <li>Shipping methods</li>
-                                <li>Conformity of the products</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="social-links-warp">
-			<div class="container">
-				<div class="social-links">
-					<a href="" class="instagram"><i class="fa fa-instagram"></i><span>instagram</span></a>
-					<a href="" class="pinterest"><i class="fa fa-pinterest"></i><span>pinterest</span></a>
-					<a href="" class="facebook"><i class="fa fa-facebook"></i><span>facebook</span></a>
-					<a href="" class="twitter"><i class="fa fa-twitter"></i><span>twitter</span></a>
-					<a href="" class="youtube"><i class="fa fa-youtube"></i><span>youtube</span></a>
-					<a href="" class="tumblr"><i class="fa fa-tumblr-square"></i><span>tumblr</span></a>
-				</div>
-			</div>
-
-<div class="container text-center pt-5">
-                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-            </div>
-
-
-		</div>
-    </footer>
+    
     <!-- Footer Section End -->
 
     <!-- Js Plugins -->
