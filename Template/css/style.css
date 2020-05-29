@@ -26,7 +26,37 @@
 10. Other Pages Style
 
 -------------------------------------------------------------------*/
+/*----------------------------------------*/
+/* JH
+/*----------------------------------------*/
 
+.buybtn{
+   color: #1e1e1e;
+   background: transparent;
+   border: none;
+   font-size: 14px;
+   font-weight: 600;
+   padding: 6px 40px;
+   border: 2px solid #1e1e1e;
+   border-radius: 50px;
+   cursor: pointer;
+   text-transform: uppercase;
+}
+.buy{
+    margin-left:200px;
+}
+
+    
+
+.a{
+    color:#1e1e1e
+}
+.total{
+    width: 80px;
+    border-radius: 50px;
+    margin-left: 150px;
+    border: 2px solid #1e1e1e;
+}
 /*----------------------------------------*/
 /* Template default CSS
 /*----------------------------------------*/
