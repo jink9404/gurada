@@ -2461,6 +2461,12 @@ ol {
 /*----------------------------------------*/
 /* JH
 /*----------------------------------------*/
+.reser-jh{
+    margin-top: 40px;
+}
+.resertable-jh{
+    margin-bottom: 80px; 
+}
 .shopping-jh2 th{
     padding-top: 10px;
     padding-left: 10px;
@@ -2484,6 +2490,9 @@ ol {
     border-left : 1px solid;
     border-right : 1px solid;
     border-bottom : 1px solid;
+}
+.reserbtn2-jh{
+    margin-left: 200px;
 }
 
 
@@ -2551,7 +2560,16 @@ ol {
 	border-bottom: 2px solid #E7EBED;	
 	margin-bottom: 25px;	
 }
-
+.store-btn-jh{
+    position: fixed;
+    left : 800px;
+    top : 200px;
+}
+.map-canvas{
+    position: fixed;
+    left : 1000px;
+    bottom : 290px;
+}
 
 
 /*----------------------------------------*/
@@ -2559,7 +2577,7 @@ ol {
 /*----------------------------------------*/
 .sh-width{
     position: absolute;
-    left: 1300px;
+    left: 600px;
     top: 280px;
 }
 .a-href{color:#1e1e1e }
