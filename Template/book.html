@@ -49,32 +49,34 @@
             <div class="row">
                
                     <div class="page-breadcrumb">
-  <h2> 회원 정보 목록<span>.</span></h2>
+  <h2> 매장 방문 예약 현황<span>.</span></h2>
   <br/>
  <form method="get" action="">
-<h3>회원검색</h3>
+<h3>예약 검색</h3>
+<br>
+<div>
+ <select class="form-control" style="width:100px;height:44px;display: inline-block">
+    <option value="">성함</option>
+    <option value="">연락처</option>
+      <option value="">전체</option>
+</select>
+<input class="col-form-label" type="text" size=80>
+ </div>
+ <br>
 
-
- <div class="input-group">
-  <input type="text" class="form-control" placeholder="회원명 혹은 ID를 입력해 주세요.">
-  <span class="input-group-btn">
-    <button class="btn btn-secondary" type="button">찾기</button>
-  </span>
-</div><br>
-  
  <table class="type09">
     <tbody>
         <tr>
-            <th></th> 
-            <th width='300' >이름</th>
-            <th width='200'>나이</th>
-            <th width='500'>ID</th>
-            <th width='700'>휴대폰번호</th>
-            <th width='800'>E-MAIL</th>
+           
+            <th width='300' >예약자 성함</th>
+            <th width='700'>방문 매장</th>
+            <th width='500'>방문 날짜</th>
+            <th width='500'>방문 시간</th>
+            <th width='800'>연락처</th>
         </tr>
  
         <tr >
-            <td><input type="checkbox" name="checkboxName"></td>
+           
             <td>김지섭</td>
             <td>22</td>
             <td>salcho94</td>
@@ -82,7 +84,7 @@
             <td>salcho94@naver.com</td>
         </tr>
            <tr >
-            <td><input type="checkbox" name="checkboxName"></td>
+        
              <td>오재호</td>
             <td>50</td>
             <td>5박사</td>
@@ -90,7 +92,7 @@
                <td>5555@naver.com</td>
         </tr>
          <tr >
-            <td><input type="checkbox" name="checkboxName"></td>
+        
              <td>김명진</td>
             <td>77</td>
             <td>명왕성</td>
@@ -98,7 +100,7 @@
             <td>mvc@naver.com</td>
         </tr>
           <tr >
-            <td><input type="checkbox" name="checkboxName"></td>
+            
              <td>문소희</td>
             <td>11</td>
             <td>moon</td>
@@ -110,7 +112,7 @@
     
 </table>
                   <br/>
-                   <button class="btn1">회원 정보 등록</button>
+                  
                     
                         </form>
 
@@ -139,6 +141,7 @@
     <script src="js/jquery.nice-select.min.js"></script>
     <script src="js/mixitup.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/test.js"></script>
 </body>
 
 </html>
