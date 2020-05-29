@@ -2539,3 +2539,33 @@ left: 5%;
 }
 .td-a2{position: relative; left: 95%;}
 }
+
+.td-fix{
+	width: 700px;
+	table-layout: fixed;
+    border-left:1px solid #fff;      
+
+border-right:1px solid #fff;
+
+border-top:1px solid #fff
+
+border-bottom:1px solid #fff
+    
+}
+
+@media only screen and (min-width: 1500px) and (max-width: 1920px) {
+    .td-fix{
+	width: 700px;
+	table-layout: fixed;
+    border-left:1px solid #fff;  
+}
+    
+.addr-table {border-left:1px solid #fff;       
+
+border-right:1px solid #fff;
+
+border-top:1px solid #fff;
+
+border-bottom:1px solid #fff;
+
+}
