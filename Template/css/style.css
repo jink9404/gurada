@@ -311,7 +311,9 @@ ol {
     text-align: left;
 }
 
-
+#login {
+    cursor: pointer;
+}
 
 
 /*---------------------
@@ -2549,10 +2551,17 @@ ol {
 	border-bottom: 2px solid #E7EBED;	
 	margin-bottom: 25px;	
 }
+
+
+
 /*----------------------------------------*/
 /* SH
 /*----------------------------------------*/
-
+.sh-width{
+    position: absolute;
+    left: 1300px;
+    top: 280px;
+}
 .a-href{color:#1e1e1e }
 .select-2{width: 150px;
 padding: .4em .1em;
@@ -2587,7 +2596,7 @@ border: 2px solid #999;
 left: 210%
 }
 .search-1{ position: relative;
-left: 5%;
+left: 8%;
     top:70%;
 }
 .td-a{position: relative; left: 150%;}
@@ -2597,10 +2606,15 @@ left: 5%;
     top: 75%;
 
 }
+<<<<<<< HEAD
 .td-a2{
     position: relative;
     left: 95%;
+=======
+.td-a2{position: relative; left: 45%;}
+>>>>>>> 2c0c1b1d6eb42a942d461dc49ab56c0629d731ad
 }
+
 
 .td-fix{
 	width: 700px;
@@ -2615,14 +2629,23 @@ border-bottom:1px solid #fff
     
 }
 
+
 @media only screen and (min-width: 1500px) and (max-width: 1920px) {
     .td-fix{
 	width: 700px;
 	table-layout: fixed;
     border-left:1px solid #fff;  
+        
+border-right:1px solid #fff;
+
+border-top:1px solid #fff
+
+border-bottom:1px solid #fff
+    
 }
     
-.addr-table {border-left:1px solid #fff;       
+.addr-table {
+border-left:1px solid #fff;       
 
 border-right:1px solid #fff;
 
@@ -2631,3 +2654,16 @@ border-top:1px solid #fff;
 border-bottom:1px solid #fff;
 
 }
+
+    
+/*----------------------------------------*/
+/* MJ
+/*----------------------------------------*/
+    
+    
+    
+    
+    
+/*----------------------------------------*/
+/* JS
+/*----------------------------------------*/

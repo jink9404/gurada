@@ -1,4 +1,66 @@
 /* Magnific Popup CSS */
+/*----------------------------------------*/
+/* JS
+/*----------------------------------------*/
+.cart-page{
+   width: auto;
+   height: auto;
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    border-bottom: ;
+
+}
+
+table.type09 {
+    border-collapse: collapse;
+    text-align: left;
+    line-height: 1.5;
+
+}
+table.type09 thead th {
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    color: black;
+    border-bottom: 7px solid black;
+}
+table.type09 tbody th {
+    width: 300px;
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+    background: #f3f6f7;
+}
+table.type09 td {
+    width: 350px;
+    padding: 10px;
+    vertical-align: top;
+    border-bottom: 1px solid #ccc;
+}
+.btn2 {color: white;
+   background: black;
+   border: none;
+   font-size: 20px;
+   font-weight: 600;
+   padding: 10px 50px;
+   border: 2px solid #1e1e1e;
+   border-radius: 50px;
+   cursor: pointer;
+    text-transform: uppercase;}
+
+.btn1 {color: #1e1e1e;
+   background: transparent;
+   border: none;
+   font-size: 20px;
+   font-weight: 600;
+   padding: 10px 50px;
+   border: 2px solid #1e1e1e;
+   border-radius: 50px;
+   cursor: pointer;
+    text-transform: uppercase;}
+/*-------------------------------------*/
 .mfp-bg {
   top: 0;
   left: 0;
