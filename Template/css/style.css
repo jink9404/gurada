@@ -2519,7 +2519,7 @@ ol {
    color: #1e1e1e;
    background: transparent;
    border: none;
-   font-size: 14px;
+   font-size: 13px;
    font-weight: 600;
    padding: 6px 40px;
    border: 2px solid #1e1e1e;
@@ -2528,7 +2528,7 @@ ol {
    text-transform: uppercase;
 }
 .buy{
-    margin-left:200px;
+    margin-left:140px;
 }
 .a{
     color:#1e1e1e;
@@ -2567,7 +2567,7 @@ ol {
 }
 .map-canvas{
     position: fixed;
-    left : 1000px;
+    left : 600px;
     bottom : 290px;
 }
 
@@ -2577,8 +2577,8 @@ ol {
 /*----------------------------------------*/
 .sh-width{
     position: absolute;
-    left: 600px;
-    top: 280px;
+    left: 1100px;
+    top: 260px;
 }
 .a-href{color:#1e1e1e }
 .select-2{width: 150px;
@@ -2623,6 +2623,10 @@ left: 8%;
     left: 40%;
     top: 75%;
 
+}
+.td-d{
+    position: relative; left: 330%;
+    
 }
 <<<<<<< HEAD
 .td-a2{
@@ -2673,6 +2677,28 @@ border-bottom:1px solid #fff;
 
 }
 
+    .td-b{position: relative; left: 45%;}
+    .td-c{position: relative; left: 43%;}
+
+    .small-button-sh button{
+        color: #1e1e1e;
+	background: transparent;
+	border: none;
+	font-size: 14px;
+	font-weight: 600;
+	padding: 8px 25px;
+	border: 1px solid #1e1e1e;
+	border-radius: 50px;
+	cursor: pointer;
+	text-transform: uppercase;
+    position: relative; left: 19%;}
+    
+    .buybtn2{
+ width: 300px;
+   height: 50px;
+   border: 1px solid #999;
+   border-radius: 20px;
+    }
     
 /*----------------------------------------*/
 /* MJ
