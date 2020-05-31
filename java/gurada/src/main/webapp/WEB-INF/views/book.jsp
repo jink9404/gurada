@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -25,6 +27,8 @@
 </head>
 
 <body>
+
+    <jsp:include page="header.jsp"/>
     <section class="page-add">
         <div class="container">
             <div class="row">
@@ -97,6 +101,7 @@
             </div>
         </div>
     </section>
+	<jsp:include page="footer.jsp"/>
     <!-- Js Plugins -->
     <script src="./resources/js/jquery-3.3.1.min.js"></script>
     <script src="./resources/js/bootstrap.min.js"></script>
