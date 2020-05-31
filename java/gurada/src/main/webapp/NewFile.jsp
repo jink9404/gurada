@@ -16,5 +16,6 @@
 <a href="find-store.do">find-store</a>
 <a href="my-page.do">my-page</a>
 <a href="order-management.do">order-management</a>
+<a href="q-n-a.do">Q&A</a>
 </body>
 </html>
