@@ -14,6 +14,7 @@
 <a href="check-out.do">check-out</a>
 <a href="pay.do">pay</a>
 <a href="find-store.do">find-store</a>
-
+<a href="my-page.do">my-page</a>
+<a href="order-management.do">order-management</a>
 </body>
 </html>
