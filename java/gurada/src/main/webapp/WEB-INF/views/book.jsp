@@ -1,0 +1,119 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Yoga Studio Template">
+    <meta name="keywords" content="Yoga, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Violet | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="./resources/style/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="./resources/style/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="./resources/style/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="./resources/style/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="./resources/style/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="./resources/style/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="./resources/style/style.css" type="text/css">
+</head>
+
+<body>
+
+    <jsp:include page="header.jsp"/>
+    <section class="page-add">
+        <div class="container">
+            <div class="row">
+            	<div class="page-breadcrumb">
+  					<h2> 매장 방문 예약 현황<span>.</span></h2>
+  					<br/>
+ 					<form method="get" action="">
+						<h3>예약 검색</h3>
+						<br>
+						<div>
+ 							<select class="form-control" style="width:100px;height:44px;display: inline-block">
+    							<option value="">성함</option>
+    							<option value="">연락처</option>
+      							<option value="">전체</option>
+							</select>
+							<input class="col-form-label" type="text" size=80>
+ 						</div>
+ 						<br>
+
+ 						<table class="type09">				
+    						<tbody>
+        						<tr>
+           
+						            <th width='300' >예약자 성함</th>
+						            <th width='700'>방문 매장</th>
+						            <th width='500'>방문 날짜</th>
+						            <th width='500'>방문 시간</th>
+						            <th width='800'>연락처</th>
+        						</tr>
+ 
+        						<tr >           
+						            <td>김지섭</td>
+						            <td>22</td>
+						            <td>salcho94</td>
+						            <td>010-5788-8298</td>
+						            <td>salcho94@naver.com</td>
+						        </tr>
+					            <tr >      
+						            <td>오재호</td>
+						            <td>50</td>
+						            <td>5박사</td>
+						            <td>010-5555-5555</td>
+						            <td>5555@naver.com</td>
+					        	</tr>
+					         	<tr >
+					        
+					            	<td>김명진</td>
+						            <td>77</td>
+						            <td>명왕성</td>
+						            <td>010-7777-7777</td>
+						            <td>mvc@naver.com</td>
+					        	</tr>
+					            
+					            <tr >
+					            
+					            	<td>문소희</td>
+					            	<td>11</td>
+					            	<td>moon</td>
+					            	<td>010-0000-0000</td>
+					            	<td>moon@naver.com</td>
+					          	</tr>
+					        
+					    	</tbody>
+    
+						</table>
+                  		<br/>
+                  
+                	</form>
+                </div>
+            </div>
+        </div>
+    </section>
+	<jsp:include page="footer.jsp"/>
+    <!-- Js Plugins -->
+    <script src="./resources/js/jquery-3.3.1.min.js"></script>
+    <script src="./resources/js/bootstrap.min.js"></script>
+    <script src="./resources/js/jquery.magnific-popup.min.js"></script>
+    <script src="./resources/js/jquery.slicknav.js"></script>
+    <script src="./resources/js/owl.carousel.min.js"></script>
+    <script src="./resources/js/jquery.nice-select.min.js"></script>
+    <script src="./resources/js/mixitup.min.js"></script>
+    <script src="./resources/js/main.js"></script>
+    <script src="./resources/js/test.js"></script>
+    
+
+</body>
+
+</html>

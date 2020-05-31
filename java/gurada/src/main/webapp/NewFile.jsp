@@ -7,6 +7,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-test
+<a href="book.do">book</a>
+<a href="buylist.do">buylist</a>
+<a href="header.do">header</a>
+<a href="categories.do">categories</a>
+<a href="check-out.do">check-out</a>
+<a href="pay.do">pay</a>
+<a href="find-store.do">find-store</a>
+
 </body>
 </html>
