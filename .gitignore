@@ -1,6 +1,11 @@
 # Compiled
 *.elc
 *.class
+/Servers/
+*.MF
+*.properties
+java/gurada/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF
+java/gurada/target/m2e-wtp/web-resources/META-INF/maven/com.javassem/basic/pom.properties
 
 # Packaging
 .cask
@@ -11,9 +16,3 @@
 # Undo-tree save-files
 *.~undo-tree
 /.metadata/
-/Servers/
-
-*.MF
-*.properties
-java/gurada/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF
-java/gurada/target/m2e-wtp/web-resources/META-INF/maven/com.javassem/basic/pom.properties
