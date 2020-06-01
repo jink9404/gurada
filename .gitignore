@@ -4,7 +4,7 @@
 
 # Packaging
 .cask
-
+.classpath
 # Backup files
 *~
 
@@ -13,3 +13,4 @@
 /.metadata/
 /Servers/
 pom.properties
+MANIFEST.MF

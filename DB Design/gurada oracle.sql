@@ -34,7 +34,8 @@ CREATE TABLE Member(
             signup_date     date            DEFAULT sysdate ,
             secession_date  date                            ,
             last_ip         VARCHAR2(15)                    ,
-            gender          varchar2(4)                     ,
+            gender          varchar2(6)     NOT NULL        ,
+            marketing       varchar2(10)                    ,
             CONSTRAINT pk_member_no             PRIMARY KEY (member_no),
             CONSTRAINT uq_member_phoneNumber    UNIQUE (phone_number),
             CONSTRAINT ck_member_gender        CHECK (gender IN('남자','여자'))
@@ -52,7 +53,7 @@ CREATE TABLE product(
             quantity        NUMBER          NOT NULL        ,
             receipt_date    date            DEFAULT sysdate ,
             category_ID     VARCHAR2(15)                    ,
-            gender          VARCHAR2(4)     NOT NULL        ,
+            gender          VARCHAR2(6)     NOT NULL        ,
             detail          VARCHAR2(2000)                  ,
             p_size            VARCHAR2(4)                     ,
             color           VARCHAR2(10)                    ,
@@ -149,17 +150,5 @@ INCREMENT   BY      1
 START       WITH    0
 MINVALUE            0;
 
-select SEQ_MEMBER_NO.currval from dual;
-		INSERT	INTO	member(
-								MEMBER_NO,		PASSWORD,		EMAIL,
-								FIRST_NAME,		LAST_NAME,		ADDRESS,
-								PHONE_NUMBER,	POST_CODE,		SIGNUP_DATE,
-								SECESSION_DATE,	LAST_IP
-						) 
-						values(
-								''||seq_member_no.nextval||''	,'test'	,'test',
-								'test'			,'test' 	    ,'test',
-								'test'			,'test'	,SYSDATE,
-								null					,null
-						);
-                        
+
+ALTER table product modify (gender varchar2(6));
