@@ -47,9 +47,7 @@
 						<h2>
 							문의 게시판<span>.</span>
 						</h2>
-						<br />
-						<br />
-						<br />
+						<br /> <br /> <br />
 						<div class="small-button">
 							<button>
 								<a href='#'>문의 하기</a>

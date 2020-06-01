@@ -46,9 +46,7 @@
 					<h2>
 						주문 관리<span>.</span>
 					</h2>
-					<br />
-					<br />
-					<br />
+					<br /> <br /> <br />
 					<hr />
 					<table class="addr-table">
 						<tr>
@@ -56,24 +54,20 @@
 								<h4>배송상태</h4> <input type="radio" id="one"> <label
 								for="one">미처리</label> <input type="radio" id="one"> <label
 								for="one">배송중</label> <input type="radio" id="one" /> <label
-								for="one">배송완료</label> <br />
-							<br />
+								for="one">배송완료</label> <br /> <br />
 							</td>
 
 							<td width='520'>
-								<h4>결제 수단</h4>
-								<input type="radio" id="one"> <label for="one">신용카드</label>
-								<input type="radio" id="one"> <label for="one">실시간
-									계좌이체</label> <input type="radio" id="one"> <label for="one">무통장
-									입금</label> <br />
-							<br />
+								<h4>결제 수단</h4> <input type="radio" id="one"> <label
+								for="one">신용카드</label> <input type="radio" id="one"> <label
+								for="one">실시간 계좌이체</label> <input type="radio" id="one">
+								<label for="one">무통장 입금</label> <br /> <br />
 							</td>
 							<td width='500'>
 								<h4>주문 날짜</h4> <input type="date"> <span
 								class="small-button">
 									<button>조회</button>
-							</span> <br />
-							<br />
+							</span> <br /> <br />
 							</td>
 						</tr>
 					</table>

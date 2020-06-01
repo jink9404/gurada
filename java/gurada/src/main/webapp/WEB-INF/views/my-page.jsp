@@ -49,15 +49,13 @@
 						<h2>
 							마이 페이지<span>.</span>
 						</h2>
-						<br /> <br />
+						
 
 						<div class="small-button btn-2">
 							<button>내정보 보기</button>
 							<button>회원정보 변경</button>
 						</div>
-						<br />
-						<br />
-						<br />
+						<br /> <br /> <br />
 						<h4>주문 내역</h4>
 						<br /> <br />
 					</div>
@@ -82,7 +80,7 @@
 							<tbody>
 								<tr>
 									<td>2020/05/20</td>
-									<td><img src='img/cart/cart-1.jpg' /> 브라운 미니백</td>
+									<td><img src='/resources/img/cart/cart-1.jpg' /> 브라운 미니백</td>
 									<td>150,000원</td>
 									<td>서울시 은평구</td>
 									<td>배송중</td>
@@ -92,7 +90,7 @@
 								</tr>
 								<tr>
 									<td>2020/05/20</td>
-									<td><img src='img/cart/cart-1.jpg' /> 브라운 미니백</td>
+									<td><img src='/resources/img/cart/cart-1.jpg' /> 브라운 미니백</td>
 									<td>150,000원</td>
 									<td>서울시 은평구</td>
 									<td>배송중</td>
@@ -102,10 +100,8 @@
 								</tr>
 								<tr>
 									<td>2020/05/20</td>
-									<td><img src='img/cart/cart-1.jpg' /> 브라운 미니백</td>
-
+									<td><img src='/resources/img/cart/cart-1.jpg' /> 브라운 미니백</td>
 									<td>150,000원</td>
-
 									<td>서울시 은평구</td>
 									<td>배송중</td>
 									<td class="small-button">

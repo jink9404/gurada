@@ -2578,8 +2578,8 @@ ol {
 }
 .map-canvas{
     position: absolute;
-    left : 1000px;
-    top: 138px;
+    left : 880px;
+    top: 295px;
     bottom : 290px;
 }
 .contact-form2 .worhtable-jh {
@@ -2681,7 +2681,7 @@ border: 1px solid #999;
 
 .small-btn-sh{
     position: sticky;
-    left: 1020px;
+    left: 900px;
     top: 1px;
      color:#1e1e1e;
 	background: transparent;
@@ -2695,6 +2695,7 @@ border: 1px solid #999;
 	text-transform: uppercase;
     
 }
+
 .small-button button .a-href{
     color: black;
 }
