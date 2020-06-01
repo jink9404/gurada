@@ -41,7 +41,7 @@
                                         상품명
                                     </td>
                                     <td class='td1' colspan="2">
-                                        &nbsp&nbsp&nbsp&nbsp<input type="text"/>
+                                        <input type="text" placeholder="상품명"/>
                                     </td>
                                 </tr>
                                 <tr class='tr'>
@@ -49,7 +49,7 @@
                                         Price
                                     </td>
                                     <td class='td1' colspan="2">
-                                        &nbsp&nbsp&nbsp&nbsp<input type="text" placeholder="Price"/>
+                                        <input type="text" placeholder="Price"/>
                                     </td>
                                 </tr>
                                 <tr>
@@ -57,7 +57,6 @@
                                         분류
                                     </td>
                                     <td>
-                                        
                                         <form name="form1" id="defaultForm" method="post">
                                             <select class="sel" name="color" onchange="changeSubject(this.form)"></select>
                                             <select class="sel" name="size" onchange="changeContents(this.form)"></select>
@@ -68,24 +67,22 @@
                                     <td>
                                         사이즈
                                     </td>
-                                    <td >
-                                       &nbsp&nbsp&nbsp&nbsp
+                                    <td>
                                         XS<input type="checkbox" value="XS"/>&nbsp&nbsp&nbsp
                                         S<input type="checkbox" value="S"/>&nbsp&nbsp&nbsp
                                         M<input type="checkbox" value="M"/>&nbsp&nbsp&nbsp
                                         L<input type="checkbox" value="L"/>&nbsp&nbsp&nbsp
                                         XL<input type="checkbox" value="XL"/>
                                     </td>
-                                    <tr class="detail">
+                                </tr>    
+                                <tr class="detail">
                                         <td>
                                             상품 설명
                                         </td>
                                         <td>
-                                           &nbsp&nbsp&nbsp&nbsp
-                                            <input class="detail1" type="textarea" placeholder="detail"/>
+                                           <textarea class="detail1" placeholder="detail"></textarea>
                                         </td>
                                     </tr>
-                                </tr>
                             </table>
                         </div>
                     <br/><br/>
@@ -96,11 +93,10 @@
                     </tr>
                 </table>
                 <div>
-                    <button class="sinsang-jh">이미지 첨부</button><br/>
+                    <button class="sinsang-jh">이미지 첨부</button>
                     <button class="sinsang-jh1">상품 등록</button>            
-                </div><hr/>
+                </div>
                 
-
                 <!-- Js Plugins -->
                 <script src="js/jquery-3.3.1.min.js"></script>
                 <script src="js/bootstrap.min.js"></script>

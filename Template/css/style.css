@@ -2662,7 +2662,13 @@ ol {
     height: 250px;
     text-align: center;
 }
-.contact-form3 tr{
+.contact-form3 input{
+    font-size : 20px;	
+	font-weight : 600;	
+	color : #838383;	
+	border : 0;	
+	padding-bottom : 10px;	
+	border-bottom : 2px solid #E7EBED;	
     
 }
 .contact-form3 td:nth-child(2){
@@ -2674,7 +2680,8 @@ ol {
     height: 250px;
 }
 .contact-form3 .detail1{
-    height:250px;
+    width : 350px;
+    height: 250px;
 }
 
 

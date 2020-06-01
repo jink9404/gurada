@@ -40,16 +40,19 @@ Array.prototype.get = function(index){
             addCategory(ROOT_CATEGORY_NODE.get(0),"CATE_0_0","-소분류-");
             
             addCategory(ROOT_CATEGORY_NODE.get(1),"CATE_0_1","-소분류-");
-            addCategory(ROOT_CATEGORY_NODE.get(1),"CATE_0_1","상의");
-            addCategory(ROOT_CATEGORY_NODE.get(1),"CATE_0_2","하의");
-            addCategory(ROOT_CATEGORY_NODE.get(1),"CATE_0_3","악세서리");
+            addCategory(ROOT_CATEGORY_NODE.get(1),"CATE_0_1","수트");
+            addCategory(ROOT_CATEGORY_NODE.get(1),"CATE_0_2","아우터");
+            addCategory(ROOT_CATEGORY_NODE.get(1),"CATE_0_3","가방");
+            addCategory(ROOT_CATEGORY_NODE.get(1),"CATE_0_4","상의");
+            addCategory(ROOT_CATEGORY_NODE.get(1),"CATE_0_5","하의");
 
             addCategory(ROOT_CATEGORY_NODE.get(2),"CATE_1_0","-소분류-");
-            addCategory(ROOT_CATEGORY_NODE.get(2),"CATE_1_1","상의");
-            addCategory(ROOT_CATEGORY_NODE.get(2),"CATE_1_2","하의");
-            addCategory(ROOT_CATEGORY_NODE.get(2),"CATE_1_3","원피스");
-            addCategory(ROOT_CATEGORY_NODE.get(2),"CATE_1_4","악세서리");
-
+            addCategory(ROOT_CATEGORY_NODE.get(2),"CATE_1_1","수트");
+            addCategory(ROOT_CATEGORY_NODE.get(2),"CATE_1_2","아우터");
+            addCategory(ROOT_CATEGORY_NODE.get(2),"CATE_1_3","가방");
+            addCategory(ROOT_CATEGORY_NODE.get(2),"CATE_1_4","상의");
+            addCategory(ROOT_CATEGORY_NODE.get(2),"CATE_1_4","하의");
+            
             /*addCategory(ROOT_CATEGORY_NODE.get(2),"CATE_2_0","-사이즈 선택-");
             addCategory(ROOT_CATEGORY_NODE.get(2),"CATE_2_2","55");
             addCategory(ROOT_CATEGORY_NODE.get(2),"CATE_2_3","66");
