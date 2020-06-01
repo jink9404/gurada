@@ -79,7 +79,7 @@
 	<jsp:include page="header.jsp"/>    
 
     <!-- Page Add Section Begin -->
-    <section class="page-add">
+     <section class="page-add">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
@@ -89,49 +89,55 @@
                 </div>
             </div>
         </div>
-    </section>
+    
     <!-- Page Add Section End -->
 
     <!-- Contact Section Begin -->
     <div class="contact-section">
-        <div class="container">
-        	<div class="col-lg-8">
-            	<form action="#" class="contact-form">
-                	<div class="row">
-                    	<div class="col-lg-6">
-                        	<input type="text" placeholder="주소, 매장입력..">
-                        </div>
-                            
+        <div class="container">    
+            <div class="col-lg-8">
+                <form action="#" class="contact-form">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <input type="text" placeholder="주소, 매장입력..">
+                        </div>    
                         <div >
-                        	<button type="submit">
-	                           	<span class="glyphicon glyphicon-search"></span>
-	                            매장검색
+                            <button type="submit">
+                                <span class="glyphicon glyphicon-search"></span>
+                                매장검색
                             </button>
-                            <button type="submit">방문예약</button>
-                               
+                            <button type="submit">방문예약</button>  
                         </div>
                     </div>
-             	</form>
-             	<form class="addr-form">
-	            	<table border="1" class="addr-table">
-	                	<tr>	
-	                    	<td><h4>검색결과 : 주소 나오는 테이블.</h4></td>	                       
-	                    </tr>
-	                        
-	                    <tr>
-		                	<td>찾아오는길 설명글.</td>
-	                    </tr>
-	                        
-	                    <tr>
-	                    	<td>연락처</td>
-	                	</tr>
-	            	</table>
                 </form>
-                <br/>   
-            	<div id="map-canvas" style="width: 1000px; height: 500px"></div>  
-        	</div>
-     	</div>
+                <form class="addr-form">
+                    <table>
+                        <tr>
+                            <td>
+                                <h4>검색결과 : 주소 나오는 테이블.</h4>
+                            </td>    
+                        </tr>
+                        <tr>
+                            <td>
+                                찾아오는길 설명글.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            연락처
+                            </td>
+                        </tr>    
+                    </table>     
+                </form>
+                <br/>       
+                <div id="map-canvas" style="width: 1000px; height: 500px">
+                </div>  
+            </div>
+        </div>
     </div>
+              	
+
+</section>
 
     <!-- Footer Section End -->
 	<jsp:include page="footer.jsp"/>

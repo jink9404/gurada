@@ -78,6 +78,7 @@
                                            </button>
                                         </td>
                                         <td>
+                                           &nbsp;&nbsp;&nbsp;
                                             <button class= 'small-button2'>
                                                 <a class='a'>장바구니 추가</a>
                                             </button>
@@ -92,13 +93,13 @@
                     <div class="product-slider owl-carousel">
                         <div class="product-img">
                             <figure>
-                                <img src="./resources/img/product/product-1.jpg" alt="">
+                                <img src="img/product/product-1.jpg" alt="">
                                 <div class="p-status">new</div>
                             </figure>
                         </div>
                         <div class="product-img">
                             <figure>
-                                <img src="./resources/img/product/product-1.jpg" alt="">
+                                <img src="img/product/product-1.jpg" alt="">
                                 <div class="p-status">new</div>
                             </figure>
                         </div>
@@ -123,7 +124,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-product-item">
                         <figure>
-                            <a href="#"><img src="./resources/img/products/img-1.jpg" alt=""></a>
+                            <a href="#"><img src="img/products/img-1.jpg" alt=""></a>
                             <div class="p-status">new</div>
                         </figure>
                         <div class="product-text">
@@ -135,7 +136,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-product-item">
                         <figure>
-                            <a href="#"><img src="./resources/img/products/img-2.jpg" alt=""></a>
+                            <a href="#"><img src="img/products/img-2.jpg" alt=""></a>
                             <div class="p-status sale">sale</div>
                         </figure>
                         <div class="product-text">
@@ -147,7 +148,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-product-item">
                         <figure>
-                            <a href="#"><img src="./resources/img/products/img-3.jpg" alt=""></a>
+                            <a href="#"><img src="img/products/img-3.jpg" alt=""></a>
                             <div class="p-status">new</div>
                         </figure>
                         <div class="product-text">
@@ -159,7 +160,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-product-item">
                         <figure>
-                            <a href="#"><img src="./resources/img/products/img-4.jpg" alt=""></a>
+                            <a href="#"><img src="img/products/img-4.jpg" alt=""></a>
                             <div class="p-status popular">popular</div>
                         </figure>
                         <div class="product-text">

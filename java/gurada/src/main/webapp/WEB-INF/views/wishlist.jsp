@@ -30,7 +30,7 @@
     <!-- header -->
     <jsp:include page="header.jsp"/>
    	<!-- header end -->
-    <section class="page-add cart-page-add">
+      <section class="page-add cart-page-add">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
@@ -40,7 +40,7 @@
                 </div> 
             </div>
         </div>
-    </section>
+    
     <!-- Page Add Section End -->
 
     <!-- Cart Page Section Begin -->
@@ -61,7 +61,32 @@
                     <tbody>
                         <tr>
                             <td class="product-col">
-                                <img src="./resources/img/product/product-1.jpg" alt="">
+                                <img src="img/product/product-1.jpg" alt="">
+                                <div class="p-title">
+                                    <h5>요쿠셔테리어</h5>
+                                </div>
+                            </td>
+                            
+                            <td class="price-col">
+                                $29
+                            </td>
+                            
+                            <td class="quantity-col">
+                                <div class="pro-qty">
+                                    <input type="text" value="1">
+                                </div>
+                            </td>
+                            
+                            <td class="price-col">
+                                $29
+                            </td>
+                            <td >
+                                <button class="xbtn-sh">X</button>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td class="product-col">
+                                <img src="img/product/product-1.jpg" alt="">
                                 <div class="p-title">
                                     <h5>요쿠셔테리어</h5>
                                 </div>
@@ -81,7 +106,32 @@
                                 $29
                             </td>
                             <td >
-                                <button>X</button>
+                                <button class="xbtn-sh">X</button>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td class="product-col">
+                                <img src="img/product/product-1.jpg" alt="">
+                                <div class="p-title">
+                                    <h5>요쿠셔테리어</h5>
+                                </div>
+                            </td>
+                            
+                            <td class="price-col">
+                                $29
+                            </td>
+                            
+                            <td class="quantity-col">
+                                <div class="pro-qty">
+                                    <input type="text" value="1">
+                                </div>
+                            </td>
+                            
+                            <td>
+                                $29
+                            </td>
+                            <td >
+                                <button class="xbtn-sh">X</button>
                             </td>
                         </tr>
                     </tbody>
@@ -117,6 +167,7 @@
             </div>
         </div>
     </div>
+    </section>
     <!-- Contact Section End -->
 
     <!-- Footer Section Begin -->

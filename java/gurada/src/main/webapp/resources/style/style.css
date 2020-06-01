@@ -2446,7 +2446,7 @@ ol {
     text-align: center;
     margin: auto;
     position: absolute;
-    left: 350px;
+    left: 180px;
 }
 
 
@@ -2569,7 +2569,7 @@ ol {
 	border: 0;	
 	padding-bottom: 10px;	
 	border-bottom: 2px solid #E7EBED;	
-	margin-bottom: 25px;	
+	margin-bottom: 8px;	
 }
 .store-btn-jh{
     position: fixed;
@@ -2582,6 +2582,61 @@ ol {
     top: 138px;
     bottom : 290px;
 }
+.contact-form2 .worhtable-jh {
+    font-size: 15px;	
+	font-weight: 600;	
+	color: #838383;	
+	border: 1;	
+	padding-bottom: 10px;	
+	border-bottom: 2px solid #E7EBED;	
+    width : 500px;
+    text-align: center;
+}
+.contact-form2 .td1:nth-child(2) {
+    width : 500px;
+}
+.contact-form2 tr{
+    height: 100px;
+}
+.contact-form2 input {	
+    width:400px;
+	font-size: 15px;	
+	font-weight: 600;	
+	color: #838383;	
+	border: 0;	
+	padding-bottom: 10px;	
+	border-bottom: 2px solid #E7EBED;	
+	margin-bottom: 8px;	
+}
+.contact-form2 .worhtable-jh input{
+    width : 80px;
+}
+.contact-form2 td1 .worh .worhtable-jh{
+    
+}
+.pro_img-jh{
+    width : 400px;
+    height: 400px;
+    text-align: center;
+    position: absolute;
+    left:1100px;
+    top: 155px;
+}
+.sinsang-jh{
+    position: fixed;
+    left : 1350px;
+    top : 608px;
+    color: #1e1e1e;
+	background: transparent;
+	border: none;
+	font-size: 14px;
+	font-weight: 600;
+	padding: 8px 25px;
+	border: 1px solid #1e1e1e;
+	border-radius: 50px;
+	cursor: pointer;
+	text-transform: uppercase;
+}
 
 
 /*----------------------------------------*/
@@ -2589,10 +2644,10 @@ ol {
 /*----------------------------------------*/
 .sh-width{
     position: relative;
-    left: 800px;
+    left: 100px;
     top: 260px;
 }
-.a-href{color:#1e1e1e }
+
 .select-2{
 width: 150px;
     height: 37px;
@@ -2605,7 +2660,7 @@ border: 1px solid #999;
 	color: #1e1e1e;
 	background: transparent;
 	border: none;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 600;
 	padding: 8px 25px;
 	border: 1px solid #1e1e1e;
@@ -2640,15 +2695,26 @@ border: 1px solid #999;
 	text-transform: uppercase;
     
 }
+.small-button button .a-href{
+    color: black;
+}
+.container .cart-table .a-href{
+    font-size: 15px;
+    color: darkblue;
+}
 
 .btn-2{position: relative;
 left: 210%
 }
 .search-1{ position: relative;
-left: 27%;
+left: 10%;
     top:70%;
 }
-.td-a{position: relative; left: 150%;}
+.td-a a{
+    color: dimgrey;
+    position: relative; left: 45%;
+
+}
 .search-2{
     position: relative;
     left: 40%;
@@ -2708,14 +2774,8 @@ left: 27%;
     text-align: center;
 	width: 700px;
 	table-layout: fixed;
-    border-left:1px solid #fff;  
-        
-    border-right:1px solid #fff;
-
-    border-top:1px solid #fff
-
-     border-bottom:1px solid #fff
-    
+    border-color: darkgray;
+    border: 2px solid darkgray;
 }
 .sh-td{
     
@@ -2742,6 +2802,10 @@ left: 27%;
     
     border: 0;
     outline: 0;
+}
+.sh-bold{
+    font-weight: bold;
+    color: 
 }
     
 /*----------------------------------------*/

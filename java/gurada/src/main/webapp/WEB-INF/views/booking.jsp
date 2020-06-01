@@ -74,11 +74,12 @@
     <!-- header -->
     <jsp:include page="header.jsp"/>
    	<!-- header end -->
-    <section class="page-add">
+     <section class="page-add">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8">
                         <div class="page-breadcrumb">
+
                             <h2>매장방문 예약<span>.</span></h2> 
                             <table class='resertable-jh'>
                                 <tr>
@@ -88,9 +89,9 @@
                                     </td>
                                     
                                 </tr>
-                                
+                                <hr/>
                             </table>
-                            <hr>
+                            
                             <table class='contact-form1'>
                                 <tr class='tr'>
                                     <td>
@@ -130,7 +131,7 @@
                         <button>매장 찾기</button>
                     </div>
                 </div>
-                
+                <div id = 'map-canvas' class="map-canvas" style="width:550px; height: 315px"></div>
             </div>
          </div>
     </section>

@@ -30,60 +30,58 @@
 	<jsp:include page="header.jsp"/>
 	<!-- header Plugins -->
 	<section class="page-add">
-		<div class="container">
-			<div class="row">					               
-				<div class="page-breadcrumb">
-					<h2> 최근 구매 이력<span>.</span></h2>
-					<br/>
-					<table class="type09">
-						<tbody>
-					    	<tr>
-					        	<th></th> 
-					            <th width='200' >상품명</th>
-					            <th width='300'>주문번호</th>
-					            <th width='1000'>주문일시</th>
-					            <th width='500'>가격</th>
-					        </tr>
-					 
-					        <tr >
-					            <td><input type="checkbox" name="checkboxName"></td>
-					            <td>1</td>
-					            <td>123432</td>
-					            <td>2020년/4월/3일</td>
-					            <td>20000</td>					          
-					        </tr>
-					        
-					        <tr >
-					        	<td><input type="checkbox" name="checkboxName"></td>
-					            <td>2</td>
-					            <td>122345</td>
-					            <td>2020년/7월/2일</td>
-					            <td>20000</td>					            
-					        </tr>
-					        
-					        <tr >
-					            <td><input type="checkbox" name="checkboxName"></td>
-					            <td>3</td>
-					            <td>123345</td>
-					            <td>2020년/5월/5일</td>
-					            <td>20000</td>					            
-					        </tr>
-					        
-					        <tr >
-					            <td><input type="checkbox" name="checkboxName"></td>
-					            <td>4</td>
-					            <td>121345</td>
-					            <td>2020년/12월/3일</td>
-					            <td>20000</td>					            
-					        </tr>
-						</tbody>
-					</table>
-                    <br/>
-                    <button class="btn1">선택</button>
-          		</div>
-        	</div>
-       	</div>      
-    </section>
+            <div class="container">
+                <div class="row">
+                
+                    <div class="page-breadcrumb">
+                        <h2> 최근 구매 이력<span>.</span></h2>
+                        <br/>
+                        <table class="type09">
+                            <tbody>
+                                <tr>
+                                    <th></th> 
+                                    <th width='200' >상품명</th>
+                                    <th width='300'>주문번호</th>
+                                    <th width='1000'>주문일시</th>
+                                    <th width='500'>가격</th>
+                                </tr>
+                                <tr >
+                                    <td><input type="checkbox" name="checkboxName"></td>
+                                    <td>1</td>
+                                    <td>123432</td>
+                                    <td>2020년/4월/3일</td>
+                                    <td>20000</td>
+                                </tr>
+                                <tr >
+                                    <td><input type="checkbox" name="checkboxName"></td>
+                                    <td>2</td>
+                                    <td>122345</td>
+                                    <td>2020년/7월/2일</td>
+                                    <td>20000</td>
+                                </tr>
+                                <tr >
+                                    <td><input type="checkbox" name="checkboxName"></td>
+                                    <td>3</td>
+                                    <td>123345</td>
+                                    <td>2020년/5월/5일</td>
+                                    <td>20000</td>
+                                </tr>
+                                <tr >
+                                    <td><input type="checkbox" name="checkboxName"></td>
+                                    <td>4</td>
+                                    <td>121345</td>
+                                    <td>2020년/12월/3일</td>
+                                    <td>20000</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br/>
+                        <button class="btn1">선택</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
     
     	<!-- footer Plugins -->
     <jsp:include page="footer.jsp"/>
