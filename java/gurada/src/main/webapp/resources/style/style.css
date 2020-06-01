@@ -96,7 +96,7 @@ textarea:focus {
 	outline: none;
 }
 
-a:hover,
+
 a:focus {
 	text-decoration: none;
 	outline: none;
@@ -2481,15 +2481,18 @@ ol {
 }
 
 .shopping-jh2{
-    position: fixed;
+   
+    position: relative;
     left: 1100px;
-    top : 200px;
-    width : 300px;
-    height : 200px;
-    border-top : 1px solid;
-    border-left : 1px solid;
-    border-right : 1px solid;
-    border-bottom : 1px solid;
+    top : 320px;
+    width : 350px;
+    height : 220px;
+ /*   border-top : 3px solid #999;
+   border-left : 3px solid #999;
+    border-right : 3px solid #999;
+    border-bottom : 3px solid #999;*/
+ 
+    
 }
 .reserbtn2-jh{
     margin-left: 200px;
@@ -2519,7 +2522,7 @@ ol {
    color: #1e1e1e;
    background: transparent;
    border: none;
-   font-size: 14px;
+   font-size: 13px;
    font-weight: 600;
    padding: 6px 40px;
    border: 2px solid #1e1e1e;
@@ -2528,10 +2531,18 @@ ol {
    text-transform: uppercase;
 }
 .buy{
-    margin-left:200px;
+    margin-left:140px;
 }
 .a{
     color:#1e1e1e;
+}
+ .container .jh-a{
+    
+    font-size: 20px;
+     color: #999;
+         position: absolute;
+     left: 1200px;
+     top: 230px;
 }
 .total{
     width: 80px;
@@ -2566,8 +2577,9 @@ ol {
     top : 200px;
 }
 .map-canvas{
-    position: fixed;
+    position: absolute;
     left : 1000px;
+    top: 138px;
     bottom : 290px;
 }
 
@@ -2576,14 +2588,16 @@ ol {
 /* SH
 /*----------------------------------------*/
 .sh-width{
-    position: absolute;
-    left: 600px;
-    top: 280px;
+    position: relative;
+    left: 800px;
+    top: 260px;
 }
 .a-href{color:#1e1e1e }
-.select-2{width: 150px;
+.select-2{
+width: 150px;
+    height: 37px;
 padding: .4em .1em;
-border: 2px solid #999;
+border: 1px solid #999;
 }
 .input-tx{ width: 350px; height: 37px}
 
@@ -2610,11 +2624,28 @@ border: 2px solid #999;
 	cursor: pointer;
 	text-transform: uppercase;}
 
+.small-btn-sh{
+    position: sticky;
+    left: 1020px;
+    top: 1px;
+     color:#1e1e1e;
+	background: transparent;
+	border: none;
+	font-size: 12px;
+	font-weight: 500;
+	padding: 3px 20px;
+	border: 1px solid #1e1e1e;
+	border-radius: 50px;
+	cursor: pointer;
+	text-transform: uppercase;
+    
+}
+
 .btn-2{position: relative;
 left: 210%
 }
 .search-1{ position: relative;
-left: 8%;
+left: 27%;
     top:70%;
 }
 .td-a{position: relative; left: 150%;}
@@ -2624,55 +2655,94 @@ left: 8%;
     top: 75%;
 
 }
-<<<<<<< HEAD
-.td-a2{
-    position: relative;
-    left: 95%;
-=======
-.td-a2{position: relative; left: 45%;}
->>>>>>> 2c0c1b1d6eb42a942d461dc49ab56c0629d731ad
-}
-
-
-.td-fix{
-	width: 700px;
-	table-layout: fixed;
-    border-left:1px solid #fff;      
-
-border-right:1px solid #fff;
-
-border-top:1px solid #fff
-
-border-bottom:1px solid #fff
+.td-d{
+    position: relative; left: 330%;
     
 }
 
+.td-a2{
+    position: relative;
+    left: 95%;
+}
 
-@media only screen and (min-width: 1500px) and (max-width: 1920px) {
-    .td-fix{
+.td-a2
+    {position: relative; left: 45%;}
+
+
+    
+.td-b{position: relative; left: 45%;}
+.td-c{position: relative; left: 61%;}
+
+ .small-button-sh button{
+        color: #1e1e1e;
+	background: transparent;
+	border: none;
+	font-size: 14px;
+	font-weight: 600;
+	padding: 8px 25px;
+	border: 1px solid #1e1e1e;
+	border-radius: 50px;
+	cursor: pointer;
+	text-transform: uppercase;
+    position: relative; left: 19%;}
+    
+.buybtn2{
+    
+    width: 380px;
+   height: 50px;
+   border: 1px solid #999;
+   border-radius: 20px;
+    }
+    
+.addr-table {
+    border-left:1px solid #fff;       
+
+    border-right:1px solid #fff;
+
+    border-top:1px solid #fff;
+
+    border-bottom:1px solid #fff;
+
+}
+.td-fix{
+    text-align: center;
 	width: 700px;
 	table-layout: fixed;
     border-left:1px solid #fff;  
         
-border-right:1px solid #fff;
+    border-right:1px solid #fff;
 
-border-top:1px solid #fff
+    border-top:1px solid #fff
 
-border-bottom:1px solid #fff
+     border-bottom:1px solid #fff
     
 }
+.sh-td{
     
-.addr-table {
-border-left:1px solid #fff;       
-
-border-right:1px solid #fff;
-
-border-top:1px solid #fff;
-
-border-bottom:1px solid #fff;
-
+    width: 500px;
+    text-align: right
 }
-
+.sh-a{
+    
+    position: absolute;
+    top: 100px;
+    left: 1400px;
+    
+    color: black;
+}
+.sh-a-1{
+    position: absolute;
+    top: 150px;
+    left: 1050px;
+    color: black;
+    border-bottom: 1px solid #999;
+    font-weight: bold;
+}
+.xbtn-sh{
+    
+    border: 0;
+    outline: 0;
+}
     
 /*----------------------------------------*/
 /* MJ

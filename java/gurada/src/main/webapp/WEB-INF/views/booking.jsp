@@ -1,7 +1,9 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
-    <head>
+<head>
         <meta charset="UTF-8">
         <meta name="description" content="Yoga Studio Template">
         <meta name="keywords" content="Yoga, unica, creative, html">
@@ -59,22 +61,24 @@
         rel="stylesheet">
 
         <!-- Css Styles -->
-        <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-        <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-        <link rel="stylesheet" href="css/nice-select.css" type="text/css">
-        <link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-        <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-        <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="./resources/style/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="./resources/style/font-awesome.min.css" type="text/css">
+        <link rel="stylesheet" href="./resources/style/nice-select.css" type="text/css">
+        <link rel="stylesheet" href="./resources/style/owl.carousel.min.css" type="text/css">
+        <link rel="stylesheet" href="./resources/style/magnific-popup.css" type="text/css">
+        <link rel="stylesheet" href="./resources/style/slicknav.min.css" type="text/css">
+        <link rel="stylesheet" href="./resources/style/style.css" type="text/css">
     </head>
 
-    <body>
-        <section class="page-add">
+<body>
+    <!-- header -->
+    <jsp:include page="header.jsp"/>
+   	<!-- header end -->
+    <section class="page-add">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8">
                         <div class="page-breadcrumb">
-
                             <h2>매장방문 예약<span>.</span></h2> 
                             <table class='resertable-jh'>
                                 <tr>
@@ -84,9 +88,9 @@
                                     </td>
                                     
                                 </tr>
-                                <hr/>
+                                
                             </table>
-                            
+                            <hr>
                             <table class='contact-form1'>
                                 <tr class='tr'>
                                     <td>
@@ -126,19 +130,26 @@
                         <button>매장 찾기</button>
                     </div>
                 </div>
-                <div id = 'map-canvas' class="map-canvas" style="width:550px; height: 315px"></div>
+                
             </div>
          </div>
     </section>
-                <!-- Js Plugins -->
-                <script src="js/jquery-3.3.1.min.js"></script>
-                <script src="js/bootstrap.min.js"></script>
-                <script src="js/jquery.magnific-popup.min.js"></script>
-                <script src="js/jquery.slicknav.js"></script>
-                <script src="js/owl.carousel.min.js"></script>
-                <script src="js/jquery.nice-select.min.js"></script>
-                <script src="js/mixitup.min.js"></script>
-                <script src="js/main.js"></script>
-                
-    </body>
+    <div id = 'map-canvas' class="map-canvas" style="width:550px; height: 315px;"></div>
+    <!-- Contact Section End -->
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <!-- Footer Section Begin -->
+    
+    <!-- Footer Section End -->
+	<jsp:include page="footer.jsp"/>
+    <!-- Js Plugins -->
+    <script src="./resources/js/jquery-3.3.1.min.js"></script>
+    <script src="./resources/js/bootstrap.min.js"></script>
+    <script src="./resources/js/jquery.magnific-popup.min.js"></script>
+    <script src="./resources/js/jquery.slicknav.js"></script>
+    <script src="./resources/js/owl.carousel.min.js"></script>
+    <script src="./resources/js/jquery.nice-select.min.js"></script>
+    <script src="./resources/js/mixitup.min.js"></script>
+    <script src="./resources/js/main.js"></script>
+</body>
+
 </html>
