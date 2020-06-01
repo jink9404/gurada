@@ -12,7 +12,14 @@ public class MemberVO {
 	private String signupDate;
 	private String secessionDate;
 	private String lastIp;
+	private	String gender;
 	
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
 	public String getMemberNo() {
 		return memberNo;
 	}

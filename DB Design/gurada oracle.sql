@@ -33,9 +33,11 @@ CREATE TABLE Member(
             post_code       VARCHAR2(6)                     ,
             signup_date     date            DEFAULT sysdate ,
             secession_date  date                            ,
-            last_ip         VARCHAR(15)                     ,
+            last_ip         VARCHAR2(15)                    ,
+            gender          varchar2(4)                     ,
             CONSTRAINT pk_member_no             PRIMARY KEY (member_no),
-            CONSTRAINT uq_member_phoneNumber    UNIQUE (phone_number)
+            CONSTRAINT uq_member_phoneNumber    UNIQUE (phone_number),
+            CONSTRAINT ck_member_gender        CHECK (gender IN('남자','여자'))
 );
 CREATE TABLE category(
             category_ID     VARCHAR2(15),
@@ -141,3 +143,23 @@ CREATE TABLE IMAGE(
             CONSTRAINT  fk_image_review_id      FOREIGN KEY (review_NO)
             REFERENCES  review(review_NO)
 );
+
+CREATE  SEQUENCE    seq_member_no
+INCREMENT   BY      1
+START       WITH    0
+MINVALUE            0;
+
+select SEQ_MEMBER_NO.currval from dual;
+		INSERT	INTO	member(
+								MEMBER_NO,		PASSWORD,		EMAIL,
+								FIRST_NAME,		LAST_NAME,		ADDRESS,
+								PHONE_NUMBER,	POST_CODE,		SIGNUP_DATE,
+								SECESSION_DATE,	LAST_IP
+						) 
+						values(
+								''||seq_member_no.nextval||''	,'test'	,'test',
+								'test'			,'test' 	    ,'test',
+								'test'			,'test'	,SYSDATE,
+								null					,null
+						);
+                        

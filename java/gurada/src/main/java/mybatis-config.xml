@@ -5,9 +5,9 @@
 <configuration>
 
 	<!-- Alias 설정 -->
-<!-- 	<typeAliases> -->
-<!-- 		<typeAlias alias="board" type="" />		 -->
-<!-- 	</typeAliases> -->
+ 	<typeAliases>
+ 		<typeAlias alias="member" type="com.gurada.domain.MemberVO" />
+ 	</typeAliases>
 
 
 </configuration>
