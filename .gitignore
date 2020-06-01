@@ -12,6 +12,5 @@
 *.~undo-tree
 /.metadata/
 /Servers/
-pom.properties
 MANIFEST.MF
 pom.properties
