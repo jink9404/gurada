@@ -14,6 +14,7 @@
     /*------------------
         Preloader
     --------------------*/
+    
     $(window).on('load', function () {
         $(".loader").fadeOut();
         $("#preloder").delay(200).fadeOut("slow");
@@ -26,6 +27,8 @@
             var mixer = mixitup(containerEl);
         }
     });
+    
+    
     
     $("#login-header-up").click(function(){
         $(".login-header").slideUp(500);
