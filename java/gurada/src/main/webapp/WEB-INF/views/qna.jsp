@@ -17,13 +17,13 @@
 		rel="stylesheet">
 		
 		<!-- Css Styles -->
-		<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-		<link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
-		<link rel="stylesheet" href="css/nice-select.css" type="text/css">
-		<link rel="stylesheet" href="css/owl.carousel.min.css" type="text/css">
-		<link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-		<link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
-		<link rel="stylesheet" href="css/style.css" type="text/css">
+		<link rel="stylesheet" href="./resources/style/bootstrap.min.css" type="text/css">
+		<link rel="stylesheet" href="./resources/style/font-awesome.min.css" type="text/css">
+		<link rel="stylesheet" href="./resources/style/nice-select.css" type="text/css">
+		<link rel="stylesheet" href="./resources/style/owl.carousel.min.css" type="text/css">
+		<link rel="stylesheet" href="./resources/style/magnific-popup.css" type="text/css">
+		<link rel="stylesheet" href="./resources/style/slicknav.min.css" type="text/css">
+		<link rel="stylesheet" href="./resources/style/style.css" type="text/css">
 	</head>
 
 	<body>  
@@ -134,14 +134,14 @@
 		<!-- Footer Section End -->
 		
 		<!-- Js Plugins -->
-		<script src="js/jquery-3.3.1.min.js"></script>
-		<script src="js/bootstrap.min.js"></script>
-		<script src="js/jquery.magnific-popup.min.js"></script>
-		<script src="js/jquery.slicknav.js"></script>
-		<script src="js/owl.carousel.min.js"></script>
-		<script src="js/jquery.nice-select.min.js"></script>
-		<script src="js/mixitup.min.js"></script>
-		<script src="js/main.js"></script>
+		<script src="./resources/js/jquery-3.3.1.min.js"></script>
+		<script src="./resources/js/bootstrap.min.js"></script>
+		<script src="./resources/js/jquery.magnific-popup.min.js"></script>
+		<script src="./resources/js/jquery.slicknav.js"></script>
+		<script src="./resources/js/owl.carousel.min.js"></script>
+		<script src="./resources/js/jquery.nice-select.min.js"></script>
+		<script src="./resources/js/mixitup.min.js"></script>
+		<script src="./resources/js/main.js"></script>
 	</body>
 
 </html>
