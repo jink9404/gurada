@@ -2446,7 +2446,7 @@ ol {
     text-align: center;
     margin: auto;
     position: absolute;
-    left: 350px;
+    left: 180px;
 }
 
 
@@ -2482,9 +2482,9 @@ ol {
 
 .shopping-jh2{
    
-    position: fixed;
-    left: 900px;
-    top : 120px;
+    position: relative;
+    left: 1100px;
+    top : 320px;
     width : 350px;
     height : 220px;
  /*   border-top : 3px solid #999;
@@ -2541,8 +2541,8 @@ ol {
     font-size: 20px;
      color: #999;
          position: absolute;
-     left: 1080px;
-     top: 30px;
+     left: 1200px;
+     top: 230px;
 }
 .total{
     width: 80px;
@@ -2569,7 +2569,7 @@ ol {
 	border: 0;	
 	padding-bottom: 10px;	
 	border-bottom: 2px solid #E7EBED;	
-	margin-bottom: 25px;	
+	margin-bottom: 8px;	
 }
 .store-btn-jh{
     position: fixed;
@@ -2577,9 +2577,65 @@ ol {
     top : 200px;
 }
 .map-canvas{
-    position: fixed;
-    left : 600px;
+    position: absolute;
+    left : 1000px;
+    top: 138px;
     bottom : 290px;
+}
+.contact-form2 .worhtable-jh {
+    font-size: 15px;	
+	font-weight: 600;	
+	color: #838383;	
+	border: 1;	
+	padding-bottom: 10px;	
+	border-bottom: 2px solid #E7EBED;	
+    width : 500px;
+    text-align: center;
+}
+.contact-form2 .td1:nth-child(2) {
+    width : 500px;
+}
+.contact-form2 tr{
+    height: 100px;
+}
+.contact-form2 input {	
+    width:400px;
+	font-size: 15px;	
+	font-weight: 600;	
+	color: #838383;	
+	border: 0;	
+	padding-bottom: 10px;	
+	border-bottom: 2px solid #E7EBED;	
+	margin-bottom: 8px;	
+}
+.contact-form2 .worhtable-jh input{
+    width : 80px;
+}
+.contact-form2 td1 .worh .worhtable-jh{
+    
+}
+.pro_img-jh{
+    width : 400px;
+    height: 400px;
+    text-align: center;
+    position: absolute;
+    left:1100px;
+    top: 155px;
+}
+.sinsang-jh{
+    position: fixed;
+    left : 1350px;
+    top : 608px;
+    color: #1e1e1e;
+	background: transparent;
+	border: none;
+	font-size: 14px;
+	font-weight: 600;
+	padding: 8px 25px;
+	border: 1px solid #1e1e1e;
+	border-radius: 50px;
+	cursor: pointer;
+	text-transform: uppercase;
 }
 
 
@@ -2587,14 +2643,16 @@ ol {
 /* SH
 /*----------------------------------------*/
 .sh-width{
-    position: absolute;
-    left: 1100px;
+    position: relative;
+    left: 800px;
     top: 260px;
 }
 .a-href{color:#1e1e1e }
-.select-2{width: 150px;
+.select-2{
+width: 150px;
+    height: 37px;
 padding: .4em .1em;
-border: 2px solid #999;
+border: 1px solid #999;
 }
 .input-tx{ width: 350px; height: 37px}
 
@@ -2621,11 +2679,28 @@ border: 2px solid #999;
 	cursor: pointer;
 	text-transform: uppercase;}
 
+.small-btn-sh{
+    position: sticky;
+    left: 1020px;
+    top: 1px;
+     color:#1e1e1e;
+	background: transparent;
+	border: none;
+	font-size: 12px;
+	font-weight: 500;
+	padding: 3px 20px;
+	border: 1px solid #1e1e1e;
+	border-radius: 50px;
+	cursor: pointer;
+	text-transform: uppercase;
+    
+}
+
 .btn-2{position: relative;
 left: 210%
 }
 .search-1{ position: relative;
-left: 8%;
+left: 27%;
     top:70%;
 }
 .td-a{position: relative; left: 150%;}
@@ -2651,7 +2726,7 @@ left: 8%;
 
     
 .td-b{position: relative; left: 45%;}
-.td-c{position: relative; left: 43%;}
+.td-c{position: relative; left: 61%;}
 
  .small-button-sh button{
         color: #1e1e1e;
@@ -2688,14 +2763,8 @@ left: 8%;
     text-align: center;
 	width: 700px;
 	table-layout: fixed;
-    border-left:1px solid #fff;  
-        
-    border-right:1px solid #fff;
-
-    border-top:1px solid #fff
-
-     border-bottom:1px solid #fff
-    
+    border-color: darkgray;
+    border: 2px solid darkgray;
 }
 .sh-td{
     
@@ -2706,9 +2775,26 @@ left: 8%;
     
     position: absolute;
     top: 100px;
-    left: 1200px;
+    left: 1400px;
     
-    color: #999;
+    color: black;
+}
+.sh-a-1{
+    position: absolute;
+    top: 150px;
+    left: 1050px;
+    color: black;
+    border-bottom: 1px solid #999;
+    font-weight: bold;
+}
+.xbtn-sh{
+    
+    border: 0;
+    outline: 0;
+}
+.sh-bold{
+    font-weight: bold;
+    color: 
 }
     
 /*----------------------------------------*/

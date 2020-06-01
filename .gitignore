@@ -1,5 +1,6 @@
 # Compiled
 *.elc
+*.class
 
 # Packaging
 .cask
@@ -9,3 +10,6 @@
 
 # Undo-tree save-files
 *.~undo-tree
+/.metadata/
+/Servers/
+pom.properties
