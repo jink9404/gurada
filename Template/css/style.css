@@ -2644,10 +2644,10 @@ ol {
 /*----------------------------------------*/
 .sh-width{
     position: relative;
-    left: 800px;
+    left: 100px;
     top: 260px;
 }
-.a-href{color:#1e1e1e }
+
 .select-2{
 width: 150px;
     height: 37px;
@@ -2660,7 +2660,7 @@ border: 1px solid #999;
 	color: #1e1e1e;
 	background: transparent;
 	border: none;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 600;
 	padding: 8px 25px;
 	border: 1px solid #1e1e1e;
@@ -2695,15 +2695,26 @@ border: 1px solid #999;
 	text-transform: uppercase;
     
 }
+.small-button button .a-href{
+    color: black;
+}
+.container .cart-table .a-href{
+    font-size: 15px;
+    color: darkblue;
+}
 
 .btn-2{position: relative;
 left: 210%
 }
 .search-1{ position: relative;
-left: 27%;
+left: 10%;
     top:70%;
 }
-.td-a{position: relative; left: 150%;}
+.td-a a{
+    color: dimgrey;
+    position: relative; left: 45%;
+
+}
 .search-2{
     position: relative;
     left: 40%;
