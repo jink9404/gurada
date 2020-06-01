@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
-    <head>
+<head>
         <meta charset="UTF-8">
         <meta name="description" content="Yoga Studio Template">
         <meta name="keywords" content="Yoga, unica, creative, html">
@@ -70,14 +70,15 @@
         <link rel="stylesheet" href="./resources/style/style.css" type="text/css">
     </head>
 
-    <body>
-    	<jsp:include page="header.jsp"/>
-        <section class="page-add">
+<body>
+    <!-- header -->
+    <jsp:include page="header.jsp"/>
+   	<!-- header end -->
+    <section class="page-add">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8">
                         <div class="page-breadcrumb">
-
                             <h2>매장방문 예약<span>.</span></h2> 
                             <table class='resertable-jh'>
                                 <tr>
@@ -85,9 +86,11 @@
                                     주소 : 대한민국 서울시 영등포구 영중로 9 신세계백화점 영등포점 1F<br/>
                                     매장번호 : +82 2 26391901 
                                     </td>
+                                    
                                 </tr>
-                                <hr/>
+                                
                             </table>
+                            <hr>
                             <table class='contact-form1'>
                                 <tr class='tr'>
                                     <td>
@@ -119,6 +122,7 @@
                                     </td>
                                 </tr>
                             </table>
+                            <hr/>
                         </div>
                     <br/><br/>
                     <div class='small-button-sh'>
@@ -126,19 +130,26 @@
                         <button>매장 찾기</button>
                     </div>
                 </div>
-                <div id = 'map-canvas' class="map-canvas" style="width:600px; height: 400px"></div>
-				<jsp:include page="footer.jsp"/>
-                <!-- Js Plugins -->
-                <script src="./resources/js/jquery-3.3.1.min.js"></script>
-                <script src="./resources/js/bootstrap.min.js"></script>
-                <script src="./resources/js/jquery.magnific-popup.min.js"></script>
-                <script src="./resources/js/jquery.slicknav.js"></script>
-                <script src="./resources/js/owl.carousel.min.js"></script>
-                <script src="./resources/js/jquery.nice-select.min.js"></script>
-                <script src="./resources/js/mixitup.min.js"></script>
-                <script src="./resources/js/main.js"></script>
-                </div>
+                
             </div>
-        </section>
-    </body>
+         </div>
+    </section>
+    <div id = 'map-canvas' class="map-canvas" style="width:550px; height: 315px;"></div>
+    <!-- Contact Section End -->
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <!-- Footer Section Begin -->
+    
+    <!-- Footer Section End -->
+	<jsp:include page="footer.jsp"/>
+    <!-- Js Plugins -->
+    <script src="./resources/js/jquery-3.3.1.min.js"></script>
+    <script src="./resources/js/bootstrap.min.js"></script>
+    <script src="./resources/js/jquery.magnific-popup.min.js"></script>
+    <script src="./resources/js/jquery.slicknav.js"></script>
+    <script src="./resources/js/owl.carousel.min.js"></script>
+    <script src="./resources/js/jquery.nice-select.min.js"></script>
+    <script src="./resources/js/mixitup.min.js"></script>
+    <script src="./resources/js/main.js"></script>
+</body>
+
 </html>
