@@ -2703,7 +2703,12 @@ left: 210%
 left: 27%;
     top:70%;
 }
-.td-a{position: relative; left: 150%;}
+.td-a a{
+    font-weight: bold;
+    color: dimgrey;
+    position: relative; left: 50%;
+
+}
 .search-2{
     position: relative;
     left: 40%;
