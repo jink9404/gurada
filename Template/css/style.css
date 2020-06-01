@@ -2637,6 +2637,52 @@ ol {
 	cursor: pointer;
 	text-transform: uppercase;
 }
+.sinsang-jh1{
+    position: fixed;
+    left : 1350px;
+    top : 708px;
+    color: #1e1e1e;
+	background: transparent;
+	border: none;
+	font-size: 14px;
+	font-weight: 600;
+	padding: 8px 25px;
+	border: 1px solid #1e1e1e;
+	border-radius: 50px;
+	cursor: pointer;
+	text-transform: uppercase;
+}
+.contact-form3 {
+    font-size: 20px;	
+	font-weight: 600;	
+	color: #838383;	
+	border: 1;	
+	padding-bottom: 10px;	
+	border-bottom: 2px solid #E7EBED;	
+    height: 250px;
+    text-align: center;
+}
+.contact-form3 input{
+    font-size : 20px;	
+	font-weight : 600;	
+	color : #838383;	
+	border : 0;	
+	padding-bottom : 10px;	
+	border-bottom : 2px solid #E7EBED;	
+    
+}
+.contact-form3 td:nth-child(2){
+    width: 500px;
+    text-align-last: left;
+    word-spacing: inherit;
+}
+.contact-form3 tr:nth-child(5){
+    height: 250px;
+}
+.contact-form3 .detail1{
+    width : 350px;
+    height: 250px;
+}
 
 
 /*----------------------------------------*/
@@ -2644,10 +2690,10 @@ ol {
 /*----------------------------------------*/
 .sh-width{
     position: relative;
-    left: 800px;
+    left: 100px;
     top: 260px;
 }
-.a-href{color:#1e1e1e }
+
 .select-2{
 width: 150px;
     height: 37px;
@@ -2660,7 +2706,7 @@ border: 1px solid #999;
 	color: #1e1e1e;
 	background: transparent;
 	border: none;
-	font-size: 14px;
+	font-size: 16px;
 	font-weight: 600;
 	padding: 8px 25px;
 	border: 1px solid #1e1e1e;
@@ -2695,15 +2741,26 @@ border: 1px solid #999;
 	text-transform: uppercase;
     
 }
+.small-button button .a-href{
+    color: black;
+}
+.container .cart-table .a-href{
+    font-size: 15px;
+    color: darkblue;
+}
 
 .btn-2{position: relative;
 left: 210%
 }
 .search-1{ position: relative;
-left: 27%;
+left: 10%;
     top:70%;
 }
-.td-a{position: relative; left: 150%;}
+.td-a a{
+    color: dimgrey;
+    position: relative; left: 45%;
+
+}
 .search-2{
     position: relative;
     left: 40%;

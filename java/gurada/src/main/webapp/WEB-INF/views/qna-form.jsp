@@ -61,7 +61,7 @@
 	                            </div>
 	                            <div class="col-lg-12 text-right" class="small-button">
 	                                <button type="submit"  >등록</button>
-	                                <button><a href="contact5.html" class="a-href">게시판 목록</a></button>
+	                                <button><a href="contact5.html">게시판 목록</a></button>
 	                            </div>
 	                        </div>
 	                    </form>
