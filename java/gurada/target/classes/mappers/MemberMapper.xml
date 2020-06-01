@@ -6,14 +6,15 @@
 	<insert id="signUp" parameterType="member">
 		INSERT	INTO	member(
 								MEMBER_NO,		PASSWORD,		EMAIL,
-								FIRST_NAME,		LAST_NAME,
-								PHONE_NUMBER,	SIGNUP_DATE
+								FIRST_NAME,		LAST_NAME,		ADDRESS,
+								PHONE_NUMBER,	POST_CODE,		SIGNUP_DATE,
+								gender,			LAST_IP
 						) 
 						values(
 								seq_member_no.nextval	,#{password}	,#{email},
-								#{firstName}			,#{lastName}	,
-								#{phoneNumber}			,SYSDATE
-				
+								#{firstName}			,#{lastName}	,null,
+								#{phoneNumber}			,null			,SYSDATE,
+								#{gender}				,null				
 						)
 	</insert>
 </mapper>

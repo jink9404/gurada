@@ -29,63 +29,68 @@
 	<body>  
 		<jsp:include page="header.jsp"/>
 		<!-- Page Add Section Begin -->
-		<section class="page-add">
-	        <div class="container">
-	            <div class="row">
-	                <div class="col-lg-4">
-	                    <div class="page-breadcrumb">
-	                        <h2>문의글 작성<span>.</span></h2>
-	                    </div>
-	                </div>  
-	            </div>
-	        </div>
-	    </section>
-	    <!-- Page Add Section End -->
 	
-	    <!-- Contact Section Begin -->
-	    <div class="contact-section">
-	        <div class="container">
-	            <div class="row">
-	                <div class="col-lg-8">
-	                    <form action="#" class="contact-form">
-	                        <div class="row">
-	                            <div class="col-lg-6">
-	                                <input type="text" placeholder="제목">
-	                            </div>
-	                            <div class="col-lg-6">
-	                                <input class="glyphicon glyphicon-user" type="text" placeholder="작성자" >
-	                            </div>
-	                            <div class="col-lg-12">
-	                                <input type="text" placeholder="password">
-	                                <textarea placeholder="내용"></textarea>
-	                            </div>
-	                            <div class="col-lg-12 text-right" class="small-button">
-	                                <button type="submit"  >등록</button>
-	                                <button><a href="contact5.html" class="a-href">게시판 목록</a></button>
-	                            </div>
-	                        </div>
-	                    </form>
-	                </div>
-	                <div class="col-lg-3 offset-lg-1">
-	                    <div class="contact-widget">
-	                        <div class="cw-item">
-	                            <h5>고객센터</h5>
-	                            <ul>
-	                                <li>+82 (603)535-4592</li>
-	                                <li>+82 (603)535-4556</li>
-	                            </ul>
-	                        </div>
-	                        <div class="cw-item">
-	                            <h5>E-mail</h5>
-	                            <ul>
-	                                <li>contact@gurada.com</li>              
-	                            </ul>
-	                        </div>
-	                    </div>
-	                </div>
-	            </div>
-	        </div>
-	    </div>
+		   <section class="page-add">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="page-breadcrumb">
+                        <h2>문의글 작성<span>.</span></h2>
+                        
+                    </div>
+                </div>  
+            </div>
+        </div>   
+    </section>
+    <a href="contact5.html" class="sh-a-1">게시판 목록보기</a>
+    <!-- Page Add Section End -->
+
+    <!-- Contact Section Begin -->
+    
+    
+    <div class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <form action="#" class="contact-form">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <input type="text" placeholder="제목">
+                            </div>
+                            <div class="col-lg-6">
+                                <input class="glyphicon glyphicon-user" type="text" placeholder="작성자" >
+                            </div>
+                            <div class="col-lg-12">
+                                <input type="text" placeholder="password">
+                                <textarea placeholder="내용"></textarea>
+                            </div>
+                            <div class="col-lg-12 text-right" class="small-button">
+                                <button type="submit"  >등&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;록</button>
+                               
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-3 offset-lg-1">
+                    <div class="contact-widget">
+                        <div class="cw-item">
+                            <h5>고객센터</h5>
+                            <ul>
+                                <li>+82 (603)535-4592</li>
+                                <li>+82 (603)535-4556</li>
+                            </ul>
+                        </div>
+                        <div class="cw-item">
+                            <h5>E-mail</h5>
+                            <ul>
+                                <li>contact@gurada.com</li>              
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 		<!-- Footer Section Begin -->
 		<jsp:include page="footer.jsp"/>		   
 		<!-- Footer Section End -->
