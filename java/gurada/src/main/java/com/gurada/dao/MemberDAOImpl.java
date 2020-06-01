@@ -7,15 +7,15 @@ import org.springframework.stereotype.Repository;
 import com.gurada.domain.MemberVO;
 import com.gurada.infa.MemberDAO;
 
-@Repository
+@Repository("MemberDAO")
 public class MemberDAOImpl implements MemberDAO {
 	@Autowired
 	private SqlSessionTemplate mybatis;
 
 	@Override
-	public int memberSignUp(MemberVO vo) {
+	public int memberInsert(MemberVO vo) {
 		
-		return mybatis.insert("",vo);
+		return mybatis.insert("com.gurada.MemberMapper.signUp",vo);
 	}
 
 	@Override

@@ -35,32 +35,32 @@
         <h2>회원가입</h2>
         <br>
         &nbsp;<sup>필수 항목*</sup>
-        <form action="">
+        <form action="/basic/signup.do" method="post">
             <table class="signup-input">
                 <tr>
-                    <td><input type="text" name="" placeholder="이름(성 제외)*" size="25"></td>
-                    <td><input type="text" placeholder="성*" size="25"></td>
+                    <td><input type="text" name="firstName" placeholder="이름(성 제외)*" value="test" size="25"></td>
+                    <td><input type="text" name="lastName" placeholder="성*" value="test" size="25"></td>
                 </tr>
                 <tr>
                     <td>&nbsp;</td>
                 </tr> 
                 <tr>
-                    <td><input type="password" placeholder="비밀번호*" size="25"></td>
-                    <td><input type="password" placeholder="비밀번호 확인*" size="25"></td>
+                    <td><input type="password" name="password" placeholder="비밀번호*" value="test" size="25"></td>
+                    <td><input type="password" placeholder="비밀번호 확인*" value="test" size="25"></td>
                 </tr>
                 <tr>
                     <td><sup>비밀번호는 8~16자여야 합니다</sup>&nbsp;</td>
                 </tr>
                 <tr>
-                    <td colspan="2"><input type="email" placeholder="이메일 *" size="40"></td>
+                    <td colspan="2"><input type="email" name="email" placeholder="이메일 *" value="test@test.com" size="40"></td>
                 </tr>
                 <tr>
                     <td><sup>계정으로 사용할 이메일을 등록하세요</sup>&nbsp;</td>
                     <td><sub>성별</sub></td>
                 </tr>
                 <tr>
-                    <td><input type="tel" size="25" placeholder="전화번호 (-없이)"></td>
-                    <td><input type="radio" name="gender"> 남 <input type="radio" name="gender"> 여 </td>
+                    <td><input type="tel" size="25" name="phoneNumber" value="test" placeholder="전화번호 (-없이)"></td>
+                    <td><input type="radio" name="gender" value="남자"> 남 <input type="radio" name="gender" value="여자"> 여 </td>
                 </tr>
             </table>
             <div class="signup-check">
@@ -86,7 +86,7 @@
             </div>
             <br>
             <div class="signup-btn">
-                <button class="btn btn-success">회원가입</button>
+                <input type="submit" value="회원가" class="btn btn-success">
                 <button class="btn btn-dark">취소</button>
             </div>
         </form>
