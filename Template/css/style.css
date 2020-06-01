@@ -2623,7 +2623,7 @@ ol {
     top: 155px;
 }
 .sinsang-jh{
-    position: fixed;
+    position: absolute;
     left : 1350px;
     top : 608px;
     color: #1e1e1e;

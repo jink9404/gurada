@@ -39,7 +39,7 @@
                             <table  class='contact-form2'>
                                 <tr class='tr'>
                                     <td>
-                                       	 상품명
+                                                                                   상품명
                                     </td>
                                     <td class='td1' colspan="2">
                                         <input type="text"/>
@@ -55,7 +55,7 @@
                                 </tr>
                                 <tr class='tr'>
                                     <td>
-                                        	재고현황
+                                        재고현황
                                     </td>
                                     <td >
                                         <table class="worhtable-jh">
@@ -110,15 +110,15 @@
                 </div>
 
                 <!-- Js Plugins -->
-                <script src="js/jquery-3.3.1.min.js"></script>
-                <script src="js/bootstrap.min.js"></script>
-                <script src="js/jquery.magnific-popup.min.js"></script>
-                <script src="js/jquery.slicknav.js"></script>
-                <script src="js/owl.carousel.min.js"></script>
-                <script src="js/jquery.nice-select.min.js"></script>
-                <script src="js/mixitup.min.js"></script>
-                <script src="js/main.js"></script>
-                <script src="js/test.js"></script>
+                <script src="./js/jquery-3.3.1.min.js"></script>
+                <script src="./js/bootstrap.min.js"></script>
+                <script src="./js/jquery.magnific-popup.min.js"></script>
+                <script src="./js/jquery.slicknav.js"></script>
+                <script src="./js/owl.carousel.min.js"></script>
+                <script src="./js/jquery.nice-select.min.js"></script>
+                <script src="./js/mixitup.min.js"></script>
+                <script src="./js/main.js"></script>
+                <script src="./js/test.js"></script>
                 </div>
             </div>
         </section>
