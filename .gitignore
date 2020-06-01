@@ -12,3 +12,4 @@
 *.~undo-tree
 /.metadata/
 /Servers/
+pom.properties
