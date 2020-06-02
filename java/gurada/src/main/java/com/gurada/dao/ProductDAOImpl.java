@@ -1,5 +1,7 @@
 package com.gurada.dao;
 
+import java.util.*;
+
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -15,18 +17,12 @@ public class ProductDAOImpl implements ProductDAO {
 	@Override
 	public void ProductInsert(ProductVO vo) {
 		mybatis.insert("com.gurada.ProductMapper.insert",vo);
-		
 	}
 
+	
 	@Override
-	public void ProductSelect(ProductVO vo) {
-		//mybatis.select("com.gurada.ProductMapper.select", vo);
+	public List<ProductVO> ProductSelect(ProductVO vo) {
+		return mybatis.selectOne("com.gurada.ProductMapper.select", vo);
 		
 	}
-	
-	
 }
-
-	
-	
-	

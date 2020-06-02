@@ -42,7 +42,7 @@
                                                                                    상품명
                                     </td>
                                     <td class='td1' colspan="2">
-                                        <input type="text"/>
+                                        <input type="text" readonly/>
                                     </td>
                                 </tr>
                                 <tr class='tr'>
@@ -50,7 +50,7 @@
                                         Price
                                     </td>
                                     <td class='td1' colspan="2">
-                                        <input type="text"/>
+                                        <input type="text"/ readonly>
                                     </td>
                                 </tr>
                                 <tr class='tr'>
@@ -68,12 +68,12 @@
                                                 <td>Free</td>
                                             </tr>
                                             <tr>
-                                                <td><input type="text" disabled value="-"/></td>
-                                                <td><input type="text" disabled value="-"/></td>
-                                                <td><input type="text" disabled value="-"/></td>
-                                                <td><input type="text" disabled value="-"/></td>
-                                                <td><input type="text" disabled value="-"/></td>
-                                                <td><input type="text" disabled value="-"/></td>
+                                                <td><input type="text" disabled /></td>
+                                                <td><input type="text" disabled /></td>
+                                                <td><input type="text" disabled /></td>
+                                                <td><input type="text" disabled /></td>
+                                                <td><input type="text" disabled /></td>
+                                                <td><input type="text" disabled /></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -87,8 +87,8 @@
                             	<tr>
                                 	<td>
                                         <select name="gender">
-                                        	<option>남자</option>
-                                        	<option>여자</option>>
+                                        	<option value="남자">남자</option>
+                                        	<option value="여자">여자</option>
                                         </select>
                                         <select name="category_id">
                                         	<option>슈트</option>
@@ -119,15 +119,6 @@
                 </div>
 
                 <!-- Js Plugins -->
-                <script src="./js/jquery-3.3.1.min.js"></script>
-                <script src="./js/bootstrap.min.js"></script>
-                <script src="./js/jquery.magnific-popup.min.js"></script>
-                <script src="./js/jquery.slicknav.js"></script>
-                <script src="./js/owl.carousel.min.js"></script>
-                <script src="./js/jquery.nice-select.min.js"></script>
-                <script src="./js/mixitup.min.js"></script>
-                <script src="./js/main.js"></script>
-                <script src="./js/test.js"></script>
                 </div>
             </div>
         </section>

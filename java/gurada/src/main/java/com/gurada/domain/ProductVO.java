@@ -1,45 +1,48 @@
 package com.gurada.domain;
 
+import java.io.File;
+import java.io.IOException;
+
+import org.springframework.web.multipart.MultipartFile;
+
 public class ProductVO {
 	private String name;
 	private int price;
-	private int quantity;
-	private String receipt_date;
-	private String category_id;
+	private int quantity; 
+	private String receiptdate;
+	private String categoryid;
 	private String gender;
-	private String p_size;
+	private String psize;
 	private String color;
-	private String p_detail;
-	private String category_id1;
-	private String profile_pt;
+	private String pdetail;
 	private String productid;
+	private String pip;
+	private String pfname;
+	private long pfsize;
+	MultipartFile file;
 	
+	public MultipartFile getFile() {
+		return file;
+	}
+	public void setFile(MultipartFile file) {
+		this.file = file;
+		
+		if(!file.isEmpty()) {
+			//MultipartFile에서 파일명과 크기만 얻어오기 >>DB에 입력하기 위해서
+			this.pfname = file.getOriginalFilename(); //파일명
+			this.pfsize = file.getSize(); //파일사이즈
+
+			//실제파일로 저장하기
+			File f= new File("C:\\Users\\Canon\\Documents\\GitHub\\gurada\\java\\gurada\\src\\main\\webapp\\resources\\upload\\" + pfname); //괄호 안에 진짜경로
+			try {
+				file.transferTo(f);
+			} catch (IOException e) {
+				System.out.println("파일전송실패" + e.getMessage());
+				e.printStackTrace();
+			}
+		}
+	}
 	
-	
-	public String getProductid() {
-		return productid;
-	}
-	public void setProductid(String productid) {
-		this.productid = productid;
-	}
-	public String getProfile_pt() {
-		return profile_pt;
-	}
-	public void setProfile_pt(String profile_pt) {
-		this.profile_pt = profile_pt;
-	}
-	public String getCategory_id1() {
-		return category_id1;
-	}
-	public void setCategory_id1(String category_id1) {
-		this.category_id1 = category_id1;
-	}
-	public String getP_detail() {
-		return p_detail;
-	}
-	public void setP_detail(String p_detail) {
-		this.p_detail = p_detail;
-	}
 	public String getName() {
 		return name;
 	}
@@ -58,17 +61,17 @@ public class ProductVO {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-	public String getReceipt_date() {
-		return receipt_date;
+	public String getReceiptdate() {
+		return receiptdate;
 	}
-	public void setReceipt_date(String receipt_date) {
-		this.receipt_date = receipt_date;
+	public void setReceiptdate(String receiptdate) {
+		this.receiptdate = receiptdate;
 	}
-	public String getCategory_id() {
-		return category_id;
+	public String getCategoryid() {
+		return categoryid;
 	}
-	public void setCategory_id(String category_id) {
-		this.category_id = category_id;
+	public void setCategoryid(String categoryid) {
+		this.categoryid = categoryid;
 	}
 	public String getGender() {
 		return gender;
@@ -76,18 +79,43 @@ public class ProductVO {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	public String getP_size() {
-		return p_size;
+	public String getPsize() {
+		return psize;
 	}
-	public void setP_size(String p_size) {
-		this.p_size = p_size;
+	public void setPsize(String psize) {
+		this.psize = psize;
 	}
-	public String getColor() {
-		return color;
+	public String getPdetail() {
+		return pdetail;
 	}
-	public void setColor(String color) {
-		this.color = color;
+	public void setPdetail(String pdetail) {
+		this.pdetail = pdetail;
 	}
+	public String getProductid() {
+		return productid;
+	}
+	public void setProductid(String productid) {
+		this.productid = productid;
+	}
+	public String getPip() {
+		return pip;
+	}
+	public void setPip(String pip) {
+		this.pip = pip;
+	}
+	public String getPfname() {
+		return pfname;
+	}
+	public void setPfname(String pfname) {
+		this.pfname = pfname;
+	}
+	public long getPfsize() {
+		return pfsize;
+	}
+	public void setPfsize(long pfsize) {
+		this.pfsize = pfsize;
+	}
+	
 	
 	
 }

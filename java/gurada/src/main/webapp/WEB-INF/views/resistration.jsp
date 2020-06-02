@@ -49,7 +49,7 @@
 							신상품 등록<span>.</span>
 						</h2>
 						<hr />
-						<form method="post" action="resistration1.do">
+						<form method="post" action="resistration1.do" enctype="multipart/form-data">
 						<table class='contact-form3'>
 							<tr class='tr'>
 								<td>상품명</td>
@@ -76,40 +76,36 @@
                                     	<option value="남자">남자</option>
                                         <option value="여자">여자</option>
                                     </select>
-                                    <select name="category_id">
+                                    <select name="categoryid">
                                         <option>슈트</option>
                                         <option>아우터</option>
                                         <option>가방</option>
                                         <option>상의</option>
                                         <option>하의</option>
                                     </select>
-									</form>
 								</td>
 							</tr>
 							<tr class='tr'>
 								<td>사이즈</td>
 								<td>
-									XS<input type="checkbox" value="XS" name="p_size" />&nbsp&nbsp&nbsp
-									S<input type="checkbox" value="S" name="p_size" />&nbsp&nbsp&nbsp 
-									M<input type="checkbox" value="M" name="p_size" />&nbsp&nbsp&nbsp 
-									L<input type="checkbox" value="L" name="p_size" />&nbsp&nbsp&nbsp 
-									XL<input type="checkbox" value="XL" name="p_size" />
+									XS<input type="checkbox" value="XS" name="psize" />&nbsp&nbsp&nbsp
+									S<input type="checkbox" value="S" name="psize" />&nbsp&nbsp&nbsp 
+									M<input type="checkbox" value="M" name="psize" />&nbsp&nbsp&nbsp 
+									L<input type="checkbox" value="L" name="psize" />&nbsp&nbsp&nbsp 
+									XL<input type="checkbox" value="XL" name="psize" />
 								</td>
 							</tr>
 							<tr class="detail">
 								<td>상품 설명</td>
-								<td><textarea class="detail1" placeholder="detail" name="p_detail"></textarea>
+								<td><textarea class="detail1" placeholder="detail" name="pdetail"></textarea>
 								</td>
 							</tr>
 						</table>
-						<input type="file" name="profile_pt" id="profile_pt" onchange="previewImage(this,'View_area')">
-                     <div id='View_area'
-                        style='position: relative; width: 400px; height: 400px; color: black; border: 1px solid black; dispaly: inline;'>
-                     </div>
-                     <input type="submit" value="상품등록" /> 
+							<input type="file" maxlength="60" size="40" name='file'>
+                     		<input type="submit" value="상품등록" />
 						</form>
 					</div>
-					<br /> <br />
+					
 				</div>
 				</div>
 		</div>

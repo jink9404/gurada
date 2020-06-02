@@ -1,5 +1,7 @@
 package com.gurada.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,9 +18,8 @@ public class ResistrationServiceImpl implements ResistrationService {
 		dao.ProductInsert(vo);
 	}
 	@Override
-	public void productSelect(ProductVO vo) {
-		dao.ProductSelect(vo);
-		
+	public List<ProductVO> productSelect(ProductVO vo) {
+		return dao.ProductSelect(vo);
 	}
 
 }

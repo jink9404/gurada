@@ -1,10 +1,12 @@
 package com.gurada.infa;
 
+import java.util.List;
+
 import com.gurada.domain.ProductVO;
 
 public interface ResistrationService {
 	
 	void productInsert(ProductVO vo);
 	
-	void productSelect(ProductVO vo);
+	List<ProductVO> productSelect(ProductVO vo);
 }
