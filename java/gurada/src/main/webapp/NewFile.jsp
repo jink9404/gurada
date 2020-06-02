@@ -9,6 +9,7 @@
 </head>
 <body>
 <a href="header.do">header</a>
+
 <a href="bookinglist.do">book</a>
 <a href="buylist.do">buylist</a>
 <a href="categories.do">categories</a>
@@ -28,5 +29,6 @@
 <a href="product-registration.do">product-registration.jsp</a>
 <a href="reservation.do">reservation.jsp</a><br/>
 <a href="resistration.do">resistration.jsp</a>
+<a href="qna-getBoard.do">qna-getBoard.jsp</a>
 </body>
 </html>

@@ -30,19 +30,20 @@
 		<jsp:include page="header.jsp"/>
 		<!-- Page Add Section Begin -->
 	
-		   <section class="page-add">
+		    <section class="page-add">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4">
                     <div class="page-breadcrumb">
-                        <h2>문의글 작성<span>.</span></h2>
+                        <h2>문의 내용<span>.</span></h2>
                         
                     </div>
                 </div>  
             </div>
         </div>   
-    </section>
-    <a href="qna.do" class="sh-a-1">게시판 목록보기</a>
+        <br/><br/>
+    
+    
     <!-- Page Add Section End -->
 
     <!-- Contact Section Begin -->
@@ -52,20 +53,20 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
-                    <form action="saveBoard.do" class="contact-form">
+                    <form action="qna.do" class="contact-form">
                         <div class="row">
                             <div class="col-lg-6">
-                                <input type="text" placeholder="제목" name='title'>
+                                <input type="text" placeholder="제목" value='${board.title}' disabled>
                             </div>
                             <div class="col-lg-6">
-                                <input class="glyphicon glyphicon-user" type="text" placeholder="작성자" name='writter' >
+                                <input class="glyphicon glyphicon-user" type="text" placeholder="작성자" value='${board.writter}' disabled>
                             </div>
                             <div class="col-lg-12">
-                                <input type="text" placeholder="password" name='password'>
-                                <textarea placeholder="내용" name='contents'></textarea>
+                               
+                                <textarea placeholder="내용" disabled>${board.contents}</textarea>
                             </div>
                             <div class="col-lg-12 text-right" class="small-button">
-                                <button type="submit"  >등&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;록</button>
+                                <button type="submit"  >게시판 목록 가기</button>
                                
                             </div>
                         </div>
@@ -91,6 +92,7 @@
             </div>
         </div>
     </div>
+   </section>
 		<!-- Footer Section Begin -->
 		<jsp:include page="footer.jsp"/>		   
 		<!-- Footer Section End -->

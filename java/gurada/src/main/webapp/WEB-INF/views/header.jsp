@@ -7,7 +7,8 @@
 </head>
 <body>
 <script src="./resources/js/jquery-3.3.1.min.js"></script>
-<script src="./resources/js/login.js"></script>
+<script src="./resources/js/jquery.cookie"></script>
+<script src="./resources/js/mj.js"></script>
     <div id="preloder">
         <div class="loader"></div>
     </div>
@@ -35,15 +36,14 @@
                             <table>
                                 <tr>
                                     <td>E_MAIL</td>
-                                    <td colspan="2"><input type="text" value="test" id="email" name="email" placeholder="   email" size="30"/></td>
+                                    <td colspan="2"><input type="text" value="test@naver.com" id="email" name="email" placeholder="   email" size="30"/></td>
                                 </tr>
                                 <tr>
                                     <td>PASSWORD</td>
-                                    <td colspan="2"><input type="password" value="test" id="password" name="password" placeholder="   PW" size="30"/></td>
+                                    <td colspan="2"><input type="password" value="test" id="login_password" name="password" placeholder="   PW" size="30"/></td>
                                 </tr>
                                 <tr>
                                     <td colspan="2">
-                                        <span><input type="checkbox"/> e-mail 저장하기</span>
                                         <span class="login-btn"><input class="btn btn-success" type="submit" value="Log-In"/></span>
                                     </td>
                                 </tr>
@@ -77,23 +77,23 @@
             
             <div class="inner-header">
                 <div class="logo">
-                    <a href=""><img src="./resources/img/logo.png" alt=""/></a>
+                    <a href="/basic/index.jsp"><img src="./resources/img/logo.png" alt=""/></a>
                 </div>
                 <div class="header-right">
-                    <a><img src="./resources/img/icons/search.png" alt="" class="search-trigger"/></a>
+                    <a><img src="./resources/img/icons/search.png" alt="" class="search-trigger"/></a>&nbsp;&nbsp;
                     <c:if test="${not empty sessionScope.UserID }">
-	                    <a href="#">
+	                    <a href="my-page.do">
 	                    	<img src="./resources/img/icons/man.png" alt=""/>
-	                    </a>
+	                    </a>&nbsp;&nbsp;&nbsp;&nbsp;
 	                    <a href="#">
 	                        <img src="./resources/img/icons/bag.png" alt=""/>
 	                        <span>1</span>
-	                    </a>
+	                    </a>&nbsp;&nbsp;&nbsp;&nbsp;
                     </c:if>
                 </div>
                 <div class="user-access">
                 	<c:if test="${empty sessionScope.UserID }">
-	                    <a href="#">회원가입</a> / 
+	                    <a href="signup-form.do">회원가입</a> / 
 	                    <span id="login" class="in">로그인</span>
 	                </c:if>
 	                <c:if test="${not empty sessionScope.UserID }">
@@ -103,7 +103,7 @@
                 </div>
                 <nav class="main-menu mobile-menu">
                     <ul>
-                        <li><a class="active" href="#">홈</a></li>
+                        <li><a class="active" href="/basic/index.jsp">홈</a></li>
                         <li><a href="#">남자</a>    
                             <ul class="sub-menu">
                                 <li><a href="#">수트</a></li>

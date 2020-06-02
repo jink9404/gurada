@@ -1,5 +1,7 @@
 ﻿package com.gurada.basic;
 
+import java.util.regex.Pattern;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,19 +22,14 @@ public class MemberController {
 	private MemberService service;
 	
 	@RequestMapping("/signup.do")
-	public ModelAndView signup(MemberVO vo) {
-		ModelAndView mv = new ModelAndView();
+	public String signup(MemberVO vo) {
 		int result = service.userSignUp(vo);
-		mv.addObject("result", result);
-		String message = vo.getFirstName()+"님 가입을 축하드립니다.";
+		
+		String message = vo.getName()+"님 가입을 축하드립니다.";
 		if (result==0) {
-			mv.setViewName("505");
-			message = "알 수 없는 에러가 발생하였습니다.";
+			System.out.println("error");
 		}
-		
-		mv.setViewName(null);
-		
-		return mv;
+		return "redirect:/index.jsp";
 	}
 	
 
@@ -45,9 +42,9 @@ public class MemberController {
 		new_vo =  service.userSignIn(vo);
 		String result ="";
 		if(new_vo != null ) {
-			if(new_vo.getFirstName() != null)
-				result = "<span class=\"in\">"+new_vo.getFirstName()+" 님 환영합니다.";
-				session.setAttribute("UserID", new_vo.getFirstName());
+			if(new_vo.getName() != null)
+				result = "<span class=\"in\">"+new_vo.getName()+" 님 환영합니다.";
+				session.setAttribute("UserID", new_vo.getName());
 				session.setAttribute("UserIDInfo", new_vo);
 		}
 		return result;
@@ -58,6 +55,24 @@ public class MemberController {
 		session.removeAttribute("UserID");
 		session.removeAttribute("UserIDInfo");
 
+	}
+	
+	@RequestMapping(value = "/updateMember.do")
+	public String updateMember(MemberVO vo,HttpSession session) {
+		int result = service.userUpdate(vo);
+		session.setAttribute("UserIDInfo", service.userSignIn(vo));
+		return "update_member";
+	}
+	
+	@ResponseBody
+	@RequestMapping(value = "/checkEmail.do",produces = "application/text; charset=utf-8")
+	public String checkEmail(MemberVO vo) {
+		String result = "사용가능한 이메일입니다.";
+		MemberVO checkvo= service.checkEmail(vo);
+		if(checkvo != null) {
+			result = "중복된 이메일입니다";
+		}
+		return result;
 	}
 }
 	

@@ -10,6 +10,8 @@
  	<typeAliases>
  		<typeAlias alias="member" type="com.gurada.domain.MemberVO" />
  		<typeAlias alias="product" type="com.gurada.domain.ProductVO"/>
+ 		<typeAlias alias="board" type="com.gurada.domain.BoardVO"/>
+ 		<typeAlias alias="store" type="com.gurada.domain.StoreVO"/>
  	</typeAliases>
  	
 

@@ -1,6 +1,6 @@
-CREATE TABLE store(
+﻿CREATE TABLE store(
             store_id        VARCHAR2(15)                ,
-            location        VARCHAR2(10)    NOT NULL    ,      
+            location        VARCHAR2(30)    NOT NULL    ,      
             post_code       VARCHAR2(6)     NOT NULL    ,
             tel             VARCHAR2(13)    NOT NULL    ,
             name            VARCHAR2(100)   NOT NULL    ,
@@ -12,8 +12,7 @@ CREATE TABLE store(
 
 CREATE TABLE booking(
             booking_id      VARCHAR2(15)                ,
-            first_name      VARCHAR2(15)    NOT NULL    ,
-            last_name       VARCHAR2(15)    NOT NULL    ,
+            full_name      VARCHAR2(15)    NOT NULL    ,
             store_id        VARCHAR2(15)    NOT NULL    ,
             booking_date    date                        ,
             phone_number    VARCHAR2(13)    NOT NULL    ,
@@ -26,9 +25,9 @@ CREATE TABLE Member(
             member_no       VARCHAR2(15)                    ,
             password        VARCHAR2(64)    NOT NULL        ,
             email           VARCHAR2(50)    NOT NULL        ,
-            first_name      VARCHAR2(15)    NOT NULL        ,
-            last_name       VARCHAR2(15)    NOT NULL        ,
-            address         VARCHAR2(300)                   ,
+            name		VARCHAR2(15)    NOT NULL        ,
+            address1       VARCHAR2(300)    				,
+            address2         VARCHAR2(300)                   ,
             phone_number    VARCHAR2(13)    NOT NULL        ,
             post_code       VARCHAR2(6)                     ,
             signup_date     date            DEFAULT sysdate ,
@@ -110,6 +109,7 @@ CREATE TABLE QnA(
             written_date    DATE                DEFAULT SYSDATE ,
             contents        VARCHAR2(3000)                      ,
             member_no       VARCHAR2(15)                        ,
+	    title	    VARCHAR2(50)
             CONSTRAINT  pk_QnA_no               PRIMARY KEY (qna_no),
             CONSTRAINT  fk_QnA_member_no        FOREIGN KEY (member_no)
             REFERENCES  member(member_no)
@@ -150,5 +150,23 @@ INCREMENT   BY      1
 START       WITH    0
 MINVALUE            0;
 
+CREATE  SEQUENCE    seq_qna_no
+INCREMENT   BY      1
+START       WITH    0
+MINVALUE            0;
+
+CREATE  SEQUENCE    seq_store_no
+INCREMENT   BY      1
+START       WITH    0
+MINVALUE            0;
+
+
 
 ALTER table product modify (gender varchar2(6));
+
+==========sh store 정보=================
+
+insert into store (store_id,location,post_code,tel,name,Latitude,longitude)
+values (seq_store_no.nextval,'서울특별시 강남구 압구정로','06010','02-3442-1830','프라다 청담점',37.526508,127.046301);
+
+==========sh store 정보=================

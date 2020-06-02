@@ -6,17 +6,26 @@
 	<insert id="signUp" parameterType="member">
 		INSERT	INTO	member(
 								MEMBER_NO,		PASSWORD,		EMAIL,
-								FIRST_NAME,		LAST_NAME,		ADDRESS,
-								PHONE_NUMBER,	POST_CODE,		SIGNUP_DATE,
-								gender,			LAST_IP
+								NAME,			
+								PHONE_NUMBER,		SIGNUP_DATE,
+								gender
 						) 
 						values(
 								seq_member_no.nextval	,#{password}	,#{email},
-								#{firstName}			,#{lastName}	,null,
-								#{phoneNumber}			,null			,SYSDATE,
-								#{gender}				,null				
+								#{name}					,
+								#{phoneNumber}					,SYSDATE,
+								#{gender}						
 						)
 	</insert>
-
-
+	<select id="selectMember" parameterType="member" resultType="member">
+		SELECT * FROM member WHERE EMAIL = #{email}
+		<if test="password!=null">
+		AND PASSWORD = #{password}
+		</if>
+	</select>
+	<update id="updateMember" parameterType="member">
+		UPDATE member 
+		SET PASSWORD = #{password},GENDER=#{gender},post_code=#{postCode}, PHONE_NUMBER=#{phoneNumber}, ADDRESS1 = #{address1}, ADDRESS2 = #{address2} 
+		WHERE EMAIL=#{email}
+	</update>
 </mapper>

@@ -11,4 +11,5 @@ public interface MemberDAO {
 	//로그인을 위한 DB에서 회원정보 가져오기
 	public abstract MemberVO memberSelect(MemberVO vo);
 	
+	public abstract int memberUpdate(MemberVO vo);
 }
