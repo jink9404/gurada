@@ -9,13 +9,13 @@ public class ProductVO {
 	private String name;
 	private int price;
 	private int quantity; 
-	private String receiptdate;
-	private String categoryid;
+	private String receiptDate;
+	private String categoryId;
 	private String gender;
-	private String psize;
+	private String pSize;
 	private String color;
-	private String pdetail;
-	private String productid;
+	private String pDetail;
+	private String productId;
 	private String pip;
 	private String pfname;
 	private long pfsize;
@@ -42,7 +42,6 @@ public class ProductVO {
 			}
 		}
 	}
-	
 	public String getName() {
 		return name;
 	}
@@ -61,17 +60,17 @@ public class ProductVO {
 	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
-	public String getReceiptdate() {
-		return receiptdate;
+	public String getReceiptDate() {
+		return receiptDate;
 	}
-	public void setReceiptdate(String receiptdate) {
-		this.receiptdate = receiptdate;
+	public void setReceiptDate(String receiptDate) {
+		this.receiptDate = receiptDate;
 	}
-	public String getCategoryid() {
-		return categoryid;
+	public String getCategoryId() {
+		return categoryId;
 	}
-	public void setCategoryid(String categoryid) {
-		this.categoryid = categoryid;
+	public void setCategoryId(String categoryId) {
+		this.categoryId = categoryId;
 	}
 	public String getGender() {
 		return gender;
@@ -79,23 +78,29 @@ public class ProductVO {
 	public void setGender(String gender) {
 		this.gender = gender;
 	}
-	public String getPsize() {
-		return psize;
+	public String getpSize() {
+		return pSize;
 	}
-	public void setPsize(String psize) {
-		this.psize = psize;
+	public void setpSize(String pSize) {
+		this.pSize = pSize;
 	}
-	public String getPdetail() {
-		return pdetail;
+	public String getColor() {
+		return color;
 	}
-	public void setPdetail(String pdetail) {
-		this.pdetail = pdetail;
+	public void setColor(String color) {
+		this.color = color;
 	}
-	public String getProductid() {
-		return productid;
+	public String getPDetail() {
+		return pDetail;
 	}
-	public void setProductid(String productid) {
-		this.productid = productid;
+	public void setPDetail(String pDetail) {
+		this.pDetail = pDetail;
+	}
+	public String getProductId() {
+		return productId;
+	}
+	public void setProductId(String productId) {
+		this.productId = productId;
 	}
 	public String getPip() {
 		return pip;
@@ -115,6 +120,8 @@ public class ProductVO {
 	public void setPfsize(long pfsize) {
 		this.pfsize = pfsize;
 	}
+	
+	
 	
 	
 	

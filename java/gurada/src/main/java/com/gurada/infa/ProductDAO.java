@@ -8,6 +8,6 @@ public interface ProductDAO {
 	//상품 등록
 	public void ProductInsert(ProductVO vo);
 	//상품 목록 검색
-	public List<ProductVO> ProductSelect(ProductVO vo);
+	public ProductVO ProductSelect(ProductVO vo);
 } 
 	

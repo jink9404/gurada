@@ -7,17 +7,17 @@
 	<insert id="insert" parameterType="product">
 		Insert into 	product	(product_id, name, p_size, price, 
 								 detail, gender, category_id,
-								 receipt_date, quantity
+								 receipt_date, quantity , pfname ,pfsize
 								 )
-		 				values (seq_productid_no.nextval, #{name}, #{psize},
-		 				 		#{price}, #{pdetail}, #{gender},
-		 				 		#{categoryid}, sysdate, #{quantity}
+		 				values (seq_productid_no.nextval, #{name}, #{pSize},
+		 				 		#{price}, #{pDetail}, #{gender},
+		 				 		#{categoryId}, sysdate, #{quantity} , #{pfname} , #{pfsize}
 		 				 		)
 	</insert>
 	
 	<select id="select" parameterType="product" resultType="product">
 		select name, price, p_size 
 		from product
-		where gender = #{gender} and category_id= #{category_id} and name=#{name}
+		where gender = #{gender} and category_id= #{categoryId} and name=#{name}
 	</select>
 </mapper> 

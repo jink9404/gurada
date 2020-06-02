@@ -76,7 +76,7 @@
                                     	<option value="남자">남자</option>
                                         <option value="여자">여자</option>
                                     </select>
-                                    <select name="categoryid">
+                                    <select name="categoryId">
                                         <option>슈트</option>
                                         <option>아우터</option>
                                         <option>가방</option>
@@ -88,16 +88,16 @@
 							<tr class='tr'>
 								<td>사이즈</td>
 								<td>
-									XS<input type="checkbox" value="XS" name="psize" />&nbsp&nbsp&nbsp
-									S<input type="checkbox" value="S" name="psize" />&nbsp&nbsp&nbsp 
-									M<input type="checkbox" value="M" name="psize" />&nbsp&nbsp&nbsp 
-									L<input type="checkbox" value="L" name="psize" />&nbsp&nbsp&nbsp 
-									XL<input type="checkbox" value="XL" name="psize" />
+									XS<input type="checkbox" value="XS" name="pSize" />&nbsp&nbsp&nbsp
+									S<input type="checkbox" value="S" name="pSize" />&nbsp&nbsp&nbsp 
+									M<input type="checkbox" value="M" name="pSize" />&nbsp&nbsp&nbsp 
+									L<input type="checkbox" value="L" name="pSize" />&nbsp&nbsp&nbsp 
+									XL<input type="checkbox" value="XL" name="pSize" />
 								</td>
 							</tr>
 							<tr class="detail">
 								<td>상품 설명</td>
-								<td><textarea class="detail1" placeholder="detail" name="pdetail"></textarea>
+								<td><textarea class="detail1" placeholder="detail" name="pDetail"></textarea>
 								</td>
 							</tr>
 						</table>

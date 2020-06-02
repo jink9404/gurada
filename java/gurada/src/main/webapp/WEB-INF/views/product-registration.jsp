@@ -42,7 +42,7 @@
                                                                                    상품명
                                     </td>
                                     <td class='td1' colspan="2">
-                                        <input type="text" readonly/>
+                                        <input type="text" readonly value="${prodlist.name}"/>
                                     </td>
                                 </tr>
                                 <tr class='tr'>
@@ -50,7 +50,7 @@
                                         Price
                                     </td>
                                     <td class='td1' colspan="2">
-                                        <input type="text"/ readonly>
+                                        <input type="text"/ readonly value="${prodlist.price}">
                                     </td>
                                 </tr>
                                 <tr class='tr'>
@@ -90,7 +90,7 @@
                                         	<option value="남자">남자</option>
                                         	<option value="여자">여자</option>
                                         </select>
-                                        <select name="category_id">
+                                        <select name="categoryId">
                                         	<option>슈트</option>
                                         	<option>아우터</option>
                                         	<option>가방</option>
@@ -111,7 +111,8 @@
                 </div>
                 <table class=pro_img-jh border="1">
                     <tr>
-                        <td><img src="img/product/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png"></td>
+<!--                         <td><img src="img/product/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png"></td> -->
+                        <td><img src="C:\Users\Canon\Documents\GitHub\gurada\java\gurada\src\main\webapp\resources\upload\ ${prodlist.pfname}"></td>
                     </tr>
                 </table>
                 <div>
