@@ -2623,7 +2623,7 @@ ol {
     top: 155px;
 }
 .sinsang-jh{
-    position: fixed;
+    position: absolute;
     left : 1350px;
     top : 608px;
     color: #1e1e1e;
@@ -2807,6 +2807,13 @@ left: 10%;
 .sh-bold{
     font-weight: bold;
     color: 
+}
+
+.video{
+	width:600px;
+	 height:440px;
+	margin:5% 22%;
+	
 }
     
 /*----------------------------------------*/

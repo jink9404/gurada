@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.gurada.domain.MemberVO;
+import com.gurada.domain.ProductVO;
 import com.gurada.infa.MemberService;
+import com.gurada.infa.ResistrationService;
 
 @Controller
 public class MemberController {
@@ -54,5 +56,6 @@ public class MemberController {
 	public void logout(HttpSession session) {
 		session.removeAttribute("UserID");
 		session.removeAttribute("UserIDInfo");
+
 	}
 }

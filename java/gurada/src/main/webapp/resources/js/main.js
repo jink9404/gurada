@@ -176,5 +176,6 @@
     $(".payment-method ul li label").on('click', function () {
         $(this).toggleClass('active');
     });
+    	
 
 })(jQuery);

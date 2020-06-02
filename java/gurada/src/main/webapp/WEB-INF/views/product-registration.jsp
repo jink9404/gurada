@@ -55,7 +55,7 @@
                                 </tr>
                                 <tr class='tr'>
                                     <td>
-                                        재고현황
+                                       	 재고현황
                                     </td>
                                     <td >
                                         <table class="worhtable-jh">
@@ -82,22 +82,31 @@
                         </div>
                     <br/><br/>
                     <div class='small-button-sh'>
-                        <table>
-                            <tr>
-                                <td>
-                                   <form name="form1" id="defaultForm" method="post">
-                                        <select class="sel" name="color" onchange="changeSubject(this.form)"></select>
-                                        <select class="sel" name="size" onchange="changeContents(this.form)"></select>
-                                    </form>
-                                </td>
-                                <td>
-                                    <input type="text"/>
-                                </td>
-                                <td>
-                                    <button>상품 검색</button>            
-                                </td>
-                            </tr>
-                        </table>
+                        <form action="prodselect.do" method="post">
+                        	<table>
+                            	<tr>
+                                	<td>
+                                        <select name="gender">
+                                        	<option>남자</option>
+                                        	<option>여자</option>>
+                                        </select>
+                                        <select name="category_id">
+                                        	<option>슈트</option>
+                                        	<option>아우터</option>
+                                        	<option>가방</option>
+                                        	<option>상의</option>
+                                        	<option>하의</option>
+                                        </select>
+                                	</td>
+                                	<td>
+                                   		<input type="text" name="name" placeholder="상품명으로 검색..."/>
+                                	</td>
+                                	<td>
+                                    	<input type="submit" value="상품 검색">            
+                                	</td>
+                            	</tr>
+                        	</table>
+                        </form>
                     </div>
                 </div>
                 <table class=pro_img-jh border="1">

@@ -9,7 +9,9 @@
 	<!-- Alias 설정 -->
  	<typeAliases>
  		<typeAlias alias="member" type="com.gurada.domain.MemberVO" />
+ 		<typeAlias alias="product" type="com.gurada.domain.ProductVO"/>
  	</typeAliases>
+ 	
 
 
 </configuration>
