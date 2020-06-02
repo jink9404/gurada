@@ -2571,6 +2571,15 @@ ol {
 	border-bottom: 2px solid #E7EBED;	
 	margin-bottom: 8px;	
 }
+.contact-form3 input {	
+	font-size: 15px;	
+	font-weight: 600;	
+	color: #838383;	
+	border: 0;	
+	padding-bottom: 10px;	
+	border-bottom: 2px solid #E7EBED;	
+	margin-bottom: 8px;	
+}
 .store-btn-jh{
     position: fixed;
     left : 800px;
