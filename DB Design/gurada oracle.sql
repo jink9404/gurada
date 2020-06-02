@@ -1,4 +1,4 @@
-CREATE TABLE store(
+﻿CREATE TABLE store(
             store_id        VARCHAR2(15)                ,
             location        VARCHAR2(10)    NOT NULL    ,      
             post_code       VARCHAR2(6)     NOT NULL    ,
@@ -12,8 +12,7 @@ CREATE TABLE store(
 
 CREATE TABLE booking(
             booking_id      VARCHAR2(15)                ,
-            first_name      VARCHAR2(15)    NOT NULL    ,
-            last_name       VARCHAR2(15)    NOT NULL    ,
+            full_name      VARCHAR2(15)    NOT NULL    ,
             store_id        VARCHAR2(15)    NOT NULL    ,
             booking_date    date                        ,
             phone_number    VARCHAR2(13)    NOT NULL    ,
@@ -26,9 +25,9 @@ CREATE TABLE Member(
             member_no       VARCHAR2(15)                    ,
             password        VARCHAR2(64)    NOT NULL        ,
             email           VARCHAR2(50)    NOT NULL        ,
-            first_name      VARCHAR2(15)    NOT NULL        ,
-            last_name       VARCHAR2(15)    NOT NULL        ,
-            address         VARCHAR2(300)                   ,
+            name		VARCHAR2(15)    NOT NULL        ,
+            address1       VARCHAR2(300)    				,
+            address2         VARCHAR2(300)                   ,
             phone_number    VARCHAR2(13)    NOT NULL        ,
             post_code       VARCHAR2(6)                     ,
             signup_date     date            DEFAULT sysdate ,
