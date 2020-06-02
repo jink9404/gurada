@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="BoardDAO">
+
+
+	<insert id="insertBoard" parameterType="board">
+	
+	insert into QNA(QNA_NO,WRITTER,PASSWORD,READ_COUNT,WRITTEN_DATE,CONTENTS,TITLE)
+	values(seq_qna_no.nextval, #{writter}, #{password} ,0,sysdate,#{contents},#{title} )
+	
+	</insert>
+
+	 <select id="getBoardList" resultType="board">
+		<![CDATA[
+		SELECT QNA_NO, WRITTER,TO_CHAR(WRITTEN_DATE, 'YYYY-MM-DD')as WRITTEN_DATE ,TITLE FROM qna ORDER BY QNA_NO DESC
+		]]>
+	</select>
+	
+	<!--
+	<update id="updateBoard"  parameterType="board">
+		<![CDATA[
+		UPDATE uploadtemp SET
+		b_title = #{b_title},
+		b_content = #{b_content}
+		WHERE b_id = #{b_id}
+		]]>
+	</update>
+	
+	<delete id="deleteBoard"  parameterType="board">
+		<![CDATA[
+		DELETE uploadtemp
+		WHERE b_id = #{b_id}
+		]]>
+	</delete>
+	
+	<select id="getBoard"  parameterType="board" resultType="board">
+		<![CDATA[
+		SELECT *
+		FROM uploadtemp
+		WHERE b_id = #{b_id}
+		]]>
+	</select>
+	
+ -->
+</mapper>

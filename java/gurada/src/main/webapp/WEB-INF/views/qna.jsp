@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -50,7 +51,7 @@
 						<br /> <br /> <br />
 						<div class="small-button">
 							<button>
-								<a href='#'>문의 하기</a>
+								<a href='qna-form.do'>문의 하기</a>
 							</button>
 						</div>
 						<br />
@@ -61,38 +62,23 @@
 									<table>
 										<thead>
 											<tr>
-												<th width='200'>작성일</th>
+												<th width='200'>게시번호</th>
+												<th width='250'>작성일</th>
 												<th width='200'>작성자</th>
 												<th width='900'>제목</th>
 											</tr>
 										</thead>
 
 										<tbody>
+										<c:forEach items="${boardList}" var="board">
 											<tr>
-												<td>2020/05/20</td>
-												<td>문소희</td>
-												<td><a href="#" class='a-href'>환불문의드립니다</a></td>
+												<td>${board.qnaNo}</td>
+												<td>${board.writtenDate}</td>
+												<td>${board.writter}</td>
+												<td><a href="getBoard.do" class='a-href'>${board.title}</a></td>
 											</tr>
-											<tr>
-												<td>2020/05/20</td>
-												<td>문소희</td>
-												<td><a href="#" class='a-href'>환불문의드립니다</a></td>
-											</tr>
-											<tr>
-												<td>2020/05/20</td>
-												<td>문소희</td>
-												<td><a href="#" class='a-href'>환불문의드립니다</a></td>
-											</tr>
-											<tr>
-												<td>2020/05/20</td>
-												<td>문소희</td>
-												<td><a href="#" class='a-href'>환불문의드립니다</a></td>
-											</tr>
-											<tr>
-												<td>2020/05/20</td>
-												<td>문소희</td>
-												<td><a href="#" class='a-href'>환불문의드립니다</a></td>
-											</tr>
+											</c:forEach>
+											
 										</tbody>
 									</table>
 									<hr>
