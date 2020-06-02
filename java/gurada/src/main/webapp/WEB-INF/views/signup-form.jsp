@@ -87,13 +87,13 @@
 					<div class="col-sm-6 col-lg-6 mb-3">
 						<div class="checkout-address">
 
-							<form class="needs-validation" novalidate>
+							<form class="needs-validation" method="post" action="signup.do" novalidate>
 								<div class="row">
 									<div class="col-md-6 mb-3">
-										<label for="firstName">이름 *</label> <input type="text"
-											class="form-control" id="firstName" placeholder="" value=""
-											required> <br> <input type="radio" name="gender">
-										남성 <input type="radio" name="gender"> 여성
+										<label for="name">이름 *</label> <input type="text"
+											class="form-control" id="name" name="name" placeholder="" value=""
+											required> <br> <input type="radio" name="gender" value="남자">
+										남성 <input type="radio" name="gender" value="여자"> 여성
 
 									</div>
 
@@ -103,7 +103,7 @@
 								<div class="mb-3">
 									<label for="username">비밀번호 *</label>
 									<div class="input-group">
-										<input type="text" class="form-control" id="username"
+										<input type="password" name="password" class="form-control" id="username"
 											placeholder="" required>
 
 									</div>
@@ -111,20 +111,20 @@
 								<div class="mb-3">
 									<label for="username">비밀번호 확인 *</label>
 									<div class="input-group">
-										<input type="text" class="form-control" id="username"
+										<input type="password"  class="form-control" id="username"
 											placeholder="" required>
 
 									</div>
 								</div>
 								<div class="mb-3">
 									<label for="email">이메일*</label> <input type="email"
-										class="form-control" id="email" placeholder=""><sup>계정으로
+										class="form-control" name="email" id="email" placeholder=""><sup>계정으로
 										사용할 이메일을 등록하세요</sup>
 
 								</div>
 								<div class="mb-3">
 									<label for="address">전화번호(-없이) *</label> <input type="text"
-										class="form-control" id="address" placeholder="" required>
+										class="form-control" name="phoneNumber" placeholder="" required>
 
 								</div>
 

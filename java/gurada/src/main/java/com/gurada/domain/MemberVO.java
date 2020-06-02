@@ -4,22 +4,15 @@ public class MemberVO {
 	private String memberNo;
 	private String password;
 	private String email;
-	private String firstName;
-	private String lastName;
-	private String address;
+	private String name;
+	private String address1;
+	private String address2;
 	private String phoneNumber;
 	private String postCode;
 	private String signupDate;
 	private String secessionDate;
 	private String lastIp;
 	private	String gender;
-	
-	public String getGender() {
-		return gender;
-	}
-	public void setGender(String gender) {
-		this.gender = gender;
-	}
 	public String getMemberNo() {
 		return memberNo;
 	}
@@ -38,23 +31,23 @@ public class MemberVO {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public String getFirstName() {
-		return firstName;
+	public String getName() {
+		return name;
 	}
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
+	public void setName(String name) {
+		this.name = name;
 	}
-	public String getLastName() {
-		return lastName;
+	public String getAddress1() {
+		return address1;
 	}
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
+	public void setAddress1(String address1) {
+		this.address1 = address1;
 	}
-	public String getAddress() {
-		return address;
+	public String getAddress2() {
+		return address2;
 	}
-	public void setAddress(String address) {
-		this.address = address;
+	public void setAddress2(String address2) {
+		this.address2 = address2;
 	}
 	public String getPhoneNumber() {
 		return phoneNumber;
@@ -86,4 +79,13 @@ public class MemberVO {
 	public void setLastIp(String lastIp) {
 		this.lastIp = lastIp;
 	}
+	public String getGender() {
+		return gender;
+	}
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	
+	
+	
 }

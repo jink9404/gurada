@@ -45,38 +45,51 @@
                 <div class="col-sm-6 col-lg-6 mb-3">
                     <div class="checkout-address">
                        
-                        <form class="needs-validation" novalidate>
+                        <form class="needs-validation" action="updateMember.do" novalidate>
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="firstName">이름 *</label>
-                                    <input type="text" class="form-control" id="firstName" placeholder="" value="${sessionScope.UserIDInfo.firstName }" required disabled>
+                                    <input type="text" class="form-control"  placeholder="" value="${sessionScope.UserIDInfo.name }" required disabled>
                                 </div>
+                            </div>
+                            <div >
+                            	<label for="email">성별*</label>
+                            	<c:if test="${sessionScope.UserIDInfo.gender eq '남자' }">
+	                                <input type="radio"  value="남자" name="gender" checked>남성
+	                                <input type="radio"  value="여자" name="gender">여성                                
+                                </c:if>
+                                <c:if test="${sessionScope.UserIDInfo.gender eq '여자' }">
+	                                <input type="radio"  value="남자" name="gender">남성
+	                                <input type="radio"  value="여자" name="gender" checked>여성                                
+                                </c:if>
                             </div>
                             <div class="mb-3">
                                 <label for="email">이메일*</label>
-                                <input type="email" class="form-control" id="email" placeholder="" value="${sessionScope.UserIDInfo.email }" disabled>
-                            </div>  
+                                <input type="hidden" name="email" value="${sessionScope.UserIDInfo.email }">
+                                <input type="email" class="form-control"  placeholder="" value="${sessionScope.UserIDInfo.email }" disabled>
+                            </div>
+                           
                             <div class="mb-3">
                                 <label for="username">새비밀번호 *</label><sup>비밀번호는 8~16자여야 합니다</sup>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="username" placeholder="" required>
+                                    <input type="password" name="password" class="form-control"  placeholder="" required>
                                     
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <label for="username">새 비밀번호 확인 *</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="username" placeholder="" required>
+                                    <input type="password" class="form-control"  placeholder="" required>
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <label for="address">전화번호(-없이) *</label>
-                                <input type="text" class="form-control" id="address" placeholder="" required>
+                                <input type="text" name="phoneNumber" class="form-control" value="${sessionScope.UserIDInfo.phoneNumber }" placeholder="" required>
                             </div>
                             <div class="mb-3">
                             <label for="address">주소 *</label>
-                            	<input type="text" class="form-control">
-                            	<input type="text" class="form-control">
+                            	<input type="text" name="address1" class="form-control">
+                            	<input type="text" name="address2" class="form-control">
                             </div>
                     		<input class="btn btn-info" type="button" value="우편번호 검색">
                             <hr class="mb-4">
@@ -98,7 +111,7 @@
 		             	   </table>
             			    <br><br>
 				            <div class="signup-btn">
-				                <button class="btn btn-success">수정</button>
+				                <input type="submit" value="수정" class="btn btn-success"/>
 				                <button class="btn btn-dark">취소</button>
 				            </div>
                         </form>

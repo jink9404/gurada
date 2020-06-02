@@ -35,7 +35,7 @@
                             <table>
                                 <tr>
                                     <td>E_MAIL</td>
-                                    <td colspan="2"><input type="text" value="test" id="email" name="email" placeholder="   email" size="30"/></td>
+                                    <td colspan="2"><input type="text" value="test@naver.com" id="email" name="email" placeholder="   email" size="30"/></td>
                                 </tr>
                                 <tr>
                                     <td>PASSWORD</td>
@@ -80,15 +80,15 @@
                     <a href=""><img src="./resources/img/logo.png" alt=""/></a>
                 </div>
                 <div class="header-right">
-                    <a><img src="./resources/img/icons/search.png" alt="" class="search-trigger"/></a>
+                    <a><img src="./resources/img/icons/search.png" alt="" class="search-trigger"/></a>&nbsp;&nbsp;
                     <c:if test="${not empty sessionScope.UserID }">
-	                    <a href="#">
+	                    <a href="my-page.do">
 	                    	<img src="./resources/img/icons/man.png" alt=""/>
-	                    </a>
+	                    </a>&nbsp;&nbsp;&nbsp;&nbsp;
 	                    <a href="#">
 	                        <img src="./resources/img/icons/bag.png" alt=""/>
 	                        <span>1</span>
-	                    </a>
+	                    </a>&nbsp;&nbsp;&nbsp;&nbsp;
                     </c:if>
                 </div>
                 <div class="user-access">
@@ -103,7 +103,7 @@
                 </div>
                 <nav class="main-menu mobile-menu">
                     <ul>
-                        <li><a class="active" href="#">홈</a></li>
+                        <li><a class="active" href="/basic/index.jsp">홈</a></li>
                         <li><a href="#">남자</a>    
                             <ul class="sub-menu">
                                 <li><a href="#">수트</a></li>
