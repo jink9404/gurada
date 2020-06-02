@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gurada.ProductMapper">
+<!-- 	mybatis 자료형 int / hashmap / string 전부 소문자 -->
+	
+	<insert id="insert" parameterType="product">
+		Insert into product(product_id, name, p_size, price, detail, gender, category_id,
+		receipt_date, profile_pt, quantity)
+		 values(seq_productid_no.nextval, #{name}, #{p_size}, #{price}, #{p_detail}, #{gender}, #{category_id},
+		 sysdate, #{profile_pt}, #{quantity})
+	</insert>
+	
+</mapper>

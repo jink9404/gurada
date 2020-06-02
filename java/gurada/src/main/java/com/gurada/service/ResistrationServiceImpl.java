@@ -15,5 +15,10 @@ public class ResistrationServiceImpl implements ResistrationService {
 	public void productInsert(ProductVO vo) {
 		dao.ProductInsert(vo);
 	}
+	@Override
+	public void productSelect(ProductVO vo) {
+		dao.ProductSelect(vo);
+		
+	}
 
 }

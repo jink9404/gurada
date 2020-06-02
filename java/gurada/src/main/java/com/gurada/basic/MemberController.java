@@ -31,17 +31,6 @@ public class MemberController {
 		
 		return mv;
 	}
-	@Autowired
-	private ResistrationService service1;
 	
-	@RequestMapping("/resistration1.do") 
-	public String product_resistration(ProductVO vo) {
-		service1.productInsert(vo);
-		return "/resistration";
-	}
-	
-	@RequestMapping("/prodselect.do")
-	public void product_select() {
-		
-	}
 }
+	

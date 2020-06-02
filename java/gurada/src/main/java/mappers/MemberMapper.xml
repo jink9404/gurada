@@ -17,11 +17,5 @@
 								#{gender}				,null				
 						)
 	</insert>
-	<insert id="insert" parameterType="product">
-		Insert into product(product_id, name, p_size, price, detail, gender, category_id,
-		receipt_date, profile_pt, quantity)
-		 values(seq_productid_no.nextval, #{name}, #{p_size}, #{price}, #{p_detail}, #{gender}, #{category_id},
-		 sysdate, #{profile_pt}, #{quantity})
-	</insert>
-	
+
 </mapper>
