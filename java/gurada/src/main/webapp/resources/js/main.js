@@ -26,13 +26,7 @@
         }
     });
     
-    $("#login-header-up").click(function(){
-        $(".login-header").slideUp(500);
-    });
 
-    $("#login").click(function(){
-        $(".login-header").slideDown(500);
-    });
     
     /*------------------
         Background Set

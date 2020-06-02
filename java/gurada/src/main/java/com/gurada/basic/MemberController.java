@@ -58,7 +58,6 @@ public class MemberController {
 	@RequestMapping(value = "/updateMember.do")
 	public String updateMember(MemberVO vo,HttpSession session) {
 		int result = service.userUpdate(vo);
-		System.out.println(result);
 		session.setAttribute("UserIDInfo", service.userSignIn(vo));
 		return "update_member";
 	}
