@@ -26,7 +26,7 @@ public class MemberDAOImpl implements MemberDAO {
 
 	@Override
 	public MemberVO memberSelect(MemberVO vo) {
-		return null;
+		return mybatis.selectOne("com.gurada.MemberMapper.selectMember",vo);
 	}
 
 }

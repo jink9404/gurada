@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -30,6 +31,7 @@
     <!-- header -->
     <jsp:include page="header.jsp"/>
    	<!-- header end -->
+   	<c:if test="${not empty sessionScope.UserID }">
    <div class="cart-box-main">
         <div class="container">
             <div class="row new-account-login">
@@ -47,16 +49,13 @@
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="firstName">이름 *</label>
-                                    <input type="text" class="form-control" id="firstName" placeholder="" value="" required disabled>
-                                    
+                                    <input type="text" class="form-control" id="firstName" placeholder="" value="${sessionScope.UserIDInfo.firstName }" required disabled>
                                 </div>
                             </div>
-                               <div class="mb-3">
+                            <div class="mb-3">
                                 <label for="email">이메일*</label>
-                                <input type="email" class="form-control" id="email" placeholder="" disabled>
-                                
+                                <input type="email" class="form-control" id="email" placeholder="" value="${sessionScope.UserIDInfo.email }" disabled>
                             </div>  
-                            
                             <div class="mb-3">
                                 <label for="username">새비밀번호 *</label><sup>비밀번호는 8~16자여야 합니다</sup>
                                 <div class="input-group">
@@ -68,54 +67,51 @@
                                 <label for="username">새 비밀번호 확인 *</label>
                                 <div class="input-group">
                                     <input type="text" class="form-control" id="username" placeholder="" required>
-                                    
                                 </div>
                             </div>
-                           
                             <div class="mb-3">
                                 <label for="address">전화번호(-없이) *</label>
                                 <input type="text" class="form-control" id="address" placeholder="" required>
-                                
                             </div>
                             <div class="mb-3">
                             <label for="address">주소 *</label>
-                             <input type="text" class="form-control">
-                             <input type="text" class="form-control">
+                            	<input type="text" class="form-control">
+                            	<input type="text" class="form-control">
                             </div>
-                    <input class="btn btn-info" type="button" value="우편번호 검색">
-                           
-                            
-                                
+                    		<input class="btn btn-info" type="button" value="우편번호 검색">
                             <hr class="mb-4">
-                           
-                            
-                    <table>
-                        <tr>
-                            <td>마케팅(선택)</td>
-                        </tr>
-                        <tr>
-                            <td><input type="radio" name="marketting"><span>&nbsp;동의합니다.</span></td>
-                            <td><input type="radio" name="marketting" checked><span>&nbsp;동의하지 않습니다.</span></td>
-                        </tr>
-                        <tr>
-                            <td>프로파일링 (선택)</td>
-                        </tr>
-                        <tr>
-                            <td><input type="radio" name="profiling"><span>&nbsp;동의합니다</span></td>
-                            <td><input type="radio" name="profiling" checked><span>&nbsp;동의하지 않습니다.</span></td>
-                    </tr>
-                </table>
-                           <br><br>
-            <div class="signup-btn">
-                <button class="btn btn-success">수정</button>
-                <button class="btn btn-dark">취소</button>
-            </div>
+		                    <table>
+		                        <tr>
+		                            <td>마케팅(선택)</td>
+		                        </tr>
+		                        <tr>
+		                            <td><input type="radio" name="marketting"><span>&nbsp;동의합니다.</span></td>
+		                            <td><input type="radio" name="marketting" checked><span>&nbsp;동의하지 않습니다.</span></td>
+		                        </tr>
+		                        <tr>
+		                            <td>프로파일링 (선택)</td>
+		                        </tr>
+		                        <tr>
+		                            <td><input type="radio" name="profiling"><span>&nbsp;동의합니다</span></td>
+		                            <td><input type="radio" name="profiling" checked><span>&nbsp;동의하지 않습니다.</span></td>
+		                    	</tr>
+		             	   </table>
+            			    <br><br>
+				            <div class="signup-btn">
+				                <button class="btn btn-success">수정</button>
+				                <button class="btn btn-dark">취소</button>
+				            </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    </c:if>
+    <c:if test="${empty sessionScope.UserID }">
+    <h1>잘못된접</h1>
+    
+    </c:if>
     <br><br><br><br><br>
     <!-- Footer Section End -->
 	<jsp:include page="footer.jsp"/>

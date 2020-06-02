@@ -14,5 +14,9 @@ public class MemberServiceImpl implements MemberService {
 	public int userSignUp(MemberVO vo) {
 		return dao.memberInsert(vo);
 	}
+	
+	public MemberVO userSignIn(MemberVO vo) {
+		return dao.memberSelect(vo);
+	}
 
 }
