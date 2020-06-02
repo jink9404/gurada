@@ -25,7 +25,7 @@
 	</select>
 	<update id="updateMember" parameterType="member">
 		UPDATE member 
-		SET PASSWORD = #{password},GENDER=#{gender}, PHONE_NUMBER=#{phoneNumber}, ADDRESS1 = #{address1}, ADDRESS2 = #{address2} 
+		SET PASSWORD = #{password},GENDER=#{gender},post_code=#{postCode}, PHONE_NUMBER=#{phoneNumber}, ADDRESS1 = #{address1}, ADDRESS2 = #{address2} 
 		WHERE EMAIL=#{email}
 	</update>
 </mapper>

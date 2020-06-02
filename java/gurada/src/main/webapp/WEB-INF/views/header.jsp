@@ -7,7 +7,8 @@
 </head>
 <body>
 <script src="./resources/js/jquery-3.3.1.min.js"></script>
-<script src="./resources/js/login.js"></script>
+<script src="./resources/js/jquery.cookie"></script>
+<script src="./resources/js/mj.js"></script>
     <div id="preloder">
         <div class="loader"></div>
     </div>
@@ -39,11 +40,10 @@
                                 </tr>
                                 <tr>
                                     <td>PASSWORD</td>
-                                    <td colspan="2"><input type="password" value="test" id="password" name="password" placeholder="   PW" size="30"/></td>
+                                    <td colspan="2"><input type="password" value="test" id="login_password" name="password" placeholder="   PW" size="30"/></td>
                                 </tr>
                                 <tr>
                                     <td colspan="2">
-                                        <span><input type="checkbox"/> e-mail 저장하기</span>
                                         <span class="login-btn"><input class="btn btn-success" type="submit" value="Log-In"/></span>
                                     </td>
                                 </tr>
@@ -77,7 +77,7 @@
             
             <div class="inner-header">
                 <div class="logo">
-                    <a href=""><img src="./resources/img/logo.png" alt=""/></a>
+                    <a href="/basic/index.jsp"><img src="./resources/img/logo.png" alt=""/></a>
                 </div>
                 <div class="header-right">
                     <a><img src="./resources/img/icons/search.png" alt="" class="search-trigger"/></a>&nbsp;&nbsp;
@@ -93,7 +93,7 @@
                 </div>
                 <div class="user-access">
                 	<c:if test="${empty sessionScope.UserID }">
-	                    <a href="#">회원가입</a> / 
+	                    <a href="signup-form.do">회원가입</a> / 
 	                    <span id="login" class="in">로그인</span>
 	                </c:if>
 	                <c:if test="${not empty sessionScope.UserID }">

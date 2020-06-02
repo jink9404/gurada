@@ -1,5 +1,7 @@
 ﻿package com.gurada.basic;
 
+import java.util.regex.Pattern;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -58,9 +60,19 @@ public class MemberController {
 	@RequestMapping(value = "/updateMember.do")
 	public String updateMember(MemberVO vo,HttpSession session) {
 		int result = service.userUpdate(vo);
-		System.out.println(result);
 		session.setAttribute("UserIDInfo", service.userSignIn(vo));
 		return "update_member";
+	}
+	
+	@ResponseBody
+	@RequestMapping(value = "/checkEmail.do",produces = "application/text; charset=utf-8")
+	public String checkEmail(MemberVO vo) {
+		String result = "사용가능한 이메일입니다.";
+		MemberVO checkvo= service.checkEmail(vo);
+		if(checkvo != null) {
+			result = "중복된 이메일입니다";
+		}
+		return result;
 	}
 }
 	

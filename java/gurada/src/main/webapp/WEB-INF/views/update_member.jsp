@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="./resources/style/magnific-popup.css" type="text/css">
     <link rel="stylesheet" href="./resources/style/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="./resources/style/style.css" type="text/css">
+    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 </head>
 
 <body>
@@ -45,7 +46,7 @@
                 <div class="col-sm-6 col-lg-6 mb-3">
                     <div class="checkout-address">
                        
-                        <form class="needs-validation" action="updateMember.do" novalidate>
+                        <form class="needs-validation" action="updateMember.do" id="updateform" method="post">
                             <div class="row">
                                 <div class="col-md-6 mb-3">
                                     <label for="firstName">이름 *</label>
@@ -72,26 +73,40 @@
                             <div class="mb-3">
                                 <label for="username">새비밀번호 *</label><sup>비밀번호는 8~16자여야 합니다</sup>
                                 <div class="input-group">
-                                    <input type="password" name="password" class="form-control"  placeholder="" required>
+                                    <input type="password" name="password" id="update_password1" class="form-control"  placeholder="" pattern="[a-zA-Z0-9]{8,16}" title="영문자와 숫자만 가능합니다. 8~16자리" required>
+                                    
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="input-group" id="pass">
                                     
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <label for="username">새 비밀번호 확인 *</label>
                                 <div class="input-group">
-                                    <input type="password" class="form-control"  placeholder="" required>
+                                    <input type="password" class="form-control" id="update_password2"  placeholder="" required>
+                                    
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="input-group" id="passcheck">
+                                    
                                 </div>
                             </div>
                             <div class="mb-3">
                                 <label for="address">전화번호(-없이) *</label>
-                                <input type="text" name="phoneNumber" class="form-control" value="${sessionScope.UserIDInfo.phoneNumber }" placeholder="" required>
+                                <input type="text" name="phoneNumber" class="form-control" pattern="[0-9]{10,13}" title="숫자만 입력하세요." value="${sessionScope.UserIDInfo.phoneNumber }" placeholder="" required>
                             </div>
                             <div class="mb-3">
-                            <label for="address">주소 *</label>
-                            	<input type="text" name="address1" class="form-control">
-                            	<input type="text" name="address2" class="form-control">
+                            <label for="address">주소 </label>
+                            	<div class="col-md-6 mb-3">
+                            	<input type="text" id="updatepostcode" placeholder="우편번호" name="postCode" class="form-control" value="${sessionScope.UserIDInfo.postCode }" size="6"/>
+                            	</div>
+                            	<input type="text" id="updateaddress" placeholder="주소" name="address1" value="${sessionScope.UserIDInfo.address1 }" class="form-control">
+                            	<input type="text" id="updatedetailaddress" placeholder="상세주소" name="address2" value="${sessionScope.UserIDInfo.address2 }" class="form-control">
                             </div>
-                    		<input class="btn btn-info" type="button" value="우편번호 검색">
+                    		<input class="btn btn-info" id="findpostcode" type="button" value="우편번호 검색">
                             <hr class="mb-4">
 		                    <table>
 		                        <tr>
@@ -122,7 +137,7 @@
     </div>
     </c:if>
     <c:if test="${empty sessionScope.UserID }">
-    <h1>잘못된접</h1>
+    <h1>잘못된접근</h1>
     
     </c:if>
     <br><br><br><br><br>
