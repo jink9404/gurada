@@ -2,8 +2,10 @@
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="zxx">
-
+	
 <head>
+
+
 <meta charset="UTF-8">
 <meta name="description" content="Yoga Studio Template">
 <meta name="keywords" content="Yoga, unica, creative, html">
@@ -12,8 +14,9 @@
 <script type="text/javascript"
 	src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript">
+
 	function initialize() {
-		var mapLocation = new google.maps.LatLng('36.322473', '127.412501'); // 지도에서 가운데로 위치할 위도와 경도
+		var mapLocation = new google.maps.LatLng(document.cookie.match('(^|;) ?' + 'Latitude' + '=([^;]*)(;|$)'),document.cookie.match('(^|;) ?' + 'Longitude' + '=([^;]*)(;|$)') ); // 지도에서 가운데로 위치할 위도와 경도
 		var markLocation = new google.maps.LatLng('36.322473', '127.412501'); // 마커가 위치할 위도와 경도
 
 		var mapOptions = {
@@ -39,12 +42,10 @@
 			map : map,
 			icon : image, // 마커로 사용할 이미지(변수)
 			//             info: '말풍선 안에 들어갈 내용',
-			title : '서대전네거리역이지롱~' // 마커에 마우스 포인트를 갖다댔을 때 뜨는 타이틀
+			
 		});
 
-		var content = "이곳은 서대전네거리역이다! <br/> 지하철 타러 가자~"; // 말풍선 안에 들어갈 내용
-
-		// 마커를 클릭했을 때의 이벤트. 말풍선 뿅~
+		
 		var infowindow = new google.maps.InfoWindow({
 			content : content
 		});
@@ -55,6 +56,7 @@
 
 	}
 	google.maps.event.addDomListener(window, 'load', initialize);
+
 </script>
 
 <title>Violet | Template</title>
@@ -109,10 +111,10 @@
 		<div class="contact-section">
 			<div class="container">
 				<div class="col-lg-8">
-					<form action="#" class="contact-form">
+					<form action="find.do" class="contact-form">
 						<div class="row">
 							<div class="col-lg-6">
-								<input type="text" placeholder="주소, 매장입력..">
+								<input type="text" placeholder="주소, 매장입력.." name='location'>
 							</div>
 							<div>
 								<button type="submit">

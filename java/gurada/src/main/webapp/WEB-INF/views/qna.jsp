@@ -75,7 +75,7 @@
 												<td>${board.qnaNo}</td>
 												<td>${board.writtenDate}</td>
 												<td>${board.writter}</td>
-												<td><a href="getBoard.do" class='a-href'>${board.title}</a></td>
+												<td><a href="qna-getBoard.do?qnaNo=${board.qnaNo}" class='a-href'>${board.title}</a></td>
 											</tr>
 											</c:forEach>
 											

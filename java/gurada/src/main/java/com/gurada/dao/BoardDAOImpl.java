@@ -21,16 +21,7 @@ public class BoardDAOImpl implements BoardDAO{
 		mybatis.insert("BoardDAO.insertBoard", vo);
 	}
 
-	public void updateBoard(BoardVO vo) {
-		System.out.println("===> Mybatis updateBoard() 호출");
-		mybatis.update("BoardDAO.updateBoard", vo);
-	}
-
-	public void deleteBoard(BoardVO vo) {
-		System.out.println("===> Mybatis deleteBoard() 호출");
-		mybatis.delete("BoardDAO.deleteBoard", vo);
-	}
-
+	
 	public BoardVO getBoard(BoardVO vo) {
 		System.out.println("===> Mybatis getBoard() 호출");
 		return (BoardVO) mybatis.selectOne("BoardDAO.getBoard", vo);

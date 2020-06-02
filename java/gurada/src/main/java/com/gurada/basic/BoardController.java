@@ -14,44 +14,32 @@ import com.gurada.infa.BoardService;
 
 @Controller
 public class BoardController {
-	
+
 	@Autowired
 	private BoardService boardService;
 
+	// 문의 게시판 목록보기
+	@RequestMapping("/qna.do")
+	public void getBoardList(BoardVO vo, Model model) {
 
-	
-		// 글 목록 검색
-		@RequestMapping("/qna.do")
-		public void getBoardList(BoardVO vo, Model model) {
-			
-			model.addAttribute("boardList", boardService.getBoardList(vo));
-			// ViewResolver를 지정하지 않으면 아래처럼 페이지명 지정
-			// return "views/getBoardList.jsp"; // View 이름 리턴
-		}
-	
-		// 글 등록
-		@RequestMapping(value = "/saveBoard.do")
-		public String insertBoard(BoardVO vo) throws IOException {
-			boardService.insertBoard(vo);
-			return "redirect:/qna.do";
-		}
+		model.addAttribute("boardList", boardService.getBoardList(vo));
+		// ViewResolver를 지정하지 않으면 아래처럼 페이지명 지정
+		// return "views/getBoardList.jsp"; // View 이름 리턴
+	}
 
-		/*
-		 * // 글 수정
-		 * 
-		 * @RequestMapping("/updateBoard.do") public String
-		 * updateBoard(@ModelAttribute("board") BoardVO vo) {
-		 * boardService.updateBoard(vo); return "redirect:/getBoardList.do"; }
-		 * 
-		 * // 글 삭제
-		 * 
-		 * @RequestMapping("/deleteBoard.do") public String deleteBoard(BoardVO vo) {
-		 * boardService.deleteBoard(vo); return "redirect:/getBoardList.do"; }
-		 * 
-		 * // 글 상세 조회
-		 * 
-		 * @RequestMapping("/getBoard.do") public void getBoard(BoardVO vo, Model model)
-		 * { model.addAttribute("board", boardService.getBoard(vo)); // Model 정보 저장 }
-		 */
+	// 문의글 등록 하기
+	@RequestMapping(value = "/saveBoard.do")
+	public String insertBoard(BoardVO vo) throws IOException {
+		boardService.insertBoard(vo);
+		return "redirect:/qna.do";
+	}
+	
+	//문의 내용 보기
+	@RequestMapping("/qna-getBoard.do")
+	public void getBoard(BoardVO vo, Model model) {
+
+		model.addAttribute("board", boardService.getBoard(vo)); // Model 정보 저장 }
 
 	}
+
+}

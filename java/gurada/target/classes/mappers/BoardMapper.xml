@@ -17,30 +17,14 @@
 		]]>
 	</select>
 	
-	<!--
-	<update id="updateBoard"  parameterType="board">
-		<![CDATA[
-		UPDATE uploadtemp SET
-		b_title = #{b_title},
-		b_content = #{b_content}
-		WHERE b_id = #{b_id}
-		]]>
-	</update>
-	
-	<delete id="deleteBoard"  parameterType="board">
-		<![CDATA[
-		DELETE uploadtemp
-		WHERE b_id = #{b_id}
-		]]>
-	</delete>
 	
 	<select id="getBoard"  parameterType="board" resultType="board">
 		<![CDATA[
 		SELECT *
-		FROM uploadtemp
-		WHERE b_id = #{b_id}
+		FROM qna
+		WHERE QNA_NO = #{qnaNo}
 		]]>
 	</select>
 	
- -->
+ 
 </mapper>

@@ -20,14 +20,6 @@ public class BoardServiceImpl implements BoardService {
 		boardDAO.insertBoard(vo);
 	}
 
-	public void updateBoard(BoardVO vo) {
-		boardDAO.updateBoard(vo);
-	}
-
-	public void deleteBoard(BoardVO vo) {
-		boardDAO.deleteBoard(vo);
-	}
-
 	public BoardVO getBoard(BoardVO vo) {
 		return boardDAO.getBoard(vo);
 	}
