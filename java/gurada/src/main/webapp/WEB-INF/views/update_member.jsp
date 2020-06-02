@@ -137,7 +137,7 @@
     </div>
     </c:if>
     <c:if test="${empty sessionScope.UserID }">
-    <h1>잘못된접</h1>
+    <h1>잘못된접근</h1>
     
     </c:if>
     <br><br><br><br><br>

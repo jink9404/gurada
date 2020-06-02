@@ -93,7 +93,7 @@
                 </div>
                 <div class="user-access">
                 	<c:if test="${empty sessionScope.UserID }">
-	                    <a href="#">회원가입</a> / 
+	                    <a href="signup-form.do">회원가입</a> / 
 	                    <span id="login" class="in">로그인</span>
 	                </c:if>
 	                <c:if test="${not empty sessionScope.UserID }">

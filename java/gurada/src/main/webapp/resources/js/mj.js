@@ -95,6 +95,66 @@ $(function(){
         execDaumPostcode();
     });
     
+     $("#signupemail").focusout(function(){
+        $.ajax({
+                type:'post',
+                async:true,
+                url : 'checkEmail.do',
+                contentType :'application/x-www-form-urlencoded;charset=UTF-8',
+                data : "email="+ $("#signupemail").val(),
+                success : function(resultData){
+                    $("#signupsup").html(resultData);
+                }
+        });
+        if($("#signupemail").val()==="")
+            $("#signupsup").html("이메일을 쓰세요.");
+    });
+    $("#signup_form input").keydown(function() {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+        }
+    });
+    
+    $("#signupemail").keydown(function(){
+        $.ajax({
+                type:'post',
+                async:true,
+                url : 'checkEmail.do',
+                contentType :'application/x-www-form-urlencoded;charset=UTF-8',
+                data : "email="+ $("#signupemail").val(),
+                success : function(resultData){
+                    $("#signupsup").html(resultData);
+                }
+        });
+        if($("#signupemail").val()==="")
+            $("#signupsup").html("이메일을 쓰세요.");
+    });
+    
+    $('#signup_password1').focusout(function () {
+   
+        var pwd1 = $("#signup_password1").val();
+        var regexp = RegExp("[a-zA-Z0-9]{8,16}");
+        if(regexp.test(pwd1)===false)
+            $("#pass").html("영문자 혹은 0-9 8자리~16자리");
+        else
+            $("#pass").html("유효한 비밀번호입니다.");
+    });
+    
+    $('#signup_password2').focusout(function () {
+        var pwd1 = $("#signup_password1").val();
+        var pwd2 = $("#signup_password2").val();
+ 
+        if ( pwd1 != '' && pwd2 == '' ) {
+            null;
+        } else if (pwd1 != "" || pwd2 != "") {
+            if (pwd1 == pwd2) {
+                $("#passcheck").html("비밀번호가 일치합니다");
+            } else {
+                $("#passcheck").html("비밀번호가 불일치합니다");
+            }
+        }
+    });
+    
     function execDaumPostcode() {
         new daum.Postcode({
             oncomplete: function(data) {

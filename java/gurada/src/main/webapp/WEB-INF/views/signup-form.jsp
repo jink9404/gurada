@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -40,6 +41,7 @@
 	<!-- header -->
 	<jsp:include page="header.jsp" />
 	<!-- header end -->
+	<c:if test="${ empty sessionScope.UserID }">
 	<section>
 		<!-- End All Title Box -->
 
@@ -55,44 +57,17 @@
 							<h3>회원 가입</h3>
 						</div>
 					</div>
-					<div class="col-sm-6 col-lg-6 mb-3">
-						<form class="mt-3 collapse review-form-box" id="formRegister">
-							<div class="form-row">
-								<div class="form-group col-md-6">
-									<label for="InputName" class="mb-0">First Name</label> <input
-										type="text" class="form-control" id="InputName"
-										placeholder="First Name">
-								</div>
-								<div class="form-group col-md-6">
-									<label for="InputLastname" class="mb-0">Last Name</label> <input
-										type="text" class="form-control" id="InputLastname"
-										placeholder="Last Name">
-								</div>
-								<div class="form-group col-md-6">
-									<label for="InputEmail1" class="mb-0">Email Address</label> <input
-										type="email" class="form-control" id="InputEmail1"
-										placeholder="Enter Email">
-								</div>
-								<div class="form-group col-md-6">
-									<label for="InputPassword1" class="mb-0">Password</label> <input
-										type="password" class="form-control" id="InputPassword1"
-										placeholder="Password">
-								</div>
-							</div>
-							<button type="submit" class="btn hvr-hover">Register</button>
-						</form>
-					</div>
 				</div>
 				<div class="row">
 					<div class="col-sm-6 col-lg-6 mb-3">
 						<div class="checkout-address">
 
-							<form class="needs-validation" method="post" action="signup.do" novalidate>
+							<form class="needs-validation" id="signup_form" method="post" action="signup.do">
 								<div class="row">
 									<div class="col-md-6 mb-3">
 										<label for="name">이름 *</label> <input type="text"
 											class="form-control" id="name" name="name" placeholder="" value=""
-											required> <br> <input type="radio" name="gender" value="남자">
+											required> <br> <input type="radio" name="gender" value="남자" checked>
 										남성 <input type="radio" name="gender" value="여자"> 여성
 
 									</div>
@@ -101,30 +76,36 @@
 								</div>
 								<br>
 								<div class="mb-3">
-									<label for="username">비밀번호 *</label>
+									<label for="username" >비밀번호 *</label>
 									<div class="input-group">
-										<input type="password" name="password" class="form-control" id="username"
+										<input type="password" name="password" class="form-control" id="signup_password1"
 											placeholder="" required>
 
 									</div>
+									<div id="pass">
+									
+									</div>
 								</div>
 								<div class="mb-3">
-									<label for="username">비밀번호 확인 *</label>
+									<label for="username" >비밀번호 확인 *</label>
 									<div class="input-group">
-										<input type="password"  class="form-control" id="username"
+										<input type="password"  class="form-control" id="signup_password2"
 											placeholder="" required>
 
+									</div>
+									<div id="passcheck">
+									
 									</div>
 								</div>
 								<div class="mb-3">
 									<label for="email">이메일*</label> <input type="email"
-										class="form-control" name="email" id="email" placeholder=""><sup>계정으로
+										class="form-control" name="email" id="signupemail" placeholder=""><sup id="signupsup">계정으로
 										사용할 이메일을 등록하세요</sup>
 
 								</div>
 								<div class="mb-3">
 									<label for="address">전화번호(-없이) *</label> <input type="text"
-										class="form-control" name="phoneNumber" placeholder="" required>
+										class="form-control" name="phoneNumber" placeholder="" pattern="[0-9]{10,13}" required>
 
 								</div>
 
@@ -167,7 +148,7 @@
 								<br>
 								<br>
 								<div class="signup-btn">
-									<button class="btn btn-success">회원가입</button>
+									<input type="submit" value="회원가입" class="btn btn-success"/>
 									<button class="btn btn-dark">취소</button>
 								</div>
 							</form>
@@ -182,7 +163,10 @@
 		<br />
 		<br />
 	</section>
-
+	</c:if>
+	<c:if test="${not empty sessionScope.UserID }">
+	<h1>잘못된 접근</h1>
+	</c:if>
 	<!-- Footer Section End -->
 	<jsp:include page="footer.jsp" />
 	<!-- Js Plugins -->

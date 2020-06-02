@@ -24,4 +24,9 @@ public class MemberServiceImpl implements MemberService {
 	public int userUpdate(MemberVO vo) {
 		return dao.memberUpdate(vo);
 	}
+	
+	@Override
+	public MemberVO checkEmail(MemberVO vo) {
+		return dao.memberSelect(vo);
+	}
 }
