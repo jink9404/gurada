@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
+
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -7,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<a href="header.do">header</a>
 <a href="bookinglist.do">book</a>
 <a href="buylist.do">buylist</a>
 <a href="categories.do">categories</a>

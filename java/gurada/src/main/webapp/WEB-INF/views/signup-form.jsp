@@ -194,6 +194,7 @@
 	<script src="./resources/js/jquery.nice-select.min.js"></script>
 	<script src="./resources/js/mixitup.min.js"></script>
 	<script src="./resources/js/main.js"></script>
+	
 </body>
 
 </html>

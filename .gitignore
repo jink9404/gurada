@@ -16,3 +16,4 @@ java/gurada/target/m2e-wtp/web-resources/META-INF/maven/com.javassem/basic/pom.p
 # Undo-tree save-files
 *.~undo-tree
 /.metadata/
+java/gurada/src/main/webapp/WEB-INF/spring/root-context.xml
