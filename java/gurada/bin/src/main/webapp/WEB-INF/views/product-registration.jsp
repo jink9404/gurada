@@ -42,7 +42,7 @@
                                                                                    상품명
                                     </td>
                                     <td class='td1' colspan="2">
-                                        <input type="text"/>
+                                        <input type="text" readonly value="${prodlist.name}"/>
                                     </td>
                                 </tr>
                                 <tr class='tr'>
@@ -50,12 +50,12 @@
                                         Price
                                     </td>
                                     <td class='td1' colspan="2">
-                                        <input type="text"/>
+                                        <input type="text"/ readonly value="${prodlist.price}">
                                     </td>
                                 </tr>
                                 <tr class='tr'>
                                     <td>
-                                        재고현황
+                                       	 재고현황
                                     </td>
                                     <td >
                                         <table class="worhtable-jh">
@@ -68,12 +68,12 @@
                                                 <td>Free</td>
                                             </tr>
                                             <tr>
-                                                <td><input type="text" disabled value="-"/></td>
-                                                <td><input type="text" disabled value="-"/></td>
-                                                <td><input type="text" disabled value="-"/></td>
-                                                <td><input type="text" disabled value="-"/></td>
-                                                <td><input type="text" disabled value="-"/></td>
-                                                <td><input type="text" disabled value="-"/></td>
+                                                <td><input type="text" disabled /></td>
+                                                <td><input type="text" disabled /></td>
+                                                <td><input type="text" disabled /></td>
+                                                <td><input type="text" disabled /></td>
+                                                <td><input type="text" disabled /></td>
+                                                <td><input type="text" disabled /></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -82,27 +82,37 @@
                         </div>
                     <br/><br/>
                     <div class='small-button-sh'>
-                        <table>
-                            <tr>
-                                <td>
-                                   <form name="form1" id="defaultForm" method="post">
-                                        <select class="sel" name="color" onchange="changeSubject(this.form)"></select>
-                                        <select class="sel" name="size" onchange="changeContents(this.form)"></select>
-                                    </form>
-                                </td>
-                                <td>
-                                    <input type="text"/>
-                                </td>
-                                <td>
-                                    <button>상품 검색</button>            
-                                </td>
-                            </tr>
-                        </table>
+                        <form action="prodselect.do" method="post">
+                        	<table>
+                            	<tr>
+                                	<td>
+                                        <select name="gender">
+                                        	<option value="남자">남자</option>
+                                        	<option value="여자">여자</option>
+                                        </select>
+                                        <select name="categoryId">
+                                        	<option>슈트</option>
+                                        	<option>아우터</option>
+                                        	<option>가방</option>
+                                        	<option>상의</option>
+                                        	<option>하의</option>
+                                        </select>
+                                	</td>
+                                	<td>
+                                   		<input type="text" name="name" placeholder="상품명으로 검색..."/>
+                                	</td>
+                                	<td>
+                                    	<input type="submit" value="상품 검색">            
+                                	</td>
+                            	</tr>
+                        	</table>
+                        </form>
                     </div>
                 </div>
                 <table class=pro_img-jh border="1">
                     <tr>
-                        <td><img src="img/product/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png"></td>
+<!--                         <td><img src="img/product/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png"></td> -->
+                        <td><img src="C:\Users\Canon\Documents\GitHub\gurada\java\gurada\src\main\webapp\resources\upload\ ${prodlist.pfname}"></td>
                     </tr>
                 </table>
                 <div>
@@ -110,15 +120,6 @@
                 </div>
 
                 <!-- Js Plugins -->
-                <script src="./js/jquery-3.3.1.min.js"></script>
-                <script src="./js/bootstrap.min.js"></script>
-                <script src="./js/jquery.magnific-popup.min.js"></script>
-                <script src="./js/jquery.slicknav.js"></script>
-                <script src="./js/owl.carousel.min.js"></script>
-                <script src="./js/jquery.nice-select.min.js"></script>
-                <script src="./js/mixitup.min.js"></script>
-                <script src="./js/main.js"></script>
-                <script src="./js/test.js"></script>
                 </div>
             </div>
         </section>

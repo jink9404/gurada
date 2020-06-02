@@ -154,6 +154,40 @@ $(function(){
             }
         }
     });
+    //*****************
+    //signup-form.jsp
+    //취소버튼
+    //*****************
+    $('.signup-btn button').click(function(){
+       event.preventDefault();
+        history.back(); //이전 히스토리 가기
+    });
+    
+    //*****************
+    //signup-form.jsp
+    //submit validation check
+    //*****************
+    $('#signup_form input[type=submit]').click(function(){
+        event.preventDefault();
+        if($("input:checkbox[id=essencialCheck1]").is(":checked") == false) {
+            alert("개인정보 처리방침에 동의 하셔야합니다.");
+            return false;
+        }
+        if($("input:checkbox[id=essencialCheck2]").is(":checked") == false) {
+            alert("개인정보의 수집 및 이용에 동의 하셔야합니다.");
+            return false;
+        }
+        
+        $('#signup_form').submit();
+    });
+    //*****************
+    //update_member.jsp
+    //취소버튼
+    //*****************
+    $('.update-btn button').click(function(){
+        event.preventDefault();
+        history.back(); //이전 히스토리 가기
+    });
     
     function execDaumPostcode() {
         new daum.Postcode({

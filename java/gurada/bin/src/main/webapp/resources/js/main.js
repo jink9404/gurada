@@ -10,7 +10,6 @@
 'use strict';
 
 (function ($) {
-
     /*------------------
         Preloader
     --------------------*/
@@ -27,13 +26,7 @@
         }
     });
     
-    $("#login-header-up").click(function(){
-        $(".login-header").slideUp(500);
-    });
 
-    $("#login").click(function(){
-        $(".login-header").slideDown(500);
-    });
     
     /*------------------
         Background Set
@@ -177,5 +170,6 @@
     $(".payment-method ul li label").on('click', function () {
         $(this).toggleClass('active');
     });
+    	
 
 })(jQuery);

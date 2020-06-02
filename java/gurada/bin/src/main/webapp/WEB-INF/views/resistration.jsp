@@ -39,92 +39,94 @@
 <body>
 	<jsp:include page="header.jsp" />
 	<!-- Page Add Section Begin -->
+	
 	<section class="page-add">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="page-breadcrumb">
-                             <h2>신상품 등록<span>.</span></h2><hr/>  
-                            <table class='contact-form3'>
-                                <tr class='tr'>
-                                    <td>
-                                        상품명
-                                    </td>
-                                    <td class='td1' colspan="2">
-                                        <input type="text" placeholder="상품명"/>
-                                    </td>
-                                </tr>
-                                <tr class='tr'>
-                                    <td >
-                                        Price
-                                    </td>
-                                    <td class='td1' colspan="2">
-                                        <input type="text" placeholder="Price"/>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        분류
-                                    </td>
-                                    <td>
-                                        <form name="form1" id="defaultForm" method="post">
-                                            <select class="sel" name="color" onchange="changeSubject(this.form)"></select>
-                                            <select class="sel" name="size" onchange="changeContents(this.form)"></select>
-                                        </form>
-                                    </td>
-                                </tr>
-                                <tr class='tr'>
-                                    <td>
-                                        사이즈
-                                    </td>
-                                    <td>
-                                        XS<input type="checkbox" value="XS"/>&nbsp&nbsp&nbsp
-                                        S<input type="checkbox" value="S"/>&nbsp&nbsp&nbsp
-                                        M<input type="checkbox" value="M"/>&nbsp&nbsp&nbsp
-                                        L<input type="checkbox" value="L"/>&nbsp&nbsp&nbsp
-                                        XL<input type="checkbox" value="XL"/>
-                                    </td>
-                                </tr>    
-                                <tr class="detail">
-                                        <td>
-                                            상품 설명
-                                        </td>
-                                        <td>
-                                           <textarea class="detail1" placeholder="detail"></textarea>
-                                        </td>
-                                    </tr>
-                            </table>
-                        </div>
-                    <br/><br/>
-                </div>
-                <table class=pro_img-jh border="1">
-                    <tr>
-                        <td><img src="img/product/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png"></td>
-                    </tr>
-                </table>
-                <div>
-                    <button class="sinsang-jh">이미지 첨부</button>
-                    <button class="sinsang-jh1">상품 등록</button>            
-                </div>
-                </div>
-            </div>
-        </section>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8">
+					<div class="page-breadcrumb">
+						<h2>
+							신상품 등록<span>.</span>
+						</h2>
+						<hr />
+						<form method="post" action="resistration1.do" enctype="multipart/form-data">
+						<table class='contact-form3'>
+							<tr class='tr'>
+								<td>상품명</td>
+								<td class='td1' colspan="2"><input type="text"
+									placeholder="상품명" name="name"/></td>
+							</tr>
+							<tr class='tr'>
+								<td>수량</td>
+								<td class='td1' colspan="2"><input type="text" placeholder="수량" name="quantity"/>
+								</td>
+							</tr>
+							<tr class='tr'>
+								<td>Price</td>
+								<td class='td1' colspan="2"><input type="text"
+									placeholder="Price" name="price" /></td>
+							</tr>
+							<tr>
+								<td>분류</td>
+								<td>
+									<!-- <form name="form1" id="defaultForm" method="post"> -->
+										<!-- <select class="sel" name="color" onchange="changeSubject(this.form)"></select> 
+										<select class="sel" name="size" onchange="changeContents(this.form)"></select> -->
+									<select name="gender">
+                                    	<option value="남자">남자</option>
+                                        <option value="여자">여자</option>
+                                    </select>
+                                    <select name="categoryId">
+                                        <option>슈트</option>
+                                        <option>아우터</option>
+                                        <option>가방</option>
+                                        <option>상의</option>
+                                        <option>하의</option>
+                                    </select>
+								</td>
+							</tr>
+							<tr class='tr'>
+								<td>사이즈</td>
+								<td>
+									XS<input type="checkbox" value="XS" name="pSize" />&nbsp&nbsp&nbsp
+									S<input type="checkbox" value="S" name="pSize" />&nbsp&nbsp&nbsp 
+									M<input type="checkbox" value="M" name="pSize" />&nbsp&nbsp&nbsp 
+									L<input type="checkbox" value="L" name="pSize" />&nbsp&nbsp&nbsp 
+									XL<input type="checkbox" value="XL" name="pSize" />
+								</td>
+							</tr>
+							<tr class="detail">
+								<td>상품 설명</td>
+								<td><textarea class="detail1" placeholder="detail" name="pDetail"></textarea>
+								</td>
+							</tr>
+						</table>
+							<input type="file" maxlength="60" size="40" name='file'>
+                     		<input type="submit" value="상품등록" />
+						</form>
+					</div>
+					
+				</div>
+				</div>
+		</div>
+	</section>
 	<!-- Footer Section Begin -->
-	
-	
+
+
 	<jsp:include page="footer.jsp" />
 	<!-- Footer Section End -->
 
 	<!-- Js Plugins -->
-	<script src="/resources/js/jquery-3.3.1.min.js"></script>
-	<script src="/resources/js/bootstrap.min.js"></script>
-	<script src="/resources/js/jquery.magnific-popup.min.js"></script>
-	<script src="/resources/js/jquery.slicknav.js"></script>
-	<script src="/resources/js/owl.carousel.min.js"></script>
-	<script src="/resources/js/jquery.nice-select.min.js"></script>
-	<script src="/resources/js/mixitup.min.js"></script>
-	<script src="/resources/js/main.js"></script>
-	<script src="/resources/js/test.js"></script>
+	<script src="./resources/js/jquery-3.3.1.min.js"></script>
+	<script src="./resources/js/bootstrap.min.js"></script>
+	<script src="./resources/js/jquery.magnific-popup.min.js"></script>
+	<script src="./resources/js/jquery.slicknav.js"></script>
+	<script src="./resources/js/owl.carousel.min.js"></script>
+	<script src="./resources/js/jquery.nice-select.min.js"></script>
+	<script src="./resources/js/mixitup.min.js"></script>
+	<script src="./resources/js/main.js"></script>
+	<script src="./resources/js/test.js"></script>
+	
 </body>
 
 </html>

@@ -53,7 +53,7 @@
 
 						<div class="small-button btn-2">
 							<button>내정보 보기</button>
-							<button>회원정보 변경</button>
+							<a href="update_member.do"><button>회원정보 변경</button></a>
 						</div>
 						<br /> <br /> <br />
 						<h4>주문 내역</h4>

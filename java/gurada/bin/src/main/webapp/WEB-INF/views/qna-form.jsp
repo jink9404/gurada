@@ -42,7 +42,7 @@
             </div>
         </div>   
     </section>
-    <a href="contact5.html" class="sh-a-1">게시판 목록보기</a>
+    <a href="qna.do" class="sh-a-1">게시판 목록보기</a>
     <!-- Page Add Section End -->
 
     <!-- Contact Section Begin -->
@@ -52,17 +52,17 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
-                    <form action="#" class="contact-form">
+                    <form action="saveBoard.do" class="contact-form">
                         <div class="row">
                             <div class="col-lg-6">
-                                <input type="text" placeholder="제목">
+                                <input type="text" placeholder="제목" name='title'>
                             </div>
                             <div class="col-lg-6">
-                                <input class="glyphicon glyphicon-user" type="text" placeholder="작성자" >
+                                <input class="glyphicon glyphicon-user" type="text" placeholder="작성자" name='writter' >
                             </div>
                             <div class="col-lg-12">
-                                <input type="text" placeholder="password">
-                                <textarea placeholder="내용"></textarea>
+                                <input type="text" placeholder="password" name='password'>
+                                <textarea placeholder="내용" name='contents'></textarea>
                             </div>
                             <div class="col-lg-12 text-right" class="small-button">
                                 <button type="submit"  >등&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;록</button>
