@@ -36,10 +36,12 @@
 						<div class="single-footer-widget">
 							<h4>고객 서비스</h4>
 							<ul>
-								<li><a href='' class='a-href'>문의 하기</a></li>
-								<li><a href='' class='a-href'>매장 찾기</a></li>
+								<li><a href='qna-form.do' class='a-href'>문의 하기</a></li>
+								<li><a href='qna.do' class='a-href'>문의 게시판</a></li>
+								<li><a href='find-store.do' class='a-href'>매장 찾기</a></li>
 								<li><a href='' class='a-href'>마이페이지</a></li>
 								<li><a href='' class='a-href'>반품 하기</a></li>
+								
 							</ul>
 						</div>
 					</div>
