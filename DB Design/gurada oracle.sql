@@ -109,7 +109,7 @@ CREATE TABLE QnA(
             written_date    DATE                DEFAULT SYSDATE ,
             contents        VARCHAR2(3000)                      ,
             member_no       VARCHAR2(15)                        ,
-	    title	    VARCHAR2(50)
+	    title	    VARCHAR2(50)				,
             CONSTRAINT  pk_QnA_no               PRIMARY KEY (qna_no),
             CONSTRAINT  fk_QnA_member_no        FOREIGN KEY (member_no)
             REFERENCES  member(member_no)
@@ -123,6 +123,7 @@ CREATE TABLE review(
             written_date    DATE                DEFAULT SYSDATE ,
             contents        VARCHAR2(3000)                      ,
             member_no       VARCHAR2(15)                        ,
+	 title		VARCHAR2(50)			,
             CONSTRAINT  pk_review_no              PRIMARY KEY (review_NO),
             CONSTRAINT  fk_review_member_no       FOREIGN KEY (member_no)
             REFERENCES  member(member_no)
