@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.gurada.domain.BookingVO;
 import com.gurada.domain.StoreVO;
 import com.gurada.infa.StoreService;
 
@@ -30,14 +31,19 @@ public class StoreController {
 	
 	}
 	
+		@RequestMapping("/booking-data.do")
+	public String booking_data(StoreVO vo, HttpServletRequest request) {
+		
+		request.setAttribute("bstore", vo);
+		request.setAttribute("blatitude", vo.getLatitude());
+		request.setAttribute("blongitude", vo.getLongitude());
+		return "/booking";
 	
-		@RequestMapping("/booking.do")
-		public void bookingStore(StoreVO vo,HttpServletRequest request) {
-			request.setAttribute("booking", vo);
-			request.setAttribute("blatitude", vo.getLatitude());
-			request.setAttribute("blongitude", vo.getLongitude());
-			
-			
+	}
+		
+		@RequestMapping("/reservation-rs.do")
+		public void bookingInsert(int storeId,BookingVO bvo) {
+			StoreService.bookingInsert(storeId,bvo);
 		}
-	
+			
 }

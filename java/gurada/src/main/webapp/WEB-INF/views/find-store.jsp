@@ -129,11 +129,15 @@
 							</div>
 						</div>
 					</form>
-					<form action='booking.do' class="addr-form">
+					<form action='booking-data.do' class="addr-form">
 						<table>
 							<tr>
 								<td>
-								<input type="hidden" name='storeId' value='${store.longitude}'>
+								<input type="hidden" name='location' value='${store.location}'>
+								<input type="hidden" name='storeId' value='${store.storeId}'>
+								<input type="hidden" name='Latitude' value='${latitude}'>
+								<input type="hidden" name='longitude' value='${longitude}'>
+								<input type="hidden" name='tel' value='${store.tel}'>
 								
 									<h4>${store.name}</h4>
 								</td>

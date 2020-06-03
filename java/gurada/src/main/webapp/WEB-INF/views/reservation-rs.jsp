@@ -39,16 +39,17 @@
 <body>
 	<jsp:include page="header.jsp" />
 	<!-- Page Add Section Begin -->
-
+<hr/>
 	<section class="page-add">
 		<div class="container">
-			<div class="col-lg-4">
+			<div class="re-sh">
 				<h2>예약 되었습니다!</h2>
+				<br/>
 				<a href='find-store.do'>돌아가기</a>
 			</div>
 		</div>
 	</section>
-
+<hr/>
 	<!-- Footer Section Begin -->
 	<jsp:include page="footer.jsp" />
 	<!-- Footer Section End -->
