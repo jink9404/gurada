@@ -57,7 +57,7 @@ CREATE TABLE product(
             detail          VARCHAR2(2000)                  ,
             p_size            VARCHAR2(4)                     ,
 	pfname	      VARCHAR2(100)		,
-	pfsize		NUMBER			,
+	pfsize		NUMBER		,
             CONSTRAINT pk_product_id            PRIMARY KEY (product_id),
             CONSTRAINT fk_product_category_id   FOREIGN KEY (category_ID)
             REFERENCES category(category_ID),
@@ -137,16 +137,43 @@ INCREMENT   BY      1
 START       WITH    0
 MINVALUE            0;
 
+CREATE  SEQUENCE    seq_order_no
+INCREMENT   BY      1
+START       WITH    0
+MINVALUE            0;
+
 CREATE  SEQUENCE    seq_qna_no
 INCREMENT   BY      1
 START       WITH    0
 MINVALUE            0;
+
+CREATE  SEQUENCE    seq_review_no
+INCREMENT   BY      1
+START       WITH    0
+MINVALUE            0;
+
+
+CREATE  SEQUENCE    seq_wishlist_no     
+INCREMENT   BY      1
+START       WITH    0
+MINVALUE            0;
+
 
 CREATE  SEQUENCE    seq_store_no
 INCREMENT   BY      1
 START       WITH    0
 MINVALUE            0;
 
+
+CREATE  SEQUENCE    seq_category_no
+INCREMENT   BY      1
+START       WITH    0
+MINVALUE            0;
+
+CREATE  SEQUENCE    seq_nonMember_no
+INCREMENT   BY      1
+START       WITH    0
+MINVALUE            0;
 
 
 CREATE  SEQUENCE 	seq_productid_no
