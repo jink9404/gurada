@@ -79,7 +79,7 @@
             
             <div style="display: block; text-align: center;">		
 				<MJ:if test="${paging.startPage != 1 }">
-					<a href="categories.do?category=${category }&gender=${gender }&nowPage=${paging.startPage - 1 }&cntPerPage=${paging.cntPerPage}">&lt;</a>
+					<a href="categories.do?category=${URLcategory }&gender=${gender }&nowPage=${paging.startPage - 1 }&cntPerPage=${paging.cntPerPage}">&lt;</a>
 				</MJ:if>
 				<MJ:forEach begin="${paging.startPage }" end="${paging.endPage }" var="p">
 					<MJ:choose>
@@ -87,12 +87,12 @@
 							<b>${p }</b>
 						</MJ:when>
 						<MJ:when test="${p != paging.nowPage }">
-							<a href="categories.do?category=${category }&gender=${gender }&nowPage=${p }&cntPerPage=${paging.cntPerPage}">${p }</a>
+							<a href="categories.do?category=${URLcategory }&gender=${gender }&nowPage=${p }&cntPerPage=${paging.cntPerPage}">${p }</a>
 						</MJ:when>
 					</MJ:choose>
 				</MJ:forEach>
 				<MJ:if test="${paging.endPage != paging.lastPage}">
-					<a href="categories.do?category=${category }&gender=${gender }&nowPage=${paging.endPage+1 }&cntPerPage=${paging.cntPerPage}">&gt;</a>
+					<a href="categories.do?category=${URLcategory }&gender=${gender }&nowPage=${paging.endPage+1 }&cntPerPage=${paging.cntPerPage}">&gt;</a>
 				</MJ:if>
 			</div>
 <!--             <div class="more-product"> -->

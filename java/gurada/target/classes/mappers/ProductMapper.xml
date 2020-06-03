@@ -47,7 +47,6 @@
 	where name=#{name} and product_id=#{productId}
 	</select>
 
-
 	<select id="selectListPaging" parameterType="hashmap" resultType="product">
 		SELECT * 
 			FROM ( SELECT ROWNUM RN, A.* 
