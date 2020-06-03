@@ -661,6 +661,7 @@ ol {
 -----------------------*/
 
 .features-section {
+	background: #dcdcdc;
 	padding-bottom: 0;
 }
 
@@ -709,8 +710,8 @@ ol {
 
 .features-box .single-box-item.first-box .box-text {
 	position: absolute;
-	right: 60px;
-	top: 106px;
+	right: 300px;
+	top: 400px;
 }
 
 .features-box .single-box-item.first-box .box-text .trend-alert {
@@ -726,6 +727,10 @@ ol {
 
 .features-box .single-box-item.first-box .box-text .primary-btn {
 	border-color: #D0D7DB;
+	color: #1e1e1e;
+}
+.features-box .single-box-item.large-box .box-text .primary-btn {
+	border-color: #282828;
 	color: #1e1e1e;
 }
 
@@ -757,11 +762,11 @@ ol {
 .features-box .single-box-item.large-box .box-text {
 	position: absolute;
 	left: 125px;
-	top: 60px;
+	top: 250px;
 }
 
 .features-box .single-box-item.large-box .box-text .trend-year {
-	color: #838383;
+	color: #696969;
 	opacity: 1;
 }
 
@@ -805,6 +810,7 @@ ol {
 -----------------------*/
 
 .latest-products {
+	background:#dcdcdc;
 	padding-top: 55px;
 	padding-bottom: 65px;
 }
@@ -975,7 +981,7 @@ ol {
 -----------------------*/
 
 .footer-section {
-	background: #262626;
+	background: #dcdcdc;
 	padding-bottom: 0;
 }
 
@@ -1016,23 +1022,22 @@ ol {
 	right: 0;
 }
 
-.footer-widget {
-	margin-bottom: 40px;
-}
+
 
 .footer-widget .single-footer-widget {
+	color: #696969;
 	margin-bottom: 30px;
 }
 
 .footer-widget .single-footer-widget h4 {
-	color: #fff;
+	color: black;
 	font-size: 26px;
 	margin-bottom: 44px;
 }
 
 .footer-widget .single-footer-widget ul li {
-	color: #fff;
-	font-size: 14px;
+	color: black;
+	font-size: 15px;
 	font-weight: 500;
 	list-style: none;
 	line-height: 36px;
@@ -1040,7 +1045,7 @@ ol {
 }
 
 .social-links-warp {
-	background: #222121;
+	background: black;
 	padding: 46px 0;
 }
 
@@ -1052,7 +1057,7 @@ ol {
 .social-links a:last-child {
 	margin-right: 0;
 }
-
+ 
 .social-links a i {
 	font-size: 30px;
 	color: #d7d7d7;
@@ -2183,6 +2188,7 @@ ol {
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 	.header-section {
+		background : #dcdcdc;
 		padding-left: 0;
 		padding-right: 0;
 	}
@@ -2571,6 +2577,15 @@ ol {
 	border-bottom: 2px solid #E7EBED;	
 	margin-bottom: 8px;	
 }
+.contact-form3 input {	
+	font-size: 15px;	
+	font-weight: 600;	
+	color: #838383;	
+	border: 0;	
+	padding-bottom: 10px;	
+	border-bottom: 2px solid #E7EBED;	
+	margin-bottom: 8px;	
+}
 .store-btn-jh{
     position: fixed;
     left : 800px;
@@ -2578,8 +2593,8 @@ ol {
 }
 .map-canvas{
     position: absolute;
-    left : 1000px;
-    top: 138px;
+    left : 880px;
+    top: 295px;
     bottom : 290px;
 }
 .contact-form2 .worhtable-jh {
@@ -2637,52 +2652,6 @@ ol {
 	cursor: pointer;
 	text-transform: uppercase;
 }
-.sinsang-jh1{
-    position: fixed;
-    left : 1350px;
-    top : 708px;
-    color: #1e1e1e;
-	background: transparent;
-	border: none;
-	font-size: 14px;
-	font-weight: 600;
-	padding: 8px 25px;
-	border: 1px solid #1e1e1e;
-	border-radius: 50px;
-	cursor: pointer;
-	text-transform: uppercase;
-}
-.contact-form3 {
-    font-size: 20px;	
-	font-weight: 600;	
-	color: #838383;	
-	border: 1;	
-	padding-bottom: 10px;	
-	border-bottom: 2px solid #E7EBED;	
-    height: 250px;
-    text-align: center;
-}
-.contact-form3 input{
-    font-size : 20px;	
-	font-weight : 600;	
-	color : #838383;	
-	border : 0;	
-	padding-bottom : 10px;	
-	border-bottom : 2px solid #E7EBED;	
-    
-}
-.contact-form3 td:nth-child(2){
-    width: 500px;
-    text-align-last: left;
-    word-spacing: inherit;
-}
-.contact-form3 tr:nth-child(5){
-    height: 250px;
-}
-.contact-form3 .detail1{
-    width : 350px;
-    height: 250px;
-}
 
 
 /*----------------------------------------*/
@@ -2727,7 +2696,7 @@ border: 1px solid #999;
 
 .small-btn-sh{
     position: sticky;
-    left: 1020px;
+    left: 900px;
     top: 1px;
      color:#1e1e1e;
 	background: transparent;
@@ -2741,6 +2710,7 @@ border: 1px solid #999;
 	text-transform: uppercase;
     
 }
+
 .small-button button .a-href{
     color: black;
 }
@@ -2748,6 +2718,12 @@ border: 1px solid #999;
     font-size: 15px;
     color: darkblue;
 }
+
+.container .a-href{
+	 color: #282828;
+
+}
+
 
 .btn-2{position: relative;
 left: 210%
@@ -2838,8 +2814,8 @@ left: 10%;
 }
 .sh-a-1{
     position: absolute;
-    top: 150px;
-    left: 1050px;
+    top: 250px;
+    left: 920px;
     color: black;
     border-bottom: 1px solid #999;
     font-weight: bold;
@@ -2853,6 +2829,24 @@ left: 10%;
     font-weight: bold;
     color: 
 }
+
+ .video{
+	position:relative;
+	margin: 5% 15%;
+	
+
+	
+} 
+.color{
+	
+	background : #dcdcdc;
+}
+
+.gura2{
+	width:500px;
+	height:800px; 
+}
+
     
 /*----------------------------------------*/
 /* MJ
