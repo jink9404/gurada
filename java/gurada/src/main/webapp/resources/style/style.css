@@ -2467,6 +2467,10 @@ ol {
 /*----------------------------------------*/
 /* JH
 /*----------------------------------------*/
+.page-breadcrumb1{
+	width : 100%;
+}
+
 .reser-jh{
     margin-top: 40px;
 }
@@ -2484,7 +2488,7 @@ ol {
 .shopping-jh2 td:nth-of-type(2){
     text-align: right;
     padding-right: 10px;
-}
+} 
 
 .shopping-jh2{
    
@@ -2543,10 +2547,9 @@ ol {
     color:#1e1e1e;
 }
  .container .jh-a{
-    
-    font-size: 20px;
+     font-size: 20px;
      color: #999;
-         position: absolute;
+     position: absolute;
      left: 1200px;
      top: 230px;
 }
@@ -2633,8 +2636,20 @@ ol {
 .contact-form2 .worhtable-jh input{
     width : 80px;
 }
-.contact-form2 td1 .worh .worhtable-jh{
-    
+.contact-form4 {
+    font-size: 15px;	
+	font-weight: 600;	
+	color: #838383;	
+	border: 0;	
+	padding-bottom: 10px;	
+	border-bottom: 2px solid #E7EBED;	
+	margin-bottom: 8px;
+}
+.contact-form4 th{
+	width : 400px;
+}
+.container .rjator{
+	width : 50%;
 }
 .pro_img-jh{
     width : 400px;

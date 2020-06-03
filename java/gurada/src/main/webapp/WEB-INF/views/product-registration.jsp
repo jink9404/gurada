@@ -32,95 +32,53 @@
    	<!-- header end -->
     <section class="page-add">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="page-breadcrumb">
-                             <h2>상품관리(재고현황)<span>.</span></h2><hr/>  
-                            <table  class='contact-form2'>
-                                <tr class='tr'>
-                                    <td>
-                                                                                   상품명
-                                    </td>
-                                    <td class='td1' colspan="2">
-                                        <input type="text" readonly value="${prodlist.name}"/>
-                                    </td>
-                                </tr>
-                                <tr class='tr'>
-                                    <td >
-                                        Price
-                                    </td>
-                                    <td class='td1' colspan="2">
-                                        <input type="text"/ readonly value="${prodlist.price}">
-                                    </td>
-                                </tr>
-                                <tr class='tr'>
-                                    <td>
-                                       	 재고현황
-                                    </td>
-                                    <td >
-                                        <table class="worhtable-jh">
-                                            <tr>
-                                                <td>XS</td>
-                                                <td>S</td>
-                                                <td>M</td>
-                                                <td>L</td>
-                                                <td>XL</td>
-                                                <td>Free</td>
-                                            </tr>
-                                            <tr>
-                                                <td><input type="text" disabled /></td>
-                                                <td><input type="text" disabled /></td>
-                                                <td><input type="text" disabled /></td>
-                                                <td><input type="text" disabled /></td>
-                                                <td><input type="text" disabled /></td>
-                                                <td><input type="text" disabled /></td>
-                                            </tr>
-                                        </table>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    <br/><br/>
-                    <div class='small-button-sh'>
-                        <form action="prodselect.do" method="post">
-                        	<table>
-                            	<tr>
-                                	<td>
-                                        <select name="gender">
-                                        	<option value="남자">남자</option>
-                                        	<option value="여자">여자</option>
-                                        </select>
-                                        <select name="categoryId">
-                                        	<option>슈트</option>
-                                        	<option>아우터</option>
-                                        	<option>가방</option>
-                                        	<option>상의</option>
-                                        	<option>하의</option>
-                                        </select>
-                                	</td>
-                                	<td>
-                                   		<input type="text" name="name" placeholder="상품명으로 검색..."/>
-                                	</td>
-                                	<td>
-                                    	<input type="submit" value="상품 검색">            
-                                	</td>
-                            	</tr>
-                        	</table>
-                        </form>
-                    </div>
-                </div>
-                <table class=pro_img-jh border="1">
-                    <tr>
-<!--                         <td><img src="img/product/%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C.png"></td> -->
-                        <td><img src="C:\Users\Canon\Documents\GitHub\gurada\java\gurada\src\main\webapp\resources\upload\ ${prodlist.pfname}"></td>
-                    </tr>
-                </table>
-                <div>
-                    <button class="sinsang-jh">신상품 등록하기</button>            
-                </div>
-
-                <!-- Js Plugins -->
-                </div>
+                
+                	<h2>상품관리(재고현황)</h2><hr/>  
+                       	<table border class='contect-form4'>
+                      	  <tr class='tr'>
+                          	<th>상품명</th>
+                          	<th>가격</th>
+                          	<th>사이즈</th>
+                          	<th>재고현황</th>
+                          	<th>성별</th>
+                          	<th>카테고리</th>
+                          	<th>이미지보기</th>
+                          </tr>
+                          <tr>
+                          	<form action="prodselect.do" method="post" class="rjator">
+                    	   		<table>
+                            		<tr>
+                                		<td>
+                                        	<select name="gender">
+                                        		<option value="남자">남자</option>
+                                        		<option value="여자">여자</option>
+                                        	</select>
+                                        	<select name="categoryId">
+                                        		<option>슈트</option>
+                                        		<option>아우터</option>
+                                        		<option>가방</option>
+	                                        	<option>상의</option>
+    	                                    	<option>하의</option>
+        	                                </select>
+            	                    	</td>
+                	                	<td>
+                    	               		<input type="text" name="name" placeholder="상품명으로 검색..."/>
+                        	        	</td>
+                            	    	<td>
+                                	    	<input type="submit" value="상품 검색">            
+                                		</td>
+                                		<td>
+                                			<button class="sinsang-jh">신상품 등록하기</button>
+                                		</td>
+                            		</tr>
+                        		</table>
+                        	</form>
+                          	</tr>
+                          
+                       </table><br/><hr/> 
+                       
+            <!-- Js Plugins -->
+               
             </div>
         </section>
     <!-- Contact Section End -->

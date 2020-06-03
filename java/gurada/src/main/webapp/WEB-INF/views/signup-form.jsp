@@ -76,7 +76,7 @@
 								</div>
 								<br>
 								<div class="mb-3">
-									<label for="username" >비밀번호 *</label>
+									<label for="signup_password1" >비밀번호 *</label>
 									<div class="input-group">
 										<input type="password" name="password" class="form-control" id="signup_password1"
 											placeholder="" required>
@@ -104,7 +104,7 @@
 
 								</div>
 								<div class="mb-3">
-									<label for="address">전화번호(-없이) *</label> <input type="text"
+									<label for="phoneNumber">전화번호(-없이) *</label> <input type="text"
 										class="form-control" name="phoneNumber" placeholder="" pattern="[0-9]{10,13}" required>
 
 								</div>
@@ -120,7 +120,7 @@
 								</div>
 								<div class="custom-control custom-checkbox">
 									<input type="checkbox" id="essencialCheck2" class="custom-control-input"> <label class="custom-control-label"
-										for="essencialCheck2"><a href="#">개인정보의 수집 및 이용</a>에 대한
+										for="essencialCheck2" ><a href="#">개인정보의 수집 및 이용</a>에 대한
 										동의(필수)</label>
 								</div>
 								<hr class="mb-4">
