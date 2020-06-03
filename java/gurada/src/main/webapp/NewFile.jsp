@@ -26,7 +26,7 @@
 <a href="wishlist.do">wishlist.do</a>
 <a href="signup-form.do">signup-form.jsp</a>
 <a href="update_member.do">update_member</a>
-<a href="product-registration.do">product-registration.jsp</a>
+<a href="product-list.do">product-registration.jsp</a>
 <a href="reservation.do">reservation.jsp</a><br/>
 <a href="resistration.do">resistration.jsp</a>
 <a href="qna-getBoard.do">qna-getBoard.jsp</a>
