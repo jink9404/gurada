@@ -29,14 +29,26 @@
 				WHERE	category_id=#{categoryId} AND gender=#{gender}	
 			</if>
 	</select>
-<!-- 삭제 예정 -->
-<!-- 	<select id="getProductList" resultType="product"> -->
-   
-<!--    SELECT  -->
-<!--    name,price,QUANTITY,CATEGORY_ID,GENDER,P_SIZE ,DETAIL,receipt_Date,PRODUCT_ID,pfname,pfsize  -->
-<!--    FROM product  -->
-  
-<!--    </select> -->
-   
+<!-- 	작성자 : 김명진 
+		return -> product 테이블 총 튜플 수
+-->
+	<select id="countProduct" parameterType="product" resultType="int">
+		SELECT COUNT(*)
+			FROM product
+			<if test="categoryId!=null and gender != null">
+				WHERE	category_id=#{categoryId} AND gender=#{gender}
+			</if>
+	</select>	
 
+	<select id="selectListPaging" parameterType="hashmap" resultType="product">
+		SELECT * 
+			FROM ( SELECT ROWNUM RN, A.* 
+						FROM (SELECT * 
+								FROM product 
+								WHERE gender=#{productVo.gender} AND category_id=#{productVo.categoryId} 
+								ORDER BY TO_NUMBER(product_id) desc
+							  ) A
+				  )
+		 	WHERE RN BETWEEN #{pageVo.start} AND #{pageVo.end}
+	</select>
 </mapper> 
