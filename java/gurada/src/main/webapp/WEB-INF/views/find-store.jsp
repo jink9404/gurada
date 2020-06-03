@@ -123,16 +123,19 @@
 							</div>
 							<div>
 								<button type="submit">
-									<span class="glyphicon glyphicon-search"></span> 매장검색
+									매장검색
 								</button>
-								<button type="submit">방문예약</button>
+								
 							</div>
 						</div>
 					</form>
-					<form class="addr-form">
+					<form action='booking.do' class="addr-form">
 						<table>
 							<tr>
 								<td>
+								<input type="hidden" value='${store.storeId}'>
+								<input type="hidden" value='${store.latitude}'>
+								<input type="hidden" value='${store.longitude}'>
 									<h4>${store.name}</h4>
 								</td>
 							</tr>
@@ -143,9 +146,11 @@
 								<td>매장 연락처 : ${store.tel}</td>
 							</tr>
 						</table>
+						<button type="submit" class='sh-button'>방문예약</button>
 					</form>
 					<br />
 					<div id="map-canvas" style="width: 1000px; height: 500px"></div>
+					
 				</div>
 			</div>
 		</div>
