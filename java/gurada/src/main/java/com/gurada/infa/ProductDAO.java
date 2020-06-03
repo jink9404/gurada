@@ -11,4 +11,5 @@ public interface ProductDAO {
 	public List<ProductVO> ProductSelectList(ProductVO vo);
 	//상품 리스트
 	public abstract List<ProductVO> productSelectList(ProductVO vo);
+}
 
