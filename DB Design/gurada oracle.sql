@@ -35,6 +35,7 @@ CREATE TABLE Member(
             last_ip         VARCHAR2(15)                    ,
             gender          varchar2(6)     NOT NULL        ,
             marketing       varchar2(10)                    ,
+	profiling		varchar2(10)		,
             CONSTRAINT pk_member_no             PRIMARY KEY (member_no),
             CONSTRAINT uq_member_phoneNumber    UNIQUE (phone_number),
             CONSTRAINT ck_member_gender        CHECK (gender IN('남자','여자'))
@@ -130,22 +131,6 @@ CREATE TABLE review(
             REFERENCES  member(member_no)
 );
 
-CREATE TABLE IMAGE(
-            image_id        VARCHAR2(15),                        
-            Product_IMG_URL VARCHAR2(500),
-            Wearing_IMG_URL VARCHAR2(500),
-            BOARD_IMG_URL   VARCHAR2(500),
-            product_id      VARCHAR2(15),
-            qna_no          VARCHAR2(15),
-            review_no       VARCHAR2(15),
-            CONSTRAINT  pk_image_id             PRIMARY KEY (image_id),
-            CONSTRAINT  fk_image_product_id     FOREIGN KEY (product_id)
-            REFERENCES  product(product_id),
-            CONSTRAINT  fk_image_qna_id         FOREIGN KEY (QnA_NO)
-            REFERENCES  QnA(QnA_NO),
-            CONSTRAINT  fk_image_review_id      FOREIGN KEY (review_NO)
-            REFERENCES  review(review_NO)
-);
 
 CREATE  SEQUENCE    seq_member_no
 INCREMENT   BY      1
@@ -164,6 +149,10 @@ MINVALUE            0;
 
 
 
+CREATE  SEQUENCE 	seq_productid_no
+INCREMENT   BY      1
+START       WITH    0
+MINVALUE            0;
 ALTER table product modify (gender varchar2(6));
 
 ==========sh store 정보=================
