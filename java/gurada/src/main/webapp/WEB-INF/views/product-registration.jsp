@@ -69,8 +69,8 @@
          </c:forEach>
       </table>
         <br>
-        <input type="submit" value="상품 검색">    
-        <input type="text">        
+        <input type="text" placeholder="상품명으로..">
+        <input type="submit" value="상품 검색">        
         <input type="button" value="상품 등록하러가기"/>
       
        <a href="resistration1.do">새글 등록</a>
