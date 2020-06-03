@@ -6,19 +6,31 @@ import java.io.IOException;
 import org.springframework.web.multipart.MultipartFile;
 
 public class ProductVO {
-	private String name;
-	private int price;
-	private int quantity; 
-	private String receiptDate;
-	private String categoryId;
-	private String gender;
-	private String pSize;
-	private String color;
-	private String pDetail;
-	private String productId;
-	private String pip;
-	private String pfname;
-	private long pfsize;
+	 private String name;
+	   private String productId;
+	   private int price;
+	   private int quantity;
+	   private String receiptDate;
+	   private String categoryId;
+	   private String gender;
+	   private String pSize;
+	   private String color;
+	   private String detail;
+	   private String pfname;
+	   private Long pfsize;
+
+	   public String getPfname() {
+		return pfname;
+	}
+	public void setPfname(String pfname) {
+		this.pfname = pfname;
+	}
+	public Long getPfsize() {
+		return pfsize;
+	}
+	public void setPfsize(Long pfsize) {
+		this.pfsize = pfsize;
+	}
 	MultipartFile file;
 	
 	public MultipartFile getFile() {
@@ -47,6 +59,12 @@ public class ProductVO {
 	}
 	public void setName(String name) {
 		this.name = name;
+	}
+	public String getProductId() {
+		return productId;
+	}
+	public void setProductId(String productId) {
+		this.productId = productId;
 	}
 	public int getPrice() {
 		return price;
@@ -90,39 +108,10 @@ public class ProductVO {
 	public void setColor(String color) {
 		this.color = color;
 	}
-	public String getPDetail() {
-		return pDetail;
+	public String getDetail() {
+		return detail;
 	}
-	public void setPDetail(String pDetail) {
-		this.pDetail = pDetail;
+	public void setDetail(String detail) {
+		this.detail = detail;
 	}
-	public String getProductId() {
-		return productId;
-	}
-	public void setProductId(String productId) {
-		this.productId = productId;
-	}
-	public String getPip() {
-		return pip;
-	}
-	public void setPip(String pip) {
-		this.pip = pip;
-	}
-	public String getPfname() {
-		return pfname;
-	}
-	public void setPfname(String pfname) {
-		this.pfname = pfname;
-	}
-	public long getPfsize() {
-		return pfsize;
-	}
-	public void setPfsize(long pfsize) {
-		this.pfsize = pfsize;
-	}
-	
-	
-	
-	
-	
 }
