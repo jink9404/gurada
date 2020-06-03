@@ -11,6 +11,12 @@
 		]]>
 	</select>
 	
+	<insert id="bookingInsert" parameterType="hashmap">
+		insert into BOOKING(BOOKING_ID,FULL_NAME,STORE_ID,BOOKING_DATE,PHONE_NUMBER,TIME)
+					values(seq_booking_no.nextval, #{name} ,#{storeId} , #{BookingDate} ,#{PhoneNumber},#{time})
+	
+	</insert>
+	
 
 	
  
