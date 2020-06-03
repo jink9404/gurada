@@ -2641,7 +2641,9 @@ ol {
 .contact-form4 th{
 	width : 400px;
 }
-.rjator
+.container .rjator{
+	width : 50%;
+}
 .pro_img-jh{
     width : 400px;
     height: 400px;

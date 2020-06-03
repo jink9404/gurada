@@ -44,35 +44,39 @@
                           	<th>카테고리</th>
                           	<th>이미지보기</th>
                           </tr>
+                          <tr>
+                          	<form action="prodselect.do" method="post" class="rjator">
+                    	   		<table>
+                            		<tr>
+                                		<td>
+                                        	<select name="gender">
+                                        		<option value="남자">남자</option>
+                                        		<option value="여자">여자</option>
+                                        	</select>
+                                        	<select name="categoryId">
+                                        		<option>슈트</option>
+                                        		<option>아우터</option>
+                                        		<option>가방</option>
+	                                        	<option>상의</option>
+    	                                    	<option>하의</option>
+        	                                </select>
+            	                    	</td>
+                	                	<td>
+                    	               		<input type="text" name="name" placeholder="상품명으로 검색..."/>
+                        	        	</td>
+                            	    	<td>
+                                	    	<input type="submit" value="상품 검색">            
+                                		</td>
+                                		<td>
+                                			<button class="sinsang-jh">신상품 등록하기</button>
+                                		</td>
+                            		</tr>
+                        		</table>
+                        	</form>
+                          	</tr>
+                          
                        </table><br/><hr/> 
-                       <form action="prodselect.do" method="post">
-                    	   	<table class="rjator">
-                            	<tr>
-                                	<td>
-                                        <select name="gender">
-                                        	<option value="남자">남자</option>
-                                        	<option value="여자">여자</option>
-                                        </select>
-                                        <select name="categoryId">
-                                        	<option>슈트</option>
-                                        	<option>아우터</option>
-                                        	<option>가방</option>
-                                        	<option>상의</option>
-                                        	<option>하의</option>
-                                        </select>
-                                	</td>
-                                	<td>
-                                   		<input type="text" name="name" placeholder="상품명으로 검색..."/>
-                                	</td>
-                                	<td>
-                                    	<input type="submit" value="상품 검색">            
-                                	</td>
-                                	<td>
-                                		<button class="sinsang-jh">신상품 등록하기</button>
-                                	</td>
-                            	</tr>
-                        	</table>
-                        </form>
+                       
             <!-- Js Plugins -->
                
             </div>

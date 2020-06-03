@@ -55,6 +55,8 @@ CREATE TABLE product(
             gender          VARCHAR2(6)     NOT NULL        ,
             detail          VARCHAR2(2000)                  ,
             p_size            VARCHAR2(4)                     ,
+	pfname	      VARCHAR2(100)		,
+	pfsize		NUMBER			,
             CONSTRAINT pk_product_id            PRIMARY KEY (product_id),
             CONSTRAINT fk_product_category_id   FOREIGN KEY (category_ID)
             REFERENCES category(category_ID),
