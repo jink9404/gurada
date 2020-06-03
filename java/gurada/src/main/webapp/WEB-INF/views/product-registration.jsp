@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%> 
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -29,58 +30,51 @@
 <body>
     <!-- header -->
     <jsp:include page="header.jsp"/>
-   	<!-- header end -->
-    <section class="page-add">
-            <div class="container">
-                
-                	<h2>상품관리(재고현황)</h2><hr/>  
-                       	<table border class='contect-form4'>
-                      	  <tr class='tr'>
-                          	<th>상품명</th>
-                          	<th>가격</th>
-                          	<th>사이즈</th>
-                          	<th>재고현황</th>
-                          	<th>성별</th>
-                          	<th>카테고리</th>
-                          	<th>이미지보기</th>
-                          </tr>
-                          <tr>
-                          	<form action="prodselect.do" method="post" class="rjator">
-                    	   		<table>
-                            		<tr>
-                                		<td>
-                                        	<select name="gender">
-                                        		<option value="남자">남자</option>
-                                        		<option value="여자">여자</option>
-                                        	</select>
-                                        	<select name="categoryId">
-                                        		<option>슈트</option>
-                                        		<option>아우터</option>
-                                        		<option>가방</option>
-	                                        	<option>상의</option>
-    	                                    	<option>하의</option>
-        	                                </select>
-            	                    	</td>
-                	                	<td>
-                    	               		<input type="text" name="name" placeholder="상품명으로 검색..."/>
-                        	        	</td>
-                            	    	<td>
-                                	    	<input type="submit" value="상품 검색">            
-                                		</td>
-                                		<td>
-                                			<button class="sinsang-jh">신상품 등록하기</button>
-                                		</td>
-                            		</tr>
-                        		</table>
-                        	</form>
-                          	</tr>
-                          
-                       </table><br/><hr/> 
-                       
-            <!-- Js Plugins -->
-               
-            </div>
-        </section>
+     <body>
+      <h1>상품관리(재고현황)</h1>
+      
+   <table border="1">
+         <tr>
+            <th bgcolor="orange" width="100">상품명</th>
+            <th bgcolor="orange" width="200">가격</th>
+            <th bgcolor="orange" width="150">사이즈</th>
+            <th bgcolor="orange" width="150">재고</th>
+            <th bgcolor="orange" width="100">성별</th>
+            <th bgcolor="orange" width="100">옷종류</th>
+            <!-- 추가 -->
+            <th bgcolor="orange" width="150">이미지</th>
+                     
+         </tr>
+         <c:forEach items="${prodlist}" var="list">
+            <!-- 프라퍼티이름 변경 -->
+            <tr>
+               <td>${list.name}</td>
+               <td>${list.price}</td>
+               <td>${list.pSize}</td>
+               <td>${list.quantity}</td>
+               <td>${list.gender}</td>
+               <td>${list.categoryId}</td>  
+               <!-- 추가 -->
+               <td>
+                <c:choose>
+                   <c:when test="${list.pfsize==0}">첨부파일 없음</c:when>
+                   <c:otherwise>
+                       <a href='resources/upload/${list.pfname}'>
+                       <img src='resources/img/disk.gif'>${list.pfname}  
+                    </a>  
+                   </c:otherwise>
+                </c:choose>                 
+               </td>   
+            </tr>
+         </c:forEach>
+      </table>
+        <br>
+        <input type="submit" value="상품 검색">    
+        <input type="text">        
+        <input type="button" value="상품 등록하러가기"/>
+      
+       <a href="resistration1.do">새글 등록</a>
+       
     <!-- Contact Section End -->
 
     <!-- Footer Section Begin -->
