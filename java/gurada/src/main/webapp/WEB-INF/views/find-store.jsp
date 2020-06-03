@@ -13,11 +13,16 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <script type="text/javascript"
 	src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyBD64wGh26USHyvlhtDJnbFzvcFD7vY0W4" ></script>
+
+
+	
 <script type="text/javascript">
 
+	
 	function initialize() {
-		var mapLocation = new google.maps.LatLng(document.cookie.match('(^|;) ?' + 'Latitude' + '=([^;]*)(;|$)'),document.cookie.match('(^|;) ?' + 'Longitude' + '=([^;]*)(;|$)') ); // 지도에서 가운데로 위치할 위도와 경도
-		var markLocation = new google.maps.LatLng('36.322473', '127.412501'); // 마커가 위치할 위도와 경도
+		var mapLocation = new google.maps.LatLng(<%="${Latitude}"%>,<%="${longitude}"%>); // 지도에서 가운데로 위치할 위도와 경도
+		var markLocation = new google.maps.LatLng(<%="${Latitude}"%>,<%="${longitude}"%>); // 마커가 위치할 위도와 경도
 
 		var mapOptions = {
 			center : mapLocation, // 지도에서 가운데로 위치할 위도와 경도(변수)

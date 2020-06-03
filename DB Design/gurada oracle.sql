@@ -4,8 +4,8 @@
             post_code       VARCHAR2(6)     NOT NULL    ,
             tel             VARCHAR2(13)    NOT NULL    ,
             name            VARCHAR2(100)   NOT NULL    ,
-            Latitude        NUMBER                      ,              --위도
-            longitude       NUMBER                      ,              --경도
+            Latitude        VARCHAR2(20),              --위도
+            longitude       VARCHAR2(20),              --경도
             CONSTRAINT  pk_store_id             PRIMARY KEY(store_id),
             CONSTRAINT  uq_store_tel            UNIQUE (tel)
 );

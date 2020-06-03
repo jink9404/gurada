@@ -7,9 +7,9 @@ public class StoreVO {
 	private String postCode;
 	private String tel;
 	private String name;
-	private int Latitude;
-	private int longitude;
-	
+	private String Latitude;
+	private String longitude;
+	 
 	
 	public int getStoreId() {
 		return storeId;
@@ -41,18 +41,19 @@ public class StoreVO {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getLatitude() {
+	public String getLatitude() {
 		return Latitude;
 	}
-	public void setLatitude(int latitude) {
+	public void setLatitude(String latitude) {
 		Latitude = latitude;
 	}
-	public int getLongitude() {
+	public String getLongitude() {
 		return longitude;
 	}
-	public void setLongitude(int longitude) {
+	public void setLongitude(String longitude) {
 		this.longitude = longitude;
 	}
+
 	
 
 	

@@ -2597,6 +2597,13 @@ ol {
     top: 295px;
     bottom : 290px;
 }
+
+#map_ma {
+	  position: absolute;
+    left : 880px;
+    top: 295px;
+    bottom : 290px;
+}
 .contact-form2 .worhtable-jh {
     font-size: 15px;	
 	font-weight: 600;	
