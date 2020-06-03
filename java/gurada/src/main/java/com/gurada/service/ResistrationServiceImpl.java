@@ -17,10 +17,11 @@ public class ResistrationServiceImpl implements ResistrationService {
 	public void productInsert(ProductVO vo) {
 		ProductDAO.ProductInsert(vo);
 	}
-	@Override
-	public List<ProductVO> productSelectList(ProductVO vo) {
-		return ProductDAO.ProductSelectList(vo); 
-	}
+//	삭제예정
+//	@Override
+//	public List<ProductVO> productSelectList(ProductVO vo) {
+//		return ProductDAO.ProductSelectList(vo); 
+//	}
 
 	@Override
 	public List<ProductVO> getProductlist(ProductVO vo){

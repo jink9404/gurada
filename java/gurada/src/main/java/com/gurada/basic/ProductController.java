@@ -9,7 +9,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
 
 import com.gurada.domain.ProductVO;
 import com.gurada.infa.ResistrationService;
@@ -26,12 +25,12 @@ public class ProductController {
 		return "/resistration";
 	}
 	//상품 목록 검색
-	@RequestMapping("/product-registration.do")
+	@RequestMapping("/product-list.do")
 	public void product_select(ProductVO vo, Model model) {
-		model.addAttribute("prodlist",service1.productSelectList(vo));
+		model.addAttribute("prodlist",service1.getProductlist(vo));
 	}
 	
-	//상품리스트
+	//User category별 ProductList
 	//produces => 한글처리
 	//RequestParam => URL로 받은 파라미터
 	@RequestMapping(value = "/categories.do", produces = "application/text; charset=utf-8")
@@ -65,8 +64,5 @@ public class ProductController {
 			model.addAttribute("productList", list );
 	}
 	
-	@RequestMapping(value = "/product-page.do")
-	public void productPage() {
-		
-	}
+	
 }
