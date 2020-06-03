@@ -2,6 +2,7 @@ package com.gurada.basic;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.gurada.domain.PagingVO;
 import com.gurada.domain.ProductVO;
 import com.gurada.infa.ResistrationService;
 
@@ -34,11 +36,18 @@ public class ProductController {
 	//produces => 한글처리
 	//RequestParam => URL로 받은 파라미터
 	@RequestMapping(value = "/categories.do", produces = "application/text; charset=utf-8")
-	public void productList(	@RequestParam(value = "category", defaultValue = "suit") 
+	public void productList(	@RequestParam(value="nowPage", required=false)
+								String nowPage,
+								@RequestParam(value="cntPerPage", required=false)
+								String cntPerPage,
+								@RequestParam(value = "category", defaultValue = "suit") 
 								String category,
 								@RequestParam(value = "gender", defaultValue = "man")
 								String gender, HttpSession session, Model model) {
 		ProductVO vo = new ProductVO();				//검색을 위한 상품객체
+		
+		
+		
 		
 		//카테고리 파라미터에 따른 객체값 세션 저장 
 		switch (category) {
@@ -52,17 +61,46 @@ public class ProductController {
 		}
 		
 		if(gender.equals("man")) {
-			vo.setGender("남자");
+			vo.setGender("남자");					
 		}else {
-			vo.setGender("여자");
+			vo.setGender("여자");					
 		}
 		//카테고리 파라미터에 따른 객체값 저장 END
 		
-		List<ProductVO> list = (List<ProductVO>) service.getProductlist(vo);//product vo로 검색
+		
+		int total = service.countProductList(vo);
+		if (nowPage == null && cntPerPage == null) {
+			nowPage = "1";
+			cntPerPage = "5";
+		} else if (nowPage == null) {
+			nowPage = "1";
+		} else if (cntPerPage == null) { 
+			cntPerPage = "5";
+		}
+		
+		
+		PagingVO pageVo = new PagingVO(total,Integer.parseInt(nowPage), Integer.parseInt(cntPerPage));
+		List<ProductVO> list = (List<ProductVO>) service.getProductList(vo, pageVo);//product vo로 검색
 		//list가 비어있지 않으면 model로 전송
-		if(list != null)
+		if(list != null) {
 			model.addAttribute("productList", list );
+			model.addAttribute("URLcategory",category);
+			model.addAttribute("gender",gender);
+			model.addAttribute("paging", pageVo);
+		}
 	}
+	
+	@RequestMapping("/product-page.do")
+	public void productpage(ProductVO vo,HttpServletRequest request, Model model) {
+		String productId = request.getParameter("productId");
+		String name = request.getParameter("name");
+		vo.setName(name);
+		vo.setProductId(productId);
+		
+		System.out.println(vo.getName());
+		System.out.println(vo.getProductId());
+		model.addAttribute("detail", service.getProductDetail(vo));
+	} 
 	
 	
 }

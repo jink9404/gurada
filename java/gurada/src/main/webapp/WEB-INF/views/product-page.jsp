@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <html lang="zxx">
 
 <head>
@@ -46,11 +47,12 @@
             <div class="row">
                 <div class="col-lg-6">              
                        <div class="product-content">
-                        <h2>상품 이름</h2><br/>
-                        <div class="pc-meta">
+                        <h2>${detail.name}</h2><br/>
+                        <div class="pc-meta"> 
                             <h5>가격 </h5>
+                            <h5>${detail.price}</h5>
                         </div>
-                        <p>상품 설명/상품 설명/상품 설명/상품 설명/상품 설명/상품 설명/상품 설명/상품 설명/상품 설명/상품 설명/상품 설명/상품 설명/상품 설명/상품 설명/상품 설명/상품 설명/상품 설명/상품 설명/상품 설명/상품 설명/상품 설명/상품 설명/</p>
+                        <p> ${detail.detail} </p>
                         <ul class="tags">
                             <li><span>카테고리 :</span> 남자 의류 </li>
                             <li><span>태그 :</span> man, shirt, dotted, elegant, cool</li>
@@ -60,23 +62,19 @@
                                 <tr>
                                     <td width="255"></td>
                                     <td width="60">
-                                        <select class="buybtn2">
-                                            <option>옵션1</option>
-                                            <option>옵션2</option>
-                                            <option>옵션3</option>
-                                        </select>
+                                        
                                     </td>
                                     <td>
                                         <div class="pro-qty">
-                                            <input type="text" value="1">
+                                            <input type="text" name="quantity" value="1">
                                         </div>
                                     </td>
                                 </tr>
                             </table><br/><br/>
                             <table class='sh-td'>
                                 <tr>
-                                <td ><h4>총합금액</h4></td>
-                                <td>123456원</td>
+                                <td ><h4>금액</h4></td>
+                                <td>${detail.price*quantity} </td>
                                 </tr>
                             </table>
                             <hr/><br/>

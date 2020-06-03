@@ -16,6 +16,7 @@ CREATE TABLE booking(
             store_id        VARCHAR2(15)    NOT NULL    ,
             booking_date    date                        ,
             phone_number    VARCHAR2(13)    NOT NULL    ,
+	 time		VARCHAR2(10),
             CONSTRAINT  pk_booking_id           PRIMARY KEY(booking_id),
             CONSTRAINT  fk_booking_store_id     FOREIGN KEY(store_id)
             REFERENCES  store(store_id)
@@ -136,6 +137,12 @@ CREATE  SEQUENCE    seq_member_no
 INCREMENT   BY      1
 START       WITH    0
 MINVALUE            0;
+
+CREATE  SEQUENCE    seq_booking_no
+INCREMENT   BY      1
+START       WITH    0
+MINVALUE            0;
+
 
 CREATE  SEQUENCE    seq_order_no
 INCREMENT   BY      1

@@ -28,20 +28,7 @@
 </head>
 
 <body>
-    <!-- <!-- Page Preloder
-    <div id="preloder">
-        <div class="loader"></div>
-    </div>
     
-   Search model
-	<div class="search-model">
-		<div class="h-100 d-flex align-items-center justify-content-center">
-			<div class="search-close-switch">+</div>
-			<form class="search-model-form">
-				<input type="text" id="search-input" placeholder="Search here.....">
-			</form>
-		</div>
-	</div> -->
 	<!-- Search model end -->
 	<jsp:include page="header.jsp"	flush = "false"/>
 
@@ -51,7 +38,7 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="page-breadcrumb">
-                        <h2>${category }<span>.</span></h2>
+                        <h2>${category}<span>.</span></h2>
 
                     </div>
                 </div>
@@ -66,37 +53,14 @@
     <!-- Categories Page Section Begin -->
     <section class="categories-page spad">
         <div class="container">
-<!--             <div class="categories-controls"> -->
-<!--                 <div class="row"> -->
-<!--                     <div class="col-lg-12"> -->
-<!--                         <div class="categories-filter"> -->
-<!--                             <div class="cf-left"> -->
-<!--                                 <form action="#"> -->
-<!--                                     <select class="sort"> -->
-<!--                                         <option value="">Sort by</option> -->
-<!--                                         <option value="">Orders</option> -->
-<!--                                         <option value="">Newest</option> -->
-<!--                                         <option value="">Price</option> -->
-<!--                                     </select> -->
-<!--                                 </form> -->
-<!--                             </div> -->
-<!--                             <div class="cf-right"> -->
-<!--                                 <span>20 Products</span> -->
-<!--                                 <a href="#">2</a> -->
-<!--                                 <a href="#" class="active">4</a> -->
-<!--                                 <a href="#">6</a> -->
-<!--                             </div> -->
-<!--                         </div> -->
-<!--                     </div> -->
-<!--                 </div> -->
-<!--             </div> -->
-            
-            
+    
             <div class="row">
+            
             <MJ:forEach var="item" items="${productList }">    
+
                 <div class="col-lg-3 col-md-6">
                     <div class="single-product-item">
-                        <a href="product-page.do"><figure>
+                        <a href="product-page.do?productId=${item.productId}&name=${item.name}"><figure>
                             <img src="/basic/resources/upload/${item.pfname }" alt="">
 <!--                             <div class="p-status">new</div> -->
                         </figure></a>
@@ -112,13 +76,32 @@
                 
                 
             </div>
-            <div class="more-product">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <a href="#" class="primary-btn">Load More</a>
-                    </div>
-                </div>
-            </div>
+            
+            <div style="display: block; text-align: center;">		
+				<MJ:if test="${paging.startPage != 1 }">
+					<a href="categories.do?category=${URLcategory }&gender=${gender }&nowPage=${paging.startPage - 1 }&cntPerPage=${paging.cntPerPage}">&lt;</a>
+				</MJ:if>
+				<MJ:forEach begin="${paging.startPage }" end="${paging.endPage }" var="p">
+					<MJ:choose>
+						<MJ:when test="${p == paging.nowPage }">
+							<b>${p }</b>
+						</MJ:when>
+						<MJ:when test="${p != paging.nowPage }">
+							<a href="categories.do?category=${URLcategory }&gender=${gender }&nowPage=${p }&cntPerPage=${paging.cntPerPage}">${p }</a>
+						</MJ:when>
+					</MJ:choose>
+				</MJ:forEach>
+				<MJ:if test="${paging.endPage != paging.lastPage}">
+					<a href="categories.do?category=${URLcategory }&gender=${gender }&nowPage=${paging.endPage+1 }&cntPerPage=${paging.cntPerPage}">&gt;</a>
+				</MJ:if>
+			</div>
+<!--             <div class="more-product"> -->
+<!--                 <div class="row"> -->
+<!--                     <div class="col-lg-12 text-center"> -->
+<!--                         <a href="#" class="primary-btn">Load More</a> -->
+<!--                     </div> -->
+<!--                 </div> -->
+<!--             </div> -->
         </div>
     </section>
     <!-- Categories Page Section End -->
