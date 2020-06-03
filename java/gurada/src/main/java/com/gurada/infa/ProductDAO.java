@@ -9,5 +9,7 @@ public interface ProductDAO {
 	public void ProductInsert(ProductVO vo);
 	//상품 목록 검색
 	public ProductVO ProductSelect(ProductVO vo);
+	//상품 리스트
+	public abstract List<ProductVO> productSelectList(ProductVO vo);
 } 
 	

@@ -104,22 +104,22 @@
                 <nav class="main-menu mobile-menu">
                     <ul>
                         <li><a class="active" href="/basic/index.jsp">홈</a></li>
-                        <li><a href="#">남자</a>    
+                        <li><a href="categories.do?category=suit&gender=man">남자</a>    
                             <ul class="sub-menu">
-                                <li><a href="#">수트</a></li>
-                                <li><a href="#">아우터</a></li>
-                                <li><a href="#">가방</a></li>
-                                <li><a href="#">상의</a></li>
-                                <li><a href="#">하의</a></li>
+                                <li><a href="categories.do?category=suit&gender=man">슈트</a></li>
+                                <li><a href="categories.do?category=outter&gender=man">아우터</a></li>
+                                <li><a href="categories.do?category=bag&gender=man">가방</a></li>
+                                <li><a href="categories.do?category=top&gender=man">상의</a></li>
+                                <li><a href="categories.do?category=bottom&gender=man">하의</a></li>
                             </ul>
                         </li>
                         <li><a href="#">여자</a>    
                             <ul class="sub-menu">
-                                <li><a href="#">수트</a></li>
-                                <li><a href="#">아우터</a></li>
-                                <li><a href="#">가방</a></li>
-                                <li><a href="#">상의</a></li>
-                                <li><a href="#">하의</a></li>
+                                <li><a href="categories.do?category=suit&gender=woman">슈트</a></li>
+                                <li><a href="categories.do?category=dress&gender=woman">드레스</a></li>
+                                <li><a href="categories.do?category=bag&gender=woman">가방</a></li>
+                                <li><a href="categories.do?category=top&gender=woman">상의</a></li>
+                                <li><a href="categories.do?category=bottom&gender=woman">하의</a></li>
                             </ul>
                         </li>
                         <li><a href="#">About</a></li>

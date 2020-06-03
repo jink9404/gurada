@@ -20,4 +20,10 @@
 		from product
 		where gender = #{gender} and category_id= #{categoryId} and name=#{name}
 	</select>
+	
+	<select id="selectList" parameterType="product" resultType="product">
+		SELECT * 
+			FROM product
+				WHERE	category_id=#{categoryId} AND gender=#{gender}	
+	</select>
 </mapper> 
