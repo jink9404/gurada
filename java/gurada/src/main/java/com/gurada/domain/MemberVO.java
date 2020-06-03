@@ -13,6 +13,21 @@ public class MemberVO {
 	private String secessionDate;
 	private String lastIp;
 	private	String gender;
+	private String marketing;
+	private String profiling;
+	
+	public String getMarketing() {
+		return marketing;
+	}
+	public void setMarketing(String marketing) {
+		this.marketing = marketing;
+	}
+	public String getProfiling() {
+		return profiling;
+	}
+	public void setProfiling(String profiling) {
+		this.profiling = profiling;
+	}
 	public String getMemberNo() {
 		return memberNo;
 	}

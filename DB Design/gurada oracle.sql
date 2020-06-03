@@ -4,8 +4,8 @@
             post_code       VARCHAR2(6)     NOT NULL    ,
             tel             VARCHAR2(13)    NOT NULL    ,
             name            VARCHAR2(100)   NOT NULL    ,
-            Latitude        NUMBER                      ,              --위도
-            longitude       NUMBER                      ,              --경도
+            Latitude        VARCHAR2(20),              --위도
+            longitude       VARCHAR2(20),              --경도
             CONSTRAINT  pk_store_id             PRIMARY KEY(store_id),
             CONSTRAINT  uq_store_tel            UNIQUE (tel)
 );
@@ -35,6 +35,7 @@ CREATE TABLE Member(
             last_ip         VARCHAR2(15)                    ,
             gender          varchar2(6)     NOT NULL        ,
             marketing       varchar2(10)                    ,
+	profiling		varchar2(10)		,
             CONSTRAINT pk_member_no             PRIMARY KEY (member_no),
             CONSTRAINT uq_member_phoneNumber    UNIQUE (phone_number),
             CONSTRAINT ck_member_gender        CHECK (gender IN('남자','여자'))
@@ -56,7 +57,7 @@ CREATE TABLE product(
             detail          VARCHAR2(2000)                  ,
             p_size            VARCHAR2(4)                     ,
 	pfname	      VARCHAR2(100)		,
-	pfsize		NUMBER			,
+	pfsize		NUMBER		,
             CONSTRAINT pk_product_id            PRIMARY KEY (product_id),
             CONSTRAINT fk_product_category_id   FOREIGN KEY (category_ID)
             REFERENCES category(category_ID),
@@ -130,24 +131,13 @@ CREATE TABLE review(
             REFERENCES  member(member_no)
 );
 
-CREATE TABLE IMAGE(
-            image_id        VARCHAR2(15),                        
-            Product_IMG_URL VARCHAR2(500),
-            Wearing_IMG_URL VARCHAR2(500),
-            BOARD_IMG_URL   VARCHAR2(500),
-            product_id      VARCHAR2(15),
-            qna_no          VARCHAR2(15),
-            review_no       VARCHAR2(15),
-            CONSTRAINT  pk_image_id             PRIMARY KEY (image_id),
-            CONSTRAINT  fk_image_product_id     FOREIGN KEY (product_id)
-            REFERENCES  product(product_id),
-            CONSTRAINT  fk_image_qna_id         FOREIGN KEY (QnA_NO)
-            REFERENCES  QnA(QnA_NO),
-            CONSTRAINT  fk_image_review_id      FOREIGN KEY (review_NO)
-            REFERENCES  review(review_NO)
-);
 
 CREATE  SEQUENCE    seq_member_no
+INCREMENT   BY      1
+START       WITH    0
+MINVALUE            0;
+
+CREATE  SEQUENCE    seq_order_no
 INCREMENT   BY      1
 START       WITH    0
 MINVALUE            0;
@@ -157,13 +147,39 @@ INCREMENT   BY      1
 START       WITH    0
 MINVALUE            0;
 
+CREATE  SEQUENCE    seq_review_no
+INCREMENT   BY      1
+START       WITH    0
+MINVALUE            0;
+
+
+CREATE  SEQUENCE    seq_wishlist_no     
+INCREMENT   BY      1
+START       WITH    0
+MINVALUE            0;
+
+
 CREATE  SEQUENCE    seq_store_no
 INCREMENT   BY      1
 START       WITH    0
 MINVALUE            0;
 
 
+CREATE  SEQUENCE    seq_category_no
+INCREMENT   BY      1
+START       WITH    0
+MINVALUE            0;
 
+CREATE  SEQUENCE    seq_nonMember_no
+INCREMENT   BY      1
+START       WITH    0
+MINVALUE            0;
+
+
+CREATE  SEQUENCE 	seq_productid_no
+INCREMENT   BY      1
+START       WITH    0
+MINVALUE            0;
 ALTER table product modify (gender varchar2(6));
 
 ==========sh store 정보=================

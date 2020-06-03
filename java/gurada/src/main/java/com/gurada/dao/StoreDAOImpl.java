@@ -18,7 +18,10 @@ public class StoreDAOImpl implements StoreDAO{
 
 
 	public StoreVO getStore(StoreVO vo) {
+		
 		return mybatis.selectOne("StoreDAO.getStore", vo);
+		
+
 		
 	}
 
