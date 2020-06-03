@@ -7,6 +7,11 @@ import com.gurada.domain.PagingVO;
 import com.gurada.domain.ProductVO;
 
 public interface ProductDAO {
+	
+	//상품수정
+	public void productModify(ProductVO vo);
+	
+	public ProductVO productUpdate(ProductVO vo);
 	//상품 등록
 	public void ProductInsert(ProductVO vo);
 
@@ -21,5 +26,10 @@ public interface ProductDAO {
 	
 	public ProductVO productDetail(ProductVO vo);
 
+	public int delete(String name);
+	
+	//상품 검색
+	public List<ProductVO> productSearch(ProductVO vo);
+	
 }
 
