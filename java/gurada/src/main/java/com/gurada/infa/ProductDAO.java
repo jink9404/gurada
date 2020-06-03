@@ -16,5 +16,10 @@ public interface ProductDAO {
 	public abstract List<ProductVO> productSelectList(HashMap map);
 	
 	public abstract int countProduct(ProductVO productVo);
+
+	//상품디테일화면(product-page)
+	
+	public ProductVO productDetail(ProductVO vo);
+
 }
 

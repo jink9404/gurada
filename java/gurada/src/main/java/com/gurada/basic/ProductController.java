@@ -2,6 +2,7 @@ package com.gurada.basic;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -88,6 +89,18 @@ public class ProductController {
 			model.addAttribute("paging", pageVo);
 		}
 	}
+	
+	@RequestMapping("/product-page.do")
+	public void productpage(ProductVO vo,HttpServletRequest request, Model model) {
+		String productId = request.getParameter("productId");
+		String name = request.getParameter("name");
+		vo.setName(name);
+		vo.setProductId(productId);
+		
+		System.out.println(vo.getName());
+		System.out.println(vo.getProductId());
+		model.addAttribute("detail", service.getProductDetail(vo));
+	} 
 	
 	
 }

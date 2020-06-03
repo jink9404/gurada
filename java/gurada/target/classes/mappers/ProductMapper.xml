@@ -29,6 +29,7 @@
 				WHERE	category_id=#{categoryId} AND gender=#{gender}	
 			</if>
 	</select>
+
 <!-- 	작성자 : 김명진 
 		return -> product 테이블 총 튜플 수
 -->
@@ -39,6 +40,13 @@
 				WHERE	category_id=#{categoryId} AND gender=#{gender}
 			</if>
 	</select>	
+
+	<select id="selectDetail" parameterType="product" resultType="product">
+	select *
+	from product
+	where name=#{name} and product_id=#{productId}
+	</select>
+
 
 	<select id="selectListPaging" parameterType="hashmap" resultType="product">
 		SELECT * 

@@ -14,4 +14,8 @@ public interface ResistrationService {
 	public abstract List<ProductVO> getProductList(ProductVO productVo, PagingVO PageVo);
 	
 	public abstract int countProductList(ProductVO productVo);
+
+	public ProductVO getProductDetail(ProductVO vo);
+	
+
 }

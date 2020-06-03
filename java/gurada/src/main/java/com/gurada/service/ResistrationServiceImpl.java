@@ -24,7 +24,7 @@ public class ResistrationServiceImpl implements ResistrationService {
 	public List<ProductVO> getProductlist(ProductVO vo){
 		return ProductDAO.productSelectList(vo);
 	}
-	
+
 	//productVo 조건 ProductVO gender, category 별 리스트
 	@Override
 	public List<ProductVO> getProductList(ProductVO productVo,PagingVO pageVo){
@@ -38,4 +38,11 @@ public class ResistrationServiceImpl implements ResistrationService {
 	public int countProductList(ProductVO productVo) {
 		return ProductDAO.countProduct(productVo);
 	}
+
+
+	@Override
+	public ProductVO getProductDetail(ProductVO vo) {
+		return ProductDAO.productDetail(vo);
+	}
+
 }

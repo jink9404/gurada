@@ -42,4 +42,10 @@ public class ProductDAOImpl implements ProductDAO {
 	public int countProduct(ProductVO productVo) {
 		return mybatis.selectOne("com.gurada.ProductMapper.countProduct", productVo);
 	}
+
+	@Override
+	public ProductVO productDetail(ProductVO vo) {
+		return mybatis.selectOne("com.gurada.ProductMapper.selectDetail", vo);
+	} 
+
 }
