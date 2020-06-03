@@ -51,7 +51,7 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="page-breadcrumb">
-                        <h2>${category }<span>.</span></h2>
+                        <h2>${category}<span>.</span></h2>
 
                     </div>
                 </div>
@@ -93,10 +93,10 @@
             
             
             <div class="row">
-            <MJ:forEach var="item" items="${productList }">    
+            <MJ:forEach var="item" items="${productList}">    
                 <div class="col-lg-3 col-md-6">
                     <div class="single-product-item">
-                        <a href="product-page.do"><figure>
+                        <a href="product-page.do?productId=${item.productId}&name=${item.name}"><figure>
                             <img src="/basic/resources/upload/${item.pfname }" alt="">
 <!--                             <div class="p-status">new</div> -->
                         </figure></a>

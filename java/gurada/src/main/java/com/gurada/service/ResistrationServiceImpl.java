@@ -22,4 +22,11 @@ public class ResistrationServiceImpl implements ResistrationService {
 	public List<ProductVO> getProductlist(ProductVO vo){
 		return ProductDAO.productSelectList(vo);
 	}
+
+	@Override
+	public ProductVO getProductDetail(ProductVO vo) {
+		return ProductDAO.productDetail(vo);
+	}
+	
+	
 }

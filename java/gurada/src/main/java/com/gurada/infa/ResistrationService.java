@@ -9,5 +9,8 @@ public interface ResistrationService {
 	void productInsert(ProductVO vo);
 	
 	public abstract List<ProductVO> getProductlist(ProductVO vo);
-
+	
+	public ProductVO getProductDetail(ProductVO vo);
+	
+	
 }

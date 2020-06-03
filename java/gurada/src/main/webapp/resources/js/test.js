@@ -124,6 +124,9 @@
             }
 
             window.onload = initialize;*/
+		var temp = document.getElementId(quantity);
+		var quantity = temp.val();
+		
 
  function previewImage(targetObj, View_area) {
                var preview = document.getElementById(View_area); //div id

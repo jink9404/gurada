@@ -24,4 +24,9 @@ public class ProductDAOImpl implements ProductDAO {
 	public List<ProductVO> productSelectList(ProductVO vo){
 		return mybatis.selectList("com.gurada.ProductMapper.selectList", vo);
 	}
+
+	@Override
+	public ProductVO productDetail(ProductVO vo) {
+		return mybatis.selectOne("com.gurada.ProductMapper.selectDetail", vo);
+	} 
 }

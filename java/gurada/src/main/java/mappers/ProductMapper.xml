@@ -37,6 +37,11 @@
 <!--    FROM product  -->
   
 <!--    </select> -->
+	<select id="selectDetail" parameterType="product" resultType="product">
+	select *
+	from product
+	where name=#{name} and product_id=#{productId}
+	</select>
    
 
 </mapper> 
