@@ -18,11 +18,10 @@ public class ProductDAOImpl implements ProductDAO {
 	public void ProductInsert(ProductVO vo) {
 		mybatis.insert("com.gurada.ProductMapper.insert",vo);
 	}
-
 	
 	@Override
-	public ProductVO ProductSelect(ProductVO vo) {
-		return mybatis.selectOne("com.gurada.ProductMapper.select", vo);
+	public List<ProductVO> ProductSelectList(ProductVO vo) {
+		return mybatis.selectList("com.gurada.ProductMapper.getProductList", vo);
 	}
 	
 	//상품리스트를 가져온다.

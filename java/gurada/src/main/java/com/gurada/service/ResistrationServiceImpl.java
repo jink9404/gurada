@@ -18,8 +18,8 @@ public class ResistrationServiceImpl implements ResistrationService {
 		ProductDAO.ProductInsert(vo);
 	}
 	@Override
-	public ProductVO productSelect(ProductVO vo) {
-		return ProductDAO.ProductSelect(vo); 
+	public List<ProductVO> productSelectList(ProductVO vo) {
+		return ProductDAO.ProductSelectList(vo); 
 	}
 
 	@Override

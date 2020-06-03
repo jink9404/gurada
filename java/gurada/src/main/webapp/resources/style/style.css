@@ -2649,7 +2649,7 @@ ol {
 	width : 400px;
 }
 .container .rjator{
-	width : 50%;
+	padding-left : 850px;
 }
 .pro_img-jh{
     width : 400px;
@@ -2704,6 +2704,19 @@ border: 1px solid #999;
 	border-radius: 50px;
 	cursor: pointer;
 	text-transform: uppercase;
+}
+.addr-form .sh-button{
+	color: #1e1e1e;
+	background: transparent;
+	border: none;
+	font-size: 14px;
+	font-weight: 600;
+	padding: 8px 25px;
+	border: 1px solid #1e1e1e;
+	border-radius: 50px;
+	cursor: pointer;
+	text-transform: uppercase;
+	
 }
 .small-button2{color: #1e1e1e;
 	background: transparent;
