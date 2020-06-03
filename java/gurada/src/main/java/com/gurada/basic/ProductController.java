@@ -17,17 +17,17 @@ import com.gurada.infa.ResistrationService;
 public class ProductController {
 	
 	@Autowired
-	private ResistrationService service1;
+	private ResistrationService service;
 	
 	@RequestMapping("/resistration1.do") 
 	public String product_resistration(ProductVO vo) {
-		service1.productInsert(vo);
+		service.productInsert(vo);
 		return "/resistration";
 	}
 	//상품 목록 검색
 	@RequestMapping("/product-list.do")
 	public void product_select(ProductVO vo, Model model) {
-		model.addAttribute("prodlist",service1.getProductlist(vo));
+		model.addAttribute("prodlist",service.getProductlist(vo));
 	}
 	
 	//User category별 ProductList
@@ -58,7 +58,7 @@ public class ProductController {
 		}
 		//카테고리 파라미터에 따른 객체값 저장 END
 		
-		List<ProductVO> list = (List<ProductVO>) service1.getProductlist(vo);//product vo로 검색
+		List<ProductVO> list = (List<ProductVO>) service.getProductlist(vo);//product vo로 검색
 		//list가 비어있지 않으면 model로 전송
 		if(list != null)
 			model.addAttribute("productList", list );
