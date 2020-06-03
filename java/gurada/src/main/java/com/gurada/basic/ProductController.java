@@ -26,7 +26,7 @@ public class ProductController {
 		return "/resistration";
 	}
 	//상품 목록 검색
-	@RequestMapping("/product-registration.do")
+	@RequestMapping("/product-list.do")
 	public void product_select(ProductVO vo, Model model) {
 		model.addAttribute("prodlist",service1.productSelectList(vo));
 	}
