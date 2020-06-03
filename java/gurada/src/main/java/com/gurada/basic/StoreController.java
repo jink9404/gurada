@@ -29,6 +29,15 @@ public class StoreController {
 		return "/find-store";
 	
 	}
-
-
+	
+	
+		@RequestMapping("/booking.do")
+		public void bookingStore(StoreVO vo,HttpServletRequest request) {
+			request.setAttribute("booking", vo);
+			request.setAttribute("blatitude", vo.getLatitude());
+			request.setAttribute("blongitude", vo.getLongitude());
+			
+			
+		}
+	
 }

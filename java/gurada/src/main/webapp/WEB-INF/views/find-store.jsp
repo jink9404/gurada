@@ -133,9 +133,8 @@
 						<table>
 							<tr>
 								<td>
-								<input type="hidden" value='${store.storeId}'>
-								<input type="hidden" value='${store.latitude}'>
-								<input type="hidden" value='${store.longitude}'>
+								<input type="hidden" name='storeId' value='${store.longitude}'>
+								
 									<h4>${store.name}</h4>
 								</td>
 							</tr>
