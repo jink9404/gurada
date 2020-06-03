@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="zxx">
-	
+
 <head>
 
 
@@ -13,16 +13,17 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <script type="text/javascript"
 	src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyBD64wGh26USHyvlhtDJnbFzvcFD7vY0W4" ></script>
+<script type="text/javascript"
+	src="http://maps.google.com/maps/api/js?key=AIzaSyBD64wGh26USHyvlhtDJnbFzvcFD7vY0W4"></script>
 
 
-	
+
 <script type="text/javascript">
 
-	
+
 	function initialize() {
-		var mapLocation = new google.maps.LatLng(<%="${Latitude}"%>,<%="${longitude}"%>); // 지도에서 가운데로 위치할 위도와 경도
-		var markLocation = new google.maps.LatLng(<%="${Latitude}"%>,<%="${longitude}"%>); // 마커가 위치할 위도와 경도
+		var mapLocation = new google.maps.LatLng(${latitude},${longitude}); // 지도에서 가운데로 위치할 위도와 경도
+		var markLocation = new google.maps.LatLng(${latitude},${longitude}); // 마커가 위치할 위도와 경도
 
 		var mapOptions = {
 			center : mapLocation, // 지도에서 가운데로 위치할 위도와 경도(변수)
@@ -102,14 +103,13 @@
 				<div class="col-lg-4">
 					<div class="page-breadcrumb">
 						<h2>
-							매장 찾기<span>.</span>
-							<br/><br/>
+							매장 찾기<span>.</span> <br />
+							<br />
 						</h2>
 					</div>
 				</div>
 			</div>
 		</div>
-
 		<!-- Page Add Section End -->
 
 		<!-- Contact Section Begin -->
@@ -133,14 +133,14 @@
 						<table>
 							<tr>
 								<td>
-									<h4>검색결과 : 주소 나오는 테이블.</h4>
+									<h4>${store.name}</h4>
 								</td>
 							</tr>
 							<tr>
-								<td>찾아오는길 설명글.</td>
+								<td>${store.location}</td>
 							</tr>
 							<tr>
-								<td>연락처</td>
+								<td>매장 연락처 : ${store.tel}</td>
 							</tr>
 						</table>
 					</form>
