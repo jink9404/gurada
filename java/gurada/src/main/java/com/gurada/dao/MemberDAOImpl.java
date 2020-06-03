@@ -12,16 +12,10 @@ public class MemberDAOImpl implements MemberDAO {
 	@Autowired
 	private SqlSessionTemplate mybatis;
 
+	//회원등록
 	@Override
 	public int memberInsert(MemberVO vo) {
-		
 		return mybatis.insert("com.gurada.MemberMapper.signUp",vo);
-	}
-
-	@Override
-	public MemberVO idCheck(MemberVO vo) {
-		
-		return null;
 	}
 
 	@Override

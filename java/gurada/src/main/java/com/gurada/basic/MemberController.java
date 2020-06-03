@@ -49,6 +49,8 @@ public class MemberController {
 		}
 		return result;
 	}
+	
+//	로그아웃
 	@ResponseBody
 	@RequestMapping(value = "/logout.do")
 	public void logout(HttpSession session) {
@@ -57,6 +59,7 @@ public class MemberController {
 
 	}
 	
+//	회원수정
 	@RequestMapping(value = "/updateMember.do")
 	public String updateMember(MemberVO vo,HttpSession session) {
 		int result = service.userUpdate(vo);
@@ -64,6 +67,7 @@ public class MemberController {
 		return "update_member";
 	}
 	
+//	중복 이메일 체크 AJAX
 	@ResponseBody
 	@RequestMapping(value = "/checkEmail.do",produces = "application/text; charset=utf-8")
 	public String checkEmail(MemberVO vo) {

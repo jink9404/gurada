@@ -8,8 +8,6 @@ public interface ResistrationService {
 	
 	void productInsert(ProductVO vo);
 	
-	List<ProductVO> productSelectList(ProductVO vo);
-	
 	public abstract List<ProductVO> getProductlist(ProductVO vo);
 
 }

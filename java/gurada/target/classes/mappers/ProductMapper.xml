@@ -4,6 +4,8 @@
 <mapper namespace="com.gurada.ProductMapper">
 <!-- 	mybatis 자료형 int / hashmap / string 전부 소문자 -->
 	
+<!-- 	관리자가 상품을 등록 할때 사용
+ -->
 	<insert id ="insert" parameterType="product">
       insert 
       into product(name,price,QUANTITY,CATEGORY_ID,GENDER,P_SIZE ,DETAIL,receipt_Date,PRODUCT_ID,pfname,pfsize) 
@@ -17,19 +19,24 @@
 		where gender = #{gender} and category_id= #{categoryId} and name=#{name}
 	</select>
 	
+<!-- 	작성자: 김명진
+		리스트 얻어오는 mapper categoryid와 gender (조건)AND 하여 가지고옴
+-->
 	<select id="selectList" parameterType="product" resultType="product">
 		SELECT * 
 			FROM product
+			<if test="categoryId!=null and gender != null"> 
 				WHERE	category_id=#{categoryId} AND gender=#{gender}	
+			</if>
 	</select>
-
-	<select id="getProductList" resultType="product">
-   <![CDATA[
-   SELECT 
-   name,price,QUANTITY,CATEGORY_ID as categoryId,GENDER,P_SIZE as pSize,DETAIL,receipt_Date,PRODUCT_ID,pfname,pfsize 
-   FROM product 
-   ]]>
-   </select>
+<!-- 삭제 예정 -->
+<!-- 	<select id="getProductList" resultType="product"> -->
+   
+<!--    SELECT  -->
+<!--    name,price,QUANTITY,CATEGORY_ID,GENDER,P_SIZE ,DETAIL,receipt_Date,PRODUCT_ID,pfname,pfsize  -->
+<!--    FROM product  -->
+  
+<!--    </select> -->
    
 
 </mapper> 

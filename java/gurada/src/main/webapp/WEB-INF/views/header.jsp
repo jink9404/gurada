@@ -36,11 +36,11 @@
                             <table>
                                 <tr>
                                     <td>E_MAIL</td>
-                                    <td colspan="2"><input type="text" value="test@naver.com" id="email" name="email" placeholder="   email" size="30"/></td>
+                                    <td colspan="2"><input type="text" id="email" name="email" placeholder="   email" size="30"/></td>
                                 </tr>
                                 <tr>
                                     <td>PASSWORD</td>
-                                    <td colspan="2"><input type="password" value="test" id="login_password" name="password" placeholder="   PW" size="30"/></td>
+                                    <td colspan="2"><input type="password" id="login_password" name="password" placeholder="   PW" size="30"/></td>
                                 </tr>
                                 <tr>
                                     <td colspan="2">

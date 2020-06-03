@@ -9,7 +9,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
 
 import com.gurada.domain.ProductVO;
 import com.gurada.infa.ResistrationService;
@@ -18,20 +17,20 @@ import com.gurada.infa.ResistrationService;
 public class ProductController {
 	
 	@Autowired
-	private ResistrationService service1;
+	private ResistrationService service;
 	
 	@RequestMapping("/resistration1.do") 
 	public String product_resistration(ProductVO vo) {
-		service1.productInsert(vo);
+		service.productInsert(vo);
 		return "/resistration";
 	}
 	//상품 목록 검색
 	@RequestMapping("/product-list.do")
 	public void product_select(ProductVO vo, Model model) {
-		model.addAttribute("prodlist",service1.productSelectList(vo));
+		model.addAttribute("prodlist",service.getProductlist(vo));
 	}
 	
-	//상품리스트
+	//User category별 ProductList
 	//produces => 한글처리
 	//RequestParam => URL로 받은 파라미터
 	@RequestMapping(value = "/categories.do", produces = "application/text; charset=utf-8")
@@ -59,14 +58,11 @@ public class ProductController {
 		}
 		//카테고리 파라미터에 따른 객체값 저장 END
 		
-		List<ProductVO> list = (List<ProductVO>) service1.getProductlist(vo);//product vo로 검색
+		List<ProductVO> list = (List<ProductVO>) service.getProductlist(vo);//product vo로 검색
 		//list가 비어있지 않으면 model로 전송
 		if(list != null)
 			model.addAttribute("productList", list );
 	}
 	
-	@RequestMapping(value = "/product-page.do")
-	public void productPage() {
-		
-	}
+	
 }
