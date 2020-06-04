@@ -88,7 +88,7 @@
 	<select id="search" parameterType="product" resultType="product">
 	<![CDATA[
 		select * from product
-		where name =#{name}
+		where name LIKE '%'|| #{name} ||'%'
 			]]> 
 	</select>
 	

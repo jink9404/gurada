@@ -7,22 +7,24 @@
 </head>
 <body>
 <script src="./resources/js/jquery-3.3.1.min.js"></script>
-<script src="./resources/js/jquery.cookie"></script>
+<script src="./resources/js/jquery.cookie.js"></script>
+<script src="./resources/js/main.js"></script>
+<script src="./resources/js/jquery.slinknav.js"></script>
 <script src="./resources/js/mj.js"></script>
     <div id="preloder">
         <div class="loader"></div>
     </div>
     
     <!-- Search model -->
-	<div class="search-model">
-		<div class="h-100 d-flex align-items-center justify-content-center">
-			<div class="search-close-switch">+</div>
-			<form class="search-model-form">
-				<input type="text" id="search-input" placeholder="검색"/>
-			</form>
-		</div>
-	</div>
-	<!-- Search model end -->
+   <div class="search-model">
+      <div class="h-100 d-flex align-items-center justify-content-center">
+         <div class="search-close-switch">+</div>
+         <form class="search-model-form">
+            <input type="text" id="search-input" placeholder="검색"/>
+         </form>
+      </div>
+   </div>
+   <!-- Search model end -->
 
     <!--Login Header Section End -->
     <div class="login-header">
@@ -82,24 +84,24 @@
                 <div class="header-right">
                     <a><img src="./resources/img/icons/search.png" alt="" class="search-trigger"/></a>&nbsp;&nbsp;
                     <c:if test="${not empty sessionScope.UserID }">
-	                    <a href="my-page.do">
-	                    	<img src="./resources/img/icons/man.png" alt=""/>
-	                    </a>&nbsp;&nbsp;&nbsp;&nbsp;
-	                    <a href="#">
-	                        <img src="./resources/img/icons/bag.png" alt=""/>
-	                        <span>1</span>
-	                    </a>&nbsp;&nbsp;&nbsp;&nbsp;
+                       <a href="my-page.do">
+                          <img src="./resources/img/icons/man.png" alt=""/>
+                       </a>&nbsp;&nbsp;&nbsp;&nbsp;
+                       <a href="#">
+                           <img src="./resources/img/icons/bag.png" alt=""/>
+                           <span>1</span>
+                       </a>&nbsp;&nbsp;&nbsp;&nbsp;
                     </c:if>
                 </div>
                 <div class="user-access">
-                	<c:if test="${empty sessionScope.UserID }">
-	                    <a href="signup-form.do">회원가입</a> / 
-	                    <span id="login" class="in">로그인</span>
-	                </c:if>
-	                <c:if test="${not empty sessionScope.UserID }">
-	                	<span class="in">${sessionScope.UserID } 님 환영합니다.</span>
-	                	/<a href="" id="logout">로그아웃</a>
-	                </c:if>
+                   <c:if test="${empty sessionScope.UserID }">
+                       <a href="signup-form.do">회원가입</a> / 
+                       <span id="login" class="in">로그인</span>
+                   </c:if>
+                   <c:if test="${not empty sessionScope.UserID }">
+                      <span class="in">${sessionScope.UserID } 님 환영합니다.</span>
+                      /<a href="" id="logout">로그아웃</a>
+                   </c:if>
                 </div>
                 <nav class="main-menu mobile-menu">
                     <ul>
