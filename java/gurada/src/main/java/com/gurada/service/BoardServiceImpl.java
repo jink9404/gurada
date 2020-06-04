@@ -30,8 +30,8 @@ public class BoardServiceImpl implements BoardService {
 		return boardDAO.getBoardList(vo);
 	}
 
-	public int getBoardCount() {
-		return boardDAO.getCountBoard();
+	public int getBoardCount(BoardVO vo) {
+		return boardDAO.getCountBoard(vo);
 	}
 
 	

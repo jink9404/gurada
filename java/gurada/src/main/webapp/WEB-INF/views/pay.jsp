@@ -208,15 +208,15 @@
 									<div class="payment-icon">
 										<ul>
 											<li><img class="img-fluid"
-												src="images/payment-icon/1.png" alt=""></li>
+												src="/resources/img/payment-icon/1.png" alt=""></li>
 											<li><img class="img-fluid"
-												src="images/payment-icon/2.png" alt=""></li>
+												src="/resources/img/payment-icon/2.png" alt=""></li>
 											<li><img class="img-fluid"
-												src="images/payment-icon/3.png" alt=""></li>
+												src="/resources/img/payment-icon/3.png" alt=""></li>
 											<li><img class="img-fluid"
-												src="images/payment-icon/5.png" alt=""></li>
+												src="/resources/img/payment-icon/5.png" alt=""></li>
 											<li><img class="img-fluid"
-												src="images/payment-icon/7.png" alt=""></li>
+												src="/resources/img/payment-icon/7.png" alt=""></li>
 										</ul>
 									</div>
 								</div>

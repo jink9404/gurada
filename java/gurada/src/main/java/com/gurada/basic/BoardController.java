@@ -25,11 +25,25 @@ public class BoardController {
 	public void getBoardList(@RequestParam(value="nowPage", required=false)
 							 String nowPage,
 							 @RequestParam(value="cntPerPage", required=false)
-							String cntPerPage,
-							BoardVO vo, Model model) {
+							 String cntPerPage,
+							 @RequestParam(value="searchType", required = false, defaultValue = "")
+							 String searchType,
+							 @RequestParam(value="value", required = false, defaultValue = "")
+							 String value, Model model) {
 
+		/*
+		 * parameter으로 searchType 값을 writter를 받아오면 BoardVO에 writter에 value 값을 set
+		 * parameter으로 searchType 값을 title를 받아오면 BoardVO에 title에 value 값을 set
+		 */
+		BoardVO vo = new BoardVO();
+
+		if(searchType.equals("writter"))
+			vo.setWritter(value);
+		else if(searchType.equals("title"))
+			vo.setTitle(value);
 		
-		int total = boardService.getBoardCount();
+		
+		int total = boardService.getBoardCount(vo);
 		if (nowPage == null && cntPerPage == null) {
 			nowPage = "1";
 			cntPerPage = "10";

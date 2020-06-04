@@ -26,23 +26,34 @@
 		]]>
 	</select>
 	
- 	<select id="getBoardCount" resultType="int">
- 		<![CDATA[
+ 	<select id="getBoardCount" parameterType="board" resultType="int">
 			SELECT COUNT(*)
-			FROM qna
-		]]>
+				FROM qna
+			<if test="title!=null"> <!---->
+ 				WHERE TITLE like '%'||#{title}||'%'
+ 			</if>
+ 			<if test="writter!=null"><!---->
+ 				WHERE WRITTER like '%'||#{writter}||'%'
+ 			</if>
  	</select>
  	
  	<!-- Boardlist paging 처리 -->
  	<select id="getBoardListPaging" parameterType="hashmap" resultType="board">
- 		<![CDATA[
+ 		
  				SELECT * FROM(SELECT ROWNUM RN, A.* 
  								FROM (SELECT QNA_NO, WRITTER,TO_CHAR(WRITTEN_DATE, 'YYYY-MM-DD')as WRITTEN_DATE ,TITLE 
- 										FROM qna ORDER BY TO_NUMBER(QNA_NO) DESC
+ 										FROM qna 
+  				<if test="BoardVO.title!=null"> <!---->
+ 										WHERE TITLE like '%'||#{BoardVO.title}||'%'
+ 				</if>
+ 				<if test="BoardVO.writter!=null"><!---->
+ 										WHERE WRITTER like '%'||#{BoardVO.writter}||'%'
+ 				</if>						
+ 										ORDER BY TO_NUMBER(QNA_NO) DESC
  									  ) A
  							  )
     			WHERE RN BETWEEN #{PagingVO.start} AND #{PagingVO.end}
- 		]]>
+ 		
  		
  	</select>
 </mapper>

@@ -14,5 +14,5 @@ public interface BoardDAO {
 	
 	public abstract List<BoardVO> getBoardList(HashMap map);
 
-	public abstract int getCountBoard();
+	public abstract int getCountBoard(BoardVO vo);
 }

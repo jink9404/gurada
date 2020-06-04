@@ -34,9 +34,9 @@ public class BoardDAOImpl implements BoardDAO{
 		
 	}
 	
-	public int getCountBoard() {
+	public int getCountBoard(BoardVO vo) {
 		System.out.println("===> Mybatis countBoard");
-		return mybatis.selectOne("BoardDAO.getBoardCount");
+		return mybatis.selectOne("BoardDAO.getBoardCount",vo);
 	}
 	
 	/*	
