@@ -67,10 +67,14 @@
                             </div>
                             <div class="col-lg-12 text-right" class="small-button">
                                 <button type="submit"  >게시판 목록 가기</button> 
-                            </div>
-                            <buttot><a href='delete-qna.do?id=${board.qnaNo}&pass=${board.password}'>게시글 삭제</a></button>
+                            </div>    
                         </div>
                     </form>
+                    <form action="delete-qna.do" method="post">
+                            <input type='hidden' name='qnaNo' value='${board.qnaNo}' >
+                            <input type='hidden' name='password' value='${board.password}' >
+                            <button type="submit"  >게시글 삭제</button>
+                            </form>
                 </div>
                 <div class="col-lg-3 offset-lg-1">
                     <div class="contact-widget">
