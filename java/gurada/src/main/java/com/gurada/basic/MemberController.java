@@ -56,7 +56,6 @@ public class MemberController {
 	public void logout(HttpSession session) {
 		session.removeAttribute("UserID");
 		session.removeAttribute("UserIDInfo");
-
 	}
 	
 //	회원수정
