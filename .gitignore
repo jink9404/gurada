@@ -1,11 +1,7 @@
 # Compiled
-*.elc
-*.class
 /Servers/
 *.MF
-*.properties
-java/gurada/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF
-java/gurada/target/m2e-wtp/web-resources/META-INF/maven/com.javassem/basic/pom.properties
+
 
 # Packaging
 .cask
@@ -17,3 +13,53 @@ java/gurada/target/m2e-wtp/web-resources/META-INF/maven/com.javassem/basic/pom.p
 *.~undo-tree
 /.metadata/
 java/gurada/src/main/webapp/WEB-INF/spring/root-context.xml
+*.ser
+java/gurada/.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml
+java/gurada/.metadata/.lock
+java/gurada/.metadata/.log
+java/gurada/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/history.version
+java/gurada/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index
+java/gurada/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.version
+java/gurada/.metadata/.plugins/org.eclipse.core.resources/.root/1.tree
+java/gurada/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources
+java/gurada/.metadata/.plugins/org.eclipse.core.runtime/.settings/Cloud Foundry.prefs
+java/gurada/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.core.resources.prefs
+*.prefs
+java/gurada/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi
+java/gurada/.metadata/.plugins/org.eclipse.jdt.core/assumedExternalFilesCache
+java/gurada/.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache
+java/gurada/.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache
+java/gurada/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat
+java/gurada/.metadata/.plugins/org.eclipse.jdt.launching/.install.xml
+java/gurada/.metadata/.plugins/org.eclipse.jdt.launching/libraryInfos.xml
+java/gurada/.metadata/.plugins/org.eclipse.jdt.ui/OpenTypeHistory.xml
+java/gurada/.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml
+java/gurada/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/_0.cfs
+java/gurada/.metadata/.plugins/org.eclipse.m2e.core.ui/dialog_settings.xml
+java/gurada/.metadata/.plugins/org.eclipse.wst.jsdt.ui/QualifiedTypeNameHistory.xml
+java/gurada/.metadata/version.ini
+java/gurada/.metadata/.plugins/org.eclipse.wst.jsdt.ui/OpenTypeHistory.xml
+java/gurada/.metadata/.plugins/org.eclipse.ui.workbench/workingsets.xml
+java/gurada/.metadata/.plugins/org.eclipse.wst.jsdt.core/variablesAndContainers.dat
+java/gurada/.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml
+java/gurada/.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml
+java/gurada/.metadata/.plugins/org.eclipse.tips.ide/dialog_settings.xml
+java/gurada/.metadata/.plugins/org.eclipse.m2e.logback.configuration/logback.1.15.0.20191217-1149.xml
+java/gurada/.metadata/.plugins/org.eclipse.m2e.core/nexus/aaa68c77c18bbce2f3acb7092c7c300a/write.lock
+java/gurada/.metadata/.plugins/org.eclipse.m2e.core/nexus/aaa68c77c18bbce2f3acb7092c7c300a/segments_2
+java/gurada/.metadata/.plugins/org.eclipse.m2e.core/nexus/aaa68c77c18bbce2f3acb7092c7c300a/segments.gen
+java/gurada/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/segments.gen
+java/gurada/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log
+java/gurada/.metadata/.plugins/org.eclipse.m2e.core/nexus/aaa68c77c18bbce2f3acb7092c7c300a/_0.cfs
+java/gurada/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/segments_2
+java/gurada/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_0.cfs
+java/gurada/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/write.lock
+java/gurada/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/segments_2
+java/gurada/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/segments.gen
+java/gurada/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/write.lock
+*.elc
+*.class
+/Servers/
+*.MF
+java/gurada/target/m2e-wtp/web-resources/META-INF/MANIFEST.MF
+java/gurada/target/m2e-wtp/web-resources/META-INF/maven/com.javassem/basic/pom.properties
