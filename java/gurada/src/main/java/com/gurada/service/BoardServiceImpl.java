@@ -44,4 +44,11 @@ public class BoardServiceImpl implements BoardService {
 		map.put("PagingVO", pageVo);
 		return boardDAO.getBoardList(map);
 	}
+
+	//글 삭제
+	public int deleteBoard(BoardVO vo) {
+		int rs=boardDAO.deleteBoard(vo);
+		return rs;
+		
+	}
 }

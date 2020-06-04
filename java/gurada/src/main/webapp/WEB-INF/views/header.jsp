@@ -122,9 +122,8 @@
                                 <li><a href="categories.do?category=bottom&gender=woman">하의</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="find-store.do">오프라인</a></li>
+                        <li><a href="qna.do">고객센터</a></li>
                     </ul>
                 </nav>
             </div>
@@ -137,19 +136,19 @@
                 <div class="col-md-4">
                     <div class="header-item">
                         <img src="./resources/img/icons/delivery.png" alt=""/>
-                        <p>Free shipping on orders over $30 in USA</p>
+                        <p>10주년 구라다 Big sale</p>
                     </div>
                 </div>
                 <div class="col-md-4 text-left text-lg-center">
                     <div class="header-item">
                         <img src="./resources/img/icons/voucher.png" alt=""/>
-                        <p>20% Student Discount</p>
+                        <p>지금 회원가입시 전품목 20% sale</p>
                     </div>
                 </div>
                 <div class="col-md-4 text-left text-xl-right">
                     <div class="header-item">
                     <img src="./resources/img/icons/sales.png" alt=""/>
-                    <p>30% off on dresses. Use code: 30OFF</p>
+                    <p>Da Gurada.</p>
                 </div>
                 </div>
             </div>

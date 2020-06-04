@@ -56,4 +56,10 @@
  		
  		
  	</select>
+ 	
+ 	<delete id="deleteBoard" parameterType="board">
+ 	
+ 		delete from QNA where QNA_NO =${qnaNo} and PASSWORD =${password}
+ 		
+ 	</delete>
 </mapper>

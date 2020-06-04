@@ -66,9 +66,9 @@
                                 <textarea placeholder="내용" disabled>${board.contents}</textarea>
                             </div>
                             <div class="col-lg-12 text-right" class="small-button">
-                                <button type="submit"  >게시판 목록 가기</button>
-                               
+                                <button type="submit"  >게시판 목록 가기</button> 
                             </div>
+                            <buttot><a href='delete-qna.do?id=${board.qnaNo}&pass=${board.password}'>게시글 삭제</a></button>
                         </div>
                     </form>
                 </div>

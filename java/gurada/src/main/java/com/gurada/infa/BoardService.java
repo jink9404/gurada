@@ -22,4 +22,7 @@ public interface BoardService {
 	List<BoardVO> getBoardList(BoardVO vo,PagingVO pageVo);
 	// 글 목록 총 갯수
 	public abstract int getBoardCount(BoardVO vo);
+	
+	//글 삭제
+	int deleteBoard(BoardVO vo);
 }
