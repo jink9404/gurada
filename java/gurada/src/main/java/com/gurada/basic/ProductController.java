@@ -7,8 +7,12 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.gurada.domain.PagingVO;
@@ -26,11 +30,14 @@ public class ProductController {
 		service.productInsert(vo);
 		return "/resistration";
 	}
-	//상품 목록 검색
-	@RequestMapping("/product-list.do")
-	public void product_select(ProductVO vo, Model model) {
-		model.addAttribute("prodlist",service.getProductlist(vo));
-	}
+	
+	
+	
+	 //상품 목록 검색
+	 
+	 @RequestMapping("/product-list.do") public void product_select(ProductVO vo,
+	 Model model) { model.addAttribute("prodlist",service.getProductlist(vo)); }
+	
 	
 	//User category별 ProductList
 	//produces => 한글처리
@@ -89,6 +96,36 @@ public class ProductController {
 			model.addAttribute("paging", pageVo);
 		}
 	}
+	//삭제하기 -kjs
+	@RequestMapping(value="/delete.do",method = RequestMethod.POST)
+	   public String delete_user(@RequestParam("delete") String[] delete, ModelMap modelMap) throws Exception 
+	   { // 삭제할 사용자 ID마다 반복해서 사용자 삭제
+	      for (String productId : delete) { 
+	         System.out.println("사용자 삭제 = " + productId); 
+	         int delete_count = service.delete(productId); 
+	         } // 목록 페이지로 이동
+	      return "redirect:/product-list.do"; }
+	
+	
+	
+	//수정하기-kjs+jain+o
+	@RequestMapping("/update.do")
+	public String updateProduct(ProductVO vo, Model model) {
+		model.addAttribute("modify",service.productUpdate(vo));
+		return "productModify";
+	}
+	
+	@RequestMapping("/modify.do")
+	public String modifyProduct(ProductVO vo, HttpServletRequest request) {
+		String productId = request.getParameter("productId");
+		vo.setProductId(productId);
+		service.productModify(vo);
+		return  "redirect:/product-list.do";
+	}
+	
+	
+	
+	
 	
 	@RequestMapping("/product-page.do")
 	public void productpage(ProductVO vo,HttpServletRequest request, Model model) {
@@ -101,6 +138,13 @@ public class ProductController {
 		System.out.println(vo.getProductId());
 		model.addAttribute("detail", service.getProductDetail(vo));
 	} 
+	
+	//상품명으로 검색
+	@RequestMapping("/product-search.do")
+	public String search(ProductVO vo, Model model) {
+		model.addAttribute("prodlist", service.productSearch(vo));
+		return "product-list";
+	}
 	
 	
 }

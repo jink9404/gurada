@@ -7,6 +7,11 @@ import com.gurada.domain.ProductVO;
 
 public interface ResistrationService {
 	
+	public void productModify(ProductVO vo);
+	
+	
+	public ProductVO productUpdate(ProductVO vo);
+	
 	void productInsert(ProductVO vo);
 	
 	public abstract List<ProductVO> getProductlist(ProductVO vo);
@@ -16,6 +21,11 @@ public interface ResistrationService {
 	public abstract int countProductList(ProductVO productVo);
 
 	public ProductVO getProductDetail(ProductVO vo);
+	
+	public int delete(String name);
+	
+	//상품검색
+	List<ProductVO> productSearch(ProductVO vo);
 	
 
 }

@@ -30,11 +30,15 @@
 <body>
     <!-- header -->
     <jsp:include page="header.jsp"/>
+    
+    
      <body>
+     <div class="container">
       <h1>상품관리(재고현황)</h1>
-      
+    <form action="delete.do" method="post">  
    <table border="1">
          <tr>
+            <th></th>
             <th bgcolor="orange" width="100">상품명</th>
             <th bgcolor="orange" width="200">가격</th>
             <th bgcolor="orange" width="150">사이즈</th>
@@ -45,10 +49,12 @@
             <th bgcolor="orange" width="150">이미지</th>
                      
          </tr>
+        
          <c:forEach items="${prodlist}" var="list">
             <!-- 프라퍼티이름 변경 -->
             <tr>
-               <td>${list.name}</td>
+               <td><input type="checkbox" name="delete" value="${list.productId}"></td>
+               <td align="left"><a href="update.do?productId=${list.productId}">${list.name} </a></td> 
                <td>${list.price}</td>
                <td>${list.pSize}</td>
                <td>${list.quantity}</td>
@@ -56,6 +62,7 @@
                <td>${list.categoryId}</td>  
                <!-- 추가 -->
                <td>
+               
                 <c:choose>
                    <c:when test="${list.pfsize==0}">첨부파일 없음</c:when>
                    <c:otherwise>
@@ -66,14 +73,19 @@
                 </c:choose>                 
                </td>   
             </tr>
+            
          </c:forEach>
+       <input type="submit" value="삭제">
       </table>
+      </form>
         <br>
-        <input type="text" placeholder="상품명으로..">
-        <input type="submit" value="상품 검색">        
-        <input type="button" value="상품 등록하러가기"/>
-      
-       <a href="resistration1.do">새글 등록</a>
+       <form action="product-search.do" method="post">
+        <input type="text" name="name" placeholder="상품명을 입력하세요.">
+         <input type="submit" value="상품 검색" >    
+         </form>
+     	
+  
+    </div>
        
     <!-- Contact Section End -->
 

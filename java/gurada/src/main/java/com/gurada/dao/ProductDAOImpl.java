@@ -48,4 +48,27 @@ public class ProductDAOImpl implements ProductDAO {
 		return mybatis.selectOne("com.gurada.ProductMapper.selectDetail", vo);
 	} 
 
+	//삭제
+	   @Override
+	   public int delete(String name) {
+	      return mybatis.delete("com.gurada.ProductMapper.delete",name);
+	   }
+
+	@Override
+	public ProductVO productUpdate(ProductVO vo) {
+		return mybatis.selectOne("com.gurada.ProductMapper.update",vo);
+		
+	}
+
+	@Override
+	public void productModify(ProductVO vo) {
+		mybatis.update("com.gurada.ProductMapper.modify",vo);
+	}
+	
+	//상품검색
+	@Override
+	public List<ProductVO> productSearch(ProductVO vo) {
+		
+		return mybatis.selectList("com.gurada.ProductMapper.search",vo);
+	}
 }

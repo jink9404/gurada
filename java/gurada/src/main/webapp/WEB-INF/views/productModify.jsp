@@ -46,32 +46,32 @@
             <div class="col-lg-8">
                <div class="page-breadcrumb">
                   <h2>
-                     신상품 등록<span>.</span>
+                상품정보수정<span>.</span>
                   </h2>
                   <hr />
-                  <form action="resistration1.do" method="post" enctype="multipart/form-data">
+                  <form action="modify.do?productId=${modify.productId}" method="post" enctype="multipart/form-data">
                      <table class='contact-form3'>
                         <tr class='tr'>
                            <td>상품명</td>
-                           <td class='td1' colspan="2"><input type="text" name="name"
+                           <td class='td1' colspan="2"><input type="text" name="name" value="${modify.name } "
                               placeholder="상품명" /></td>
                         </tr>
                         <tr class='tr'>
                            <td>수량</td>
-                           <td class='td1' colspan="2"><input type="text" name="quantity"
+                           <td class='td1' colspan="2"><input type="text" name="quantity" value="${modify.quantity }"
                               placeholder="수량" /></td>
                         </tr>
                         <tr class='tr'>
                            <td>Price</td>
                            <td class='td1' colspan="2"><input type="text"
-                              name="price" placeholder="price" /></td>
+                              name="price" placeholder="price" value="${modify.price}" /></td>
                         </tr>
                         <tr>
                            <td>분류</td>
-                           <td><select name="gender">
+                           <td><select name="gender" value="${modify.gender}">
                                  <option value="남자">남자</option>
                                  <option value="여자">여자</option>
-                           </select> <select name=categoryId>
+                           </select> <select name=categoryId value="${modify.categoryId}">
                                  <option value="슈트">슈트</option>
                                  <option value="아우터">아우터</option>
                                  <option value="가방">가방</option>
@@ -81,26 +81,21 @@
                         </tr>
                         <tr class='tr'>
                            <td>사이즈</td>
-                           <td>XS <input type="checkbox" value="XS" name="pSize" />&nbsp&nbsp&nbsp
-                              S <input type="checkbox" value="S" name="pSize" />&nbsp&nbsp&nbsp
-                              M <input type="checkbox" value="M" name="pSize" />&nbsp&nbsp&nbsp
-                              L <input type="checkbox" value="L" name="pSize" />&nbsp&nbsp&nbsp
-                              XL <input type="checkbox" value="XL" name="pSize" />
+                           <td>XS <input type="checkbox" value="XS" name="pSize" value="${modify.pSize}" />&nbsp&nbsp&nbsp
+                              S <input type="checkbox" value="S" name="pSize" value="${modify.pSize}" />&nbsp&nbsp&nbsp
+                              M <input type="checkbox" value="M" name="pSize"  value="${modify.pSize}"/>&nbsp&nbsp&nbsp
+                              L <input type="checkbox" value="L" name="pSize"  value="${modify.pSize}"/>&nbsp&nbsp&nbsp
+                              XL <input type="checkbox" value="XL" name="pSize"  value="${modify.pSize}"/>
                            </td>
                         </tr>
                         <tr class="detail">
                            <td>상품 설명</td>
-                           <td><textarea class="detail1" placeholder="detail" name="detail"></textarea>
+                           <td><textarea class="detail1" placeholder="detail" name="detail"  value="${modify.detail}"></textarea>
                            </td>
                         </tr>
                      </table>
-                      <input type="file"
-                        name="file" id="profile_pt"
-                        onchange="previewImage(this,'View_area')">
-                     <div id='View_area'
-                        style='position: relative; width: 400px; height: 400px; color: black; border: 1px solid black; dispaly: inline;'>
-                     </div>
-                     <input type="submit" value="상품등록" />
+                      
+                     <input type="submit" value="상품수정" />
                    
                   </form>
                </div>

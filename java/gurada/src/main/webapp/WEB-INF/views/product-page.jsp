@@ -50,7 +50,7 @@
                         <h2>${detail.name}</h2><br/>
                         <div class="pc-meta"> 
                             <h5>가격 </h5>
-                            <h5>${detail.price}</h5>
+                            <h5><span id="price">${detail.price}</span></h5>
                         </div>
                         <p> ${detail.detail} </p>
                         <ul class="tags">
@@ -66,7 +66,7 @@
                                     </td>
                                     <td>
                                         <div class="pro-qty">
-                                            <input type="text" name="quantity" value="1">
+                                            <input type="text" id="quantity" value="1">
                                         </div>
                                     </td>
                                 </tr>
@@ -74,7 +74,7 @@
                             <table class='sh-td'>
                                 <tr>
                                 <td ><h4>금액</h4></td>
-                                <td>${detail.price*quantity} </td>
+                                <td id="total">${detail.price*quantity} </td>
                                 </tr>
                             </table>
                             <hr/><br/>

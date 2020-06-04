@@ -11,7 +11,7 @@ import com.gurada.domain.ProductVO;
 import com.gurada.infa.ProductDAO;
 import com.gurada.infa.ResistrationService;
 
-@Service("service1")
+@Service("service")
 public class ResistrationServiceImpl implements ResistrationService {
 	@Autowired
 	private ProductDAO ProductDAO; 
@@ -25,6 +25,13 @@ public class ResistrationServiceImpl implements ResistrationService {
 		return ProductDAO.productSelectList(vo);
 	}
 
+	//삭제
+	@Override
+	   public int delete(String name) {
+	   return ProductDAO.delete(name);   
+	}
+	
+	
 	//productVo 조건 ProductVO gender, category 별 리스트
 	@Override
 	public List<ProductVO> getProductList(ProductVO productVo,PagingVO pageVo){
@@ -43,6 +50,25 @@ public class ResistrationServiceImpl implements ResistrationService {
 	@Override
 	public ProductVO getProductDetail(ProductVO vo) {
 		return ProductDAO.productDetail(vo);
+	}
+
+	@Override
+	public ProductVO productUpdate(ProductVO vo) {
+		return ProductDAO.productUpdate(vo);
+		
+	}
+
+	@Override
+	public void productModify(ProductVO vo) {
+		ProductDAO.productModify(vo);
+		
+	}
+
+	//상품 검색
+	@Override
+	public List<ProductVO> productSearch(ProductVO vo) {
+		
+		return ProductDAO.productSearch(vo);
 	}
 
 }

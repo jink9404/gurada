@@ -58,4 +58,38 @@
 				  )
 		 	WHERE RN BETWEEN #{pageVo.start} AND #{pageVo.end}
 	</select>
+	<!-- 상품삭제 -->
+	<delete id="delete" parameterType="product">
+   <![CDATA[
+
+         delete from product where product_Id = #{productId}
+         
+             ]]>
+   </delete>
+   <!--상품수정 -->
+   <select id="update" parameterType="product" resultType="product">
+   <![CDATA[
+	select*
+	from product
+	where product_Id=#{productId}
+        
+             ]]>
+   </select>
+	
+	<update id="modify" parameterType="product">
+	 <![CDATA[
+	update product 
+	set quantity=#{quantity} 
+	where product_Id=#{productId}
+             ]]>
+	</update>
+	
+	<select id="search" parameterType="product" resultType="product">
+	<![CDATA[
+		select * from product
+		where name =#{name}
+			]]> 
+	</select>
+	
+	
 </mapper> 

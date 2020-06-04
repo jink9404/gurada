@@ -124,8 +124,19 @@
             }
 
             window.onload = initialize;*/
-		var temp = document.getElementId(quantity);
-		var quantity = temp.val();
+$(function(){
+	$('#quantity').change(function(){
+		var temp = parseInt($("#quantity").val());
+		var price = parseInt($("#price").val());
+		var result = temp * price;
+		alert("가격"+price+"수량"+temp);
+		$("#total").html(result);
+	});
+});
+	
+		
+		
+		
 		
 
  function previewImage(targetObj, View_area) {
