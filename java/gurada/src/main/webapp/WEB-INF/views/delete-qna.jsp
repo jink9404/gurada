@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%
-	String id=request.getParameter("id");
+	String id=request.getParameter("qnaNo");
 
 %>
 <html lang="zxx">
