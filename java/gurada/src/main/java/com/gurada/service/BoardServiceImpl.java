@@ -1,5 +1,6 @@
 package com.gurada.service;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,6 +8,7 @@ import org.springframework.stereotype.Service;
 
 import com.gurada.dao.BoardDAOImpl;
 import com.gurada.domain.BoardVO;
+import com.gurada.domain.PagingVO;
 import com.gurada.infa.BoardService;
 
 
@@ -28,6 +30,18 @@ public class BoardServiceImpl implements BoardService {
 		return boardDAO.getBoardList(vo);
 	}
 
+	public int getBoardCount() {
+		return boardDAO.getCountBoard();
+	}
 
-
+	
+	/*
+	 *		PagingVO는 페이징 처리를 위한 설정 값 
+	 */
+	public List<BoardVO> getBoardList(BoardVO vo,PagingVO pageVo) {
+		HashMap map = new HashMap();
+		map.put("BoardVO", vo);
+		map.put("PagingVO", pageVo);
+		return boardDAO.getBoardList(map);
+	}
 }

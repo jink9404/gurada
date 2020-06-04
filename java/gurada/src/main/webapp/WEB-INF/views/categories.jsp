@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<%@ taglib prefix="MJ" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="zxx">
 
 <head>
@@ -56,7 +56,7 @@
     
             <div class="row">
             
-            <MJ:forEach var="item" items="${productList }">    
+            <c:forEach var="item" items="${productList }">    
 
                 <div class="col-lg-3 col-md-6">
                     <div class="single-product-item">
@@ -72,28 +72,28 @@
                         </div>
                     </div>
                 </div>
-			</MJ:forEach>
+			</c:forEach>
                 
                 
             </div>
             
             <div style="display: block; text-align: center;">		
-				<MJ:if test="${paging.startPage != 1 }">
+				<c:if test="${paging.startPage != 1 }">
 					<a href="categories.do?category=${URLcategory }&gender=${gender }&nowPage=${paging.startPage - 1 }&cntPerPage=${paging.cntPerPage}">&lt;</a>
-				</MJ:if>
-				<MJ:forEach begin="${paging.startPage }" end="${paging.endPage }" var="p">
-					<MJ:choose>
-						<MJ:when test="${p == paging.nowPage }">
+				</c:if>
+				<c:forEach begin="${paging.startPage }" end="${paging.endPage }" var="p">
+					<c:choose>
+						<c:when test="${p == paging.nowPage }">
 							<b>${p }</b>
-						</MJ:when>
-						<MJ:when test="${p != paging.nowPage }">
+						</c:when>
+						<c:when test="${p != paging.nowPage }">
 							<a href="categories.do?category=${URLcategory }&gender=${gender }&nowPage=${p }&cntPerPage=${paging.cntPerPage}">${p }</a>
-						</MJ:when>
-					</MJ:choose>
-				</MJ:forEach>
-				<MJ:if test="${paging.endPage != paging.lastPage}">
+						</c:when>
+					</c:choose>
+				</c:forEach>
+				<c:if test="${paging.endPage != paging.lastPage}">
 					<a href="categories.do?category=${URLcategory }&gender=${gender }&nowPage=${paging.endPage+1 }&cntPerPage=${paging.cntPerPage}">&gt;</a>
-				</MJ:if>
+				</c:if>
 			</div>
 <!--             <div class="more-product"> -->
 <!--                 <div class="row"> -->

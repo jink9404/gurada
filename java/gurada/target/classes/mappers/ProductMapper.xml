@@ -19,7 +19,7 @@
 		where gender = #{gender} and category_id= #{categoryId} and name=#{name}
 	</select>
 	
-<!-- 	작성자: 김명진
+<!-- 	
 		리스트 얻어오는 mapper categoryid와 gender (조건)AND 하여 가지고옴
 -->
 	<select id="selectList" parameterType="product" resultType="product">
@@ -30,7 +30,7 @@
 			</if>
 	</select>
 
-<!-- 	작성자 : 김명진 
+<!-- 	
 		return -> product 테이블 총 튜플 수
 -->
 	<select id="countProduct" parameterType="product" resultType="int">
