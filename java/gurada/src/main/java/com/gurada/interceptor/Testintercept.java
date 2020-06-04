@@ -1,0 +1,60 @@
+package com.gurada.interceptor;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.web.method.HandlerMethod;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+
+/*		HTTP Intercept 양식
+ *		servlet-context.xml도 수정이 필요함.
+ */
+public class Testintercept extends HandlerInterceptorAdapter{
+	private static final Logger logger = LoggerFactory.getLogger(Testintercept.class);
+	
+/*		컨트롤러 실행 전 에 수행	
+ */
+	@Override
+	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception{
+		logger.info("preHandle call...");
+		if(handler instanceof HandlerMethod){
+			
+			HandlerMethod method = (HandlerMethod) handler;
+			System.out.println("인터 셉트 preHandle call" + method.getMethod().getName());
+			logger.info("handler method name : " + method.getMethod().getName());
+		}
+		
+		
+		return  true;
+	}
+
+/*		컨트롤러 실행 직 후 수행	
+ */
+	@Override 
+	public void postHandle(	HttpServletRequest request, HttpServletResponse response, 
+							Object handler, ModelAndView modelAndView) throws Exception {
+		logger.info("postHandle call......"); 
+	}
+	
+/*		View 렌더링 완료시점 수행
+ */
+	@Override 
+	public void afterCompletion(	HttpServletRequest request, HttpServletResponse response,
+									Object handler, Exception ex) throws Exception {
+		logger.info("afterCompletion call......"); 
+	}
+
+/*		비동기 호출시 수행
+ */
+	@Override 
+	public void afterConcurrentHandlingStarted(HttpServletRequest request, HttpServletResponse response, 
+												Object handler) throws Exception {
+		logger.info("afterConcurrentHandlingStarted call......"); 
+	}
+
+
+	
+}

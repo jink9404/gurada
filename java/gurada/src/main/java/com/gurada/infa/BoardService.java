@@ -3,6 +3,7 @@ package com.gurada.infa;
 import java.util.List;
 
 import com.gurada.domain.BoardVO;
+import com.gurada.domain.PagingVO;
 
 
 
@@ -16,4 +17,9 @@ public interface BoardService {
 
 	// 글 목록 조회
 	List<BoardVO> getBoardList(BoardVO vo);
+	
+	// 글 목록 조회(페이징)
+	List<BoardVO> getBoardList(BoardVO vo,PagingVO pageVo);
+	// 글 목록 총 갯수
+	public abstract int getBoardCount();
 }

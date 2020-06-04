@@ -13,7 +13,7 @@
 
 	 <select id="getBoardList" resultType="board">
 		<![CDATA[
-		SELECT QNA_NO, WRITTER,TO_CHAR(WRITTEN_DATE, 'YYYY-MM-DD')as WRITTEN_DATE ,TITLE FROM qna ORDER BY QNA_NO DESC
+		SELECT QNA_NO, WRITTER,TO_CHAR(WRITTEN_DATE, 'YYYY-MM-DD')as WRITTEN_DATE ,TITLE FROM qna ORDER BY TO_NUMBER(QNA_NO) DESC
 		]]>
 	</select>
 	
@@ -26,5 +26,23 @@
 		]]>
 	</select>
 	
- 
+ 	<select id="getBoardCount" resultType="int">
+ 		<![CDATA[
+			SELECT COUNT(*)
+			FROM qna
+		]]>
+ 	</select>
+ 	
+ 	<!-- Boardlist paging 처리 -->
+ 	<select id="getBoardListPaging" parameterType="hashmap" resultType="board">
+ 		<![CDATA[
+ 				SELECT * FROM(SELECT ROWNUM RN, A.* 
+ 								FROM (SELECT QNA_NO, WRITTER,TO_CHAR(WRITTEN_DATE, 'YYYY-MM-DD')as WRITTEN_DATE ,TITLE 
+ 										FROM qna ORDER BY TO_NUMBER(QNA_NO) DESC
+ 									  ) A
+ 							  )
+    			WHERE RN BETWEEN #{PagingVO.start} AND #{PagingVO.end}
+ 		]]>
+ 		
+ 	</select>
 </mapper>

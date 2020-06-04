@@ -62,7 +62,7 @@
                <td>
                     <div class="sign-up" class="text-white">
                         <h2 class="text-white">등록하지 않으셧나요?</h2><br/>
-                        <button class="btn btn-primary">새 계정 만들기</button>
+                        <a href="signup-form.do"><button class="btn btn-primary">새 계정 만들기</button></a>
                     </div>
                 </td>
             </tr>
