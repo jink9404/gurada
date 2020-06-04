@@ -3,12 +3,25 @@ package com.gurada.domain;
 
 public class BookingVO {
 	int bookingId;
-	String name;
 	String bookingDate;
 	String phoneNumber;
 	String time;
+	String storeId;
+	String fullName;
 	
 	
+	public String getFullName() {
+		return fullName;
+	}
+	public void setFullName(String fullName) {
+		this.fullName = fullName;
+	}
+	public String getStoreId() {
+		return storeId;
+	}
+	public void setStoreId(String storeId) {
+		this.storeId = storeId;
+	}
 	public String getTime() {
 		return time;
 	}
@@ -21,12 +34,7 @@ public class BookingVO {
 	public void setBookingId(int bookingId) {
 		this.bookingId = bookingId;
 	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
+
 	public String getBookingDate() {
 		return bookingDate;
 	}

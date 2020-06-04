@@ -112,7 +112,7 @@
 							<tr class='tr'>
 								<td>
 								<input type="hidden" name='storeId' value='${bstore.storeId}'/>
-								<input type="text" name='name' placeholder="이름*" />
+								<input type="text" name='fullName' placeholder="이름*" />
 								</td>
 							</tr>
 							<tr class='tr'>
@@ -139,7 +139,7 @@
 						<hr />
 						<div class='small-button-sh'>
 						<button type="submit">예약 하기</button>
-						<button>매장 찾기</button>
+						<button><a href='find-store.do'>매장 찾기</a></button>
 					</div>
 						</form>
 						

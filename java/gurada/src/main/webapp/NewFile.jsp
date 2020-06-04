@@ -9,8 +9,7 @@
 </head>
 <body>
 <a href="header.do">header</a>
-
-<a href="bookinglist.do">book</a>
+<a href="bookinglist.do">bookinglist</a>
 <a href="buylist.do">buylist</a>
 <a href="categories.do">categories</a>
 <a href="check-out.do">check-out</a>
