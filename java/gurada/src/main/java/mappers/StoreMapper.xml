@@ -19,12 +19,12 @@
 	
 	<select id="bookingSearch" parameterType="booking" resultType="booking">
 	
-		select * from booking 
+		select * from booking b,store s 
 		<if test="fullName!=null">
-		where FULL_NAME LIKE '%'|| #{fullName} ||'%'
+		where b.store_id=s.store_id and FULL_NAME LIKE '%'|| #{fullName} ||'%'
 		</if>
 		<if test="phoneNumber != null">
-		where PHONE_NUMBER LIKE '%'|| #{phoneNumber} ||'%'
+		where b.store_id=s.store_id and PHONE_NUMBER LIKE '%'|| #{phoneNumber} ||'%'
 		</if>
 	</select>
 

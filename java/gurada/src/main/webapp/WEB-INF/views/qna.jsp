@@ -131,7 +131,7 @@
 				<div class="sh-width">
 					<div class="contact-widget">
 						<div class="cw-item">
-							<h5>고객센터</h5>
+							<h5>고객센터 연락처</h5>
 							<ul>
 								<li>+82 (603)535-4592</li>
 								<li>+82 (603)535-4556</li>

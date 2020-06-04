@@ -1,7 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <!DOCTYPE html>
+<%
+	String id=request.getParameter("id");
+
+%>
 <html lang="zxx">
 
 <head>
@@ -38,61 +41,29 @@
 </head>
 
 <body>
-
 	<jsp:include page="header.jsp" />
-	<section class="page-add">
+	<!-- Page Add Section Begin -->
+	<hr /><br><br><br><br><br><br>
+	<div class="contact-section">
 		<div class="container">
 			<div class="row">
-				<div class="page-breadcrumb">
-					<h2>
-						매장 방문 예약 현황<span>.</span>
-					</h2>
-					<br />
-					<form method="get" action="booking-search.do">
-						<h3>예약 검색</h3>
-						<br>
-						<div>
-							<select class="form-control" name='search'
-								style="width: 100px; height: 44px; display: inline-block">
-								<option value='oname'>성함</option>
-								<option value='otel'>연락처</option>
-							</select> <input class="col-form-label" type="text" size=80 name='value'>
-
-							<button class='small-button2' type='submit'>검색</button>
-						</div>
-						<hr>
-							<div class="cart-table">
-								<table>
-									<tbody>
-										<tr>
-											<td width='400'>예약자 성함</td>
-											<td width='400'>방문날짜</td>
-											<td width='400'>방문시간</td>
-											<td width='400'>연락처</td>
-											<td width='400'>매장명</td>
-										</tr>
-
-										<c:forEach items="${search}" var="search">
-											<tr>
-												<td>${search.fullName}</td>
-												<td>${search.bookingDate}</td>
-												<td>${search.time}</td>
-												<td>${search.phoneNumber}</td>
-												<td>${search.name}</td>
-											</tr>
-										</c:forEach>
-
-									</tbody>
-								</table>
-								<hr/>
-							</div>
-						<br />
-					</form>
-				</div>
+				<form action="deleteBoard.do" class="contact-form">
+					<div class="re-sh">
+					
+						<h4>비밀번호</h4>
+						<input type="text" name='password'>
+						<input type='hidden' name='qnaNo' value='<%= id %>'>
+						<button type="submit" class='small-button3'>게시글 삭제</button>
+					</div>
+				</form>
 			</div>
 		</div>
-	</section>
+	</div>
+	<br><br><br><br><br><br><hr />
+	<!-- Footer Section Begin -->
 	<jsp:include page="footer.jsp" />
+	<!-- Footer Section End -->
+
 	<!-- Js Plugins -->
 	<script src="./resources/js/jquery-3.3.1.min.js"></script>
 	<script src="./resources/js/bootstrap.min.js"></script>
@@ -102,9 +73,6 @@
 	<script src="./resources/js/jquery.nice-select.min.js"></script>
 	<script src="./resources/js/mixitup.min.js"></script>
 	<script src="./resources/js/main.js"></script>
-	<script src="./resources/js/test.js"></script>
-
-
 </body>
 
 </html>

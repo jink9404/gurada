@@ -34,6 +34,8 @@ public class BoardDAOImpl implements BoardDAO{
 		
 	}
 	
+	
+	
 	public int getCountBoard(BoardVO vo) {
 		System.out.println("===> Mybatis countBoard");
 		return mybatis.selectOne("BoardDAO.getBoardCount",vo);
@@ -48,4 +50,13 @@ public class BoardDAOImpl implements BoardDAO{
 		System.out.println("===> Mybatis getBoardListPaging() 호출");
 		return mybatis.selectList("BoardDAO.getBoardListPaging",map);
 	}
+	
+	//글 삭제
+	public int deleteBoard(BoardVO vo) {
+		System.out.println("===> Mybatis deleteBoard() 호출");
+		int rs=mybatis.delete("BoardDAO.deleteBoard", vo);
+		return rs;
+	}
+	
+
 }
