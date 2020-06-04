@@ -13,10 +13,20 @@
 	
 	<insert id="bookingInsert" parameterType="hashmap">
 		insert into BOOKING(BOOKING_ID,FULL_NAME,STORE_ID,BOOKING_DATE,PHONE_NUMBER,TIME)
-					values(seq_booking_no.nextval, #{name} ,#{storeId} , #{BookingDate} ,#{PhoneNumber},#{time})
+					values(seq_booking_no.nextval, #{fullName} ,#{storeId} , #{BookingDate} ,#{PhoneNumber},#{time})
 	
 	</insert>
 	
+	<select id="bookingSearch" parameterType="booking" resultType="booking">
+	
+		select * from booking 
+		<if test="fullName!=null">
+		where FULL_NAME LIKE '%'|| #{fullName} ||'%'
+		</if>
+		<if test="phoneNumber != null">
+		where PHONE_NUMBER LIKE '%'|| #{phoneNumber} ||'%'
+		</if>
+	</select>
 
 	
  

@@ -54,24 +54,24 @@
                         <tr class='tr'>
                            <td>상품명</td>
                            <td class='td1' colspan="2"><input type="text" name="name"
-                              placeholder="상품명" /></td>
+                              placeholder="상품명"  class="test"/></td>
                         </tr>
                         <tr class='tr'>
                            <td>수량</td>
                            <td class='td1' colspan="2"><input type="text" name="quantity"
-                              placeholder="수량" /></td>
+                              placeholder="수량" class="test"/></td>
                         </tr>
                         <tr class='tr'>
                            <td>Price</td>
                            <td class='td1' colspan="2"><input type="text"
-                              name="price" placeholder="price" /></td>
+                              name="price" placeholder="price" class="test"/></td>
                         </tr>
                         <tr>
                            <td>분류</td>
-                           <td><select name="gender">
+                           <td><select name="gender" class="test">
                                  <option value="남자">남자</option>
                                  <option value="여자">여자</option>
-                           </select> <select name=categoryId>
+                           </select> <select name=categoryId class="test">
                                  <option value="슈트">슈트</option>
                                  <option value="아우터">아우터</option>
                                  <option value="가방">가방</option>
@@ -81,22 +81,22 @@
                         </tr>
                         <tr class='tr'>
                            <td>사이즈</td>
-                           <td>XS <input type="checkbox" value="XS" name="pSize" />&nbsp&nbsp&nbsp
-                              S <input type="checkbox" value="S" name="pSize" />&nbsp&nbsp&nbsp
-                              M <input type="checkbox" value="M" name="pSize" />&nbsp&nbsp&nbsp
-                              L <input type="checkbox" value="L" name="pSize" />&nbsp&nbsp&nbsp
-                              XL <input type="checkbox" value="XL" name="pSize" />
+                           <td>XS <input type="checkbox" value="XS" name="pSize" class="test" />&nbsp&nbsp&nbsp
+                              S <input type="checkbox" value="S" name="pSize" class="test"/>&nbsp&nbsp&nbsp
+                              M <input type="checkbox" value="M" name="pSize" class="test"/>&nbsp&nbsp&nbsp
+                              L <input type="checkbox" value="L" name="pSize" class="test"/>&nbsp&nbsp&nbsp
+                              XL <input type="checkbox" value="XL" name="pSize" class="test"/>
                            </td>
                         </tr>
                         <tr class="detail">
                            <td>상품 설명</td>
-                           <td><textarea class="detail1" placeholder="detail" name="detail"></textarea>
+                           <td><textarea class="detail1" placeholder="detail" name="detail" class="test"></textarea>
                            </td>
                         </tr>
                      </table>
                       <input type="file"
-                        name="file" id="profile_pt"
-                        onchange="previewImage(this,'View_area')">
+                        name="file" id="profile_pt" class="test"
+                        onchange="previewImage(this,'View_area')" >
                      <div id='View_area'
                         style='position: relative; width: 400px; height: 400px; color: black; border: 1px solid black; dispaly: inline;'>
                      </div>

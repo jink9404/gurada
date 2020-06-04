@@ -1,6 +1,8 @@
 package com.gurada.service;
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,6 +28,13 @@ public class StoreServiceImpl implements StoreService {
 	public int bookingInsert(int storeId, BookingVO bvo) {
 		
 		return StoreDAO.bookingInsert(storeId, bvo) ;
+	}
+
+
+	@Override
+	public List<BookingVO> bookingSearch(BookingVO vo) {
+		
+		return StoreDAO.bookingSearch(vo) ;
 	}
 
 
