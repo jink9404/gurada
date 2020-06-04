@@ -6,15 +6,16 @@
 	
 <!-- 	관리자가 상품을 등록 할때 사용
  -->
+ 	<!-- 상품 등록 오재호 -->
 	<insert id ="insert" parameterType="product">
       insert 
       into product(name,price,QUANTITY,CATEGORY_ID,GENDER,P_SIZE ,DETAIL,receipt_Date,PRODUCT_ID,pfname,pfsize) 
       values(#{name},#{price},#{quantity},#{categoryId},#{gender},#{pSize},#{detail}, sysdate, SEQ_PRODUCTID_NO.nextval, #{pfname}, #{pfsize})
    </insert>
 	
-
+	<!-- 상품 디테일 페이지 오재호 -->
 	<select id="select" parameterType="product" resultType="product">
-		select name, price, p_size 
+		select * 
 		from product
 		where gender = #{gender} and category_id= #{categoryId} and name=#{name}
 	</select>
@@ -58,7 +59,7 @@
 				  )
 		 	WHERE RN BETWEEN #{pageVo.start} AND #{pageVo.end}
 	</select>
-	<!-- 상품삭제 -->
+	<!-- 상품삭제  김지섭-->
 	<delete id="delete" parameterType="product">
    <![CDATA[
 
@@ -66,7 +67,7 @@
          
              ]]>
    </delete>
-   <!--상품수정 -->
+   <!--상품수정 김지섭-->
    <select id="update" parameterType="product" resultType="product">
    <![CDATA[
 	select*
@@ -75,7 +76,7 @@
         
              ]]>
    </select>
-	
+	<!-- 상품관리페이지 수정 김지섭 -->
 	<update id="modify" parameterType="product">
 	 <![CDATA[
 	update product 
@@ -83,7 +84,7 @@
 	where product_Id=#{productId}
              ]]>
 	</update>
-	
+	<!-- 상품 관리 페이지 상품검색기능 김지섭 -->
 	<select id="search" parameterType="product" resultType="product">
 	<![CDATA[
 		select * from product

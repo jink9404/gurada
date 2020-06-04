@@ -17,6 +17,8 @@
 								#{gender}						
 						)
 	</insert>
+	
+	
 	<select id="selectMember" parameterType="member" resultType="member">
 		SELECT * FROM member WHERE EMAIL = #{email}
 		<if test="password!=null">
