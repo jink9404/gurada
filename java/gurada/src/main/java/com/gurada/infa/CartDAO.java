@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.gurada.domain.CartVO;
 
-public interface CartService {
+public interface CartDAO {
 
 	public Integer cartInsert(CartVO vo);
 	

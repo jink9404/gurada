@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%> 
+	
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -67,70 +69,32 @@
 								<th>취소</th>
 							</tr>
 						</thead>
-
 						<tbody>
+						<c:forEach items="${cartSelect}" var="cart">
 							<tr>
 								<td class="product-col"><img
 									src="img/product/product-1.jpg" alt="">
 									<div class="p-title">
-										<h5>요쿠셔테리어</h5>
+										<h5>${cart.name} </h5>
 									</div></td>
 
-								<td class="price-col">$29</td>
+								<td class="price-col">${cart.price}</td>
 
 								<td class="quantity-col">
 									<div class="pro-qty">
-										<input type="text" value="1">
+										<input type="text" value="${cart.count}">
 									</div>
 								</td>
 
-								<td class="price-col">$29</td>
+								<td class="price-col">${cart.total}</td>
 								<td>
 									<button class="xbtn-sh">X</button>
 								</td>
 							</tr>
-							<tr>
-								<td class="product-col"><img
-									src="img/product/product-1.jpg" alt="">
-									<div class="p-title">
-										<h5>요쿠셔테리어</h5>
-									</div></td>
-
-								<td class="price-col">$29</td>
-
-								<td class="quantity-col">
-									<div class="pro-qty">
-										<input type="text" value="1">
-									</div>
-								</td>
-
-								<td>$29</td>
-								<td>
-									<button class="xbtn-sh">X</button>
-								</td>
-							</tr>
-							<tr>
-								<td class="product-col"><img
-									src="/resources/img/product/product-1.jpg" alt="">
-									<div class="p-title">
-										<h5>요쿠셔테리어</h5>
-									</div></td>
-
-								<td class="price-col">$29</td>
-
-								<td class="quantity-col">
-									<div class="pro-qty">
-										<input type="text" value="1">
-									</div>
-								</td>
-
-								<td>$29</td>
-								<td>
-									<button class="xbtn-sh">X</button>
-								</td>
-							</tr>
+							</c:forEach>
 						</tbody>
 					</table>
+					
 				</div>
 			</div>
 		</div>

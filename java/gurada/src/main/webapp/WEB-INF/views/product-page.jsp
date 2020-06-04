@@ -1,7 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+
+<!DOCTYPE html>
+
+<%
+
+%>
+
+
 <html lang="zxx">
 
 <head>
@@ -66,7 +73,7 @@
                                     </td>
                                     <td>
                                         <div class="pro-qty">
-                                            <input type="text" id="quantity" value="0">
+                                            <input type="text" id="product-quantity" value="0">
                                         </div>
                                     </td>
                                 </tr>
@@ -85,14 +92,21 @@
                                     <tr>
                                         <td>
                                            <button class = 'small-button2'>
-                                               <a class="a">구매&nbsp; 하기</a>
+                                               <a class="a">구매&nbsp;하기</a>
                                            </button>
                                         </td>
                                         <td>
                                            &nbsp;&nbsp;&nbsp;
-                                            <button class= 'small-button2'>
-                                                <a class='a'>장바구니 추가</a>
-                                            </button>
+                                           <form action="cart.do">
+                                        		<input type="hidden" name="name" value="${detail.name}"/>
+                                           		<input type="hidden" name="price" value="${detail.price}"/>
+                                           		<input id="quantity" type="hidden" name="count" value=""/>
+                                           		<input id="total1" type="hidden" name="total" value=""/>
+                                           		<input type="hidden" name="productId" value="${detail.productId}"/>
+                                           		<input type="hidden" name="memberNo" value="${sessionScope.memberNo}"/> 
+                                                <input type="submit" class= 'small-button2' value="장바구니 추가"/>
+                                           </form>
+                                            
                                         </td>
                                     </tr>
                                 </table>

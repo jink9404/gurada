@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+
 <a href="header.do">header</a>
 <a href="bookinglist.do">bookinglist</a>
 <a href="buylist.do">buylist</a>
@@ -16,8 +17,9 @@
 <a href="pay.do">pay</a>
 <a href="find-store.do">find-store</a> 
 <a href="my-page.do">my-page</a>
+
 <a href="order-management.do">order-management</a>
-<a href="qna.do">Q&A</a>
+<a href="qna.do">Q&A</a>	
 <a href="qna-form.do">Q&A form</a>
 <a href="member-management.do">member-management</a>
 <a href="product-page.do">product-page</a> 

@@ -2,46 +2,40 @@ package com.gurada.service;
 
 import java.util.List;
 
+import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Repository;
 
 import com.gurada.domain.CartVO;
 import com.gurada.infa.CartDAO;
-import com.gurada.infa.CartService;
-@Service("cartservice")
-public class CartServiceImpl implements CartService{
+@Repository("cartDAO")
+public class CartDAOImpl implements CartDAO{
 	@Autowired
-	CartDAO cartDAO; 
-	
+	private SqlSessionTemplate mybatis;
 	
 	@Override
 	public Integer cartInsert(CartVO vo) {
-	return cartDAO.cartInsert(vo);
-	
+		
+		return mybatis.insert("cart.cartInsert", vo);
 	}
-
 
 	@Override
 	public List<CartVO> cartSelect(CartVO vo) {
-	return cartDAO.cartSelect(vo);
 		
+		return mybatis.selectList("cart.cartSelect",vo);
 	}
-
 
 	@Override
 	public Integer cartCheck(CartVO vo) {
 		
-		return cartDAO.cartCheck(vo);
+		return mybatis.selectOne("cart.cartCheck",vo);
 	}
-
 
 	@Override
 	public Integer cartUpdate(CartVO vo) {
 		
-		return cartDAO.cartUpdate(vo);
+		return mybatis.update("cart.cartUpdate",vo);
 	}
 
-
-	
-
+		
 }

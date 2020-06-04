@@ -8,13 +8,16 @@
 <body>
 <script src="./resources/js/jquery-3.3.1.min.js"></script>
 <script src="./resources/js/jquery.cookie.js"></script>
-<script src="./resources/js/main.js"></script>
-<script src="./resources/js/jquery.slinknav.js"></script>
+<script src="./resources/js/jquery.slicknav.js"></script>
+<script src="./resources/js/owl.carousel.min.js"></script>
+<script src="./resources/js/jquery.magnific-popup.min.js"></script>
+<script src="./resources/js/jquery.nice-select.min.js"></script>
 <script src="./resources/js/mj.js"></script>
+<script src="./resources/js/main.js"></script>
+
     <div id="preloder">
         <div class="loader"></div>
     </div>
-    
     <!-- Search model -->
    <div class="search-model">
       <div class="h-100 d-flex align-items-center justify-content-center">
@@ -87,7 +90,7 @@
                        <a href="my-page.do">
                           <img src="./resources/img/icons/man.png" alt=""/>
                        </a>&nbsp;&nbsp;&nbsp;&nbsp;
-                       <a href="#">
+                       <a href="cartselect.do?memberNo=${sessionScope.memberNo}">
                            <img src="./resources/img/icons/bag.png" alt=""/>
                            <span>1</span>
                        </a>&nbsp;&nbsp;&nbsp;&nbsp;
@@ -98,8 +101,8 @@
                        <a href="signup-form.do">회원가입</a> / 
                        <span id="login" class="in">로그인</span>
                    </c:if>
-                   <c:if test="${not empty sessionScope.UserID }">
-                      <span class="in">${sessionScope.UserID } 님 환영합니다.</span>
+                   <c:if test="${not empty sessionScope.UserID}">
+                      <span class="in">${sessionScope.UserID} 님 환영합니다.</span>
                       /<a href="" id="logout">로그아웃</a>
                    </c:if>
                 </div>

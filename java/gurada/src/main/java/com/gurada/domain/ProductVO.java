@@ -6,7 +6,7 @@ import java.io.IOException;
 import org.springframework.web.multipart.MultipartFile;
 
 public class ProductVO {
-	 private String name;
+	   private String name;
 	   private String productId;
 	   private int price;
 	   private int quantity;
@@ -18,8 +18,8 @@ public class ProductVO {
 	   private String detail;
 	   private String pfname;
 	   private Long pfsize;
-
-	   public String getPfname() {
+	   
+	public String getPfname() {
 		return pfname;
 	}
 	public void setPfname(String pfname) {

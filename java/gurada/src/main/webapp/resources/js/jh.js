@@ -11,11 +11,13 @@ proQty.on('click', '.qtybtn', function () {
         var newVal = parseFloat(oldValue) + 1;
         var price = parseInt($('#price').text());
         $('#total').text(newVal*price);
+        $('#total1').val(newVal*price);
+        $('#quantity').val(newVal);
     } else {
         var newVal1 = parseFloat(oldValue) - 1;
         var price = parseInt($('#price').text());
-        
-        $('#total').text(parseInt(newVal1*price));
+        $('#quantity').val(newVal);
+        $('#total1').text(parseInt(newVal1*price));
     	// Don't allow decrementing below zero
     	if (oldValue > 0) {
             var newVal = parseFloat(oldValue) - 1;

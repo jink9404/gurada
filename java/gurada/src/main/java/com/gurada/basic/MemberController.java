@@ -46,9 +46,11 @@ public class MemberController {
 				result = "<span class=\"in\">"+new_vo.getName()+" 님 환영합니다.";
 				session.setAttribute("UserID", new_vo.getName());
 				session.setAttribute("UserIDInfo", new_vo);
+				session.setAttribute("memberNo", new_vo.getMemberNo());
 		}
 		return result;
 	}
+	
 	
 //	로그아웃
 	@ResponseBody
