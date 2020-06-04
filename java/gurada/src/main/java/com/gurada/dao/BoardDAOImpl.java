@@ -1,5 +1,6 @@
 package com.gurada.dao;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.mybatis.spring.SqlSessionTemplate;
@@ -32,5 +33,19 @@ public class BoardDAOImpl implements BoardDAO{
 		return mybatis.selectList("BoardDAO.getBoardList", vo);
 		
 	}
-
+	
+	public int getCountBoard() {
+		System.out.println("===> Mybatis countBoard");
+		return mybatis.selectOne("BoardDAO.getBoardCount");
+	}
+	
+	/*	
+	 * HashMap 1) Key:BoardVO, Value:BoardVO객체
+	 * 			2) Key:PagingVO, Value:PagingVO객체
+	 *	return -> paging처리에 의한 리스트 
+	 */
+	public List<BoardVO> getBoardList(HashMap map) {
+		System.out.println("===> Mybatis getBoardListPaging() 호출");
+		return mybatis.selectList("BoardDAO.getBoardListPaging",map);
+	}
 }

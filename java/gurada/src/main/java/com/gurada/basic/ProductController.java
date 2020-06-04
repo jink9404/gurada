@@ -24,7 +24,7 @@ public class ProductController {
 	
 	@Autowired
 	private ResistrationService service;
-	
+	//상품 등록 페이지
 	@RequestMapping("/resistration1.do") 
 	public String product_resistration(ProductVO vo) {
 		service.productInsert(vo);
@@ -33,10 +33,12 @@ public class ProductController {
 	
 	
 	
-	 //상품 목록 검색
-	 
-	 @RequestMapping("/product-list.do") public void product_select(ProductVO vo,
-	 Model model) { model.addAttribute("prodlist",service.getProductlist(vo)); }
+	//상품관리(리스트) 목록 검색
+	@RequestMapping("/product-list.do")
+	public void product_select(ProductVO vo, Model model) {
+		 model.addAttribute("prodlist",service.getProductlist(vo));
+	}
+	
 	
 	
 	//User category별 ProductList
@@ -122,10 +124,12 @@ public class ProductController {
 		service.productModify(vo);
 		return  "redirect:/product-list.do";
 	}
-	
-	
-	
-	
+	//상품명으로 검색(상품관리 페이지)
+		@RequestMapping("/product-search.do")
+		public String search(ProductVO vo, Model model) {
+			model.addAttribute("prodlist", service.productSearch(vo));
+			return "product-list";
+		}
 	
 	@RequestMapping("/product-page.do")
 	public void productpage(ProductVO vo,HttpServletRequest request, Model model) {
@@ -133,18 +137,8 @@ public class ProductController {
 		String name = request.getParameter("name");
 		vo.setName(name);
 		vo.setProductId(productId);
-		
-		System.out.println(vo.getName());
-		System.out.println(vo.getProductId());
 		model.addAttribute("detail", service.getProductDetail(vo));
 	} 
-	
-	//상품명으로 검색
-	@RequestMapping("/product-search.do")
-	public String search(ProductVO vo, Model model) {
-		model.addAttribute("prodlist", service.productSearch(vo));
-		return "product-list";
-	}
 	
 	
 }

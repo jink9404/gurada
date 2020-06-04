@@ -49,7 +49,7 @@
                        <div class="product-content">
                         <h2>${detail.name}</h2><br/>
                         <div class="pc-meta"> 
-                            <h5>가격 </h5>
+                            <h5>Price </h5>
                             <h5><span id="price">${detail.price}</span></h5>
                         </div>
                         <p> ${detail.detail} </p>
@@ -66,15 +66,17 @@
                                     </td>
                                     <td>
                                         <div class="pro-qty">
-                                            <input type="text" id="quantity" value="1">
+                                            <input type="text" id="quantity" value="0">
                                         </div>
                                     </td>
                                 </tr>
                             </table><br/><br/>
                             <table class='sh-td'>
                                 <tr>
-                                <td ><h4>금액</h4></td>
-                                <td id="total">${detail.price*quantity} </td>
+                                <td ><h4>합계</h4></td>
+                                <td>
+                                	<span id='total'></span>
+                                </td>
                                 </tr>
                             </table>
                             <hr/><br/>
@@ -102,20 +104,14 @@
                     <div class="product-slider owl-carousel">
                         <div class="product-img">
                             <figure>
-                                <img src="img/product/product-1.jpg" alt="">
+                                <img src='/basic/resources/upload/${detail.pfname }'/>
                                 <div class="p-status">new</div>
-                            </figure>
-                        </div>
-                        <div class="product-img">
-                            <figure>
-                                <img src="img/product/product-1.jpg" alt="">
-                                <div class="p-status">new</div>
-                            </figure>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                        	</figure>
+                    	</div>
+                	</div>
+            	</div>
+        	</div>
+    	</div>
     </section>
     <!-- Product Page Section End -->
 
@@ -133,7 +129,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-product-item">
                         <figure>
-                            <a href="#"><img src="img/products/img-1.jpg" alt=""></a>
+                            <a href="#"><img src="resources/img/products/img-1.jpg" alt=""></a>
                             <div class="p-status">new</div>
                         </figure>
                         <div class="product-text">
@@ -145,7 +141,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-product-item">
                         <figure>
-                            <a href="#"><img src="img/products/img-2.jpg" alt=""></a>
+                            <a href="#"><img src="resources/img/products/img-2.jpg" alt=""></a>
                             <div class="p-status sale">sale</div>
                         </figure>
                         <div class="product-text">
@@ -157,7 +153,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-product-item">
                         <figure>
-                            <a href="#"><img src="img/products/img-3.jpg" alt=""></a>
+                            <a href="#"><img src="resources/img/products/img-3.jpg" alt=""></a>
                             <div class="p-status">new</div>
                         </figure>
                         <div class="product-text">
@@ -169,7 +165,7 @@
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-product-item">
                         <figure>
-                            <a href="#"><img src="img/products/img-4.jpg" alt=""></a>
+                            <a href="#"><img src="resources/img/products/img-4.jpg" alt=""></a>
                             <div class="p-status popular">popular</div>
                         </figure>
                         <div class="product-text">
@@ -186,12 +182,14 @@
 	<!-- Js Plugins -->
 	<script src="./resources/js/jquery-3.3.1.min.js"></script>
 	<script src="./resources/js/bootstrap.min.js"></script>
+	<script src="./resources/js/jquery.cookie.js"></script>
 	<script src="./resources/js/jquery.magnific-popup.min.js"></script>
 	<script src="./resources/js/jquery.slicknav.js"></script>
 	<script src="./resources/js/owl.carousel.min.js"></script>
 	<script src="./resources/js/jquery.nice-select.min.js"></script>
 	<script src="./resources/js/mixitup.min.js"></script>
 	<script src="./resources/js/main.js"></script>
+	<script src="./resources/js/jh.js"></script>
 </body>
 
 </html>

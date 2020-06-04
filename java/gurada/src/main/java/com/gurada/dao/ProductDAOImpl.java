@@ -26,7 +26,7 @@ public class ProductDAOImpl implements ProductDAO {
 		return mybatis.selectList("com.gurada.ProductMapper.selectList", vo);
 	}
 	
-	/*	작성자: 김명진
+	/*	
 	 * 	HashMap: 1) key: productVo, value : ProductVO 객체
 	 * 			 2) key: pageVo,    value : PagingVO 객체
 	 *	return -> gender, category에 해당하는 pruductList 모두
@@ -35,7 +35,7 @@ public class ProductDAOImpl implements ProductDAO {
 	public List<ProductVO> productSelectList(HashMap map){
 		return mybatis.selectList("com.gurada.ProductMapper.selectListPaging", map);
 	}
-	/*	작성자: 김명진
+	/*	
 	 *	return -> gender, category에 해당하는 pruductList 총 갯수
 	 */
 	@Override

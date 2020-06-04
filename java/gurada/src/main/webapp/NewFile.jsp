@@ -29,5 +29,6 @@
 <a href="reservation.do">reservation.jsp</a><br/>
 <a href="resistration.do">resistration.jsp</a>
 <a href="qna-getBoard.do">qna-getBoard.jsp</a>
+<a href="TestIntercept.do">test intercept</a>
 </body>
 </html>

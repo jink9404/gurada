@@ -1375,6 +1375,7 @@ ol {
 }
 
 .product-img figure img {
+	margin-top : 20%;
 	min-width: 100%;
 }
 
@@ -1450,6 +1451,9 @@ ol {
 	border: 2px solid #EEF1F2;
 	border-radius: 50px;
 	text-align: center;
+}
+.product-content .product-quantity span{
+	width : 200px;
 }
 
 .product-content .product-quantity .pro-qty input {
