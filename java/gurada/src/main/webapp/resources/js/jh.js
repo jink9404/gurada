@@ -27,6 +27,11 @@ proQty.on('click', '.qtybtn', function () {
     }
     $button.parent().find('input').val(newVal);
 });
+
+$('#back').click(function(){
+	history.back(-2);
+});
+
 	
   
   

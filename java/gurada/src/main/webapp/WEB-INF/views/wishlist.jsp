@@ -122,7 +122,7 @@
 							</tr>
 						</tbody>
 					</table>
-					<a href="" class="sh-a">쇼핑계속하기</a>
+					<a id="back" class="sh-a">쇼핑계속하기</a>
 				</div>
 			</div>
 		</div>
@@ -142,6 +142,7 @@
 	<script src="./resources/js/jquery.nice-select.min.js"></script>
 	<script src="./resources/js/mixitup.min.js"></script>
 	<script src="./resources/js/main.js"></script>
+	<script src="./resources/js/jh.js"></script>
 </body>
 
 </html>

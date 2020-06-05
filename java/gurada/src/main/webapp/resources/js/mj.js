@@ -58,7 +58,7 @@ $(function(){
    
     //*****************
     //header.jsp
-    //ajax로 로그아웃 요청 보내고 성공시 리로드
+    //ajax로 로그아웃 요청 보내고 성공시 리로드(index화면으로)
     //*****************
     $('#logout').click(function(){
     	event.preventDefault();
@@ -68,7 +68,8 @@ $(function(){
 			url : 'logout.do',
             contentType :'application/x-www-form-urlencoded;charset=UTF-8',
             success : function(resultData){
-            	window.location.reload();	
+            	//window.location.reload();
+            	window.location = "index.jsp";
 //            	window.location=document.referrer;
             }
         });	

@@ -17,7 +17,6 @@
 <a href="pay.do">pay</a>
 <a href="find-store.do">find-store</a> 
 <a href="my-page.do">my-page</a>
-
 <a href="order-management.do">order-management</a>
 <a href="qna.do">Q&A</a>	
 <a href="qna-form.do">Q&A form</a>

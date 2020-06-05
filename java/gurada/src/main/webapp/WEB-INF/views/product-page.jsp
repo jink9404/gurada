@@ -97,7 +97,7 @@
                                         </td>
                                         <td>
                                            &nbsp;&nbsp;&nbsp;
-                                           <form action="cart.do">
+                                           <form action="cart.do" method="post">
                                         		<input type="hidden" name="name" value="${detail.name}"/>
                                            		<input type="hidden" name="price" value="${detail.price}"/>
                                            		<input id="quantity" type="hidden" name="count" value=""/>
