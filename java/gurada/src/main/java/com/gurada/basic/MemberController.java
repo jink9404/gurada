@@ -55,6 +55,7 @@ public class MemberController {
 //	로그아웃
 	@ResponseBody
 	@RequestMapping(value = "/logout.do")
+<<<<<<< HEAD
 	public void logout(HttpSession session) {
 		session.removeAttribute("UserID");
 		session.removeAttribute("UserIDInfo");
@@ -63,6 +64,13 @@ public class MemberController {
 
 		
 
+=======
+	public String logout(HttpSession session) {
+		//session.removeAttribute("UserID");
+		//session.removeAttribute("UserIDInfo");
+		session.invalidate();
+		return "logout_success";
+>>>>>>> parent of 8a2c751... by jh
 	}
 	
 //	회원수정

@@ -41,18 +41,27 @@ public class CartServiceImpl implements CartService{
 		return cartDAO.cartUpdate(vo);
 	}
 	
+<<<<<<< HEAD
 
 
 	//장바구니 내역 삭제
 
+=======
+	
+>>>>>>> parent of 8a2c751... by jh
 	public int cartDelete(int id) {
 		 
 		return cartDAO.cartDelete(id);
 	}
 
 
+<<<<<<< HEAD
 
 	
 
 
+=======
+	
+
+>>>>>>> parent of 8a2c751... by jh
 }

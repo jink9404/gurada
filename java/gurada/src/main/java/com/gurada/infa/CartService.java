@@ -15,6 +15,4 @@ public interface CartService {
 	public Integer cartUpdate(CartVO vo);
 	//장바구니 내역삭제
 	public int cartDelete(int id); 
-	
-	
 }

@@ -122,7 +122,11 @@
 								<td width='250'>500</td>
 								<td width='240'>25000</td>
 								<td>
+<<<<<<< HEAD
                                     <a href="payment.do"><button class="btn2">결제하기</button></a>
+=======
+									<button class="btn2">결제하기</button>
+>>>>>>> parent of 8a2c751... by jh
 								</td>
 							</tr>
 						</tbody>

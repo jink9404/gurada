@@ -23,6 +23,7 @@ public class cartController {
 
 	  private CartService cartservice;
 	// 상품 장바구니 담기, 중복처리
+	
 	@RequestMapping(value="cart.do", method= RequestMethod.POST)	
 
 	private CartService cartservice;
@@ -79,8 +80,16 @@ public class cartController {
 			model.addAttribute("cartSelect", cartservice.cartSelect(vo, userId));
 
 			
+<<<<<<< HEAD
 			return "wishlist";
 	}
+=======
+			int rs=cartservice.cartDelete(id);
+			return "redirect:/cartselect.do?memberNo="+memberNo;
+				
+			}
+
+>>>>>>> parent of 8a2c751... by jh
 	
 
 	// 장바구니내역 삭제하기

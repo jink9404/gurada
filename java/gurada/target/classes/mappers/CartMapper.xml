@@ -35,4 +35,7 @@
 	delete from WISHLIST where WISHLIST_NO = #{id}
 	
 	</delete>
+	
+	
+	
 </mapper>
