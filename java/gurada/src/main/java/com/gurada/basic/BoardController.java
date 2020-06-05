@@ -71,11 +71,11 @@ public class BoardController {
 	}
 
 	// 게시글 삭제하기
+	// 삭제 성공시 게시판 목록으로 돌아가고 실패시 다시 게시글화면으로 돌아감.
 	@RequestMapping("/deleteBoard.do")
 	public String deleteBoard(BoardVO vo) {
 
 		int rs = boardService.deleteBoard(vo);
- 
 		if (rs != 1) {
 			return "redirect:/qna-getBoard.do?qnaNo="+vo.getQnaNo();
 		} else {

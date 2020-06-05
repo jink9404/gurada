@@ -4,30 +4,34 @@
 <mapper namespace="StoreDAO">
 
 
-
-	 <select id="getStore" parameterType="store" resultType="store">
+	<!-- 매장 검색하기 -->
+	<select id="getStore" parameterType="store" resultType="store">
 		<![CDATA[
 		select * from store where LOCATION LIKE '%'|| #{location} ||'%'
 		]]>
 	</select>
-	
+
+	<!-- 매장 예약하기 -->
 	<insert id="bookingInsert" parameterType="hashmap">
-		insert into BOOKING(BOOKING_ID,FULL_NAME,STORE_ID,BOOKING_DATE,PHONE_NUMBER,TIME)
-					values(seq_booking_no.nextval, #{fullName} ,#{storeId} , #{BookingDate} ,#{PhoneNumber},#{time})
-	
+		insert into
+		BOOKING(BOOKING_ID,FULL_NAME,STORE_ID,BOOKING_DATE,PHONE_NUMBER,TIME)
+		values(seq_booking_no.nextval, #{fullName} ,#{storeId} ,#{BookingDate} ,#{PhoneNumber},#{time})
 	</insert>
 	
-	<select id="bookingSearch" parameterType="booking" resultType="booking">
-	
-		select * from booking b,store s 
+	<!-- 매장예약현황 검색(관리자페이지) -->
+	<select id="bookingSearch" parameterType="booking"
+		resultType="booking">
+
+		select * from booking b,store s
 		<if test="fullName!=null">
-		where b.store_id=s.store_id and FULL_NAME LIKE '%'|| #{fullName} ||'%'
+			where b.store_id=s.store_id and FULL_NAME LIKE '%'|| #{fullName} ||'%'
 		</if>
 		<if test="phoneNumber != null">
-		where b.store_id=s.store_id and PHONE_NUMBER LIKE '%'|| #{phoneNumber} ||'%'
+			where b.store_id=s.store_id and PHONE_NUMBER LIKE '%'|| #{phoneNumber}
+			||'%'
 		</if>
 	</select>
 
-	
- 
+
+
 </mapper>
