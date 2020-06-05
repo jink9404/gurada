@@ -1,6 +1,9 @@
 package com.gurada.basic;
 
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +25,12 @@ public class cartController {
 	
 	@RequestMapping(value="cart.do", method= RequestMethod.POST)	
 	public String cartInsert(CartVO vo, HttpSession session) {
+		String encodedParam=null;
+		try {
+			encodedParam = URLEncoder.encode(vo.getName(), "UTF-8");
+		} catch (UnsupportedEncodingException e) {
+		}
+		System.out.println(">>>"+vo.getName());
 		int result = cartservice.cartCheck(vo);
 		if(result == 0) { 
 			int result1 = cartservice.cartInsert(vo);
@@ -34,14 +43,26 @@ public class cartController {
 			if(result1 == 0) {
 				return "redirect:cartSelect.do";
 			} 
-		}
-		return "redirect:/product-page.do?productId="+vo.getProductId()+"&name="+vo.getName();
+		}	
+	
+		return "redirect:/product-page.do?productId="+vo.getProductId()+"&name="+encodedParam;
 	}
+		
 	//장바구니 리스트 불러오기
 	@RequestMapping("cartselect.do")
 	public String cartSelect(CartVO vo ,Model model) {
 		model.addAttribute("cartSelect",cartservice.cartSelect(vo));
 		return "wishlist";
 	}
+	
+	//장바구니 삭제하기
+		@RequestMapping("/cartDelete.do")
+		public String cartDelete(int id, String memberNo) {
+			
+			int rs=cartservice.cartDelete(id);
+			return "redirect:/cartselect.do?memberNo="+memberNo;
+				
+			}
+	
 	
 }
