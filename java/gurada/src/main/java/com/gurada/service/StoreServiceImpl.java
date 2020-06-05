@@ -18,19 +18,19 @@ public class StoreServiceImpl implements StoreService {
 	@Autowired
 	private StoreDAOImpl StoreDAO;
 
-
+	//매장정보 보기
 	public StoreVO getStore(StoreVO vo) {
 		return StoreDAO.getStore(vo);
 	}
 
-
+	//매장예약하기
 	@Override
 	public int bookingInsert(int storeId, BookingVO bvo) {
 		
 		return StoreDAO.bookingInsert(storeId, bvo) ;
 	}
 
-
+	//매장내역 검색하기(관리자 페이지)
 	@Override
 	public List<BookingVO> bookingSearch(BookingVO vo) {
 		

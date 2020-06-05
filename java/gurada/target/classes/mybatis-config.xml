@@ -14,6 +14,7 @@
  		<typeAlias alias="store" type="com.gurada.domain.StoreVO"/>
  		<typeAlias alias="cart" type="com.gurada.domain.CartVO"/>
  		<typeAlias alias="booking" type="com.gurada.domain.BookingVO"/>
+ 		<typeAlias alias="pay" type="com.gurada.domain.CartVO"/>
  	</typeAliases>
  	
 

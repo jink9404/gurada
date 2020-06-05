@@ -2,36 +2,34 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cart">
-
+	<!-- 장바구니에 담기,입력-->
 	<insert id="cartInsert" parameterType="cart" >
 	insert into wishlist(wishlist_no,member_no,product_id,count)
 	values(seq_wishlist_no.nextval,#{memberNo},#{productId},#{count})
 	</insert>
-
-	<select id="cartSelect" parameterType="cart" resultType="cart">
 	
-	select w.wishlist_no,m.member_no, p.name name , p.price price ,w.count count, (p.price*w.count) total 
+	<!-- 장바구니 내역보기 -->
+	<select id="cartSelect" parameterType="hashmap" resultType="cart">
+	select w.wishlist_no, w.member_no , p.name name , p.price price ,w.count count, (p.price*w.count) total 
 	from wishlist w , product p , member m
-	where m.member_no =#{memberNo} and p.product_id = w.product_id
-	
+	where w.member_no = ${vo.memberNo} and p.product_id = w.product_id and p.product_id=w.product_id and M.NAME='${id}'
 	</select>
 	
+	<!-- 장바구니 중복 체크 -->
 	<select id="cartCheck" parameterType="cart" resultType="int">
-	
 	select count(*)
 	from wishlist
 	where member_no =#{memberNo} and product_id = #{productId}
-	
 	</select>
 	
+	<!-- 장바구니 수량 수정 -->
 	<update id="cartUpdate" parameterType="cart">
-	
 	update wishlist
 	set count = count+#{count}
 	where product_id = #{productId} and member_no =#{memberNo}
-	
 	</update>
 	
+	<!-- 장바구니 내역 삭제 -->
 	<delete id="cartDelete" parameterType="int">
 	
 	delete from WISHLIST where WISHLIST_NO = #{id}

@@ -17,19 +17,23 @@ public class BoardServiceImpl implements BoardService {
 	@Autowired
 	private BoardDAOImpl boardDAO;
 
+	//게시글 등록
 	public void insertBoard(BoardVO vo) {
 
 		boardDAO.insertBoard(vo);
 	}
 
+	//게시글 내용 보기
 	public BoardVO getBoard(BoardVO vo) {
 		return boardDAO.getBoard(vo);
 	}
-
+	
+	//게시글 목록보기
 	public List<BoardVO> getBoardList(BoardVO vo) {
 		return boardDAO.getBoardList(vo);
 	}
-
+	
+	//글목록 총 갯수
 	public int getBoardCount(BoardVO vo) {
 		return boardDAO.getCountBoard(vo);
 	}
@@ -45,7 +49,7 @@ public class BoardServiceImpl implements BoardService {
 		return boardDAO.getBoardList(map);
 	}
 
-	//글 삭제
+	//게시글 삭제
 	public int deleteBoard(BoardVO vo) {
 		int rs=boardDAO.deleteBoard(vo);
 		return rs;

@@ -123,8 +123,8 @@
                 </div>
                 <nav class="main-menu mobile-menu">
                     <ul>
-                        <li><a class="active" href="/basic/index.jsp">홈</a></li>
-                        <li><a href="categories.do?category=suit&gender=man">남자</a>    
+                        <li><a class="active" href="/basic/index.jsp">HOME</a></li>
+                        <li><a href="categories.do?category=suit&gender=man">MAN</a>    
                             <ul class="sub-menu">
                                 <li><a href="categories.do?category=suit&gender=man">슈트</a></li>
                                 <li><a href="categories.do?category=outter&gender=man">아우터</a></li>
@@ -133,7 +133,7 @@
                                 <li><a href="categories.do?category=bottom&gender=man">하의</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">여자</a>    
+                        <li><a href="#">WOMEN</a>    
                             <ul class="sub-menu">
                                 <li><a href="categories.do?category=suit&gender=woman">슈트</a></li>
                                 <li><a href="categories.do?category=dress&gender=woman">드레스</a></li>
@@ -142,8 +142,8 @@
                                 <li><a href="categories.do?category=bottom&gender=woman">하의</a></li>
                             </ul>
                         </li>
-                        <li><a href="find-store.do">오프라인</a></li>
-                        <li><a href="qna.do">고객센터</a></li>
+                        <li><a href="find-store.do">STORE</a></li>
+                        <li><a href="qna.do">잉?</a></li>
                     </ul>
                 </nav>
             </div>

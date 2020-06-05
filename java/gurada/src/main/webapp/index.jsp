@@ -12,7 +12,7 @@
 <title>Violet | Template</title>
 
 <!-- Google Font -->
-<link
+<link 
 	href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap"
 	rel="stylesheet">
 <link

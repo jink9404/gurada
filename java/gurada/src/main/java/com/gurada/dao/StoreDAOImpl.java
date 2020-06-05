@@ -17,15 +17,15 @@ public class StoreDAOImpl implements StoreDAO {
 	@Autowired
 	private SqlSessionTemplate mybatis;
 
+	//매장찾기
 	public StoreVO getStore(StoreVO vo) {
 
 		return mybatis.selectOne("StoreDAO.getStore", vo);
 	}
 	
-
+	//매장 예약하기
+	//hashmap에 값을 저장하여  mapper로 보냄.
 	public int bookingInsert(int storeId,BookingVO bvo) {
-		
-		System.out.println(storeId+bvo.getBookingDate()+bvo.getTime()+bvo.getFullName()+bvo.getPhoneNumber());
 		
 		HashMap map= new HashMap();
 		map.put("storeId",storeId );
@@ -38,7 +38,7 @@ public class StoreDAOImpl implements StoreDAO {
 		return a;
 	}
 
-
+	//매장예약현황 검색하기
 	public List<BookingVO> bookingSearch(BookingVO vo) {
 		return mybatis.selectList("StoreDAO.bookingSearch", vo);
 	}
