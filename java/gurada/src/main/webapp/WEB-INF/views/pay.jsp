@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%> 
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -237,37 +238,20 @@
 											<div class="title-left">
 												<h3>장바구니 내역</h3>
 											</div>
+											<c:forEach items="${paylist}" var="pay">
 											<div class="rounded p-2 bg-light">
 												<div class="media mb-2 border-bottom">
 													<div class="media-body">
-														<a href="detail.html"> 상품 이름 나오는 곳</a>
+														 ${name} 
 														<div class="small text-muted">
-															가격:150,000 <span class="mx-2">|</span> 수량: 1 <span
-																class="mx-2">|</span> 합계: 150,000
+															가격:${price} <span class="mx-2">|</span> 수량${count} <span
+																class="mx-2">|</span> 합계: ${total}
 														</div>
 													</div>
 												</div>
-												<div class="media mb-2 border-bottom">
-													<div class="media-body">
-														<a href="detail.html"> 상품 이름 나오는 곳</a>
-														<div class="small text-muted">
-															가격:150,000 <span class="mx-2">|</span> 수량: 1 <span
-																class="mx-2">|</span> 합계: 150,000
-														</div>
-													</div>
-												</div>
-												<div class="media mb-2 border-bottom">
-													<div class="media-body">
-														<a href="detail.html"> 상품 이름 나오는 곳</a>
-														<div class="small text-muted">
-															가격:150,000 <span class="mx-2">|</span> 수량: 1 <span
-																class="mx-2">|</span> 합계: 150,000
-														</div>
-													</div>
-												</div>
-											</div>
 										</div>
 									</div>
+									</c:forEach>
 									<div class="col-md-12 col-lg-12">
 										<div class="order-box">
 											<div class="title-left">

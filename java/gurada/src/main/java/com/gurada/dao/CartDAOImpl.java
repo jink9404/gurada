@@ -1,4 +1,4 @@
-package com.gurada.service;
+package com.gurada.dao;
 
 import java.util.List;
 
