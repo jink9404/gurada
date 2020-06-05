@@ -5,6 +5,10 @@ public class OrderVO {
 	private String orderDate;
 	private int count;
 	private int totalPrice;
+	private String memberNo;
+	private String productNo;
+	private String payment;
+	
 	public String getOrderNo() {
 		return orderNo;
 	}
@@ -47,8 +51,6 @@ public class OrderVO {
 	public void setPayment(String payment) {
 		this.payment = payment;
 	}
-	private String memberNo;
-	private String productNo;
-	private String payment;
+
 	
 }

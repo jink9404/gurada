@@ -3,8 +3,11 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="pay">
 
-	<insert id="payInsert" parameterType="pay">
-	
+	<insert id="payInsert" parameterType="cart">
+  <!--  insert into GURADA_ORDER(COUNT,TOTAL_PRICE,MEMBER_NO,PRODUCT_NO)
+	 values(#{count},#{total},#{memberNo},#{72}) -->
+   insert into GURADA_ORDER(COUNT,TOTAL_PRICE,MEMBER_NO)
+	 values(#{count},#{total},#{memberNo}) 
 	
 	
 	</insert>

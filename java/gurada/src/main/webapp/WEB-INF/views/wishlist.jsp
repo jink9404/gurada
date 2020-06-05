@@ -59,7 +59,7 @@
 		<div class="cart-page">
 			<div class="container">
 				<div class="cart-table">
-					<form action="pay.do" method="post">
+				
 					<table>
 						<thead>
 							<tr>
@@ -76,10 +76,10 @@
 								<td class="product-col"><img
 									src="img/product/product-1.jpg" alt="">
 									<div class="p-title">
-										<h5><span name="name">${cart.name}</span>> </h5>
+										<h5>${cart.name} </h5>
 									</div></td>
 
-								<td class="price-col"><span name="price">${cart.price}<span></td>
+								<td class="price-col">${cart.price}</td>
 
 								<td class="quantity-col">
 									<div class="pro-qty">
@@ -87,7 +87,7 @@
 									</div>
 								</td>
 
-								<td class="price-col"><span name="total">${cart.total}</span></td>
+								<td class="price-col">${cart.total}</td>
 								
 								<td>
 								<a href='cartDelete.do?id=${cart.wishlistNo}&memberNo=${cart.memberNo}'>X</a>
@@ -96,10 +96,9 @@
 							</c:forEach>
 						</tbody>
 					</table>
-			</form>
-			<form action="pay.do?${cartSelect.wishlistNo}">
-			<button type='submit' class="btn1">결제하기</button>
-			</form>
+					<a href="pay.do?id=${cartSelect}">결제하기</a>
+
+			
 				</div>
 			</div>
 		</div>

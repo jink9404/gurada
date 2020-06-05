@@ -3,17 +3,14 @@ package com.gurada.basic;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
-import java.util.StringTokenizer;
 
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.gurada.domain.CartVO;
 import com.gurada.infa.CartService;
@@ -67,11 +64,12 @@ public class cartController {
 	//장바구니 삭제하기
 		@RequestMapping("/cartDelete.do")
 		public String cartDelete(int id, String memberNo) {
-			
-			int rs=cartservice.cartDelete(id);
-			return "redirect:/cartselect.do?memberNo="+memberNo;
+		int rs=cartservice.cartDelete(id);
+		return "redirect:/cartselect.do?memberNo="+memberNo;
 				
 			}
-	
+		
+
+			
 	
 }

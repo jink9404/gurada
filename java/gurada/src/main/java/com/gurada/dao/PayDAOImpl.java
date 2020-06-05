@@ -12,7 +12,7 @@ public class PayDAOImpl implements PayDAO{
 	@Autowired
 	private SqlSessionTemplate mybatis;
 	@Override
-	public Integer payInsert(CartVO vo) {
+	public int payInsert(CartVO vo) {
 	return mybatis.insert("pay.payInsert",vo);	
 	
 	}

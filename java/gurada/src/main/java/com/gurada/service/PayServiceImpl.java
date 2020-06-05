@@ -14,7 +14,7 @@ public class PayServiceImpl implements PayService {
 	PayDAO paydao;
 	
 	@Override
-	public List<CartVO> payInsert(CartVO vo) {
+	public int payInsert(CartVO vo) {
 		return paydao.payInsert(vo); 
 	}
 

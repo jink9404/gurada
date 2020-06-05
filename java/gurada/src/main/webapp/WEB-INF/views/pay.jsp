@@ -238,14 +238,14 @@
 											<div class="title-left">
 												<h3>장바구니 내역</h3>
 											</div>
-											<c:forEach items="${paylist}" var="pay">
+										<c:forEach items="${cartSelect}" var="pay">
 											<div class="rounded p-2 bg-light">
 												<div class="media mb-2 border-bottom">
 													<div class="media-body">
-														 ${name} 
+														 ${pay.name} 
 														<div class="small text-muted">
-															가격:${price} <span class="mx-2">|</span> 수량${count} <span
-																class="mx-2">|</span> 합계: ${total}
+															가격:${price} <span class="mx-2">|</span> 수량${pay.count} <span
+																class="mx-2">|</span> 합계: ${pay.total}
 														</div>
 													</div>
 												</div>

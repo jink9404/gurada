@@ -6,7 +6,7 @@ import com.gurada.domain.CartVO;
 
 public interface PayDAO {
 	
-	public List<CartVO> payInsert(CartVO vo);
+	public int payInsert(CartVO vo);
 		
 	
 }
