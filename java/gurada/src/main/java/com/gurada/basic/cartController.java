@@ -1,6 +1,8 @@
 package com.gurada.basic;
 
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -36,14 +38,23 @@ public class cartController {
 			}
 		}
 		
-		
-		
 		return "product-page";
 	}
+	
 	@RequestMapping("cartselect.do")
 	public String cartSelect(CartVO vo ,Model model) {
 		model.addAttribute("cartSelect",cartservice.cartSelect(vo));
 		return "wishlist";
 	}
+	
+	//장바구니 삭제하기
+	@RequestMapping("/cartDelete.do")
+	public String cartDelete(int id, String memberNo) {
+		
+		int rs=cartservice.cartDelete(id);
+		return "redirect:/cartselect.do?memberNo="+memberNo;
+			
+		}
+	
 	
 }

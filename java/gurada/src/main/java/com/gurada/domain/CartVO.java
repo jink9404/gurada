@@ -1,7 +1,7 @@
 package com.gurada.domain;
 
 public class CartVO {
-	private String wishlistNo;
+	private int wishlistNo;
 	private String memberNo;
 	private String productId;
 	private int count;
@@ -28,10 +28,11 @@ public class CartVO {
 	public void setTotal(int total) {
 		this.total = total;
 	}
-	public String getWishlistNo() {
+
+	public int getWishlistNo() {
 		return wishlistNo;
 	}
-	public void setWishlistNo(String wishlistNo) {
+	public void setWishlistNo(int wishlistNo) {
 		this.wishlistNo = wishlistNo;
 	}
 	public String getMemberNo() {
