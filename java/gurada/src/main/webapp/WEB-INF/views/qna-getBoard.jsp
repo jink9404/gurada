@@ -65,15 +65,15 @@
                                
                                 <textarea placeholder="내용" disabled>${board.contents}</textarea>
                             </div>
-                            <div class="col-lg-12 text-right" class="small-button">
+                            <div class="col-lg-12 text-right" id="small-button-list">
                                 <button type="submit"  >게시판 목록 가기</button> 
                             </div>    
                         </div>
                     </form>
-                    <form action="delete-qna.do" method="post">
+                    <form action="delete-qna.do" method="post" class='sh-form'>
                             <input type='hidden' name='qnaNo' value='${board.qnaNo}' >
                             <input type='hidden' name='password' value='${board.password}' >
-                            <button type="submit"  >게시글 삭제</button>
+                            <button class='small-button-delete' type="submit"  >게시글 삭제</button>
                             </form>
                 </div>
                 <div class="col-lg-3 offset-lg-1">

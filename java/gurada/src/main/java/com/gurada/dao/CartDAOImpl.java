@@ -1,5 +1,6 @@
 package com.gurada.dao;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.mybatis.spring.SqlSessionTemplate;
@@ -20,9 +21,13 @@ public class CartDAOImpl implements CartDAO{
 	}
 
 	@Override
-	public List<CartVO> cartSelect(CartVO vo) {
+	public List<CartVO> cartSelect(CartVO vo,String userId) {
+		System.out.println(userId);
+		HashMap map = new HashMap();
+		map.put("vo", vo);
+		map.put("id", userId);
 		
-		return mybatis.selectList("cart.cartSelect",vo);
+		return mybatis.selectList("cart.cartSelect",map);
 	}
 
 	@Override
