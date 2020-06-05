@@ -8,7 +8,7 @@ public interface CartService {
 
 	public Integer cartInsert(CartVO vo);
 	
-	public List<CartVO> cartSelect(CartVO vo);
+	public List<CartVO> cartSelect(CartVO vo,String userId);
 	
 	public Integer cartCheck(CartVO vo);
 	

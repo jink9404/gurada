@@ -8,7 +8,7 @@ public interface CartDAO {
 
 	public Integer cartInsert(CartVO vo);
 	
-	public List<CartVO> cartSelect(CartVO vo);
+	public List<CartVO> cartSelect(CartVO vo, String id);
 	
 	public Integer cartCheck(CartVO vo);
 	

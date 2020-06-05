@@ -8,11 +8,11 @@
 	values(seq_wishlist_no.nextval,#{memberNo},#{productId},#{count})
 	</insert>
 
-	<select id="cartSelect" parameterType="cart" resultType="cart">
+	<select id="cartSelect" parameterType="hashmap" resultType="cart">
 	
-	select w.wishlist_no,m.member_no, p.name name , p.price price ,w.count count, (p.price*w.count) total 
+	select w.wishlist_no, w.member_no , p.name name , p.price price ,w.count count, (p.price*w.count) total 
 	from wishlist w , product p , member m
-	where m.member_no =#{memberNo} and p.product_id = w.product_id
+	where w.member_no = ${vo.memberNo} and p.product_id = w.product_id and p.product_id=w.product_id and M.NAME='${id}'
 	
 	</select>
 	

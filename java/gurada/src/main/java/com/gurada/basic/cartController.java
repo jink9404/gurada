@@ -3,6 +3,7 @@ package com.gurada.basic;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
+import java.util.StringTokenizer;
 
 import javax.servlet.http.HttpSession;
 
@@ -50,9 +51,17 @@ public class cartController {
 		
 	//장바구니 리스트 불러오기
 	@RequestMapping("cartselect.do")
-	public String cartSelect(CartVO vo ,Model model) {
-		model.addAttribute("cartSelect",cartservice.cartSelect(vo));
+	public String cartSelect(CartVO vo ,Model model,HttpSession session) {
+		String userId=(String)session.getAttribute("UserID");
+		System.out.println(userId);
+		System.out.println(vo.getMemberNo());
+		
+		if(userId != null) {
+		model.addAttribute("cartSelect",cartservice.cartSelect(vo,userId));
 		return "wishlist";
+		}else {
+			return"/wishlist";
+		}
 	}
 	
 	//장바구니 삭제하기
