@@ -83,7 +83,7 @@
 
 								<td class="quantity-col">
 									<div class="pro-qty">
-										<input type="text" value="${cart.count}" name="count">
+										<input type="text" value="${cart.count}" name="count"/>
 									</div>
 								</td>
 
@@ -96,7 +96,7 @@
 							</c:forEach>
 						</tbody>
 					</table>
-					<a href="pay.do?id=${cartSelect}">결제하기</a>
+				
 
 			
 				</div>
@@ -121,7 +121,7 @@
 								<td width='250'>500</td>
 								<td width='240'>25000</td>
 								<td>
-							
+                                    <a href="payment.do"><button class="btn2">결제하기</button></a>
 								</td>
 							</tr>
 						</tbody>

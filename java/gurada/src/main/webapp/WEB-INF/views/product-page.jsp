@@ -104,7 +104,7 @@
                                            		<input id="total1" type="hidden" name="total" value=""/>
                                            		<input type="hidden" name="productId" value="${detail.productId}"/>
                                            		<input type="hidden" name="memberNo" value="${sessionScope.memberNo}"/> 
-                                                <input type="submit" class= 'small-button2' value="장바구니 추가"/>
+                                                <input id="" type="submit" class= 'small-button2' value="장바구니 추가"/>
                                            </form>
                                             
                                         </td>
@@ -129,7 +129,7 @@
     </section>
     <!-- Product Page Section End -->
 
-    <!-- Related Product Section Begin -->
+    <!-- 추천상품 section -->
     <section class="related-product spad">
         <div class="container">
             <div class="row">
@@ -191,7 +191,8 @@
             </div>
         </div>
     </section>
-    <!-- Product Page Section End -->
+    
+    <!-- footer 연결 -->
 	<jsp:include page="footer.jsp" />
 	<!-- Js Plugins -->
 	<script src="./resources/js/jquery-3.3.1.min.js"></script>

@@ -12,64 +12,54 @@ import com.gurada.domain.BookingVO;
 import com.gurada.domain.StoreVO;
 import com.gurada.infa.StoreService;
 
-
 @Controller
 public class StoreController {
 
 	@Autowired
 	private StoreService StoreService;
 
-	// 매장 검색하기
+	// 매장 찾기
 	@RequestMapping("/find.do")
 	public String getStore(StoreVO vo, HttpServletRequest request) {
-		
-		StoreVO nvo=StoreService.getStore(vo);
-		System.out.println(nvo.getLatitude());
-		System.out.println(nvo.getLongitude()); 
+
+		StoreVO nvo = StoreService.getStore(vo);
 		request.setAttribute("store", nvo);
 		request.setAttribute("latitude", nvo.getLatitude());
 		request.setAttribute("longitude", nvo.getLongitude());
 		return "/find-store";
-	
+
 	}
-	
-		@RequestMapping("/booking-data.do")
+	//위도, 경도 정보 보내주기
+	@RequestMapping("/booking-data.do")
 	public String booking_data(StoreVO vo, HttpServletRequest request) {
-		
+
 		request.setAttribute("bstore", vo);
 		request.setAttribute("blatitude", vo.getLatitude());
 		request.setAttribute("blongitude", vo.getLongitude());
 		return "/booking";
-	
-	}
-		
-		@RequestMapping("/reservation-rs.do")
-		public void bookingInsert(int storeId,BookingVO bvo) {
-			StoreService.bookingInsert(storeId,bvo);
-		}
-		
-		@RequestMapping("/booking-search.do")
-		public String booking_search(@RequestParam(name = "value", required = false) 
-								   String value,
-								   @RequestParam(name = "search", required = false)
-								   String search, Model model) {
-			BookingVO vo = new BookingVO();
-			if(search.equals("oname"))
-				vo.setFullName(value);
-			else if(search.equals("otel"))
-				vo.setPhoneNumber(value);
 
-			model.addAttribute("search",StoreService.bookingSearch(vo));
-			
-			return "/bookinglist"; 
-		}
+	}
+	//매장 예약하기
+	@RequestMapping("/reservation-rs.do")
+	public void bookingInsert(int storeId, BookingVO bvo) {
+		StoreService.bookingInsert(storeId, bvo);
+	}
+
+	//예약내역 검색하기(관리자 페이지)
+	//selete박스의 선택 정보에 따라 BookingVO에 정보를 담아서 인자로 보냄.
+	@RequestMapping("/booking-search.do")
+	public String booking_search(@RequestParam(name = "value", required = false) String value,
+			@RequestParam(name = "search", required = false) String search, Model model) {
 		
-		
-		
-		
-		
-		
-		
-		
-			
+		BookingVO vo = new BookingVO();
+		if (search.equals("oname"))
+			vo.setFullName(value);
+		else if (search.equals("otel"))
+			vo.setPhoneNumber(value);
+
+		model.addAttribute("search", StoreService.bookingSearch(vo));
+
+		return "/bookinglist";
+	}
+
 }
