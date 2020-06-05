@@ -47,6 +47,7 @@ public class MemberController {
 				session.setAttribute("UserID", new_vo.getName());
 				session.setAttribute("UserIDInfo", new_vo);
 				session.setAttribute("memberNo", new_vo.getMemberNo());
+				
 		}
 		return result;
 	}
@@ -54,24 +55,10 @@ public class MemberController {
 	
 //	로그아웃
 	@ResponseBody
-	@RequestMapping(value = "/logout.do")
-
+	@RequestMapping(value="/logout.do")
 	public void logout(HttpSession session) {
 		session.removeAttribute("UserID");
 		session.removeAttribute("UserIDInfo");
-
-		//session.invalidate();
-
-		
-
-
-
-	public String logout(HttpSession session) {
-		//session.removeAttribute("UserID");
-		//session.removeAttribute("UserIDInfo");
-		session.invalidate();
-		return "logout_success";
-
 	}
 	
 //	회원수정

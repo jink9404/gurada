@@ -43,14 +43,11 @@ public class CartServiceImpl implements CartService{
 
 
 	//장바구니 내역 삭제
-
-
-	
-
 	public int cartDelete(int id) {
 		 
 		return cartDAO.cartDelete(id);
 	}
+}
 
 
 

@@ -64,12 +64,12 @@ $(function(){
     	event.preventDefault();
         $.ajax({
             type:'post',
-            async:true,
+            async : true,
 			url : 'logout.do',
             contentType :'application/x-www-form-urlencoded;charset=UTF-8',
             success : function(resultData){
             	//window.location.reload();
-            	window.location = "index.jsp";
+            	window.location = "index2.jsp";
 //            	window.location=document.referrer;
             }
         });	

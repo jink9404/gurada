@@ -11,11 +11,12 @@ import com.gurada.infa.PayService;
 @Service("payservice")
 public class PayServiceImpl implements PayService {
 	@Autowired
-	PayDAO paydao;
+	private PayDAO paydao;
 	
+
 	@Override
-	public int payInsert(CartVO vo) {
-		return paydao.payInsert(vo); 
+	public List<CartVO> paySelect(CartVO vo) {
+		return paydao.paySelect(vo);				
 	}
 
 }

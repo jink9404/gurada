@@ -6,6 +6,6 @@ import com.gurada.domain.CartVO;
 
 public interface PayService {
 
-	public int payInsert(CartVO vo);
+	public List<CartVO> paySelect(CartVO vo);
 }
  

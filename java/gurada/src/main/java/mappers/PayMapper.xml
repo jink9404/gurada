@@ -3,16 +3,10 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="pay">
 
-	<insert id="payInsert" parameterType="cart">
-  <!--  insert into GURADA_ORDER(COUNT,TOTAL_PRICE,MEMBER_NO,PRODUCT_NO)
-	 values(#{count},#{total},#{memberNo},#{72}) -->
-   insert into GURADA_ORDER(COUNT,TOTAL_PRICE,MEMBER_NO)
-	 values(#{count},#{total},#{memberNo}) 
-	
-	
-	</insert>
+	<select id="paySelect" parameterType="cart" resultType="cart">
+   		select w.count as count,w.member_no as memberNo, p.price as price, w.product_id as productId,w.wishlist_no as wishlistNo , (w.count*p.price) as total, p.name as name
+		from wishlist w, member m, product p
+		where m.member_no=w.member_no and w.product_id=p.product_id and m.member_no=#{memberNo} 
+   		</select>
 
-	
-	
-	
 </mapper>

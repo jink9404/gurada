@@ -104,7 +104,7 @@
                                            		<input id="total1" type="hidden" name="total" value=""/>
                                            		<input type="hidden" name="productId" value="${detail.productId}"/>
                                            		<input type="hidden" name="memberNo" value="${sessionScope.memberNo}"/> 
-                                                <input id="" type="submit" class= 'small-button2' value="장바구니 추가"/>
+                                                <input id="submit" type="submit" class= 'small-button2' value="장바구니 추가"/>
                                            </form>
                                             
                                         </td>

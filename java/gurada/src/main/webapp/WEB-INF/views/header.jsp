@@ -118,7 +118,7 @@
                    </c:if>
                    <c:if test="${not empty sessionScope.UserID}">
                       <span class="in">${sessionScope.UserID} 님 환영합니다.</span>
-                      /<a href="" id="logout">로그아웃</a>
+                      <a href="" id="logout">로그아웃</a>
                    </c:if>
                 </div>
                 <nav class="main-menu mobile-menu">
