@@ -10,7 +10,7 @@
 
 	<select id="cartSelect" parameterType="cart" resultType="cart">
 	
-	select p.name name , p.price price ,w.count count, (p.price*w.count) total 
+	select w.wishlist_no,m.member_no, p.name name , p.price price ,w.count count, (p.price*w.count) total 
 	from wishlist w , product p , member m
 	where m.member_no =#{memberNo} and p.product_id = w.product_id
 	
@@ -31,6 +31,12 @@
 	where product_id = #{productId} and member_no =#{memberNo}
 	
 	</update>
+	
+	<delete id="cartDelete" parameterType="int">
+	
+	delete from WISHLIST where WISHLIST_NO = #{id}
+	
+	</delete>
 	
 	
 	

@@ -13,4 +13,6 @@ public interface CartDAO {
 	public Integer cartCheck(CartVO vo);
 	
 	public Integer cartUpdate(CartVO vo);
+
+	public int cartDelete(int id);  
 }

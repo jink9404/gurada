@@ -87,14 +87,15 @@
 								</td>
 
 								<td class="price-col">${cart.total}</td>
+								
 								<td>
-									<button class="xbtn-sh">X</button>
+								<a href='cartDelete.do?id=${cart.wishlistNo}&memberNo=${cart.memberNo}'>X</a>
 								</td>
 							</tr>
 							</c:forEach>
 						</tbody>
 					</table>
-					
+		
 				</div>
 			</div>
 		</div>
