@@ -32,6 +32,12 @@ $('#back').click(function(){
 	history.back(-2);
 });
 
+$('#submit').click(function(){
+	if($('#product-quantity').val() == 0){
+		alert("수량을 확인하여 주십시오");
+		event.preventDefault();
+	}
+});
 	
   
   

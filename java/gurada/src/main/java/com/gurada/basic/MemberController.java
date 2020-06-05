@@ -55,11 +55,10 @@ public class MemberController {
 //	로그아웃
 	@ResponseBody
 	@RequestMapping(value = "/logout.do")
-	public String logout(HttpSession session) {
-		//session.removeAttribute("UserID");
-		//session.removeAttribute("UserIDInfo");
-		session.invalidate();
-		return "logout_success";
+	public void logout(HttpSession session) {
+		session.removeAttribute("UserID");
+		session.removeAttribute("UserIDInfo");
+		//session.invalidate();
 	}
 	
 //	회원수정

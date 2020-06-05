@@ -41,13 +41,10 @@ public class CartServiceImpl implements CartService{
 		return cartDAO.cartUpdate(vo);
 	}
 	
-	
 	public int cartDelete(int id) {
 		 
 		return cartDAO.cartDelete(id);
 	}
 
-
-	
 
 }

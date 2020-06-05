@@ -4,6 +4,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
+<link rel="stylesheet" href="./resources/style/bootstrap.min.css" type="text/css">
+
 </head>
 <body>
 <script src="./resources/js/jquery-3.3.1.min.js"></script>
@@ -14,6 +16,8 @@
 <script src="./resources/js/jquery.nice-select.min.js"></script>
 <script src="./resources/js/mj.js"></script>
 <script src="./resources/js/main.js"></script>
+
+
 
     <div id="preloder">
         <div class="loader"></div>
@@ -87,14 +91,25 @@
                 <div class="header-right">
                     <a><img src="./resources/img/icons/search.png" alt="" class="search-trigger"/></a>&nbsp;&nbsp;
                     <c:if test="${not empty sessionScope.UserID }">
-                       <a href="my-page.do">
-                          <img src="./resources/img/icons/man.png" alt=""/>
-                       </a>&nbsp;&nbsp;&nbsp;&nbsp;
-                       <a href="cartselect.do?memberNo=${sessionScope.memberNo}">
+                    	<c:set var ="name" value="${sessionScope.UserID}"/>
+                    		<c:choose>
+                    			<c:when test="${ name eq '관리자'}">
+                    				<span><a class="glyphicon glyphicon-cloud" href="product-list.do">상품리스트</a></span>
+                    				<span><a class="glyphicon glyphicon-plus" href="resistration.do">상품등록</a></span>
+                    				<span><a class="glyphicon glyphicon-calendar" href="bookinglist.do">매장예약 현황</a></span>
+                    				<span><a class="glyphicon glyphicon-list" href="order-management.do">주문내역</a></span>
+                    			</c:when>
+                    			<c:otherwise>
+                       	<a href="my-page.do">
+                        <img src="./resources/img/icons/man.png" alt=""/>
+                        </a>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <a href="cartselect.do?memberNo=${sessionScope.memberNo}">
                            <img src="./resources/img/icons/bag.png" alt=""/>
                            <span>1</span>
                        </a>&nbsp;&nbsp;&nbsp;&nbsp;
-                    </c:if>
+                   				</c:otherwise>
+                    		</c:choose>
+                     </c:if> 
                 </div>
                 <div class="user-access">
                    <c:if test="${empty sessionScope.UserID }">

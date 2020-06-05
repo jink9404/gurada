@@ -22,7 +22,6 @@ public class cartController {
 	@Autowired
 	  private CartService cartservice;
 	// 상품 장바구니 담기, 중복처리
-	
 	@RequestMapping(value="cart.do", method= RequestMethod.POST)	
 	public String cartInsert(CartVO vo, HttpSession session) {
 		String encodedParam=null;
@@ -64,6 +63,6 @@ public class cartController {
 			return "redirect:/cartselect.do?memberNo="+memberNo;
 				
 			}
-
+	
 	
 }

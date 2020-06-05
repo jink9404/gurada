@@ -118,7 +118,7 @@
 								<td width='250'>500</td>
 								<td width='240'>25000</td>
 								<td>
-									<button class="btn2">결제하기</button>
+									<a href="payment.do"><button class="btn2">결제하기</button></a>
 								</td>
 							</tr>
 						</tbody>

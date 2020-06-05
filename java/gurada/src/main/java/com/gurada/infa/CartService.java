@@ -15,4 +15,6 @@ public interface CartService {
 	public Integer cartUpdate(CartVO vo);
 	
 	public int cartDelete(int id); 
+	
+	
 }
