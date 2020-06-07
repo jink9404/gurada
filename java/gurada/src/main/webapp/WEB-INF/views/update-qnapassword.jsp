@@ -47,13 +47,16 @@
 	<div class="contact-section">
 		<div class="container">
 			<div class="row">
-				<form action="deleteBoard.do" class="contact-form">
+				<form action="updateBoard.do" class="contact-form" method='post'>
 					<div class="re-sh">
 					
-						<h4>삭제하시려면 비밀번호를 입력해주세요</h4>
+						<h4>수정하시려면 비밀번호를 입력해주세요</h4>
 						<input type="text" name='password'>
-						<input type='hidden' name='qnaNo' value='<%= id %>'>
-						<button type="submit" class='small-button3'>게시글 삭제</button>
+						<input type='hidden' name='qnaNo' value='${board.qnaNo}'>
+						<input type='hidden' name='title' value='${board.title}'>
+						<input type='hidden' name='writter' value='${board.writter}'>
+						<input type='hidden' name='contents' value='${board.contents}'>
+						<button type="submit" class='small-button3'>게시글 수정</button>
 					</div>
 				</form>
 			</div>

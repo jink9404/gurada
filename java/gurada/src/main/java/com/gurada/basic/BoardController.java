@@ -82,5 +82,31 @@ public class BoardController {
 			return "redirect:/qna.do";
 		}
 	}
+	
+	//수정페이지로 이동 
+		@RequestMapping("/qna-update.do")
+		public void boardupdate(BoardVO vo, Model model) {
+			
+			model.addAttribute("board",vo);
+		}
+	
+	//수정비밀번호확인
+	@RequestMapping("/update-qnapassword.do")
+	public void boardupdate2(BoardVO vo,Model model) {
+		model.addAttribute("board",vo);
+		
+	}
+	
+	//게시글 수정
+	
+		@RequestMapping("/updateBoard.do")
+	public String boardupdate3(BoardVO vo) {		
+		int rs=boardService.updateBoard(vo);
+		if (rs != 1) {
+			return "redirect:/qna-getBoard.do?qnaNo="+vo.getQnaNo();
+		} else {
+			return "redirect:/qna.do";
+		}
+	}
 
 }
