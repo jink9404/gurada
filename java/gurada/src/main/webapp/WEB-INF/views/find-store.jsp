@@ -146,10 +146,16 @@
 								<td>${store.location}</td>
 							</tr>
 							<tr>
-								<td>매장 연락처 : ${store.tel}</td>
+								<td>${store.tel}</td>
+							</tr>
+							<br>
+							<tr>
+								<td>
+								<button type="submit" class='sh-button'>방문예약</button>
+								</td>
 							</tr>
 						</table>
-						<button type="submit" class='sh-button'>방문예약</button>
+						
 					</form>
 					<br />
 					<div id="map-canvas" style="width: 1000px; height: 500px"></div>

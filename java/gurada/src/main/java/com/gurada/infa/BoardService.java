@@ -25,4 +25,7 @@ public interface BoardService {
 	
 	//글 삭제
 	int deleteBoard(BoardVO vo);
+	
+	//글 수정
+	int updateBoard(BoardVO vo);
 }

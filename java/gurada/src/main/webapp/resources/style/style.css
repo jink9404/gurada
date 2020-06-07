@@ -2924,7 +2924,7 @@ left: 10%;
 	cursor: pointer;
 	text-transform: uppercase;
     position: absolute; 
-    top:327px; left:400px;
+    top:327px; left:410px;
 }
 #small-button-list button{
 	
@@ -2939,8 +2939,28 @@ left: 10%;
 	cursor: pointer;
 	text-transform: uppercase;
      position: absolute; 
-    top:1px; left:550px;
+    top:-400px; left:570px;
 	
+}
+
+#small-button-update button{
+	
+	color: #1e1e1e;
+	background: transparent;
+	border: none;
+	font-size: 14px;
+	font-weight: 600;
+	padding: 8px 25px;
+	border: 1px solid #1e1e1e;
+	border-radius: 50px;
+	cursor: pointer;
+	text-transform: uppercase;
+     position: absolute;
+    top:2px; left:550px;
+	
+}
+#small-button-update a{
+	color:  #1e1e1e;
 }
     
 /*----------------------------------------*/

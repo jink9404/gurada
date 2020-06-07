@@ -65,4 +65,10 @@
  		delete from QNA where QNA_NO =${qnaNo} and PASSWORD =${password}
  		
  	</delete>
+ 	
+ 	<!-- 게시글 수정 -->
+ 	<update id="updateBoard" parameterType="board">
+ 	
+ 	update QNA set title =#{title}, CONTENTS =#{contents} where QNA_NO =#{qnaNo} and PASSWORD=#{password}
+ 	</update>
 </mapper>

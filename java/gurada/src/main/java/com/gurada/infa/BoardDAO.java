@@ -16,4 +16,6 @@ public interface BoardDAO {
 	public abstract List<BoardVO> getBoardList(HashMap map);
 	//글목록 총 갯수
 	public abstract int getCountBoard(BoardVO vo);
+	//글 수정
+	public int updateBoard(BoardVO vo);
 }

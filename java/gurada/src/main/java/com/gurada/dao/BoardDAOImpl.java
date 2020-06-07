@@ -59,5 +59,10 @@ public class BoardDAOImpl implements BoardDAO{
 		return rs;
 	}
 	
+	public int updateBoard(BoardVO vo) {
+		int rs=mybatis.update("BoardDAO.updateBoard",vo);
+		return rs;
+	}
+	
 
 }

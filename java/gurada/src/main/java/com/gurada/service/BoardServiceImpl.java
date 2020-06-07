@@ -55,4 +55,11 @@ public class BoardServiceImpl implements BoardService {
 		return rs;
 		
 	}
+	
+	//게시글 수정
+	@Override
+	public int updateBoard(BoardVO vo) {
+		return boardDAO.updateBoard(vo);
+		
+	}
 }
