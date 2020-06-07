@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.gurada.domain.CartVO;
+import com.gurada.domain.OrderVO;
 import com.gurada.infa.PayDAO;
 import com.gurada.infa.PayService;
 @Service("payservice")
@@ -19,4 +20,7 @@ public class PayServiceImpl implements PayService {
 		return paydao.paySelect(vo);				
 	}
 
+	public void payInsert(OrderVO vo) {
+		paydao.payInsert(vo);
+	}
 }

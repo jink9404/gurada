@@ -4,8 +4,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
-<link rel="stylesheet" href="./resources/style/bootstrap.min.css" type="text/css">
-
 </head>
 <body>
 <script src="./resources/js/jquery-3.3.1.min.js"></script>
@@ -39,8 +37,7 @@
            <tr>
                 <td rowspan="2">
                     <div class="login">
-                        <span><h2 class="text-white"/>로그인</h2></span>
-         
+                        <span><h2 class="text-white"/>로그인</h2></span>         
                         <form action="login.do" method="post" id="frm" name="frm">
                             <table>
                                 <tr>
@@ -86,7 +83,7 @@
             
             <div class="inner-header">
                 <div class="logo">
-                    <a href="/basic/index.jsp"><img src="./resources/img/logo.png" alt=""/></a>
+                    <a href="/basic/index2.jsp"><img src="./resources/img/logo.png" alt=""/></a>
                 </div>
                 <div class="header-right">
                     <a><img src="./resources/img/icons/search.png" alt="" class="search-trigger"/></a>&nbsp;&nbsp;
@@ -97,7 +94,8 @@
                     				<span><a class="glyphicon glyphicon-cloud" href="product-list.do">상품리스트</a></span>
                     				<span><a class="glyphicon glyphicon-plus" href="resistration.do">상품등록</a></span>
                     				<span><a class="glyphicon glyphicon-calendar" href="bookinglist.do">매장예약 현황</a></span>
-                    				<span><a class="glyphicon glyphicon-list" href="order-management.do">주문내역</a></span>
+                    				<span><a class="glyphicon glyphicon-list" href="order-management.do">주문내역</a></span><br/>
+                    				<span><a class="glyphicon glyphicon-list" href="member-management.do">회원관리</a></span>
                     			</c:when>
                     			<c:otherwise>
                        	<a href="my-page.do">
@@ -123,7 +121,7 @@
                 </div>
                 <nav class="main-menu mobile-menu">
                     <ul>
-                        <li><a class="active" href="/basic/index.jsp">HOME</a></li>
+                        <li><a class="active" href="/basic/index2.jsp">HOME</a></li>
                         <li><a href="categories.do?category=suit&gender=man">MAN</a>    
                             <ul class="sub-menu">
                                 <li><a href="categories.do?category=suit&gender=man">슈트</a></li>
@@ -133,7 +131,7 @@
                                 <li><a href="categories.do?category=bottom&gender=man">하의</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">WOMEN</a>    
+                        <li><a href="categories.do?category=suit&gender=women">WOMEN</a>    
                             <ul class="sub-menu">
                                 <li><a href="categories.do?category=suit&gender=woman">슈트</a></li>
                                 <li><a href="categories.do?category=dress&gender=woman">드레스</a></li>
@@ -143,7 +141,7 @@
                             </ul>
                         </li>
                         <li><a href="find-store.do">STORE</a></li>
-                        <li><a href="qna.do">잉?</a></li>
+                        <li><a href="qna.do">문의 게시판</a></li>
                     </ul>
                 </nav>
             </div>

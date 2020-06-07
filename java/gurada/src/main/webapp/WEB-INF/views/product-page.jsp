@@ -61,8 +61,7 @@
                         </div>
                         <p> ${detail.detail} </p>
                         <ul class="tags">
-                            <li><span>카테고리 :</span> 남자 의류 </li>
-                            <li><span>태그 :</span> man, shirt, dotted, elegant, cool</li>
+                            <li><span>카테고리 :</span> ${detail.gender} > ${detail.categoryId} </li>
                         </ul>
                         <div class="product-quantity">
                             <table>
@@ -135,59 +134,27 @@
             <div class="row">
                 <div class="col-lg-12 text-left">
                     <div class="section-title">
-                        <h2>추천 상품</h2>
+                        <h2>new Item</h2>
                     </div>
                 </div>
             </div>
+            
             <div class="row">
+            <c:forEach items="${viewlist}" var="list" begin="1" end="4">
                 <div class="col-lg-3 col-sm-6">
                     <div class="single-product-item">
                         <figure>
-                            <a href="#"><img src="resources/img/products/img-1.jpg" alt=""></a>
-                            <div class="p-status">new</div>
+                            <a href="product-page.do?productId=${list.productId}&name=${list.name}">
+                     <img src="./resources/upload/${list.pfname}" alt=""></a>
                         </figure>
                         <div class="product-text">
-                            <h6>Green Dress with details</h6>
-                            <p>$22.90</p>
+                          <h6>${list.name} </h6>
+                     <p>${list.price}</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-product-item">
-                        <figure>
-                            <a href="#"><img src="resources/img/products/img-2.jpg" alt=""></a>
-                            <div class="p-status sale">sale</div>
-                        </figure>
-                        <div class="product-text">
-                            <h6>Yellow Maxi Dress</h6>
-                            <p>$25.90</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-product-item">
-                        <figure>
-                            <a href="#"><img src="resources/img/products/img-3.jpg" alt=""></a>
-                            <div class="p-status">new</div>
-                        </figure>
-                        <div class="product-text">
-                            <h6>One piece bodysuit</h6>
-                            <p>$19.90</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-sm-6">
-                    <div class="single-product-item">
-                        <figure>
-                            <a href="#"><img src="resources/img/products/img-4.jpg" alt=""></a>
-                            <div class="p-status popular">popular</div>
-                        </figure>
-                        <div class="product-text">
-                            <h6>Blue Dress with details</h6>
-                            <p>$35.50</p>
-                        </div>
-                    </div>
-                </div>
+              </c:forEach>
+               
             </div>
         </div>
     </section>

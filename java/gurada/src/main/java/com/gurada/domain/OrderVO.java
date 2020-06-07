@@ -3,36 +3,12 @@ package com.gurada.domain;
 public class OrderVO {
 	private String orderNo;
 	private String orderDate;
-	private int count;
-	private int totalPrice;
+	private int total;
+	private String paymentMethod;
 	private String memberNo;
 	private String productNo;
-	private String payment;
-	
-	public String getOrderNo() {
-		return orderNo;
-	}
-	public void setOrderNo(String orderNo) {
-		this.orderNo = orderNo;
-	}
-	public String getOrderDate() {
-		return orderDate;
-	}
-	public void setOrderDate(String orderDate) {
-		this.orderDate = orderDate;
-	}
-	public int getCount() {
-		return count;
-	}
-	public void setCount(int count) {
-		this.count = count;
-	}
-	public int getTotalPrice() {
-		return totalPrice;
-	}
-	public void setTotalPrice(int totalPrice) {
-		this.totalPrice = totalPrice;
-	}
+
+
 	public String getMemberNo() {
 		return memberNo;
 	}
@@ -45,12 +21,31 @@ public class OrderVO {
 	public void setProductNo(String productNo) {
 		this.productNo = productNo;
 	}
-	public String getPayment() {
-		return payment;
+	public int getTotal() {
+		return total;
 	}
-	public void setPayment(String payment) {
-		this.payment = payment;
+	public void setTotal(int total) {
+		this.total = total;
 	}
-
+	public String getPaymentMethod() {
+		return paymentMethod;
+	}
+	public void setPaymentMethod(String paymentMethod) {
+		this.paymentMethod = paymentMethod;
+	}
+	public String getOrderNo() {
+		return orderNo;
+	}
+	public void setOrderNo(String orderNo) {
+		this.orderNo = orderNo;
+	}
+	public String getOrderDate() {
+		return orderDate;
+	}
+	public void setOrderDate(String orderDate) {
+		this.orderDate = orderDate;
+	}
 	
 }
+
+	

@@ -36,8 +36,28 @@ $('#submit').click(function(){
 	if($('#product-quantity').val() == 0){
 		alert("수량을 확인하여 주십시오");
 		event.preventDefault();
+	}else{
+		alert("상품이 장바구니에 추가되었습니다");
 	}
 });
+
+$('#prodinsert').click(function(){
+	if($("#prodname").val() == ""){
+		alert("상품명을 입력해주세요");
+		event.preventDefault();
+	}else if($("#prodcount").val() == ""){
+		alert("수량을 입력해주세요");
+		event.preventDefault();
+	}else if($("#prodprice").val()==""){
+		alert("가격을 등록해주세요");
+		event.preventDefault();
+	}else if($("#proddetail").val()==""){
+		alert("상품설명을 등록해주세요");
+		event.preventDefault();
+	}else{
+		alert("상품이 등록되었습니다.");
+	}
+})
 	
   
 

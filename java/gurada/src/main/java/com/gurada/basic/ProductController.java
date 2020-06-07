@@ -130,9 +130,15 @@ public class ProductController {
 		vo.setName(name);
 		vo.setProductId(productId);
 		model.addAttribute("detail", service.getProductDetail(vo));
+		 model.addAttribute("viewlist",service.getProductlist(vo));
 	} 
 	
 	//!!!!!!!!!!!!!!!!
-	
+	//메인페이지  상품목록 보여주기 
+	   @RequestMapping("/main.do")
+	   public void product_viewindex(ProductVO vo, Model model) {
+	       model.addAttribute("viewlist",service.getProductlist(vo));
+	   }
+	   
 	
 }

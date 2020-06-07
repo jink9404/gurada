@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 	<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+	<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -52,93 +53,41 @@
 	<!-- Start Cart  -->
 	<div class="cart-box-main">
 		<div class="container">
-			<div class="row new-account-login">
-				<div class="col-sm-6 col-lg-6 mb-3">
-					<div class="title-left">
-						<h3>상품 결제</h3>
-					</div>
-
-					<form class="mt-3 collapse review-form-box" id="formLogin">
-						<div class="form-row">
-							<div class="form-group col-md-6">
-								<label for="InputEmail" class="mb-0">Email Address</label> <input
-									type="email" class="form-control" id="InputEmail"
-									placeholder="Enter Email">
-							</div>
-							<div class="form-group col-md-6">
-								<label for="InputPassword" class="mb-0">Password</label> <input
-									type="password" class="form-control" id="InputPassword"
-									placeholder="Password">
-							</div>
-						</div>
-						<button type="submit" class="btn hvr-hover">Login</button>
-					</form>
-				</div>
-				<div class="col-sm-6 col-lg-6 mb-3">
-					<form class="mt-3 collapse review-form-box" id="formRegister">
-						<div class="form-row">
-							<div class="form-group col-md-6">
-								<label for="InputName" class="mb-0">First Name</label> <input
-									type="text" class="form-control" id="InputName"
-									placeholder="First Name">
-							</div>
-							<div class="form-group col-md-6">
-								<label for="InputLastname" class="mb-0">Last Name</label> <input
-									type="text" class="form-control" id="InputLastname"
-									placeholder="Last Name">
-							</div>
-							<div class="form-group col-md-6">
-								<label for="InputEmail1" class="mb-0">Email Address</label> <input
-									type="email" class="form-control" id="InputEmail1"
-									placeholder="Enter Email">
-							</div>
-							<div class="form-group col-md-6">
-								<label for="InputPassword1" class="mb-0">Password</label> <input
-									type="password" class="form-control" id="InputPassword1"
-									placeholder="Password">
-							</div>
-						</div>
-						<button type="submit" class="btn hvr-hover">Register</button>
-					</form>
-				</div>
-			</div>
+		<h3>상품결제</h3>
+			<form action="payment-rs.do?total=${sum+sum1+2500}" method="post" class="needs-validation" novalidate>
 			<div class="row">
 				<div class="col-sm-6 col-lg-6 mb-3">
 					<div class="checkout-address">
-
-						<form class="needs-validation" novalidate>
 							<div class="row">
 								<div class="col-md-6 mb-3">
 									<label for="firstName">주문자 성함 *</label> <input type="text"
-										class="form-control" id="firstName" placeholder="" value=""
+										 class="form-control" id="firstName" placeholder="" value=""
 										required>
 									<div class="invalid-feedback">Valid first name is
 										required.</div>
 								</div>
-
 							</div>
 							<div class="mb-3">
 								<label for="username">휴대폰 번호 *</label>
 								<div class="input-group">
-									<input type="text" class="form-control" id="username"
-										placeholder="" required>
+									<input type="text" class="form-control" id="username" placeholder="" required>
 
 								</div>
 							</div>
 							<div class="mb-3">
 								<label for="email">Email*</label> <input type="email"
-									class="form-control" id="email" placeholder="">
+								class="form-control" id="email" placeholder="">
 
 							</div>
 							<div class="mb-3">
 								<label for="address">주소 *</label> <input type="text"
-									class="form-control" id="address" placeholder="" required>
+								class="form-control" id="address" placeholder="" required>
 								<div class="invalid-feedback">Please enter your shipping
 									address.</div>
 							</div>
 							<div class="mb-3">
 								<label for="address2">상세주소 *</label> <input type="text"
-									class="form-control" id="address2" placeholder="">
+								class="form-control" id="address2" placeholder="">
 							</div>
 
 
@@ -146,12 +95,12 @@
 							<div class="custom-control custom-checkbox">
 								<input type="checkbox" class="custom-control-input"
 									id="same-address"> <label class="custom-control-label"
-									for="same-address">개인정보 수집 동의 </label>
+									for="same-address">개인정보 수집 동의 *</label>
 							</div>
 							<div class="custom-control custom-checkbox">
 								<input type="checkbox" class="custom-control-input"
 									id="save-info"> <label class="custom-control-label"
-									for="save-info">전자 금융거래 이용 약관</label>
+									for="save-info">전자 금융거래 이용 약관*</label>
 							</div>
 							<hr class="mb-4">
 							<div class="title">
@@ -188,7 +137,7 @@
 								</div>
 								<div class="col-md-6 mb-3">
 									<label for="cc-number">카드번호</label> <input type="text"
-										class="form-control" id="cc-number" placeholder="" required>
+									class="form-control" id="cc-number" placeholder="" required>
 									<div class="invalid-feedback">Credit card number is
 										required</div>
 								</div>
@@ -202,7 +151,7 @@
 								</div>
 								<div class="col-md-3 mb-3">
 									<label for="cc-expiration">CVV</label> <input type="text"
-										class="form-control" id="cc-cvv" placeholder="" required>
+									class="form-control" id="cc-cvv" placeholder="" required>
 									<div class="invalid-feedback">Security code required</div>
 								</div>
 								<div class="col-md-6 mb-3">
@@ -223,7 +172,6 @@
 								</div>
 							</div>
 							<hr class="mb-1">
-						</form>
 					</div>
 				</div>
 				<div class="col-sm-6 col-lg-6 mb-3">
@@ -238,15 +186,17 @@
 											</div>
 											<c:set var="sum" value="0"/>
 											
-												<table>
+												<table class="paywish">
+													
 													<tr>
 														<th>상품명</th>
 														<th>가격</th>
 														<th>수량</th>
 														<th>소계</th>
-														
 													</tr>
 													<c:forEach items="${pay}" var="cart">
+													<input type="hidden" name="memberNo" value="${cart.memberNo}"/>
+													<input type="hidden" name="productNo" value="${cart.productId}"/>	
 													<tr>
 														<td>${cart.name}</td>
 														<td>${cart.price}</td>
@@ -255,51 +205,52 @@
 													</tr>
 													<c:set var="sum" value="${sum+cart.total}"/>
 													</c:forEach>
+														
 												</table>
-											
 										</div>
 									</div>
 									<div class="col-md-12 col-lg-12">
 										<div class="order-box">
 											<div class="title-left">
-												<h3>총 결제 금액</h3>
+												<pre>          </pre>
+												<h3>SLELCT ITEMS PRICE.</h3>
 											</div>
 											<div class="d-flex">
-												<h4>상품 총 금액</h4>
+												<h4>TOTAL</h4>
 												<div class="ml-auto font-weight-bold">${sum}</div>
 											</div>
-
-
 											<div class="d-flex">
-												<h4>세금</h4>
+												<h4>TAX</h4>
 												<c:set var="sum1" value="${sum*0.1}"/>
-												<div class="ml-auto font-weight-bold">${sum1}</div>
+												<fmt:parseNumber var="test" value="${sum1 }" integerOnly="true"/>
+												<div class="ml-auto font-weight-bold">${test }</div>
 												
 											</div>
 											<div class="d-flex">
-												<h4>배송비</h4>
+												<h4>DELIVERY</h4>
 												
 												<div class="ml-auto font-weight-bold">2,500원</div>
 											</div>
 											<hr>
 											<div class="d-flex gr-total">
 												<h5>총 결제 금액</h5>
-												<div class="ml-auto h5">${sum+sum1+2500}원</div>
+												<c:set var="sum2" value="${sum+sum1+2500}"/>
+												<fmt:parseNumber var="test1" value="${sum2 }" integerOnly="true"/>
+												<div  class="ml-auto h5">${test1} 원</div>
 											</div>
 											<hr>
 										</div>
 									</div>
-									<div class="col-12 d-flex shopping-box">
-										<a href="checkout.html" class="ml-auto btn hvr-hover">결제
-											하기</a>
-									</div>
 								</div>
 							</div>
 						</div>
-
 					</div>
 				</div>
 			</div>
+			<div class="col-12 d-flex shopping-box">
+				<input type="submit" value="결제하기"/>
+			</div>
+			</form>
 		</div>
 
 	</div>

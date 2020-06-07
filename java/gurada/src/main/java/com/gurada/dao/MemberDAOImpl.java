@@ -1,5 +1,7 @@
 package com.gurada.dao;
 
+import java.util.List;
+
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -26,5 +28,15 @@ public class MemberDAOImpl implements MemberDAO {
 	@Override
 	public int memberUpdate(MemberVO vo) {
 		return mybatis.update("com.gurada.MemberMapper.updateMember",vo);
+	} 
+
+	@Override
+	public List<MemberVO> memberList(MemberVO vo) {
+		return mybatis.selectList("com.gurada.MemberMapper.selectMemberList", vo);
+	}
+
+	@Override
+	public List<MemberVO> memberSearch(MemberVO vo) {
+		return mybatis.selectList("com.gurada.MemberMapper.selectSearch", vo);
 	}
 }

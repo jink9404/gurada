@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import com.gurada.domain.CartVO;
+import com.gurada.domain.OrderVO;
 import com.gurada.infa.PayDAO;
 @Repository("paydao")
 public class PayDAOImpl implements PayDAO{
@@ -16,7 +17,12 @@ public class PayDAOImpl implements PayDAO{
 	
 	@Override
 	public List<CartVO> paySelect(CartVO vo) {
-		System.out.println(vo.getMemberNo());
 	return mybatis.selectList("pay.paySelect",vo);	
+	}
+
+	@Override
+	public void payInsert(OrderVO vo) {
+		mybatis.insert("pay.payInsert", vo);
+		
 	}
 }

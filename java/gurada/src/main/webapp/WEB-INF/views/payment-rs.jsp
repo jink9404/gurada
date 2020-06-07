@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+		
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -45,7 +46,8 @@
 			<div class="re-sh">
 				<h2>결제가 완료되었습니다.!</h2>
 				<br/>
-				<a href='find-store.do'>돌아가기</a>
+			
+				<a href='my-page.do'>주문내역보기</a>
 			</div>
 		</div>
 	</section>

@@ -1,6 +1,6 @@
 ﻿package com.gurada.basic;
 
-import java.util.regex.Pattern;
+import java.util.List;
 
 import javax.servlet.http.HttpSession;
 
@@ -9,12 +9,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
 
 import com.gurada.domain.MemberVO;
-import com.gurada.domain.ProductVO;
 import com.gurada.infa.MemberService;
-import com.gurada.infa.ResistrationService;
 
 @Controller
 public class MemberController {
@@ -29,7 +26,7 @@ public class MemberController {
 		if (result==0) {
 			System.out.println("error");
 		}
-		return "redirect:/index.jsp";
+		return "redirect:/main.do";
 	}
 	
 
@@ -79,6 +76,16 @@ public class MemberController {
 			result = "중복된 이메일입니다";
 		}
 		return result;
+	}
+	@RequestMapping("/member-management.do")
+	public void memberList(MemberVO vo, Model model) {
+		 model.addAttribute("list", service.memberList(vo));
+	}
+	@RequestMapping("/memberSearch.do")
+	public String memberSearch(MemberVO vo, Model model) {
+		model.addAttribute("list",service.memberSearch(vo));
+		return "member-management";
+		
 	}
 }
 	

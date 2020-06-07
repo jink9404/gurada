@@ -50,20 +50,20 @@
                   </h2>
                   <hr />
                   <form action="resistration1.do" method="post" enctype="multipart/form-data">
-                     <table class='contact-form3'>
+                     <table class='contact-form3' id='prodtable'>
                         <tr class='tr'>
                            <td>상품명</td>
-                           <td class='td1' colspan="2"><input type="text" name="name"
+                           <td class='td1' colspan="2"><input id="prodname" type="text" name="name"
                               placeholder="상품명"  class="test"/></td>
                         </tr>
                         <tr class='tr'>
                            <td>수량</td>
-                           <td class='td1' colspan="2"><input type="text" name="quantity"
+                           <td class='td1' colspan="2"><input id="prodcount" type="text" name="quantity"
                               placeholder="수량" class="test"/></td>
                         </tr>
                         <tr class='tr'>
                            <td>Price</td>
-                           <td class='td1' colspan="2"><input type="text"
+                           <td class='td1' colspan="2"><input type="text" id="prodprice"
                               name="price" placeholder="price" class="test"/></td>
                         </tr>
                         <tr>
@@ -73,7 +73,7 @@
                                  <option value="여자">여자</option>
                            </select> <select name=categoryId class="test">
                                  <option value="슈트">슈트</option>
-                                 <option value="아우터">아우터</option>
+                                 <option value="드레스">드레스</option>
                                  <option value="가방">가방</option>
                                  <option value="상의">상의</option>
                                  <option value="하의">하의</option>
@@ -90,7 +90,7 @@
                         </tr>
                         <tr class="detail">
                            <td>상품 설명</td>
-                           <td><textarea class="detail1" placeholder="detail" name="detail" class="test"></textarea>
+                           <td><textarea class="detail1" id="proddetail" placeholder="detail" name="detail" class="test"></textarea>
                            </td>
                         </tr>
                      </table>
@@ -100,7 +100,7 @@
                      <div id='View_area'
                         style='position: relative; width: 400px; height: 400px; color: black; border: 1px solid black; dispaly: inline;'>
                      </div>
-                     <input type="submit" value="상품등록" />
+                     <input id="prodinsert" type="submit" value="상품등록" />
                    
                   </form>
                </div>
@@ -124,7 +124,7 @@
 	<script src="./resources/js/mixitup.min.js"></script>
 	<script src="./resources/js/main.js"></script>
 	<script src="./resources/js/test.js"></script>
-	
+	<script src="./resources/js/jh.js"></script>
 </body>
 
 </html>

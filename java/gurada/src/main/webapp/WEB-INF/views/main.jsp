@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%> 	
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -97,117 +98,30 @@
 						</div>
 						<ul class="product-controls">
 							<li data-filter="*">All</li>
-							<li data-filter=".shoes">남성</li>
-							<li data-filter=".bags">여성</li>
+							<li data-filter=".shoes"><a href="categories.do?category=suit&gender=men">남성</a></li>
+							<li data-filter=".bags"><a href="categories.do?category=suit&gender=woman">여성</a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
 			<div class="row" id="product-list">
-				<div class="col-lg-3 col-sm-6 mix all shoes accesories">
-					<div class="single-product-item">
-						<figure>
-							<a href="#"><img
-								src="./resources/img/prada/남자-상의/프라다 카라티2.JPG" alt=""></a>
-							<div class="p-status">new</div>
-						</figure>
-						<div class="product-text">
-							<h6>구라다 카라티셔츠</h6>
-							<p>50,000원</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 mix all shoes accesories">
-					<div class="single-product-item">
-						<figure>
-							<a href="#"><img
-								src="./resources/img/prada/남자-상의/구찌 마몬트 카라티2.JPG" alt=""></a>
-							<div class="p-status sale">sale</div>
-						</figure>
-						<div class="product-text">
-							<h6>구짜 마몬트 카라티셔츠</h6>
-							<p>50,000원</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 mix all accesories bags">
-					<div class="single-product-item">
-						<figure>
-							<a href="#"><img
-								src="./resources/img/prada/여자-상의/발렌시아가 파리티 상세5만.JPG" alt=""></a>
-							<div class="p-status">new</div>
-						</figure>
-						<div class="product-text">
-							<h6>발렌시애기 파라티셔츠</h6>
-							<p>50,000원</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 mix all accesories bags">
-					<div class="single-product-item">
-						<figure>
-							<a href="#"><img
-								src="./resources/img/prada/여자-드레스/생로랑 미니드레스2.JPG" alt=""></a>
-							<div class="p-status popular">popular</div>
-						</figure>
-						<div class="product-text">
-							<h6>생로랑 미니드레스</h6>
-							<p>100,000</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 mix all accesories bags">
-					<div class="single-product-item">
-						<figure>
-							<a href="#"><img
-								src="./resources/img/prada/여자-하의/프라다 가죽 미니스커드2.JPG" alt=""></a>
-							<div class="p-status">new</div>
-						</figure>
-						<div class="product-text">
-							<h6>구라다 가죽 미니 스커트</h6>
-							<p>80,000</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 mix all accesories bags">
-					<div class="single-product-item">
-						<figure>
-							<a href="#"><img src="./resources/img/products/img-6.jpg"
-								alt=""></a>
-							<div class="p-status sale">sale</div>
-						</figure>
-						<div class="product-text">
-							<h6>구짜 이너웨어</h6>
-							<p>70,000</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 mix all shoes accesories">
-					<div class="single-product-item">
-						<figure>
-							<a href="#"><img
-								src="./resources/img/prada/남자-수트/구찌 하운드투스 시어서커-1.JPG" alt=""></a>
-						</figure>
-						<div class="product-text">
-							<h6>구짜 하운드투스 시어서커 수트</h6>
-							<p>200,000원</p>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-sm-6 mix all accesories bags">
-					<div class="single-product-item">
-						<figure>
-							<a href="#"><img src="./resources/img/products/img-8.jpg"
-								alt=""></a>
-							<div class="p-status popular">popular</div>
-						</figure>
-						<div class="product-text">
-							<h6>생로랑 블루 드레스</h6>
-							<p>80,000원</p>
-						</div>
-					</div>
-				</div>
-			</div>
+            <c:forEach items="${viewlist}" var="list" begin="1" end="8">
+            <div class="col-lg-3 col-sm-6 mix all bags accesories">
+               <div class="single-product-item">
+                  <figure>
+                        <a href="product-page.do?productId=${list.productId}&name=${list.name}">
+                     <img src="./resources/upload/${list.pfname}" alt="">
+                        </a>
+                     <div class="p-status">new</div>
+                  </figure>
+                  <div class="product-text">
+                     <h6>${list.name} </h6>
+                     <p>${list.price}</p>
+                  </div>
+               </div>
+            </div>
+            </c:forEach>
+         </div>
 		</div>
 	</section>
 	<!-- Latest Product End -->

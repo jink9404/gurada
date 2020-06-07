@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -41,76 +42,44 @@
 	<!-- Page Add Section Begin -->
 	<section class="page-add">
 		<div class="container">
-			<div class="row">
-				<div class="page-breadcrumb">
 					<h2>
 						회원 정보 목록<span>.</span>
 					</h2>
 					<br />
-					<form method="get" action="">
 						<h3>회원검색</h3>
-						<div class="input-group">
-							<input type="text" class="form-control"
-								placeholder="회원명 혹은 ID를 입력해 주세요."> <span
-								class="input-group-btn">
-								<button class="btn btn-secondary" type="button">찾기</button>
-							</span>
-						</div>
+						
+							<form action="memberSearch.do" method="post">
+							<div class="input-group">
+								<input type="text" name="name" class="form-control"
+									placeholder="회원명으로 검색하세요."> 
+								<button class="btn btn-secondary" type="submit">찾기</button>
+							</div>
+								</form>
+						
 						<br>
 						<table class="type09">
 							<tbody>
 								<tr>
-									<th></th>
-									<th width='300'>이름</th>
-									<th width='200'>나이</th>
-									<th width='500'>ID</th>
-									<th width='700'>휴대폰번호</th>
-									<th width='800'>E-MAIL</th>
+									<th width='700'>E-mail</th>
+									<th width='200'>이름</th>
+									<th width='500'>휴대폰번호</th>
+									<th width='200'>성별</th>
+									<th colspan="2" width='700'>주소</th>
 								</tr>
-								<tr>
-									<td><input type="checkbox" name="checkboxName"></td>
-									<td>김지섭</td>
-									<td>22</td>
-									<td>salcho94</td>
-									<td>010-5788-8298</td>
-									<td>salcho94@naver.com</td>
+								<c:forEach items="${list}" var="member">
+            					<tr>
+               						<td>${member.email}</td>
+               						<td>${member.name}</td> 
+               						<td>${member.phoneNumber}</td>
+               						<td>${member.gender}</td>
+               						<td colspan="2">${member.address1},${member.address2}</td>
 								</tr>
-								<tr>
-									<td><input type="checkbox" name="checkboxName"></td>
-									<td>오재호</td>
-									<td>50</td>
-									<td>5박사</td>
-									<td>010-5555-5555</td>
-									<td>5555@naver.com</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" name="checkboxName"></td>
-									<td>김명진</td>
-									<td>77</td>
-									<td>명왕성</td>
-									<td>010-7777-7777</td>
-									<td>mvc@naver.com</td>
-								</tr>
-								<tr>
-									<td><input type="checkbox" name="checkboxName"></td>
-									<td>문소희</td>
-									<td>11</td>
-									<td>moon</td>
-									<td>010-0000-0000</td>
-									<td>moon@naver.com</td>
-								</tr>
+								</c:forEach>
 							</tbody>
-							<div class="td-d">
-								<a href=''>[1]</a> <a href=''>[2]</a> <a href=''>[3]</a> <a
-									href=''>[4]</a>
-							</div>
+							
 						</table>
 						<br />
-						<button class="small-button2">회원 정보 등록</button>
-					</form>
 				</div>
-			</div>
-		</div>
 	</section>
 	<br />
 	<br />
