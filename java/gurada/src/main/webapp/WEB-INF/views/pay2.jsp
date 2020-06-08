@@ -61,7 +61,7 @@
 							<div class="row">
 								<div class="col-md-6 mb-3">
 									<label for="firstName">주문자 성함 *</label> <input type="text"
-										 class="form-control" id="firstName" placeholder="" value=""
+										 class="form-control" id="firstName" placeholder="" value="${ UserIDInfo.name }"
 										required>
 									<div class="invalid-feedback">Valid first name is
 										required.</div>
@@ -70,24 +70,24 @@
 							<div class="mb-3">
 								<label for="username">휴대폰 번호 *</label>
 								<div class="input-group">
-									<input type="text" class="form-control" id="username" placeholder="" required>
+									<input type="text" class="form-control" id="username" value="${UserIDInfo.phoneNumber }" placeholder="" required>
 
 								</div>
 							</div>
 							<div class="mb-3">
 								<label for="email">Email*</label> <input type="email"
-								class="form-control" id="email" placeholder="">
+								class="form-control" id="email" value="${UserIDInfo.email }" placeholder="">
 
 							</div>
 							<div class="mb-3">
 								<label for="address">주소 *</label> <input type="text"
-								class="form-control" id="address" placeholder="" required>
+								class="form-control" id="address" placeholder="" value="${UserIDInfo.address1 }" required>
 								<div class="invalid-feedback">Please enter your shipping
 									address.</div>
 							</div>
 							<div class="mb-3">
 								<label for="address2">상세주소 *</label> <input type="text"
-								class="form-control" id="address2" placeholder="">
+								class="form-control" id="address2" value="${UserIDInfo.address2 }" placeholder="">
 							</div>
 
 

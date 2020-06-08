@@ -21,8 +21,7 @@ public class PayDAOImpl implements PayDAO{
 	}
 
 	@Override
-	public void payInsert(OrderVO vo) {
-		mybatis.insert("pay.payInsert", vo);
-		
+	public int payInsert(OrderVO vo) {
+		return mybatis.insert("pay.payInsert", vo);
 	}
 }

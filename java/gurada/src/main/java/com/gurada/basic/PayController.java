@@ -8,6 +8,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -37,11 +38,5 @@ public class PayController {
     		vo.setProductNo(productArr[i]);
     		payservice.payInsert(vo);
     	}
-    	System.out.println(vo.getProductNo());
-		
-    	
-    	
-    	
-    	
     }
 }
