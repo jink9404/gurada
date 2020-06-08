@@ -185,9 +185,7 @@
 												<h3>장바구니 내역</h3>
 											</div>
 											<c:set var="sum" value="0"/>
-											
 												<table class="paywish">
-													
 													<tr>
 														<th>상품명</th>
 														<th>가격</th>
@@ -203,10 +201,9 @@
 														<td>${cart.count}</td>
 														<td>${cart.total}</td>
 													</tr>
-													<c:set var="sum" value="${sum+cart.total}"/>
-													</c:forEach>
-														
-												</table>
+												<c:set var="sum" value="${sum+cart.total}"/>
+												</c:forEach>
+											</table>
 										</div>
 									</div>
 									<div class="col-md-12 col-lg-12">

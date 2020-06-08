@@ -22,6 +22,5 @@ public interface ResistrationService {
 	public int delete(String name);
 	//상품검색
 	List<ProductVO> productSearch(ProductVO vo);
-	
 
 }

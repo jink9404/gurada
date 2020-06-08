@@ -135,10 +135,9 @@ public class ProductController {
 	
 	//!!!!!!!!!!!!!!!!
 	//메인페이지  상품목록 보여주기 
-	   @RequestMapping("/main.do")
+	   @RequestMapping("main.do")
 	   public void product_viewindex(ProductVO vo, Model model) {
 	       model.addAttribute("viewlist",service.getProductlist(vo));
 	   }
-	   
-	
+
 }
