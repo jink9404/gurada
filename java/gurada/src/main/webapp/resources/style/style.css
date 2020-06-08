@@ -2603,9 +2603,9 @@ ol {
     top : 200px;
 }
 .map-canvas{
-    position: absolute;
-    left : 880px;
-    top: 295px;
+    position: relative;
+    left : 650px;
+    top: -385px;
     bottom : 290px;
 }
 
@@ -2713,6 +2713,20 @@ border: 1px solid #999;
 	cursor: pointer;
 	text-transform: uppercase;
 }
+
+td .small-button{
+	
+	color: #1e1e1e;
+	background: transparent;
+	border: none;
+	font-size: 16px;
+	font-weight: 600;
+	padding: 8px 25px;
+	border: 1px solid #1e1e1e;
+	border-radius: 50px;
+	cursor: pointer;
+	text-transform: uppercase;
+}
 .addr-form .sh-button{
 	color: #1e1e1e;
 	background: transparent;
@@ -2783,7 +2797,7 @@ border: 1px solid #999;
 }
 
 .btn-2{position: relative;
-left: 210%
+left: 230%
 }
 .search-1{ position: relative;
 left: 10%;
@@ -2964,6 +2978,10 @@ left: 10%;
 	
 }
 #small-button-update a{
+	color:  #1e1e1e;
+}
+
+#small-button-list a{
 	color:  #1e1e1e;
 }
     

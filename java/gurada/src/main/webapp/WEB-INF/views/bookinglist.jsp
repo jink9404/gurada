@@ -65,11 +65,12 @@
 								<table>
 									<tbody>
 										<tr>
-											<td width='400'>예약자 성함</td>
-											<td width='400'>방문날짜</td>
-											<td width='400'>방문시간</td>
-											<td width='400'>연락처</td>
-											<td width='400'>매장명</td>
+											<td width='300'>예약자 성함</td>
+											<td width='300'>방문날짜</td>
+											<td width='300'>방문시간</td>
+											<td width='300'>연락처</td>
+											<td width='350'>매장명</td>
+											<td width='300'>취소</td>
 										</tr>
 
 										<c:forEach items="${search}" var="search">
@@ -79,6 +80,7 @@
 												<td>${search.time}</td>
 												<td>${search.phoneNumber}</td>
 												<td>${search.name}</td>
+												<td><a href='booking-delete.do?bookingId=${search.bookingId}'>예약 취소</a></td>
 											</tr>
 										</c:forEach>
 
@@ -103,7 +105,7 @@
 	<script src="./resources/js/mixitup.min.js"></script>
 	<script src="./resources/js/main.js"></script>
 	<script src="./resources/js/test.js"></script>
-
+	<script src="./resources/js/sh.js"></script>
 
 </body>
 

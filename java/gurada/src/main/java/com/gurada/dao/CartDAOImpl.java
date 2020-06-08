@@ -51,4 +51,7 @@ public class CartDAOImpl implements CartDAO{
 		return mybatis.delete("cart.cartDelete",id);
 	}
 		
+	public int cartDelete(CartVO vo) {
+		return mybatis.delete("cart.cartDelete_transaction",vo);
+	}
 }

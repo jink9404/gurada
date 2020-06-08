@@ -8,5 +8,5 @@ import com.gurada.domain.OrderVO;
 public interface PayDAO {
 	public List<CartVO> paySelect(CartVO vo);
 	
-	public void payInsert(OrderVO vo);
+	public int payInsert(OrderVO vo);
 }

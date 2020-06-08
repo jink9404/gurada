@@ -44,12 +44,13 @@
 	<section class="page-add">
 		<div class="container">
 			<div class="re-sh">
-				<h2>결제가 완료되었습니다.!</h2>
+				<h2>${message }</h2>
 				<br/>
 			
 				<a href='my-page.do'>주문내역보기</a>
 			</div>
 		</div>
+		<br/><br/><br/><br/><br/>
 	</section>
 <hr/>
 	<!-- Footer Section Begin -->

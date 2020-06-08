@@ -16,8 +16,7 @@
 	<!-- 상품 디테일 페이지 오재호 -->
 	<select id="select" parameterType="product" resultType="product">
 		select * 
-		from product
-		where gender = #{gender} and category_id= #{categoryId} and name=#{name}
+		from product where gender = #{gender} and category_id= #{categoryId} and name=#{name}
 	</select>
 	
 <!-- 	
@@ -45,7 +44,12 @@
 	<select id="selectDetail" parameterType="product" resultType="product">
 	select *
 	from product
-	where name=#{name} and product_id=#{productId}
+	<if test="productId!=null">
+	where  product_id=#{productId}
+		<if test="name != null">
+		and name=#{name} 
+		</if>
+	</if>
 	</select>
 
 	<select id="selectListPaging" parameterType="hashmap" resultType="product">

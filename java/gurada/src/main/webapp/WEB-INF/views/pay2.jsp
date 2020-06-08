@@ -61,7 +61,7 @@
 							<div class="row">
 								<div class="col-md-6 mb-3">
 									<label for="firstName">주문자 성함 *</label> <input type="text"
-										 class="form-control" id="firstName" placeholder="" value=""
+										 class="form-control" id="firstName" placeholder="" value="${ UserIDInfo.name }"
 										required>
 									<div class="invalid-feedback">Valid first name is
 										required.</div>
@@ -70,24 +70,24 @@
 							<div class="mb-3">
 								<label for="username">휴대폰 번호 *</label>
 								<div class="input-group">
-									<input type="text" class="form-control" id="username" placeholder="" required>
+									<input type="text" class="form-control" id="username" value="${UserIDInfo.phoneNumber }" placeholder="" required>
 
 								</div>
 							</div>
 							<div class="mb-3">
 								<label for="email">Email*</label> <input type="email"
-								class="form-control" id="email" placeholder="">
+								class="form-control" id="email" value="${UserIDInfo.email }" placeholder="">
 
 							</div>
 							<div class="mb-3">
 								<label for="address">주소 *</label> <input type="text"
-								class="form-control" id="address" placeholder="" required>
+								class="form-control" id="address" placeholder="" value="${UserIDInfo.address1 }" required>
 								<div class="invalid-feedback">Please enter your shipping
 									address.</div>
 							</div>
 							<div class="mb-3">
 								<label for="address2">상세주소 *</label> <input type="text"
-								class="form-control" id="address2" placeholder="">
+								class="form-control" id="address2" value="${UserIDInfo.address2 }" placeholder="">
 							</div>
 
 
@@ -109,17 +109,17 @@
 							<div class="d-block my-3">
 								<div class="custom-control custom-radio">
 									<input id="credit" name="paymentMethod" type="radio"
-										class="custom-control-input" checked required> <label
+										class="custom-control-input" value="credit" checked required> <label
 										class="custom-control-label" for="credit">신용카드</label>
 								</div>
 								<div class="custom-control custom-radio">
 									<input id="debit" name="paymentMethod" type="radio"
-										class="custom-control-input" required> <label
-										class="custom-control-label" for="debit">무통장 입금</label>
+										class="custom-control-input" value="deposit" required> <label
+										class="custom-control-label"  for="debit">무통장 입금</label>
 								</div>
 								<div class="custom-control custom-radio">
 									<input id="paypal" name="paymentMethod" type="radio"
-										class="custom-control-input" required> <label
+										class="custom-control-input" value="Account" required> <label
 										class="custom-control-label" for="paypal">실시간 계좌이체</label>
 								</div>
 							</div>

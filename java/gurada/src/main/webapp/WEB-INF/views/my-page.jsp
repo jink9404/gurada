@@ -49,10 +49,9 @@
 						<h2>
 							마이 페이지<span>.</span>
 						</h2>
-						
+
 
 						<div class="small-button btn-2">
-							<button>내정보 보기</button>
 							<a href="update_member.do"><button>회원정보 변경</button></a>
 						</div>
 						<br /> <br /> <br />
@@ -88,37 +87,13 @@
 										<button>X</button>
 									</td>
 								</tr>
-								<tr>
-									<td>2020/05/20</td>
-									<td><img src='/resources/img/cart/cart-1.jpg' /> 브라운 미니백</td>
-									<td>150,000원</td>
-									<td>서울시 은평구</td>
-									<td>배송중</td>
-									<td class="small-button">
-										<button>X</button>
-									</td>
-								</tr>
-								<tr>
-									<td>2020/05/20</td>
-									<td><img src='/resources/img/cart/cart-1.jpg' /> 브라운 미니백</td>
-									<td>150,000원</td>
-									<td>서울시 은평구</td>
-									<td>배송중</td>
-									<td class="small-button">
-										<button>X</button>
-									</td>
-								</tr>
 							</tbody>
 						</table>
 						<hr>
 					</div>
 				</div>
-
 			</div>
-			<div class="td-a">
-				<a href=''>[1]</a> <a href=''>[2]</a> <a href=''>[3]</a> <a href=''>[4]</a>
-			</div>
-		</div>
+		</div>		
 	</section>
 
 	<!-- Js Plugins -->

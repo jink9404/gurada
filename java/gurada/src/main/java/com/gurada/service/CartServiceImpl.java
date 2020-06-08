@@ -47,6 +47,10 @@ public class CartServiceImpl implements CartService{
 		 
 		return cartDAO.cartDelete(id);
 	}
+	
+	public int cartDelete(CartVO vo) {
+		return cartDAO.cartDelete(vo);
+	}
 }
 
 

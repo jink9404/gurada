@@ -17,4 +17,5 @@ public interface CartDAO {
 	//장바구니 내역 삭제
 	public int cartDelete(int id);  
 	
+	public int cartDelete(CartVO vo);
 }

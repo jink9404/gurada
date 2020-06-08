@@ -60,5 +60,12 @@ public class StoreController {
 
 		return "/bookinglist";
 	}
+	
+	//매장예약 취소하기
+	@RequestMapping("/booking-delete.do")
+	public String bookingDelete(BookingVO vo) {
+		StoreService.bookingDelete(vo);
+		return "/bookinglist";
+	}
 
 }
