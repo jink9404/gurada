@@ -43,11 +43,13 @@
                             <table>
                                 <tr>
                                     <td>E_MAIL</td>
-                                    <td colspan="2"><input type="text" id="email" name="email" placeholder="   email" size="30"/></td>
+                                    <td colspan="2"><input type="text" id="email" name="email" placeholder=" email" size="30"
+                                     style="border-bottom:2px solid #D0D7DB; border-left:0px; border-right:0px; border-top:0px; background: transparent;"/></td>
                                 </tr>
                                 <tr>
                                     <td>PASSWORD</td>
-                                    <td colspan="2"><input type="password" id="login_password" name="password" placeholder="   PW" size="30"/></td>
+                                    <td colspan="2"><input type="password" id="login_password" name="password" placeholder="   PW" size="30"
+                                    style="border-bottom:2px solid #D0D7DB; border-left:0px; border-right:0px; border-top:0px;background: transparent;"/></td>
                                 </tr>
                                 <tr>
                                     <td colspan="2">
@@ -62,13 +64,13 @@
             <tr>
                <td>
                     <div class="sign-up" class="text-white">
-                        <h2 class="text-white">등록하지 않으셧나요?</h2><br/>
+                        <h2 class="text-white">계정이 없으신가요?</h2><br/>
                         <a href="signup-form.do"><button class="btn btn-primary">새 계정 만들기</button></a>
                     </div>
                 </td>
             </tr>
         </table>
-        <img id="login-header-up" src="./resources/img/arrow-up.png" alt="" width="25px"/>
+        <img id="login-header-up" src="./resources/img/arrow-icon.png" alt="" width="25px"/>
     </div>
     <!--Login Header Section End -->
     
@@ -136,7 +138,7 @@
                             </ul>
                         </li>
                         <li><a href="find-store.do">STORE</a></li>
-                        <li><a href="qna.do">문의 게시판</a></li>
+                        <li><a href="qna.do">QUESTIONS</a></li>
                     </ul>
                 </nav>
             </div>
