@@ -2,6 +2,7 @@ package com.gurada.interceptor;
 
 import java.io.File;
 import java.io.FileWriter;
+import java.util.Calendar;
 import java.util.Date;
 
 import javax.servlet.http.HttpServletRequest;
@@ -36,15 +37,14 @@ public class Testintercept extends HandlerInterceptorAdapter{
 			HttpSession session = request.getSession();
 			
 			MemberVO loginInfo =(MemberVO)session.getAttribute("UserIDInfo");
-			
-			File logFile = new File("acess.log");
+			Calendar cal = Calendar.getInstance();
+			File logFile = new File(cal.get(Calendar.YEAR)+"-"+(cal.get(Calendar.MONTH)+1)+"-"+cal.get(Calendar.DATE)+"-access_info.log");
 			try(FileWriter writer =new FileWriter(logFile,true)){
-				Date date = new Date();
 				if(loginInfo != null) {
-				String message ="UserID : "+loginInfo.getEmail()+
-								"---------------acess ip : " + request.getRemoteAddr() +
-								"---------------"+ date.toString() +
-								"---------------URL : "+ request.getRequestURI() +
+				String message =loginInfo.getEmail()+
+								"," + request.getRemoteAddr() +
+								","+ cal.getTime().toString() +
+								","+ request.getRequestURI() +"?"+request.getQueryString()+
 								"\n";
 				
 				writer.write(message);
@@ -67,30 +67,6 @@ public class Testintercept extends HandlerInterceptorAdapter{
 	public void postHandle(	HttpServletRequest request, HttpServletResponse response, 
 							Object handler, ModelAndView modelAndView) throws Exception {
 		logger.info("postHandle call......");
-		if(handler instanceof HandlerMethod){
-			
-			HandlerMethod method = (HandlerMethod) handler;
-			HttpSession session = request.getSession();
-			
-			MemberVO loginInfo =(MemberVO)session.getAttribute("UserIDInfo");
-			
-			File logFile = new File("acess.log");
-			try(FileWriter writer =new FileWriter(logFile,true)){
-				Date date = new Date();
-				if(loginInfo != null) {
-				String message ="UserID : "+loginInfo.getEmail()+
-								"---------------acess ip : " + request.getRemoteAddr() +
-								"---------------"+ date.toString() +
-								"---------------URL : "+ request.getRequestURI() +
-								"\n";
-				
-				writer.write(message);
-				System.out.println(message);
-				writer.flush();
-				}
-			}
-	
-		}
 	}
  */
 	
@@ -112,32 +88,6 @@ public class Testintercept extends HandlerInterceptorAdapter{
 	@Override 
 	public void afterConcurrentHandlingStarted(HttpServletRequest request, HttpServletResponse response, 
 												Object handler) throws Exception {
-		if(handler instanceof HandlerMethod){
-			
-			HandlerMethod method = (HandlerMethod) handler;
-			HttpSession session = request.getSession();
-			
-			MemberVO loginInfo =(MemberVO)session.getAttribute("UserIDInfo");
-			
-			File logFile = new File("acess.log");
-			try(FileWriter writer =new FileWriter(logFile,true)){
-				Date date = new Date();
-				if(loginInfo != null) {
-				String message ="UserID : "+loginInfo.getEmail()+
-								"---------------acess ip : " + request.getRemoteAddr() +
-								"---------------"+ date.toString() +
-								"---------------URL : "+ request.getRequestURI() +
-								"\n";
-				
-				writer.write(message);
-				System.out.println(message);
-				writer.flush();
-				}
-			}
-	
-		
-			logger.info("afterConcurrentHandlingStarted call......"); 
-		}
 	}
  */
 	

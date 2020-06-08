@@ -33,6 +33,9 @@
 	<delete id="cartDelete" parameterType="int">
 	
 	delete from WISHLIST where WISHLIST_NO = #{id}
-	
 	</delete>
+	<delete id="cartDelete_transaction" parameterType="cart">
+	delete from WISHLIST where MEMBER_NO=#{memberNo} AND PRODUCT_ID =#{productId}
+	</delete>
+	
 </mapper>
