@@ -73,8 +73,6 @@
                         				<span>size  :  ${detail.pSize}</span>
                         			</td>
                         		</tr> 
-                            
-                            
                             </table>
                         </div>
                         <p> ${detail.detail} </p>
@@ -108,22 +106,22 @@
                                 <table>
                                     <tr>
                                         <td>
-                                           <button class = 'small-button2'>
-                                               <a class="a">구매&nbsp;하기</a>
-                                           </button>
+                                        	<form>
+                                           		<button class = 'small-button2'>
+                                           		      구매&nbsp;하기
+                                           		</button>
+                                           </form>
                                         </td>
                                         <td>
-                                           &nbsp;&nbsp;&nbsp;
                                            <form action="cart.do" method="post">
                                         		<input type="hidden" name="name" value="${detail.name}"/>
                                            		<input type="hidden" name="price" value="${detail.price}"/>
-                                           		<input id="quantity" type="hidden" name="count" value=""/>
-                                           		<input id="total1" type="hidden" name="total" value=""/>
+                                           		<input id="quantity" type="hidden" name="count" value/>
+                                           		<input id="total1" type="hidden" name="total" value/>
                                            		<input type="hidden" name="productId" value="${detail.productId}"/>
                                            		<input type="hidden" id="pdSession" name="memberNo" value="${sessionScope.memberNo}"/> 
                                                 <input id="submit" type="submit" class= 'small-button2' value="장바구니 추가"/>
                                            </form>
-                                            
                                         </td>
                                     </tr>
                                 </table>
