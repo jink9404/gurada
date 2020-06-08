@@ -1,6 +1,7 @@
 package com.gurada.service;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,10 +14,22 @@ public class OrderServiceImpl implements OrderService {
 	@Autowired
 	private OrderDAO orderDao;
 
-	/*주문 리스트를 가져온다.*/
+	/*관리자 페이지 주문 리스트를 검색해서 가져온다.*/
 	@Override
-	public List<OrderVO> getOrderList(OrderVO vo) {
+	public List<Map<String,String>> getOrderList(OrderVO vo) {
 		return orderDao.selectOrderList(vo);
 	}
+	
+	//마이페이지 주문내역리스트 보기
+	@Override
+	public List<Map<String, String>> mypageOrder(String userId) {
+		return orderDao.mypageOrder(userId);
+	}
+	
+	//마이페이지 주문 취소
+	public int orderDelete(String id) {
+		return orderDao.orderDelete(id);
+	}
+	
 
 }
