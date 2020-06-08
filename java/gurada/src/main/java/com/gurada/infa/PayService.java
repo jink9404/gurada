@@ -9,6 +9,6 @@ public interface PayService {
 
 	public List<CartVO> paySelect(CartVO vo);
 	
-	public int payInsert(OrderVO vo);
+	public int payInsert(OrderVO vo) throws Exception;
 }
  
