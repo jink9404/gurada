@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
@@ -57,12 +58,6 @@
                         </form>
                     </div>
                 </td>
-                <td>
-                    <div class="social-login">
-                        <span><h2 class="text-white">소셜 로그인</h2></span><br/>
-                        <a href="#"><img src="./resources/img/logos/google_logo.png" width="50px" alt=""/></a>
-                    </div>
-                </td>
             </tr>
             <tr>
                <td>
@@ -103,7 +98,7 @@
                         </a>&nbsp;&nbsp;&nbsp;&nbsp;
                         <a href="cartselect.do?memberNo=${sessionScope.memberNo}">
                            <img src="./resources/img/icons/bag.png" alt=""/>
-                           <span>1</span>
+                           <span>${fn:length(cartSelect) }</span>
                        </a>&nbsp;&nbsp;&nbsp;&nbsp;
                    				</c:otherwise>
                     		</c:choose>
