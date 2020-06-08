@@ -1,5 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8" %>
+	<%
+	String id=request.getParameter("qnaNo");
+	String title=request.getParameter("title");
+	String writter=request.getParameter("writter");
+	String contents=request.getParameter("contents");
+	String password=request.getParameter("password");
+
+	%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -56,16 +64,16 @@
                     <form action="update-qnapassword.do" class="contact-form" method='post'>
                         <div class="row">
                             <div class="col-lg-6">
-                            	<input type='hidden' name='qnaNo' value='${board.qnaNo}'>
-                            	<input type='hidden' name='password' value='${board.password}'>
-                                <input type="text" placeholder="제목" name='title' value='${board.title}'>
+                            	<input type='hidden' name='qnaNo' value='<%= id %>'>
+                            	<input type='hidden' name='password' value='<%= password%>'>
+                                <input type="text" placeholder="제목" name='title' value='<%= title%>'>
                             </div>
                             <div class="col-lg-6">
-                                <input class="glyphicon glyphicon-user" type="text" placeholder="작성자" value='${board.writter}' disabled>
+                                <input class="glyphicon glyphicon-user" type="text" placeholder="작성자" value='<%=writter %>' disabled>
                             </div>
                             <div class="col-lg-12">
                                
-                                <textarea placeholder="내용" name='contents'>${board.contents}</textarea>
+                                <textarea placeholder="내용" name='contents'><%= contents%></textarea>
                             </div>
                             <div class="col-lg-12 text-right" id="small-button-update">
                                 <button type="submit">문의글 등록</button> 

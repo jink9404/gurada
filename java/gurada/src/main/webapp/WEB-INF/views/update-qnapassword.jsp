@@ -3,6 +3,10 @@
 <!DOCTYPE html>
 <%
 	String id=request.getParameter("qnaNo");
+	String title=request.getParameter("title");
+	String writter=request.getParameter("writter");
+	String contents=request.getParameter("contents");
+	String password=request.getParameter("password");
 
 %>
 <html lang="zxx">
@@ -51,12 +55,13 @@
 					<div class="re-sh">
 					
 						<h4>수정하시려면 비밀번호를 입력해주세요</h4>
-						<input type="text" name='password'>
-						<input type='hidden' name='qnaNo' value='${board.qnaNo}'>
-						<input type='hidden' name='title' value='${board.title}'>
-						<input type='hidden' name='writter' value='${board.writter}'>
-						<input type='hidden' name='contents' value='${board.contents}'>
-						<button type="submit" class='small-button3'>게시글 수정</button>
+						<input type="text" id='password1' name='password'>
+						<input type='hidden' name='qnaNo' value='<%= id %>'>
+						<input type='hidden' name='title' value='<%= title%>'>
+						<input type='hidden' name='writter' value='<%=writter %>'>
+						<input type='hidden' name='contents' value='<%= contents%>'>
+						<input type='hidden' id='password2' value='<%= password%>'>
+						<button type="submit" id='ubtn' class='small-button3'>게시글 수정</button>
 					</div>
 				</form>
 			</div>
@@ -76,6 +81,7 @@
 	<script src="./resources/js/jquery.nice-select.min.js"></script>
 	<script src="./resources/js/mixitup.min.js"></script>
 	<script src="./resources/js/main.js"></script>
+	<script src="./resources/js/sh.js"></script>
 </body>
 
 </html>

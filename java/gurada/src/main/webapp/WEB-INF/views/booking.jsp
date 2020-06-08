@@ -155,8 +155,7 @@
 			</div>
 		</div>
 	</section>
-	<div id='map-canvas' class="map-canvas"
-		style="width: 550px; height: 315px;"></div>
+
 	<!-- Contact Section End -->
 	<br>
 	<br>
