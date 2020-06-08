@@ -86,7 +86,7 @@
 										<td>${order.price}</td>
 										<td>${order.total}</td>
 										<td class="small-button">
-											<button>X</button>
+											<button><a href='orderDelete.do?id=${order.orderNo}'>X</a></button>
 										</td>
 									</tr>
 								</c:forEach>

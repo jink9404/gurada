@@ -52,5 +52,9 @@
 		p.product_id
 		and m.name=#{userId}
 	</select>
+	
+	<delete id='orderDelete' parameterType="String">
+	 	delete from GURADA_ORDER where ORDER_NO = #{id}
+	</delete>
 
 </mapper>

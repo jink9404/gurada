@@ -21,6 +21,12 @@ public class OrderDAOImpl implements OrderDAO {
 	public List<Map<String, String>> mypageOrder(String userId) {
 		return mybatis.selectList("orderDAO.mypageOrder",userId);
 	}
+	@Override
+	public int orderDelete(String id) {
+		
+		int rs= mybatis.delete("orderDAO.orderDelete",id);
+		return rs;
+	}
 	
 
 }

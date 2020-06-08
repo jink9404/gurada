@@ -31,4 +31,15 @@ public class OrderController {
 		 
 		 model.addAttribute("order",service.mypageOrder(userId));
 	}
+	
+	//주문취소하기
+	@RequestMapping("/orderDelete.do")
+	public String orderDelete(String id) {
+		service.orderDelete(id); 
+		return "redirect:/my-page.do";
+		
+	}
+	
+	
+
 }

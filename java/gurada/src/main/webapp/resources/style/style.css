@@ -2786,6 +2786,11 @@ td .small-button{
 .small-button button .a-href{
     color: black;
 }
+
+.small-button button a{
+    color: black;
+}
+
 .container .cart-table .a-href{
     font-size: 15px;
     color: darkblue;

@@ -9,5 +9,7 @@ public interface OrderDAO {
 	public abstract List<Map<String, String>> selectOrderList(OrderVO vo);
 	
 	public abstract List<Map<String, String>> mypageOrder(String userId);
+	
+	public int orderDelete(String id);
 }
  

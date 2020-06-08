@@ -9,4 +9,6 @@ public interface OrderService {
 	public abstract List<Map<String, String>> getOrderList(OrderVO vo);
 	
 	public abstract List<Map<String, String>> mypageOrder(String userId);
+	
+	public int orderDelete(String id);
 }

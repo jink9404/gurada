@@ -25,6 +25,9 @@ public class OrderServiceImpl implements OrderService {
 		return orderDao.mypageOrder(userId);
 	}
 	
+	public int orderDelete(String id) {
+		return orderDao.orderDelete(id);
+	}
 	
 
 }
