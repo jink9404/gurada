@@ -55,9 +55,27 @@
                 <div class="col-lg-6">              
                        <div class="product-content">
                         <h2>${detail.name}</h2><br/>
-                        <div class="pc-meta"> 
-                            <h5>Price </h5>
-                            <h5><span id="price">${detail.price}</span></h5>
+                        <div class="pc-meta">
+                        	<table class="worh">
+                        		<tr>
+                        			<td>
+                        				<h5>Price </h5>
+                        			</td>
+                        			<td align="right">
+                        				<span>재고 현황 : ${detail.quantity}개</span>
+                        			</td>
+                        		</tr>
+                        		<tr>
+                        			<td>
+                        				<h5><span id="price">${detail.price}</span></h5>
+                        			</td>
+                        			<td align="right">
+                        				<span>size  :  ${detail.pSize}</span>
+                        			</td>
+                        		</tr> 
+                            
+                            
+                            </table>
                         </div>
                         <p> ${detail.detail} </p>
                         <ul class="tags">
@@ -102,7 +120,7 @@
                                            		<input id="quantity" type="hidden" name="count" value=""/>
                                            		<input id="total1" type="hidden" name="total" value=""/>
                                            		<input type="hidden" name="productId" value="${detail.productId}"/>
-                                           		<input type="hidden" name="memberNo" value="${sessionScope.memberNo}"/> 
+                                           		<input type="hidden" id="pdSession" name="memberNo" value="${sessionScope.memberNo}"/> 
                                                 <input id="submit" type="submit" class= 'small-button2' value="장바구니 추가"/>
                                            </form>
                                             

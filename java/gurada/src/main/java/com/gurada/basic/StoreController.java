@@ -32,7 +32,6 @@ public class StoreController {
 	//위도, 경도 정보 보내주기
 	@RequestMapping("/booking-data.do")
 	public String booking_data(StoreVO vo, HttpServletRequest request) {
-
 		request.setAttribute("bstore", vo);
 		request.setAttribute("blatitude", vo.getLatitude());
 		request.setAttribute("blongitude", vo.getLongitude());

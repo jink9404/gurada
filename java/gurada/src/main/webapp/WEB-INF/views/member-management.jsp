@@ -64,7 +64,7 @@
 									<th width='200'>이름</th>
 									<th width='500'>휴대폰번호</th>
 									<th width='200'>성별</th>
-									<th colspan="2" width='700'>주소</th>
+									
 								</tr>
 								<c:forEach items="${list}" var="member">
             					<tr>
@@ -72,7 +72,7 @@
                						<td>${member.name}</td> 
                						<td>${member.phoneNumber}</td>
                						<td>${member.gender}</td>
-               						<td colspan="2">${member.address1},${member.address2}</td>
+               						
 								</tr>
 								</c:forEach>
 							</tbody>

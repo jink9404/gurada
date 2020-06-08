@@ -10,7 +10,7 @@
 	<insert id ="insert" parameterType="product">
       insert 
       into product(name,price,QUANTITY,CATEGORY_ID,GENDER,P_SIZE ,DETAIL,receipt_Date,PRODUCT_ID,pfname,pfsize) 
-      values(#{name},#{price},#{quantity},#{categoryId},#{gender},#{pSize},#{detail}, sysdate, SEQ_PRODUCTID_NO.nextval, #{pfname}, #{pfsize})
+      values(#{name},#{price},#{quantity},#{categoryId},#{gender},#{pSize},#{detail}, sysdate, SEQ_PRODUCTID_NO.nextval, #{pfname},#{pfsize})
    </insert>
 	
 	<!-- 상품 디테일 페이지 오재호 -->

@@ -52,9 +52,7 @@
 				</div>
 			</div>
 		</div>
-
 		<!-- Page Add Section End -->
-
 		<!-- Cart Page Section Begin -->
 		<div class="cart-page">
 			<div class="container">

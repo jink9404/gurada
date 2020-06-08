@@ -32,7 +32,9 @@ $('#back').click(function(){
 	history.back(-2);
 });
 
+
 $('#submit').click(function(){
+	/*var session = $('#pdSession').val();*/
 	if($('#product-quantity').val() == 0){
 		alert("수량을 확인하여 주십시오");
 		event.preventDefault();
@@ -58,6 +60,25 @@ $('#prodinsert').click(function(){
 		alert("상품이 등록되었습니다.");
 	}
 })
+
+$('#findstore').click(function(){
+	if($('#store').val() ==""){
+		alert("매장명을 입력해 주세요");
+		event.preventDefault();
+	}else{
+		return true;
+	}
+})
+
+$('#visit').click(function(){
+	if($('#location').val()==""){
+		alert("방문하실 매장을 검색해주세요");
+		event.preventDefault();
+	}else {
+		return true;
+	}
+})
+
 	
   
 

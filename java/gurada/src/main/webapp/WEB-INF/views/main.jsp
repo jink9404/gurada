@@ -48,9 +48,6 @@
 				type="video/mp4">
 		</video>
 	</div>
-
-
-
 	<!-- Features Section Begin -->
 	<section class="features-section spad">
 		<div class="features-box">
@@ -98,15 +95,31 @@
 						</div>
 						<ul class="product-controls">
 							<li data-filter="*">All</li>
-							<li data-filter=".shoes"><a href="categories.do?category=suit&gender=men">남성</a></li>
-							<li data-filter=".bags"><a href="categories.do?category=suit&gender=woman">여성</a></li>
+							<li data-filter=".shoes">남성</li>
+							<li data-filter=".bags">여성</li>
 						</ul>
 					</div>
 				</div>
 			</div>
 			<div class="row" id="product-list">
-            <c:forEach items="${viewlist}" var="list" begin="1" end="8">
-            <div class="col-lg-3 col-sm-6 mix all bags accesories">
+            <c:forEach items="${viewlist}" var="list" begin="1" end="4">
+            <div class="col-lg-3 col-sm-6 mix all accesories bags">
+               <div class="single-product-item">
+                  <figure>
+                        <a href="product-page.do?productId=${list.productId}&name=${list.name}">
+                     <img src="./resources/upload/${list.pfname}" alt="">
+                        </a>
+                     <div class="p-status">new</div>
+                  </figure>
+                  <div class="product-text">
+                     <h6>${list.name} </h6>
+                     <p>${list.price}</p>
+                  </div>
+               </div>
+            </div>
+            </c:forEach>
+            <c:forEach items="${viewlist}" var="list" begin="5" end="8">
+            <div class="col-lg-3 col-sm-6 mix all shoes accesories">
                <div class="single-product-item">
                   <figure>
                         <a href="product-page.do?productId=${list.productId}&name=${list.name}">
