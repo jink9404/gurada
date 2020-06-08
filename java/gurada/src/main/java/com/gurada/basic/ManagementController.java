@@ -37,7 +37,7 @@ public class ManagementController {
 		//tmpStr => eval(DataRow = [new Date('2020','05','09','08'),남자총계,여자총계,합계]);
 		//			eval(data.daaRow(dataRow));
 		//			Chart.jsp에서 사용
-		System.out.println(sendData);
+		//System.out.println(sendData);
 		model.addAttribute("chartData", sendData);
 		return "Chart";
 	}
