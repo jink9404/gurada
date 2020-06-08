@@ -85,7 +85,8 @@
                               S <input type="checkbox" value="S" name="pSize" class="test"/>&nbsp&nbsp&nbsp
                               M <input type="checkbox" value="M" name="pSize" class="test"/>&nbsp&nbsp&nbsp
                               L <input type="checkbox" value="L" name="pSize" class="test"/>&nbsp&nbsp&nbsp
-                              XL <input type="checkbox" value="XL" name="pSize" class="test"/>
+                              XL <input type="checkbox" value="XL" name="pSize" class="test"/>&nbsp&nbsp&nbsp
+                              F <input type="checkbox" value="F" name="pSize" class="test"/>
                            </td>
                         </tr>
                         <tr class="detail">

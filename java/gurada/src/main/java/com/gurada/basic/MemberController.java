@@ -10,14 +10,17 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.gurada.domain.CartVO;
 import com.gurada.domain.MemberVO;
+import com.gurada.infa.CartService;
 import com.gurada.infa.MemberService;
 
 @Controller
 public class MemberController {
 	@Autowired
 	private MemberService service;
-	
+	@Autowired
+	private CartService cartService;
 	@RequestMapping("/signup.do")
 	public String signup(MemberVO vo) {
 		int result = service.userSignUp(vo);
@@ -39,12 +42,17 @@ public class MemberController {
 		new_vo =  service.userSignIn(vo);
 		String result ="";
 		if(new_vo != null ) {
-			if(new_vo.getName() != null)
+			if(new_vo.getName() != null) {
+				CartVO cartVo = new CartVO();
+				cartVo.setMemberNo(new_vo.getMemberNo());
 				result = "<span class=\"in\">"+new_vo.getName()+" 님 환영합니다.";
 				session.setAttribute("UserID", new_vo.getName());
 				session.setAttribute("UserIDInfo", new_vo);
 				session.setAttribute("memberNo", new_vo.getMemberNo());
+				//장바구니 list 갱신
+				session.setAttribute("cartSelect", cartService.cartSelect(cartVo, new_vo.getName()));
 				
+			}
 		}
 		return result;
 	}

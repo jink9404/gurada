@@ -41,15 +41,19 @@ public class cartController {
       if (result == 0) {
          int result1 = cartservice.cartInsert(vo);
          if (result1 == 0) {
+        	 //장바구니 cartSelect 갱신
+        	 session.setAttribute("cartSelect", cartservice.cartSelect(vo, (String) session.getAttribute("UserID")));
             return "redirect:cartSelect.do";
          }
       } else if (result != 0) {
          int result1 = cartservice.cartUpdate(vo);
 
          if (result1 == 0) {
+        	 session.setAttribute("cartSelect", cartservice.cartSelect(vo, (String) session.getAttribute("UserID")));
             return "redirect:cartSelect.do";
          }
       }
+      session.setAttribute("cartSelect", cartservice.cartSelect(vo, (String) session.getAttribute("UserID")));
       return "redirect:/product-page.do?productId=" + vo.getProductId() + "&name=" + encodedParam;
    }
 
@@ -59,9 +63,8 @@ public class cartController {
    public String cartSelect(CartVO vo, Model model, HttpSession session) {
       String userId = (String) session.getAttribute("UserID");
       
-         model.addAttribute("cartSelect", cartservice.cartSelect(vo, userId));
-         
-         return "wishlist";
+      model.addAttribute("cartSelect", cartservice.cartSelect(vo, userId));
+      return "wishlist";
    }
     
 
