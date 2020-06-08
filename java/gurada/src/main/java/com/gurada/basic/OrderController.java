@@ -27,8 +27,7 @@ public class OrderController {
 	//마이페이지 주문내역 리스트
 	@RequestMapping("/my-page.do")
 	public void mypageOrder(HttpSession session ,Model model) {
-		 String userId = (String) session.getAttribute("UserID");
-		 
+		 String userId = (String) session.getAttribute("UserID"); 
 		 model.addAttribute("order",service.mypageOrder(userId));
 	}
 	

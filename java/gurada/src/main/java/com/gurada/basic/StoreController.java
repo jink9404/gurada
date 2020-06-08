@@ -23,10 +23,16 @@ public class StoreController {
 	public String getStore(StoreVO vo, HttpServletRequest request) {
 
 		StoreVO nvo = StoreService.getStore(vo);
-		request.setAttribute("store", nvo);
-		request.setAttribute("latitude", nvo.getLatitude());
-		request.setAttribute("longitude", nvo.getLongitude());
-		return "/find-store";
+		if(nvo != null) {
+			request.setAttribute("store", nvo);
+			request.setAttribute("latitude", nvo.getLatitude());
+			request.setAttribute("longitude", nvo.getLongitude());
+			return "/find-store";
+		}else {
+			request.setAttribute("test","찾는 매장이 없습니다. 다시 검색하세요");
+			 return "/find-store";
+		}
+		
 
 	}
 	//위도, 경도 정보 보내주기

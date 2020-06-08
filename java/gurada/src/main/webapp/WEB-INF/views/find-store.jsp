@@ -119,7 +119,7 @@
 					<form action="find.do" class="contact-form">
 						<div class="row">
 							<div class="col-lg-6">
-								<input type="text" placeholder="주소, 매장입력.." id="store" name='location'>
+								<input type="text" placeholder="주소, 매장입력.." id="store" name='location' '>
 							</div>
 							<div>
 								<button type="submit" id="findstore">
@@ -140,6 +140,7 @@
 								<input type="hidden" name='tel' value='${store.tel}'>
 								
 									<h4>${store.name}</h4>
+									<h4>${test}</h4>
 								</td>
 							</tr>
 							<tr>
@@ -148,7 +149,6 @@
 							<tr>
 								<td>${store.tel}</td>
 							</tr>
-							<br>
 							<tr>
 								<td>
 								<button type="submit" id="visit" class='sh-button'>방문예약</button>
@@ -180,6 +180,7 @@
 	<script src="./resources/js/mixitup.min.js"></script>
 	<script src="./resources/js/main.js"></script>
 	<script src="./resources/js/jh.js"></script>
+	<script src="./resources/js/sh.js"></script>
 </body>
 
 </html>

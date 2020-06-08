@@ -60,7 +60,7 @@
 									<img src="./resources/img/prada/gura1.jpg" alt="">
 									<div class="box-text">
 										<span class="trend-year">2020 gurada</span>
-										<h2>Jewelry</h2>
+										<h2>women</h2>
 										<span class="trend-alert">Trend Allert</span> <a href="#"
 											class="primary-btn">살펴 보기</a>
 									</div>
@@ -70,10 +70,10 @@
 					</div>
 					<div class="col-lg-6">
 						<div class="single-box-item large-box">
-							<img src="./resources/img/prada/gura2.jpg" alt="">
+							<img src="./resources/img/prada/gura3.jpg" alt="">
 							<div class="box-text">
-								<span class="trend-year">2020 트렌드</span>
-								<h2>Collection</h2>
+								<span class="trend-year">2020 gurada</span>
+								<h2>man</h2>
 								<div class="trend-alert">Trend Allert</div>
 								<a href="#" class="primary-btn">살펴 보기</a>
 							</div>

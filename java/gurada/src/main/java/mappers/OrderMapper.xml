@@ -53,6 +53,7 @@
 		and m.name=#{userId}
 	</select>
 	
+	<!-- 주문 취소 하기 -->
 	<delete id='orderDelete' parameterType="String">
 	 	delete from GURADA_ORDER where ORDER_NO = #{id}
 	</delete>

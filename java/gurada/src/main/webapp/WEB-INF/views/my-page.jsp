@@ -86,7 +86,7 @@
 										<td>${order.price}</td>
 										<td>${order.total}</td>
 										<td class="small-button">
-											<button><a href='orderDelete.do?id=${order.orderNo}'>X</a></button>
+											<button><a id='obtn' href='orderDelete.do?id=${order.orderNo}'>X</a></button>
 										</td>
 									</tr>
 								</c:forEach>
@@ -108,6 +108,7 @@
 	<script src="./resources/js/jquery.nice-select.min.js"></script>
 	<script src="./resources/js/mixitup.min.js"></script>
 	<script src="./resources/js/main.js"></script>
+	<script src="./resources/js/sh.js"></script>
 </body>
 
 </html>
