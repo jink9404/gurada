@@ -57,7 +57,7 @@
             <div class="row">
             
             <c:forEach var="item" items="${productList }">    
-
+				<c:if test="${item.quantity >0 }">
                 <div class="col-lg-3 col-md-6">
                     <div class="single-product-item">
                         <a href="product-page.do?productId=${item.productId}&name=${item.name}"><figure>
@@ -65,13 +65,14 @@
 <!--                             <div class="p-status">new</div> -->
                         </figure></a>
                         <div class="product-text">
-                            <a href="#">
+                            <a href="product-page.do?productId=${item.productId}&name=${item.name}">
                                 <h6 style="text-align: center;">${item.name }</h6>
                             </a>
                             <p style="float: right">${item.price }원</p>
                         </div>
                     </div>
                 </div>
+                </c:if>
 			</c:forEach>
                 
                 

@@ -30,13 +30,20 @@ public class PayController {
     }
   
     @RequestMapping("/payment-rs.do")
-    public void payInsert(OrderVO vo, HttpSession session, HttpServletRequest request) {
+    public void payInsert(OrderVO vo, HttpSession session, HttpServletRequest request, Model model) {
     	vo.setTotal(Integer.parseInt(request.getParameter("total")));
     	String []productArr = request.getParameterValues("productNo");
-    	
+    	String message = "";
     	for(int i=0 ; i<productArr.length ; i++) {
     		vo.setProductNo(productArr[i]);
-    		payservice.payInsert(vo);
+    		try {
+    			payservice.payInsert(vo);
+    			message="결제가 완료되었습니다.!";
+    		}catch (Exception e) {
+				System.out.println("상품 갯수 0 이하");				
+				message="결제에 실패했습니다. <br>올바르지 않은 상품정보";
+			}
+    		model.addAttribute("message", message);
     	}
     }
 }
