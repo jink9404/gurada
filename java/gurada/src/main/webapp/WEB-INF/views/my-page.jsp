@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -67,33 +68,35 @@
 						<table>
 							<thead>
 								<tr>
-									<th>주문일자</th>
+									<th>주문번호</th>
+									<th>주문날짜</th>
 									<th>상품명</th>
-									<th>가격</th>
-									<th>주소지</th>
-									<th>주문상태</th>
+									<th>상품가격</th>
+									<th>총가격</th>
 									<th>주문 취소</th>
 								</tr>
 							</thead>
 
 							<tbody>
-								<tr>
-									<td>2020/05/20</td>
-									<td><img src='/resources/img/cart/cart-1.jpg' /> 브라운 미니백</td>
-									<td>150,000원</td>
-									<td>서울시 은평구</td>
-									<td>배송중</td>
-									<td class="small-button">
-										<button>X</button>
-									</td>
-								</tr>
+								<c:forEach items="${order}" var="order">
+									<tr>
+										<td>${order.orderNo}</td>
+										<td>${order.orderDate}</td>
+										<td>${order.pname}</td>
+										<td>${order.price}</td>
+										<td>${order.total}</td>
+										<td class="small-button">
+											<button>X</button>
+										</td>
+									</tr>
+								</c:forEach>
 							</tbody>
 						</table>
 						<hr>
 					</div>
 				</div>
 			</div>
-		</div>		
+		</div>
 	</section>
 
 	<!-- Js Plugins -->

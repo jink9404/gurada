@@ -1,6 +1,7 @@
 package com.gurada.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +14,14 @@ public class OrderDAOImpl implements OrderDAO {
 	@Autowired
 	private SqlSessionTemplate mybatis;
 	@Override
-	public List<OrderVO> selectOrderList(OrderVO vo) {
-		return mybatis.selectList("",vo);
+	public List<Map<String,String>> selectOrderList(OrderVO vo) {
+		return mybatis.selectList("orderDAO.selectList",vo);
 	}
+	@Override
+	public List<Map<String, String>> mypageOrder(String userId) {
+		return mybatis.selectList("orderDAO.mypageOrder",userId);
+	}
+	
 
 }
+ 

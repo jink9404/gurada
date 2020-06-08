@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -51,24 +52,21 @@
 					<form action='order-manageList.do'>
 						<table class="addr-table">
 							<tr>
-								<td width='400'>
-								<label>결제 방법</label>&nbsp;&nbsp;<select class="form-control" name='payment'
+								<td width='400'><label>결제 방법</label>&nbsp;&nbsp;<select
+									class="form-control" name='paymentMethod'
 									style="width: 300px; height: 44px; display: inline-block">
-										<option>신용카드</option>
-										<option>무통장 입금</option>
-										<option>실시간 계좌이체</option> 
+										<option value='credit'>신용카드</option>
+										<option value='deposit'>무통장입금</option>
+										<option value='account'>실시간 계좌이체</option>
 								</select></td>
-								<td width='400'>
-									<label>주문 날짜</label>&nbsp;&nbsp;<input type="date" name='orderDate'
+								<td width='400'><label>주문 날짜</label>&nbsp;&nbsp;<input
+									type="date" name='orderDate'
 									style="width: 300px; height: 44px; display: inline-block">
 								</td>
 								<td>
-									<button type='submit'class="small-button">조회</button>
+									<button type='submit' class="small-button">조회</button>
 								</td>
 							</tr>
-
-
-
 						</table>
 					</form>
 
@@ -87,21 +85,20 @@
 											<th>상품명</th>
 											<th>결제금액</th>
 											<th>결제방법</th>
-											<th>배송상태</th>
 										</tr>
 									</thead>
 
 									<tbody>
-										<tr>
-											<td>2020/05/20</td>
-											<td>12357244</td>
-											<td>문소희</td>
-											<td>브라운 미니백</td>
-											<td>150,000원</td>
-											<td>신용카드</td>
-											<td>배송완료</td>
-										</tr>
-
+										<c:forEach items="${order}" var="order">
+											<tr>
+												<td>${order.orderDate}</td>
+												<td>${order.orderNo}</td>
+												<td>${order.mname}</td>
+												<td>${order.pname}</td>
+												<td>${order.total}</td>
+												<td>${order.payment}</td>
+											</tr>
+										</c:forEach>
 									</tbody>
 								</table>
 								<hr>
