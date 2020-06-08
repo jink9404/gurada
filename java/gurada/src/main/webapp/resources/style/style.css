@@ -2599,9 +2599,9 @@ ol {
     top : 200px;
 }
 .map-canvas{
-    position: absolute;
-    left : 880px;
-    top: 295px;
+    position: relative;
+    left : 650px;
+    top: -385px;
     bottom : 290px;
 }
 
@@ -2779,7 +2779,7 @@ border: 1px solid #999;
 }
 
 .btn-2{position: relative;
-left: 210%
+left: 230%
 }
 .search-1{ position: relative;
 left: 10%;
@@ -2960,6 +2960,10 @@ left: 10%;
 	
 }
 #small-button-update a{
+	color:  #1e1e1e;
+}
+
+#small-button-list a{
 	color:  #1e1e1e;
 }
     

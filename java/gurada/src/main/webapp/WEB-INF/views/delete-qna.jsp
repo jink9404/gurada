@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <%
 	String id=request.getParameter("qnaNo");
+	String pass=request.getParameter("password");
 
 %>
 <html lang="zxx">
@@ -51,9 +52,10 @@
 					<div class="re-sh">
 					
 						<h4>삭제하시려면 비밀번호를 입력해주세요</h4>
-						<input type="text" name='password'>
-						<input type='hidden' name='qnaNo' value='<%= id %>'>
-						<button type="submit" class='small-button3'>게시글 삭제</button>
+						<input type="text" id='password1' name='password'>
+						<input type='hidden' id='password2' value='<%=pass %>'> 
+						<input type='hidden' name='qnaNo' id='qnaNo' value='<%= id %>'>
+						<button type="submit" id="dbtn" class='small-button3'>게시글 삭제</button>
 					</div>
 				</form>
 			</div>
@@ -73,6 +75,7 @@
 	<script src="./resources/js/jquery.nice-select.min.js"></script>
 	<script src="./resources/js/mixitup.min.js"></script>
 	<script src="./resources/js/main.js"></script>
+	<script src="./resources/js/sh.js"></script>
 </body>
 
 </html>
