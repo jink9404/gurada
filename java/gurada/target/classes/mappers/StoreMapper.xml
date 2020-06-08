@@ -22,7 +22,9 @@
 	<select id="bookingSearch" parameterType="booking"
 		resultType="booking">
 
-		select * from booking b,store s
+		select b.BOOKING_ID BOOKING_ID,b.FULL_NAME FULL_NAME, s.STORE_ID STORE_ID,s.NAME NAME,
+			   TO_CHAR(b.BOOKING_DATE,'YYYY-MM-DD')as BOOKING_DATE,b.PHONE_NUMBER PHONE_NUMBER,
+			   b.TIME TIME from booking b,store s
 		<if test="fullName!=null">
 			where b.store_id=s.store_id and FULL_NAME LIKE '%'|| #{fullName} ||'%'
 		</if>
@@ -31,6 +33,10 @@
 			||'%'
 		</if>
 	</select>
+	
+	<delete id="bookingDelete" parameterType="booking">
+		delete from booking where BOOKING_ID = #{bookingId}
+	</delete>
 
 
 

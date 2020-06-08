@@ -36,7 +36,10 @@ public class StoreServiceImpl implements StoreService {
 		
 		return StoreDAO.bookingSearch(vo) ;
 	}
-
-
+	
+	//매장 예약 취소하기
+	public int bookingDelete(BookingVO vo) {
+		return StoreDAO.bookingDelete(vo); 
+	}
 
 }

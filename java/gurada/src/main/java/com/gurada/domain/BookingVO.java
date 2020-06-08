@@ -2,7 +2,7 @@ package com.gurada.domain;
 
 
 public class BookingVO {
-	int bookingId;
+	String bookingId;
 	String bookingDate;
 	String phoneNumber;
 	String time;
@@ -35,13 +35,13 @@ public class BookingVO {
 	public void setTime(String time) {
 		this.time = time;
 	}
-	public int getBookingId() {
+
+	public String getBookingId() {
 		return bookingId;
 	}
-	public void setBookingId(int bookingId) {
+	public void setBookingId(String bookingId) {
 		this.bookingId = bookingId;
 	}
-
 	public String getBookingDate() {
 		return bookingDate;
 	}

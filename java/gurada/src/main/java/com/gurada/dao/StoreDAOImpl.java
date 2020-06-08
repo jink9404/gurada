@@ -43,6 +43,11 @@ public class StoreDAOImpl implements StoreDAO {
 		return mybatis.selectList("StoreDAO.bookingSearch", vo);
 	}
 	
+	//매장 예약 취소 하기
+	public int bookingDelete(BookingVO vo) { 
+		return mybatis.delete("StoreDAO.bookingDelete",vo);
+	}
+	
 	
 	
 }

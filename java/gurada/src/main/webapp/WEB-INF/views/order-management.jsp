@@ -51,22 +51,24 @@
 					<form action='order-manageList.do'>
 						<table class="addr-table">
 							<tr>
-								
-								<td width='520'>
-									<select class="form-control" name='payment'
-									style="width: 100px; height: 44px; display: inline-block">
-										<option >신용카드</option>
-										<option >무통장 입금</option>
-										<option >실시간 계좌이체</option>
-									</select>
+								<td width='400'>
+								<label>결제 방법</label>&nbsp;&nbsp;<select class="form-control" name='payment'
+									style="width: 300px; height: 44px; display: inline-block">
+										<option>신용카드</option>
+										<option>무통장 입금</option>
+										<option>실시간 계좌이체</option> 
+								</select></td>
+								<td width='400'>
+									<label>주문 날짜</label>&nbsp;&nbsp;<input type="date" name='orderDate'
+									style="width: 300px; height: 44px; display: inline-block">
 								</td>
-								<td width='500'>
-									<h4>주문 날짜</h4> <input type="date" name='orderDate'> <span
-									class="small-button">
-										<button type='submit'>조회</button>
-								</span> <br /> <br />
+								<td>
+									<button type='submit'class="small-button">조회</button>
 								</td>
 							</tr>
+
+
+
 						</table>
 					</form>
 
@@ -99,7 +101,7 @@
 											<td>신용카드</td>
 											<td>배송완료</td>
 										</tr>
-										
+
 									</tbody>
 								</table>
 								<hr>
