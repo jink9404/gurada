@@ -2987,6 +2987,11 @@ left: 10%;
 #small-button-list a{
 	color:  #1e1e1e;
 }
+.findstoreMain{
+	position: relative;
+	margin-left: 15%;
+	
+}
     
 /*----------------------------------------*/
 /* MJ
