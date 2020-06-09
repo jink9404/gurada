@@ -72,8 +72,8 @@
 					사업자등록번호: 213-86-18599. 공동대표 오재호,김지섭,김명진,문소희 | 개인정보 보호책임자: 김지훈이사. <br />통신판매신고번호:
 					2017-서울강남-04082. <i class="icon-heart color-danger"
 						aria-hidden="true"></i> by <a href="https://colorlib.com"
-						target="_blank">Colorlib</a>
-					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+						target="_blank">Colorlib</a><br/>
+					<span style="color: black;"> Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. </span>
 				</p>
 			</div>
 

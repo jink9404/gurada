@@ -66,9 +66,9 @@ public class cartController {
    
    // 장바구니내역 삭제하기
    @RequestMapping("/cartDelete.do")
-   public String cartDelete(int id, String memberNo) {
-
+   public String cartDelete(int id, String memberNo, HttpSession session) {
       int rs = cartservice.cartDelete(id);
+      session.removeAttribute("cartSelect");
       return "redirect:/cartselect.do?memberNo=" + memberNo;
 
    }

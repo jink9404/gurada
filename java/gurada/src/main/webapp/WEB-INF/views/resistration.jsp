@@ -74,6 +74,7 @@
                            </select> <select name=categoryId class="test">
                                  <option value="슈트">슈트</option>
                                  <option value="드레스">드레스</option>
+                                  <option value="아우터">아우터</option>
                                  <option value="가방">가방</option>
                                  <option value="상의">상의</option>
                                  <option value="하의">하의</option>

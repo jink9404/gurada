@@ -38,7 +38,7 @@
            <tr>
                 <td rowspan="2">
                     <div class="login">
-                        <span><h2 class="text-white"/>로그인</h2></span>         
+                        <span><h2 class="text-white">로그인</h2></span>         
                         <form action="login.do" method="post" id="frm" name="frm">
                             <table>
                                 <tr>
@@ -50,6 +50,7 @@
                                     <td>PASSWORD</td>
                                     <td colspan="2"><input type="password"  id="login_password" name="password" placeholder="   PW" size="30"
                                     style="border-bottom:2px solid #D0D7DB; color:white; border-left:0px; border-right:0px; border-top:0px;background: transparent;"/></td>
+
                                 </tr>
                                 <tr>
                                     <td colspan="2">
@@ -94,6 +95,7 @@
                     				<span><a class="glyphicon glyphicon-list" href="order-management.do">주문내역</a></span><br/>
                     				<span><a class="glyphicon glyphicon-list" href="member-management.do">회원관리</a></span>
                     			</c:when>
+                    		
                     			<c:otherwise>
                        				<a href="my-page.do">
                         			<img src="./resources/img/icons/man.png" alt=""/>
@@ -164,7 +166,7 @@
                     <div class="header-item">
                     <img src="./resources/img/icons/sales.png" alt=""/>
                     <p>Da Gurada.</p>
-                </div>
+                    </div>
                 </div>
             </div>
         </div>

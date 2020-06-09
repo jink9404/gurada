@@ -1,4 +1,4 @@
-package com.gurada.basic;
+﻿package com.gurada.basic;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -34,6 +34,7 @@ public class PayController {
     	String message = "";
     	for(int i=0 ; i<productArr.length ; i++) {
     		vo.setProductNo(productArr[i]);
+
         		int count =Integer.parseInt(productArr2[i]);
 	    		try {
 	    			payservice.payInsert(vo, count);
@@ -43,7 +44,7 @@ public class PayController {
 					message="결제에 실패했습니다. <br>올바르지 않은 상품정보";
 				}
 	    		model.addAttribute("message", message);
-    		
+
     	}
     }
     

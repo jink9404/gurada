@@ -52,7 +52,28 @@
 		p.product_id
 		and m.name=#{userId}
 	</select>
+<!-- 	페이징 -->
+	<select id="mypageOrderPaging" parameterType="hashmap" resultMap="mypage">
+	SELECT total_price,order_date, order_no,p_name, price
+	FROM(select ROWNUM RN, o.total_price total_price,TO_CHAR(o.order_date,'YYYY-MM-DD') order_date,	o.order_no order_no,p.name p_name,p.PRICE price
 	
+	from GURADA_ORDER o ,MEMBER m,PRODUCT p
+	
+	where o.member_no = m.member_no and o.product_no =	p.product_id and m.name=#{userId}
+	Order by o.order_date desc)
+	WHERE RN BETWEEN #{pagingVO.start} and #{pagingVO.end}
+	
+	</select>
+	<select id="mypageCount" parameterType="string" resultType="int">
+		select
+		count(*)
+
+		from GURADA_ORDER o ,MEMBER m,PRODUCT p
+
+		where o.member_no = m.member_no and o.product_no =
+		p.product_id
+		and m.name=#{userId}
+	</select>
 	<!-- 주문 취소 하기 -->
 	<delete id='orderDelete' parameterType="String">
 	 	delete from GURADA_ORDER where ORDER_NO = #{id}
