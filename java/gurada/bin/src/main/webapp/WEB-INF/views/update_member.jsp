@@ -125,7 +125,7 @@
 		                    	</tr>
 		             	   </table>
             			    <br><br>
-				            <div class="signup-btn">
+				            <div class="update-btn">
 				                <input type="submit" value="수정" class="btn btn-success"/>
 				                <button class="btn btn-dark">취소</button>
 				            </div>

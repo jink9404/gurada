@@ -83,27 +83,55 @@
 									</table>
 									<hr>
 									<div class="td-a">
-										<a href=''>[1]</a> <a href=''>[2]</a> <a href=''>[3]</a> <a
-											href=''>[4]</a>
+										
 									</div>
 								</div>
 
 							</div>
 
 						</div>
+						<div style="display: block; text-align: center;">		
+							<c:if test="${paging.startPage != 1 and empty param.searchType }">
+								<a href="qna.do?nowPage=${paging.startPage - 1 }">&lt;</a>
+							</c:if>
+							<c:if test="${paging.startPage != 1 and not empty param.searchType }">
+								<a href="qna.do?nowPage=${paging.startPage - 1 }&searchType=${param.searchType }&value=${param.value }">&lt;</a>
+							</c:if>
+							<c:forEach begin="${paging.startPage }" end="${paging.endPage }" var="p">
+								<c:choose>
+									<c:when test="${p == paging.nowPage }">
+										<b>${p }</b>
+									</c:when>
+									<c:when test="${p != paging.nowPage  and empty param.searchType}">
+										<a href="qna.do?nowPage=${p }">${p }</a>
+									</c:when>
+									<c:when test="${p != paging.nowPage and not empty param.searchType}">
+										<a href="qna.do?nowPage=${p }&searchType=${param.searchType }&value=${param.value }">${p }</a>
+									</c:when>
+								</c:choose>
+							</c:forEach>
+							<c:if test="${paging.endPage != paging.lastPage and empty param.searchType}">
+								<a href="qna.do?nowPage=${paging.endPage+1 }">&gt;</a>
+							</c:if>
+							<c:if test="${paging.endPage != paging.lastPage and not empty param.searchType}">
+								<a href="qna.do?nowPage=${paging.endPage+1 }&searchType=${param.searchType }&value=${param.value }">&gt;</a>
+							</c:if>
+						</div>
 						<div class="search-1">
-							<select class="select-2">
-								<option>작성자</option>
-								<option>제목</option>
-							</select> <input type="text" class="input-tx">
-							<button class='small-button2'>검색</button>
+							<form method="get" action="qna.do">
+								<select class="select-2" name="searchType">
+									<option value="writter">작성자</option>
+									<option value="title">제목</option>
+								</select> <input type="text" name="value" class="input-tx">
+								<input type="submit" class='small-button2' value="검색">
+							</form>
 						</div>
 					</div>
 				</div>
 				<div class="sh-width">
 					<div class="contact-widget">
 						<div class="cw-item">
-							<h5>고객센터</h5>
+							<h5>고객센터 연락처</h5>
 							<ul>
 								<li>+82 (603)535-4592</li>
 								<li>+82 (603)535-4556</li>

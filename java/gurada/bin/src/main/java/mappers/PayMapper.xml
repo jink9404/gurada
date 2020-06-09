@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="pay">
+
+	<select id="paySelect" parameterType="cart" resultType="cart">
+   		select w.count as count,w.member_no as memberNo, p.price as price, w.product_id as productId,w.wishlist_no as wishlistNo , (w.count*p.price) as total, p.name as name
+		from wishlist w, member m, product p
+		where m.member_no=w.member_no and w.product_id=p.product_id and m.member_no=#{memberNo} 
+   		</select>
+	
+	<insert id="payInsert" parameterType="pay">
+		insert into gurada_order(order_no, order_date, total_price, payment, product_no, member_no) 
+		values(seq_order_no.nextval, sysdate, #{total}, #{paymentMethod}, #{productNo}, '${memberNo}')
+	</insert>
+	
+	
+</mapper>

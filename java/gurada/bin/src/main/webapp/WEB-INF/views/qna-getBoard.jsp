@@ -53,24 +53,34 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
-                    <form action="qna.do" class="contact-form">
+                    <form action="qna-update.do" class="contact-form" method='post'>
                         <div class="row">
                             <div class="col-lg-6">
-                                <input type="text" placeholder="제목" value='${board.title}' disabled>
+                            	<input type='hidden' name='qnaNo' value='${board.qnaNo}'>
+                            	<input type='hidden' name='password' value='${board.password}'>
+                                <input type="text" placeholder="제목" name='title' value='${board.title}' >
                             </div>
                             <div class="col-lg-6">
-                                <input class="glyphicon glyphicon-user" type="text" placeholder="작성자" value='${board.writter}' disabled>
+                                <input class="glyphicon glyphicon-user" name='writter' type="text" placeholder="작성자" value='${board.writter}' >
                             </div>
                             <div class="col-lg-12">
                                
-                                <textarea placeholder="내용" disabled>${board.contents}</textarea>
+                                <textarea placeholder="내용" name='contents' >${board.contents}</textarea>
                             </div>
-                            <div class="col-lg-12 text-right" class="small-button">
-                                <button type="submit"  >게시판 목록 가기</button>
-                               
-                            </div>
+                            <div class="col-lg-12 text-right" id="small-button-update">
+                                <button type="submit"  >게시글 수정</button> 
+                            </div>    
                         </div>
                     </form>
+                    <form action="delete-qna.do" method="post" class='sh-form'>
+                            <input type='hidden' name='qnaNo' value='${board.qnaNo}' >
+                            <input type='hidden' name='password' value='${board.password}' >
+                            <button class='small-button-delete' type="submit"  >게시글 삭제</button>
+                            </form>
+                            
+                             <div class="col-lg-12 text-right" id="small-button-list">
+                                <button><a href='qna.do'>게시판 목록</a></button> 
+                            </div>   
                 </div>
                 <div class="col-lg-3 offset-lg-1">
                     <div class="contact-widget">

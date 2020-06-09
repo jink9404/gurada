@@ -267,7 +267,7 @@ ol {
     padding-right: 45px;
     display: none;
     width: 100%;
-    background-color: black;
+    background-color:#1e1e1e;
     color: white;
     text-align: center;
 }
@@ -420,13 +420,12 @@ ol {
 	line-height: 42px;
 }
 
-.inner-header .main-menu ul li a.active:after {
+
+ .inner-header .main-menu ul li a:hover:after {
 	opacity: 1;
 }
 
-.inner-header .main-menu ul li a:hover:after {
-	opacity: 1;
-}
+.inner-header .main-menu ul li a { text-decoration:none }
 
 .inner-header .main-menu ul li a:after {
 	position: absolute;
@@ -730,8 +729,8 @@ ol {
 	color: #1e1e1e;
 }
 .features-box .single-box-item.large-box .box-text .primary-btn {
-	border-color: #282828;
-	color: #1e1e1e;
+	border-color: #D0D7DB;
+	color: #D0D7DB;
 }
 
 .features-box .single-box-item.second-box {
@@ -740,8 +739,8 @@ ol {
 
 .features-box .single-box-item.second-box .box-text {
 	position: absolute;
-	left: 56px;
-	top: 150px;
+	left: 100px;
+	top: 200px;
 }
 
 .features-box .single-box-item.second-box .box-text .trend-year {
@@ -761,8 +760,8 @@ ol {
 
 .features-box .single-box-item.large-box .box-text {
 	position: absolute;
-	left: 125px;
-	top: 250px;
+	left: 360px;
+	top: 300px;
 }
 
 .features-box .single-box-item.large-box .box-text .trend-year {
@@ -1375,6 +1374,7 @@ ol {
 }
 
 .product-img figure img {
+	margin-top : 20%;
 	min-width: 100%;
 }
 
@@ -1450,6 +1450,9 @@ ol {
 	border: 2px solid #EEF1F2;
 	border-radius: 50px;
 	text-align: center;
+}
+.product-content .product-quantity span{
+	width : 200px;
 }
 
 .product-content .product-quantity .pro-qty input {
@@ -2467,6 +2470,13 @@ ol {
 /*----------------------------------------*/
 /* JH
 /*----------------------------------------*/
+.product-content .pc-meta .worh{
+	width : 100%;
+}
+.page-breadcrumb1{
+	width : 100%;
+}
+
 .reser-jh{
     margin-top: 40px;
 }
@@ -2484,7 +2494,7 @@ ol {
 .shopping-jh2 td:nth-of-type(2){
     text-align: right;
     padding-right: 10px;
-}
+} 
 
 .shopping-jh2{
    
@@ -2543,10 +2553,9 @@ ol {
     color:#1e1e1e;
 }
  .container .jh-a{
-    
-    font-size: 20px;
+     font-size: 20px;
      color: #999;
-         position: absolute;
+     position: absolute;
      left: 1200px;
      top: 230px;
 }
@@ -2592,7 +2601,14 @@ ol {
     top : 200px;
 }
 .map-canvas{
-    position: absolute;
+    position: relative;
+    left : 650px;
+    top: -385px;
+    bottom : 290px;
+}
+
+#map_ma {
+	  position: absolute;
     left : 880px;
     top: 295px;
     bottom : 290px;
@@ -2626,8 +2642,20 @@ ol {
 .contact-form2 .worhtable-jh input{
     width : 80px;
 }
-.contact-form2 td1 .worh .worhtable-jh{
-    
+.contact-form4 {
+    font-size: 15px;	
+	font-weight: 600;	
+	color: #838383;	
+	border: 0;	
+	padding-bottom: 10px;	
+	border-bottom: 2px solid #E7EBED;	
+	margin-bottom: 8px;
+}
+.contact-form4 th{
+	width : 400px;
+}
+.container .rjator{
+	padding-left : 850px;
 }
 .pro_img-jh{
     width : 400px;
@@ -2683,6 +2711,33 @@ border: 1px solid #999;
 	cursor: pointer;
 	text-transform: uppercase;
 }
+
+td .small-button{
+	
+	color: #1e1e1e;
+	background: transparent;
+	border: none;
+	font-size: 16px;
+	font-weight: 600;
+	padding: 8px 25px;
+	border: 1px solid #1e1e1e;
+	border-radius: 50px;
+	cursor: pointer;
+	text-transform: uppercase;
+}
+.addr-form .sh-button{
+	color: #1e1e1e;
+	background: transparent;
+	border: none;
+	font-size: 14px;
+	font-weight: 600;
+	padding: 8px 25px;
+	border: 1px solid #1e1e1e;
+	border-radius: 50px;
+	cursor: pointer;
+	text-transform: uppercase;
+	
+}
 .small-button2{color: #1e1e1e;
 	background: transparent;
 	border: none;
@@ -2693,6 +2748,21 @@ border: 1px solid #999;
 	border-radius: 50px;
 	cursor: pointer;
 	text-transform: uppercase;}
+	
+.re-sh .small-button3{
+	color: #1e1e1e;
+	background: transparent;
+	border: none;
+	font-size: 12px;
+	font-weight: 600;
+	padding: 6px 20px;
+	border: 1px solid #1e1e1e;
+	border-radius: 10px;
+	cursor: pointer;
+	text-transform: uppercase;
+	position:absolute;
+	
+	}
 
 .small-btn-sh{
     position: sticky;
@@ -2714,6 +2784,11 @@ border: 1px solid #999;
 .small-button button .a-href{
     color: black;
 }
+
+.small-button button a{
+    color: black;
+}
+
 .container .cart-table .a-href{
     font-size: 15px;
     color: darkblue;
@@ -2724,9 +2799,8 @@ border: 1px solid #999;
 
 }
 
-
 .btn-2{position: relative;
-left: 210%
+left: 230%
 }
 .search-1{ position: relative;
 left: 10%;
@@ -2807,10 +2881,10 @@ left: 10%;
 .sh-a{
     
     position: absolute;
-    top: 100px;
-    left: 1400px;
-    
+    top: 200px;
+    left: 1300px;
     color: black;
+    border-bottom: 1px solid;
 }
 .sh-a-1{
     position: absolute;
@@ -2847,6 +2921,77 @@ left: 10%;
 	height:800px; 
 }
 
+.re-sh{
+	position:absolute;
+	
+	margin:0 25%;
+	
+}
+.re-sh a{
+	position:absolute;
+	
+	margin:0 35%;
+	
+}
+.sh-form .small-button-delete {
+	       color: #1e1e1e;
+	background: transparent;
+	border: none;
+	font-size: 14px;
+	font-weight: 600;
+	padding: 8px 25px;
+	border: 1px solid #1e1e1e;
+	border-radius: 50px;
+	cursor: pointer;
+	text-transform: uppercase;
+    position: absolute; 
+    top:327px; left:410px;
+}
+#small-button-list button{
+	
+	       color: #1e1e1e;
+	background: transparent;
+	border: none;
+	font-size: 14px;
+	font-weight: 600;
+	padding: 8px 25px;
+	border: 1px solid #1e1e1e;
+	border-radius: 50px;
+	cursor: pointer;
+	text-transform: uppercase;
+     position: absolute; 
+    top:-400px; left:570px;
+	
+}
+
+#small-button-update button{
+	
+	color: #1e1e1e;
+	background: transparent;
+	border: none;
+	font-size: 14px;
+	font-weight: 600;
+	padding: 8px 25px;
+	border: 1px solid #1e1e1e;
+	border-radius: 50px;
+	cursor: pointer;
+	text-transform: uppercase;
+     position: absolute;
+    top:2px; left:550px;
+	
+}
+#small-button-update a{
+	color:  #1e1e1e;
+}
+
+#small-button-list a{
+	color:  #1e1e1e;
+}
+.findstoreMain{
+	position: relative;
+	margin-left: 15%;
+	
+}
     
 /*----------------------------------------*/
 /* MJ
@@ -2859,3 +3004,8 @@ left: 10%;
 /*----------------------------------------*/
 /* JS
 /*----------------------------------------*/
+.paywish {
+	width: 100%;
+}
+ 
+
