@@ -136,6 +136,11 @@
             </c:forEach>
          </div>
 		</div>
+		<div class='findstoreMain'>
+			<a href='find-store.do'>
+				<img alt="" src="./resources/img/findstore.jpg">
+			</a>
+		</div> 
 	</section>
 	<!-- Latest Product End -->
 
