@@ -44,12 +44,12 @@
                                 <tr>
                                     <td>E_MAIL</td>
                                     <td colspan="2"><input type="text" id="email" name="email" placeholder=" email" size="30"
-                                     style="border-bottom:2px solid #D0D7DB; border-left:0px; border-right:0px; border-top:0px; background: transparent;"/></td>
+                                     style="border-bottom:2px solid #D0D7DB; border-left:0px; border-right:0px; border-top:0px; background: #f8f9fa;"/></td>
                                 </tr>
                                 <tr>
                                     <td>PASSWORD</td>
                                     <td colspan="2"><input type="password" id="login_password" name="password" placeholder="   PW" size="30"
-                                    style="border-bottom:2px solid #D0D7DB; border-left:0px; border-right:0px; border-top:0px;background: transparent;"/></td>
+                                    style="border-bottom:2px solid #D0D7DB; border-left:0px; border-right:0px; border-top:0px;background: #f8f9fa;"/></td>
                                 </tr>
                                 <tr>
                                     <td colspan="2">
