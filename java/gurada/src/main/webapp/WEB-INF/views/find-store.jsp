@@ -125,7 +125,6 @@
 								<button type="submit" id="findstore">
 									매장검색
 								</button>
-								
 							</div>
 						</div>
 					</form>
@@ -138,7 +137,6 @@
 								<input type="hidden" name='Latitude' value='${latitude}'>
 								<input type="hidden" name='longitude' value='${longitude}'>
 								<input type="hidden" name='tel' value='${store.tel}'>
-								
 									<h4>${store.name}</h4>
 									<h4>${test}</h4>
 								</td>

@@ -34,13 +34,14 @@ public class PayServiceImpl implements PayService {
 	 *  product 상품 재고 줄이기.
 	 */
     @Transactional
-	public int payInsert(OrderVO vo) throws Exception {
+	public int payInsert(OrderVO vo, int count) throws Exception {
 		int result = paydao.payInsert(vo);
 		CartVO cVo = new CartVO();
 		ProductVO pVo = new ProductVO();
 		pVo.setProductId(vo.getProductNo());
 		pVo = productdao.productDetail(pVo);
-		pVo.setQuantity(pVo.getQuantity()-1);
+		pVo.setQuantity(pVo.getQuantity()-count);
+		
 		if(pVo.getQuantity() < 0)
 		{
 			throw new Exception();
@@ -50,7 +51,9 @@ public class PayServiceImpl implements PayService {
 		int result2 = cartdao.cartDelete(cVo);
 		productdao.productModify(pVo);
 		if (result <= 0 || result2 <= 0)
-			return 0;
+			return 0; 
 		return 1;
 	}
+
+	
 }

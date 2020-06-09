@@ -11,6 +11,8 @@
 	
 	<insert id="payInsert" parameterType="pay">
 		insert into gurada_order(order_no, order_date, total_price, payment, product_no, member_no) 
-		values(seq_order_no.nextval, sysdate, #{total}, #{paymentMethod}, #{productNo}, #{memberNo})
+		values(seq_order_no.nextval, sysdate, #{total}, #{paymentMethod}, #{productNo}, '${memberNo}')
 	</insert>
+	
+	
 </mapper>

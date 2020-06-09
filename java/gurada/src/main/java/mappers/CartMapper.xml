@@ -12,7 +12,7 @@
 	<select id="cartSelect" parameterType="hashmap" resultType="cart">
 	select w.wishlist_no, w.member_no , p.name name , p.price price ,w.count count, (p.price*w.count) total
 	from wishlist w , product p , member m
-	where w.member_no = ${vo.memberNo} and p.product_id = w.product_id and p.product_id=w.product_id and M.NAME='${id}'
+	where w.member_no = ${vo.memberNo} and w.member_no = m.member_no and p.product_id= w.product_id
 	</select>
 	
 	<!-- 장바구니 중복 체크 -->

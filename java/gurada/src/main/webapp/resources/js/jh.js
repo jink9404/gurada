@@ -91,6 +91,9 @@ $('#visit').click(function(){
 	}
 })
 
+
+
+
 	
   
 

@@ -43,13 +43,13 @@
                             <table>
                                 <tr>
                                     <td>E_MAIL</td>
-                                    <td colspan="2"><input type="text" id="email" name="email" placeholder=" email" size="30"
-                                     style="border-bottom:2px solid #D0D7DB; border-left:0px; border-right:0px; border-top:0px; background: transparent;"/></td>
+                                    <td colspan="2"><input type="text" id="email" name="email" placeholder=" email" size="30" 
+                                     style="border-bottom:2px solid #D0D7DB; border-left:0px; border-right:0px; color:white; border-top:0px; background: transparent;"/></td>
                                 </tr>
                                 <tr>
                                     <td>PASSWORD</td>
-                                    <td colspan="2"><input type="password" id="login_password" name="password" placeholder="   PW" size="30"
-                                    style="border-bottom:2px solid #D0D7DB; border-left:0px; border-right:0px; border-top:0px;background: transparent;"/></td>
+                                    <td colspan="2"><input type="password"  id="login_password" name="password" placeholder="   PW" size="30"
+                                    style="border-bottom:2px solid #D0D7DB; color:white; border-left:0px; border-right:0px; border-top:0px;background: transparent;"/></td>
                                 </tr>
                                 <tr>
                                     <td colspan="2">
@@ -70,7 +70,7 @@
                 </td>
             </tr>
         </table>
-        <img id="login-header-up" src="./resources/img/arrow-icon.png" alt="" width="25px"/>
+        <img id="login-header-up" src="./resources/img/arrow-up.png" alt="" width="25px"/>
     </div>
     <!--Login Header Section End -->
     
@@ -95,13 +95,13 @@
                     				<span><a class="glyphicon glyphicon-list" href="member-management.do">회원관리</a></span>
                     			</c:when>
                     			<c:otherwise>
-                       	<a href="my-page.do">
-                        <img src="./resources/img/icons/man.png" alt=""/>
-                        </a>&nbsp;&nbsp;&nbsp;&nbsp;
-                        <a href="cartselect.do?memberNo=${sessionScope.memberNo}">
-                           <img src="./resources/img/icons/bag.png" alt=""/>
-                           <span>${fn:length(cartSelect) }</span>
-                       </a>&nbsp;&nbsp;&nbsp;&nbsp;
+                       				<a href="my-page.do">
+                        			<img src="./resources/img/icons/man.png" alt=""/>
+                        			</a>
+                        			<a href="cartselect.do">
+                           			<img src="./resources/img/icons/bag.png" alt=""/>
+                           			<span>${fn:length(cartSelect) }</span>
+                       				</a>&nbsp;&nbsp;&nbsp;&nbsp;
                    				</c:otherwise>
                     		</c:choose>
                      </c:if> 

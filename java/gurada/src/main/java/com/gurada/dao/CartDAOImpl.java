@@ -23,12 +23,10 @@ public class CartDAOImpl implements CartDAO{
 	
 	//각 아이디마다 장바구니 내역 보기
 	@Override
-	public List<CartVO> cartSelect(CartVO vo,String userId) {
-		System.out.println(userId);
+	public List<CartVO> cartSelect(CartVO vo, String userId) {
 		HashMap map = new HashMap();
 		map.put("vo", vo);
 		map.put("id", userId);
-		
 		return mybatis.selectList("cart.cartSelect",map);
 	}
 

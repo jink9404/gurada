@@ -117,7 +117,7 @@
 						<c:set var="sum2" value="${sum1+sum}"/>
 						<fmt:parseNumber var="test1" value="${sum2}" integerOnly="true"/>
 							<tr>
-								<td width='250'>2500</td>
+								<td width='250' id="delivery">2500</td>
 								<td width='250'>${test}</td>
 								<td width='240'>${test1}</td>
 								<td>

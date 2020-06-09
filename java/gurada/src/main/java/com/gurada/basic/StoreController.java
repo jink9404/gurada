@@ -21,7 +21,6 @@ public class StoreController {
 	// 매장 찾기
 	@RequestMapping("/find.do")
 	public String getStore(StoreVO vo, HttpServletRequest request) {
-
 		StoreVO nvo = StoreService.getStore(vo);
 		if(nvo != null) {
 			request.setAttribute("store", nvo);

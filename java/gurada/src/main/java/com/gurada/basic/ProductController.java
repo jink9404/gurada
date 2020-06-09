@@ -139,5 +139,5 @@ public class ProductController {
 	   public void product_viewindex(ProductVO vo, Model model) {
 	       model.addAttribute("viewlist",service.getProductlist(vo));
 	   }
-
+	   
 }

@@ -9,4 +9,5 @@ public interface PayDAO {
 	public List<CartVO> paySelect(CartVO vo);
 	
 	public int payInsert(OrderVO vo);
+	
 }

@@ -22,8 +22,8 @@ public class CartServiceImpl implements CartService{
 
 	//장바구니 내역보기
 	@Override
-	public List<CartVO> cartSelect(CartVO vo,String id) {
-	return cartDAO.cartSelect(vo,id);
+	public List<CartVO> cartSelect(CartVO vo, String userId) {
+	return cartDAO.cartSelect(vo, userId);
 		
 	}
 

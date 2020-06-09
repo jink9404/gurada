@@ -192,9 +192,13 @@
 														<th>수량</th>
 														<th>소계</th>
 													</tr>
+													<input type="hidden" name="memberNo" value="${pay[0].memberNo}"/>
 													<c:forEach items="${pay}" var="cart">
-													<input type="hidden" name="memberNo" value="${cart.memberNo}"/>
-													<input type="hidden" name="productNo" value="${cart.productId}"/>	
+													
+													<input type="hidden" name="productNo" value="${cart.productId}"/>
+													<input type="hidden" name="count" value="${cart.count}"/>
+													
+													
 													<tr>
 														<td>${cart.name}</td>
 														<td>${cart.price}</td>

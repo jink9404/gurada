@@ -1,5 +1,6 @@
 package com.gurada.dao;
 
+import java.util.HashMap;
 import java.util.List;
 
 import org.mybatis.spring.SqlSessionTemplate;
@@ -24,4 +25,5 @@ public class PayDAOImpl implements PayDAO{
 	public int payInsert(OrderVO vo) {
 		return mybatis.insert("pay.payInsert", vo);
 	}
+
 }
