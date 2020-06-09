@@ -17,6 +17,7 @@ public class ManagementController {
 	@Autowired
 	private ManagerService service;
 	
+	//일별 판매량 남자, 여자 ,총계 차트 출력 데이터
 	@RequestMapping(value = "/test.do")
 	public String saleCostView(Model model) {
 		List list = service.getSaleCost();
@@ -32,6 +33,10 @@ public class ManagementController {
 			tmpStr.append("eval(data.addRow(dataRow));\n");
 			sendData.append(tmpStr);
 		}
+		//자바스크립트에서 사용할 stmpStr
+		//tmpStr => eval(DataRow = [new Date('2020','05','09','08'),남자총계,여자총계,합계]);
+		//			eval(data.daaRow(dataRow));
+		//			Chart.jsp에서 사용
 		System.out.println(sendData);
 		model.addAttribute("chartData", sendData);
 		return "Chart";
