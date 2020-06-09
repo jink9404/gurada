@@ -94,6 +94,7 @@
                     				<span><a class="glyphicon glyphicon-list" href="order-management.do">주문내역</a></span><br/>
                     				<span><a class="glyphicon glyphicon-list" href="member-management.do">회원관리</a></span>
                     			</c:when>
+                    		
                     			<c:otherwise>
                        	<a href="my-page.do">
                         <img src="./resources/img/icons/man.png" alt=""/>
@@ -164,7 +165,7 @@
                     <div class="header-item">
                     <img src="./resources/img/icons/sales.png" alt=""/>
                     <p>Da Gurada.</p>
-                </div>
+                    </div>
                 </div>
             </div>
         </div>
