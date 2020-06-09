@@ -44,6 +44,7 @@ public class PayController {
 				message="결제에 실패했습니다. <br>올바르지 않은 상품정보";
 			}
     		model.addAttribute("message", message);
+    		session.removeAttribute("cartSelect");
     	}
     }
 }
