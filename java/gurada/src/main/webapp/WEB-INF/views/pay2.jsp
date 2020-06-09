@@ -234,8 +234,7 @@
 												<div class="d-flex">
 													<h4>TAX</h4>
 													<c:set var="sum1" value="${sum*0.1}" />
-													<fmt:parseNumber var="test" value="${sum1 }"
-														integerOnly="true" />
+													<fmt:parseNumber var="test" value="${sum1 }" />
 													<div class="ml-auto font-weight-bold">${test }</div>
 
 												</div>
@@ -248,8 +247,7 @@
 												<div class="d-flex gr-total">
 													<h5>총 결제 금액</h5>
 													<c:set var="sum2" value="${sum+sum1+2500}" />
-													<fmt:parseNumber var="test1" value="${sum2 }"
-														integerOnly="true" />
+													<fmt:parseNumber var="test1" value="${sum2 }"/>
 													<div class="ml-auto h5">${test1}
 														원<input type="hidden" name="total" value="${test1 }">
 													</div>
