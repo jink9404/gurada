@@ -17,6 +17,8 @@
 								#{gender}						
 						)
 	</insert>
+	
+	
 	<select id="selectMember" parameterType="member" resultType="member">
 		SELECT * FROM member WHERE EMAIL = #{email}
 		<if test="password!=null">
@@ -28,4 +30,17 @@
 		SET PASSWORD = #{password},GENDER=#{gender},post_code=#{postCode}, PHONE_NUMBER=#{phoneNumber}, ADDRESS1 = #{address1}, ADDRESS2 = #{address2} 
 		WHERE EMAIL=#{email}
 	</update>
+	
+	<select id="selectMemberList" parameterType="member" resultType="member">
+		select *
+		from member
+	</select>
+	
+	<select id="selectSearch" parameterType="member" resultType="member">
+		select *
+		from member
+		where name=#{name}
+	</select>
+	
+	
 </mapper>

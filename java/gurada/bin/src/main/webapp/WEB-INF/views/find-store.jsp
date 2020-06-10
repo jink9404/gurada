@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="zxx">
-	
+
 <head>
 
 
@@ -13,11 +13,17 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <script type="text/javascript"
 	src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript"
+	src="http://maps.google.com/maps/api/js?key=AIzaSyBD64wGh26USHyvlhtDJnbFzvcFD7vY0W4"></script>
+
+
+
 <script type="text/javascript">
 
+
 	function initialize() {
-		var mapLocation = new google.maps.LatLng(document.cookie.match('(^|;) ?' + 'Latitude' + '=([^;]*)(;|$)'),document.cookie.match('(^|;) ?' + 'Longitude' + '=([^;]*)(;|$)') ); // 지도에서 가운데로 위치할 위도와 경도
-		var markLocation = new google.maps.LatLng('36.322473', '127.412501'); // 마커가 위치할 위도와 경도
+		var mapLocation = new google.maps.LatLng(${latitude},${longitude}); // 지도에서 가운데로 위치할 위도와 경도
+		var markLocation = new google.maps.LatLng(${latitude},${longitude}); // 마커가 위치할 위도와 경도
 
 		var mapOptions = {
 			center : mapLocation, // 지도에서 가운데로 위치할 위도와 경도(변수)
@@ -97,14 +103,13 @@
 				<div class="col-lg-4">
 					<div class="page-breadcrumb">
 						<h2>
-							매장 찾기<span>.</span>
-							<br/><br/>
+							매장 찾기<span>.</span> <br />
+							<br />
 						</h2>
 					</div>
 				</div>
 			</div>
 		</div>
-
 		<!-- Page Add Section End -->
 
 		<!-- Contact Section Begin -->
@@ -114,33 +119,45 @@
 					<form action="find.do" class="contact-form">
 						<div class="row">
 							<div class="col-lg-6">
-								<input type="text" placeholder="주소, 매장입력.." name='location'>
+								<input type="text" placeholder="주소, 매장입력.." id="store" name='location' '>
 							</div>
 							<div>
-								<button type="submit">
-									<span class="glyphicon glyphicon-search"></span> 매장검색
+								<button type="submit" id="findstore">
+									매장검색
 								</button>
-								<button type="submit">방문예약</button>
 							</div>
 						</div>
 					</form>
-					<form class="addr-form">
+					<form action='booking-data.do' class="addr-form">
 						<table>
 							<tr>
 								<td>
-									<h4>검색결과 : 주소 나오는 테이블.</h4>
+								<input type="hidden" name='location' id="location" value='${store.location}'>
+								<input type="hidden" name='storeId' value='${store.storeId}'>
+								<input type="hidden" name='Latitude' value='${latitude}'>
+								<input type="hidden" name='longitude' value='${longitude}'>
+								<input type="hidden" name='tel' value='${store.tel}'>
+									<h4>${store.name}</h4>
+									<h4>${test}</h4>
 								</td>
 							</tr>
 							<tr>
-								<td>찾아오는길 설명글.</td>
+								<td>${store.location}</td>
 							</tr>
 							<tr>
-								<td>연락처</td>
+								<td>${store.tel}</td>
+							</tr>
+							<tr>
+								<td>
+								<button type="submit" id="visit" class='sh-button'>방문예약</button>
+								</td>
 							</tr>
 						</table>
+						
 					</form>
 					<br />
 					<div id="map-canvas" style="width: 1000px; height: 500px"></div>
+					
 				</div>
 			</div>
 		</div>
@@ -160,6 +177,8 @@
 	<script src="./resources/js/jquery.nice-select.min.js"></script>
 	<script src="./resources/js/mixitup.min.js"></script>
 	<script src="./resources/js/main.js"></script>
+	<script src="./resources/js/jh.js"></script>
+	<script src="./resources/js/sh.js"></script>
 </body>
 
 </html>

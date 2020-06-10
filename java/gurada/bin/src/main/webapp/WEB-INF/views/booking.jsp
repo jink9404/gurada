@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -11,10 +12,12 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <script type="text/javascript"
 	src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+	<script type="text/javascript"
+	src="http://maps.google.com/maps/api/js?key=AIzaSyBD64wGh26USHyvlhtDJnbFzvcFD7vY0W4"></script>
 <script type="text/javascript">
 	function initialize() {
-		var mapLocation = new google.maps.LatLng('36.322473', '127.412501'); // 지도에서 가운데로 위치할 위도와 경도
-		var markLocation = new google.maps.LatLng('36.322473', '127.412501'); // 마커가 위치할 위도와 경도
+		var mapLocation = new google.maps.LatLng(${blatitude},${blongitude}); // 지도에서 가운데로 위치할 위도와 경도
+		var markLocation = new google.maps.LatLng(${blatitude},${blongitude}); // 마커가 위치할 위도와 경도
 
 		var mapOptions = {
 			center : mapLocation, // 지도에서 가운데로 위치할 위도와 경도(변수)
@@ -90,31 +93,34 @@
 			<div class="row">
 				<div class="col-lg-8">
 					<div class="page-breadcrumb">
-
 						<h2>
 							매장방문 예약<span>.</span>
 						</h2>
 						<table class='resertable-jh'>
 							<tr>
-								<td>주소 : 대한민국 서울시 영등포구 영중로 9 신세계백화점 영등포점 1F<br /> 매장번호 :
-									+82 2 26391901
+								<td>주소 : ${bstore.location}<br /> 
+								매장번호 : ${bstore.tel}
+									
 								</td>
 
 							</tr>
-							<hr />
+							<hr/> 
 						</table>
-
+						
+						<form action="reservation-rs.do">
 						<table class='contact-form1'>
 							<tr class='tr'>
-								<td><input type="text" placeholder="이름(성제외)*" /> <input
-									type="text" placeholder="성*" /></td>
+								<td>
+								<input type="hidden" name='storeId' value='${bstore.storeId}'/>
+								<input type="text" name='fullName' placeholder="이름*" />
+								</td>
 							</tr>
 							<tr class='tr'>
-								<td><input type="text" placeholder="연락처"> 방문날짜 <input
-									type='date' value="방문 날짜" /></td>
+								<td><input type="text" name='phoneNumber' placeholder="연락처"> 
+								방문날짜 <input type='date' name='bookingDate' value="방문 날짜" /></td>
 							</tr>
 							<tr class='tr'>
-								<td>시간대 선택 <select>
+								<td>시간대 선택 <select name='time'>
 										<option>10:00</option>
 										<option>11:00</option>
 										<option>13:00</option>
@@ -128,23 +134,28 @@
 								</select>
 								</td>
 							</tr>
+							
 						</table>
 						<hr />
+						<div class='small-button-sh'>
+						<button type="submit">예약 하기</button>
+						<button><a href='find-store.do'>매장 찾기</a></button>
+					</div>
+						</form>
+						
 					</div>
 					<br />
 					<br />
-					<div class='small-button-sh'>
-						<button>예약 하기</button>
-						<button>매장 찾기</button>
-					</div>
+					
+				
 				</div>
+				
 				<div id='map-canvas' class="map-canvas"
 					style="width: 550px; height: 315px"></div>
 			</div>
 		</div>
 	</section>
-	<div id='map-canvas' class="map-canvas"
-		style="width: 550px; height: 315px;"></div>
+
 	<!-- Contact Section End -->
 	<br>
 	<br>

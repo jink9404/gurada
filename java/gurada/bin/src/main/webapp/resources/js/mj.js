@@ -3,18 +3,30 @@
  */
 
 $(function(){
+    //*****************
+    //header.jsp
+    //로그인 클릭시 슬라이드로 로그인화면 보여줌
+    //*****************
     $("#login-header-up").click(function(){
         $(".login-header").slideUp(500);
     });
-
+    
     $("#login").click(function(){
         $(".login-header").slideDown(500);
     });
+    //*****************
+    //signup-form.jsp
+    //submit 엔터로 날라가는거 막기
+    //*****************
     $('#frm input[type="text"]').keydown(function() {
         if (event.keyCode === 13) {
             event.preventDefault();
         }
     });
+    //*****************
+    //header.jsp
+    //ajax로 로그인후 새로고침 변환
+    //*****************
     $('#frm').submit(function(){
     	event.preventDefault();
         if($("#login_password").val()===""){
@@ -44,23 +56,25 @@ $(function(){
     });
     
    
-    
+    //*****************
+    //header.jsp
+    //ajax로 로그아웃 요청 보내고 성공시 리로드(index화면으로)
+    //*****************
     $('#logout').click(function(){
     	event.preventDefault();
         $.ajax({
             type:'post',
-            async:true,
+            async : true,
 			url : 'logout.do',
             contentType :'application/x-www-form-urlencoded;charset=UTF-8',
             success : function(resultData){
-            	window.location.reload();	
+            	//window.location.reload();
+            	window.location = "index2.jsp";
 //            	window.location=document.referrer;
             }
         });	
     });
-    $('#updateform').submit(function(){
-        
-    });
+
     
     $('#update_password1').focusout(function () {
         var pwd1 = $("#update_password1").val();
@@ -134,12 +148,32 @@ $(function(){
    
         var pwd1 = $("#signup_password1").val();
         var regexp = RegExp("[a-zA-Z0-9]{8,16}");
-        if(regexp.test(pwd1)===false)
+        if(regexp.test(pwd1)===false){
             $("#pass").html("영문자 혹은 0-9 8자리~16자리");
-        else
+            passcheck = false;
+        }
+        else{
             $("#pass").html("유효한 비밀번호입니다.");
+            passcheck = true;
+        }
     });
     
+    var passcheck = false;
+    $('#signup_password1').keydown(function () {
+   
+        var pwd1 = $("#signup_password1").val();
+        var regexp = RegExp("[a-zA-Z0-9]{8,16}");
+        if(regexp.test(pwd1)===false){
+            $("#pass").html("영문자 혹은 0-9 8자리~16자리");
+            passcheck = false;
+        }
+        else{
+            $("#pass").html("유효한 비밀번호입니다.");
+            passcheck = true;
+        }
+    });
+    
+   
     $('#signup_password2').focusout(function () {
         var pwd1 = $("#signup_password1").val();
         var pwd2 = $("#signup_password2").val();
@@ -149,10 +183,81 @@ $(function(){
         } else if (pwd1 != "" || pwd2 != "") {
             if (pwd1 == pwd2) {
                 $("#passcheck").html("비밀번호가 일치합니다");
+                passcheck = true;
             } else {
                 $("#passcheck").html("비밀번호가 불일치합니다");
+                passcheck = false;
             }
         }
+    });
+    //*****************
+    //signup-form.jsp
+    //취소버튼
+    //*****************
+    $('.signup-btn button').click(function(){
+       event.preventDefault();
+        history.back(); //이전 히스토리 가기
+    });
+    
+    //*****************
+    //signup-form.jsp
+    //submit validation check
+    //*****************
+    $('#signup_form input[type=submit]').click(function(){
+        var vali = false;
+        var passvali=/[0-9a-zA-Z]{8,16}/i;
+        var emailvali=/^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+        var phonevali=/[0-9]{10,13}/;
+        if($('#name').val()==="")
+        {
+            alert("이름을 작성하세요");return false;        
+        }
+        else if($('#signup_password1').val()==="")
+        {
+            alert("비밀번호를 입력하세요.");return false;    
+        }else if(!passvali.test($('#signup_password1').val())){
+            alert("비밀번호 양식이 다릅니다."); return false;  
+        }
+        else if($('#signup_password2').val()==="")
+        {
+            alert("비밀번호 확인을 입력하세요."); return false;       
+        }
+        else if($('#signup_password1').val()!==$('#signup_password2').val())
+        {
+            alert("비밀번호 확인이 다릅니다.");return false;        
+        }
+        else if($('#signupemail').val()==="")
+        {
+            alert("이메일을 입력하세요.");return false;
+        }else if(!emailvali.test($('#signupemail').val())){
+            alert("이메일 양식이 다릅니다.");return false;   
+        }
+        else if($('#phoneNumber').val()===""){
+            alert("전화번호를 입력하세요.");return false;
+        }
+        else if(phonevali.test($('#phoneNumber').val())){
+            alert("전화번호는 숫자 10~13자리입니다.");return false;
+        }
+        else if($("input:checkbox[id=essencialCheck1]").is(":checked") == false) {
+            alert("개인정보 처리방침에 동의 하셔야합니다.");
+            return false;
+        }
+        else if($("input:checkbox[id=essencialCheck2]").is(":checked") == false) {
+            alert("개인정보의 수집 및 이용에 동의 하셔야합니다.");
+            return false;
+        }
+        else
+            vali = true;
+        if(vali === true)
+            $('#signup_form').submit();
+    });
+    //*****************
+    //update_member.jsp
+    //취소버튼
+    //*****************
+    $('.update-btn button').click(function(){
+        event.preventDefault();
+        history.back(); //이전 히스토리 가기
     });
     
     function execDaumPostcode() {

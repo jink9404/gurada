@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="manager">
+
+	<select id="getSaleCost" parameterType="hashmap" resultType="hashmap">
+		SELECT a.ORDER_DATE, NVL(man_cost,0) man_cost, NVL(woman_cost,0) woman_cost,NVL(man_cost,0)+ NVL(woman_cost,0) TOTAL_COST
+		FROM               (
+		                       SELECT TO_CHAR(ORDER_DATE,'YYYY-MM-DD') ORDER_DATE, SUM(total_price) man_cost 
+		                       FROM gurada_order o, product p
+		                       WHERE o.PRODUCT_NO = p.PRODUCT_ID AND gender = '남자'
+		                       GROUP BY TO_CHAR(ORDER_DATE,'YYYY-MM-DD')
+		                    )   a
+		FULL OUTER JOIN   (
+		                    SELECT TO_CHAR(ORDER_DATE,'YYYY-MM-DD') ORDER_DATE, SUM(total_price) woman_cost
+		                    FROM gurada_order o, product p
+		                    WHERE o.PRODUCT_NO = p.PRODUCT_ID AND gender = '여자'
+		                    GROUP BY TO_CHAR(ORDER_DATE,'YYYY-MM-DD')
+		                   )   b
+		ON  (
+		        a.ORDER_DATE = b.ORDER_DATE
+		    )
+		ORDER BY TO_DATE(ORDER_DATE)
+	</select>
+	
+</mapper>

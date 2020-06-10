@@ -76,7 +76,7 @@
 								</div>
 								<br>
 								<div class="mb-3">
-									<label for="username" >비밀번호 *</label>
+									<label for="signup_password1" >비밀번호 *</label>
 									<div class="input-group">
 										<input type="password" name="password" class="form-control" id="signup_password1"
 											placeholder="" required>
@@ -104,7 +104,7 @@
 
 								</div>
 								<div class="mb-3">
-									<label for="address">전화번호(-없이) *</label> <input type="text"
+									<label for="phoneNumber">전화번호(-없이) *</label> <input type="text"
 										class="form-control" name="phoneNumber" placeholder="" pattern="[0-9]{10,13}" required>
 
 								</div>
@@ -113,16 +113,14 @@
 
 								<hr class="mb-4">
 								<div class="custom-control custom-checkbox">
-									<input type="checkbox" class="custom-control-input"
-										id="same-address"> <label class="custom-control-label"
-										for="same-address">본인은 <a href="#">개인 정보 처리방침</a> 을 읽고
+									<input type="checkbox" id="essencialCheck1" class="custom-control-input"> <label class="custom-control-label"
+										for="essencialCheck1">본인은 <a href="#">개인 정보 처리방침</a> 을 읽고
 										이에 동의 합니다. 본인은 만 14세 이상임을 확인합니다.(필수)
 									</label>
 								</div>
 								<div class="custom-control custom-checkbox">
-									<input type="checkbox" class="custom-control-input"
-										id="save-info"> <label class="custom-control-label"
-										for="save-info"><a href="#">개인정보의 수집 및 이용</a>에 대한
+									<input type="checkbox" id="essencialCheck2" class="custom-control-input"> <label class="custom-control-label"
+										for="essencialCheck2" ><a href="#">개인정보의 수집 및 이용</a>에 대한
 										동의(필수)</label>
 								</div>
 								<hr class="mb-4">
@@ -132,8 +130,8 @@
 										<td>마케팅(선택)</td>
 									</tr>
 									<tr>
-										<td><input type="radio" name="marketting"><span>&nbsp;동의합니다.</span></td>
-										<td><input type="radio" name="marketting" checked><span>&nbsp;동의하지
+										<td><input type="radio" id="marketting" name="marketting"><span>&nbsp;동의합니다.</span></td>
+										<td><input type="radio" id="marketting" name="marketting" checked><span>&nbsp;동의하지
 												않습니다.</span></td>
 									</tr>
 									<tr>

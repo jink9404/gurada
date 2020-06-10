@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -47,58 +48,46 @@
 						매장 방문 예약 현황<span>.</span>
 					</h2>
 					<br />
-					<form method="get" action="">
+					<form method="get" action="booking-search.do">
 						<h3>예약 검색</h3>
 						<br>
 						<div>
-							<select class="form-control"
+							<select class="form-control" name='search'
 								style="width: 100px; height: 44px; display: inline-block">
-								<option value="">성함</option>
-								<option value="">연락처</option>
-								<option value="">전체</option>
-							</select> <input class="col-form-label" type="text" size=80>
-							<button>검색</button>
+								<option value='oname'>성함</option>
+								<option value='otel'>연락처</option>
+							</select> <input class="col-form-label" type="text" size=80 name='value'>
+
+							<button class='small-button2' type='submit'>검색</button>
 						</div>
-						<br>
-						<table class="type09">
-							<tbody>
-								<tr>
-									<th width='300'>예약자 성함</th>
-									<th width='700'>방문 매장</th>
-									<th width='500'>방문 날짜</th>
-									<th width='500'>방문 시간</th>
-									<th width='800'>연락처</th>
-								</tr>
-								<tr>
-									<td>김지섭</td>
-									<td>22</td>
-									<td>salcho94</td>
-									<td>010-5788-8298</td>
-									<td>salcho94@naver.com</td>
-								</tr>
-								<tr>
-									<td>오재호</td>
-									<td>50</td>
-									<td>5박사</td>
-									<td>010-5555-5555</td>
-									<td>5555@naver.com</td>
-								</tr>
-								<tr>
-									<td>김명진</td>
-									<td>77</td>
-									<td>명왕성</td>
-									<td>010-7777-7777</td>
-									<td>mvc@naver.com</td>
-								</tr>
-								<tr>
-									<td>문소희</td>
-									<td>11</td>
-									<td>moon</td>
-									<td>010-0000-0000</td>
-									<td>moon@naver.com</td>
-								</tr>
-							</tbody>
-						</table>
+						<hr>
+							<div class="cart-table">
+								<table>
+									<tbody>
+										<tr>
+											<td width='300'>예약자 성함</td>
+											<td width='300'>방문날짜</td>
+											<td width='300'>방문시간</td>
+											<td width='300'>연락처</td>
+											<td width='350'>매장명</td>
+											<td width='300'>취소</td>
+										</tr>
+
+										<c:forEach items="${search}" var="search">
+											<tr>
+												<td>${search.fullName}</td>
+												<td>${search.bookingDate}</td>
+												<td>${search.time}</td>
+												<td>${search.phoneNumber}</td>
+												<td>${search.name}</td>
+												<td><a href='booking-delete.do?bookingId=${search.bookingId}'>예약 취소</a></td>
+											</tr>
+										</c:forEach>
+
+									</tbody>
+								</table>
+								<hr/>
+							</div>
 						<br />
 					</form>
 				</div>
@@ -116,7 +105,7 @@
 	<script src="./resources/js/mixitup.min.js"></script>
 	<script src="./resources/js/main.js"></script>
 	<script src="./resources/js/test.js"></script>
-
+	<script src="./resources/js/sh.js"></script>
 
 </body>
 

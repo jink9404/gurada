@@ -4,14 +4,40 @@
 <mapper namespace="StoreDAO">
 
 
-
-	 <select id="getStore" parameterType="store" resultType="store">
+	<!-- 매장 검색하기 -->
+	<select id="getStore" parameterType="store" resultType="store">
 		<![CDATA[
 		select * from store where LOCATION LIKE '%'|| #{location} ||'%'
 		]]>
 	</select>
-	
 
+	<!-- 매장 예약하기 -->
+	<insert id="bookingInsert" parameterType="hashmap">
+		insert into
+		BOOKING(BOOKING_ID,FULL_NAME,STORE_ID,BOOKING_DATE,PHONE_NUMBER,TIME)
+		values(seq_booking_no.nextval, #{fullName} ,#{storeId} ,#{BookingDate} ,#{PhoneNumber},#{time})
+	</insert>
 	
- 
+	<!-- 매장예약현황 검색(관리자페이지) -->
+	<select id="bookingSearch" parameterType="booking"
+		resultType="booking">
+
+		select b.BOOKING_ID BOOKING_ID,b.FULL_NAME FULL_NAME, s.STORE_ID STORE_ID,s.NAME NAME,
+			   TO_CHAR(b.BOOKING_DATE,'YYYY-MM-DD')as BOOKING_DATE,b.PHONE_NUMBER PHONE_NUMBER,
+			   b.TIME TIME from booking b,store s
+		<if test="fullName!=null">
+			where b.store_id=s.store_id and FULL_NAME LIKE '%'|| #{fullName} ||'%'
+		</if>
+		<if test="phoneNumber != null">
+			where b.store_id=s.store_id and PHONE_NUMBER LIKE '%'|| #{phoneNumber}
+			||'%'
+		</if>
+	</select>
+	
+	<delete id="bookingDelete" parameterType="booking">
+		delete from booking where BOOKING_ID = #{bookingId}
+	</delete>
+
+
+
 </mapper>

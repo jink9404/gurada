@@ -12,6 +12,9 @@
  		<typeAlias alias="product" type="com.gurada.domain.ProductVO"/>
  		<typeAlias alias="board" type="com.gurada.domain.BoardVO"/>
  		<typeAlias alias="store" type="com.gurada.domain.StoreVO"/>
+ 		<typeAlias alias="cart" type="com.gurada.domain.CartVO"/>
+ 		<typeAlias alias="booking" type="com.gurada.domain.BookingVO"/>
+ 		<typeAlias alias="pay" type="com.gurada.domain.OrderVO"/>
  	</typeAliases>
  	
 

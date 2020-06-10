@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="orderDAO">
+
+	<!-- 관리자페이지 주문내역리스트 hashMap -->
+	<resultMap type="hashmap" id="selectList">
+		<id column="total_price" property="total" />
+		<id column="m_name" property="mname" />
+		<id column="order_date" property="orderDate" />
+		<id column="order_no" property="orderNo" />
+		<id column="p_name" property="pname" />
+		<id column="payment" property="payment" />
+	</resultMap>
+
+	<!-- 관리자페이지 주문내역리스트 select문 -->
+	<select id="selectList" parameterType="pay"
+		resultMap="selectList">
+		select
+		o.total_price total_price,m.name
+		m_name,TO_CHAR(o.order_date,'YYYY-MM-DD') order_date,
+		o.order_no
+		order_no,p.name p_name,o.payment payment
+
+		from GURADA_ORDER o ,MEMBER m
+		,PRODUCT p
+
+		where o.member_no = m.member_no and o.product_no =
+		p.product_id and
+		o.payment =#{paymentMethod} and TO_CHAR(ORDER_DATE,
+		'YYYY-MM-DD') =#{orderDate}
+	</select>
+
+	<!-- 마이페이지 주문내역리스트 hashMap -->
+	<resultMap type="hashmap" id="mypage">
+		<id column="total_price" property="total" />
+		<id column="order_date" property="orderDate" />
+		<id column="order_no" property="orderNo" />
+		<id column="p_name" property="pname" />
+		<id column="price" property="price" />
+	</resultMap>
+
+	<!-- 관리자페이지 주문내역리스트 select문 -->
+	<select id="mypageOrder" parameterType="String" resultMap="mypage">
+		select
+		o.total_price total_price,TO_CHAR(o.order_date,'YYYY-MM-DD') order_date,
+		o.order_no order_no,p.name p_name,p.PRICE price
+
+		from GURADA_ORDER o ,MEMBER m,PRODUCT p
+
+		where o.member_no = m.member_no and o.product_no =
+		p.product_id
+		and m.name=#{userId}
+	</select>
+<!-- 	페이징 -->
+	<select id="mypageOrderPaging" parameterType="hashmap" resultMap="mypage">
+	SELECT total_price,order_date, order_no,p_name, price
+	FROM(select ROWNUM RN, o.total_price total_price,TO_CHAR(o.order_date,'YYYY-MM-DD') order_date,	o.order_no order_no,p.name p_name,p.PRICE price
+	
+	from GURADA_ORDER o ,MEMBER m,PRODUCT p
+	
+	where o.member_no = m.member_no and o.product_no =	p.product_id and m.name=#{userId}
+	Order by o.order_date desc)
+	WHERE RN BETWEEN #{pagingVO.start} and #{pagingVO.end}
+	
+	</select>
+	<select id="mypageCount" parameterType="string" resultType="int">
+		select
+		count(*)
+
+		from GURADA_ORDER o ,MEMBER m,PRODUCT p
+
+		where o.member_no = m.member_no and o.product_no =
+		p.product_id
+		and m.name=#{userId}
+	</select>
+	<!-- 주문 취소 하기 -->
+	<delete id='orderDelete' parameterType="String">
+	 	delete from GURADA_ORDER where ORDER_NO = #{id}
+	</delete>
+
+</mapper>
