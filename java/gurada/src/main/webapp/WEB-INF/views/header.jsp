@@ -120,7 +120,7 @@
                         </li>
                         <li><a href="categories.do?category=suit&gender=women">WOMEN</a>    
                             <ul class="sub-menu">
-                                <li><a href="categories.do?category=suit&gender=woman">슈트</a></li>
+                                <li><a href="categories.do?category=suit&gender=woman">아우터</a></li>
                                 <li><a href="categories.do?category=dress&gender=woman">드레스</a></li>
                                 <li><a href="categories.do?category=bag&gender=woman">가방</a></li>
                                 <li><a href="categories.do?category=top&gender=woman">상의</a></li>

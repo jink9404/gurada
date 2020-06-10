@@ -26,11 +26,11 @@
 			   TO_CHAR(b.BOOKING_DATE,'YYYY-MM-DD')as BOOKING_DATE,b.PHONE_NUMBER PHONE_NUMBER,
 			   b.TIME TIME from booking b,store s
 		<if test="fullName!=null">
-			where b.store_id=s.store_id and FULL_NAME LIKE '%'|| #{fullName} ||'%'
+			where b.store_id=s.store_id and FULL_NAME LIKE '%'|| #{fullName} ||'%' order by BOOKING_DATE desc
 		</if>
 		<if test="phoneNumber != null">
 			where b.store_id=s.store_id and PHONE_NUMBER LIKE '%'|| #{phoneNumber}
-			||'%'
+			||'%' and order by BOOKING_DATE desc
 		</if>
 	</select>
 	
