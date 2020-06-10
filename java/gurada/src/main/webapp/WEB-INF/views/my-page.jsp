@@ -135,6 +135,8 @@
 	<script src="./resources/js/mixitup.min.js"></script>
 	<script src="./resources/js/main.js"></script>
 	<script src="./resources/js/sh.js"></script>
+	
+	<jsp:include page="footer.jsp" />
 </body>
 
 </html>
