@@ -76,7 +76,7 @@
 					<div class="cart-page">
 						<div class="container">
 							<div class="cart-table">
-								<table>
+								<table class='table-hover'>
 									<thead>
 										<tr>
 											<th>주문일자</th>
@@ -88,8 +88,9 @@
 										</tr>
 									</thead>
 
-									<tbody>
-										<c:forEach items="${order}" var="order">
+
+									<c:forEach items="${order}" var="order">
+										<tbody>
 											<tr>
 												<td>${order.orderDate}</td>
 												<td>${order.orderNo}</td>
@@ -98,8 +99,9 @@
 												<td>${order.total}</td>
 												<td>${order.payment}</td>
 											</tr>
-										</c:forEach>
-									</tbody>
+										</tbody>
+									</c:forEach>
+
 								</table>
 								<hr>
 							</div>

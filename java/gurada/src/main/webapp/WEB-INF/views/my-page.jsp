@@ -65,7 +65,7 @@
 			<div class="cart-page">
 				<div class="container">
 					<div class="cart-table">
-						<table>
+						<table class='table-hover'>
 							<thead>
 								<tr>
 									<th>주문번호</th>
@@ -77,8 +77,9 @@
 								</tr>
 							</thead>
 
-							<tbody>
-								<c:forEach items="${order}" var="order">
+
+							<c:forEach items="${order}" var="order">
+								<tbody>
 									<tr>
 										<td>${order.orderNo}</td>
 										<td>${order.orderDate}</td>
@@ -86,30 +87,37 @@
 										<td>${order.price}</td>
 										<td>${order.total}</td>
 										<td class="small-button">
-											<button><a id='obtn' href='orderDelete.do?id=${order.orderNo}'>X</a></button>
+											<button>
+												<a id='obtn' href='orderDelete.do?id=${order.orderNo}'>X</a>
+											</button>
 										</td>
 									</tr>
-								</c:forEach>
-							</tbody>
+								</tbody>
+							</c:forEach>
+
 						</table>
 						<hr>
 					</div>
-					<div style="display: block; text-align: center;">		
+					<div style="display: block; text-align: center;">
 						<c:if test="${paging.startPage != 1 }">
-							<a href="my-page.do?nowPage=${paging.startPage - 1 }&cntPerPage=${paging.cntPerPage}">&lt;</a>
+							<a
+								href="my-page.do?nowPage=${paging.startPage - 1 }&cntPerPage=${paging.cntPerPage}">&lt;</a>
 						</c:if>
-						<c:forEach begin="${paging.startPage }" end="${paging.endPage }" var="p">
+						<c:forEach begin="${paging.startPage }" end="${paging.endPage }"
+							var="p">
 							<c:choose>
 								<c:when test="${p == paging.nowPage }">
 									<b>${p }</b>
 								</c:when>
 								<c:when test="${p != paging.nowPage }">
-									<a href="my-page.do?nowPage=${p }&cntPerPage=${paging.cntPerPage}">${p }</a>
+									<a
+										href="my-page.do?nowPage=${p }&cntPerPage=${paging.cntPerPage}">${p }</a>
 								</c:when>
 							</c:choose>
 						</c:forEach>
 						<c:if test="${paging.endPage != paging.lastPage}">
-							<a href="my-page.do?nowPage=${paging.endPage+1 }&cntPerPage=${paging.cntPerPage}">&gt;</a>
+							<a
+								href="my-page.do?nowPage=${paging.endPage+1 }&cntPerPage=${paging.cntPerPage}">&gt;</a>
 						</c:if>
 					</div>
 				</div>

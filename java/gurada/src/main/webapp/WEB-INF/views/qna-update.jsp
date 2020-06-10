@@ -76,7 +76,7 @@
                                 <textarea placeholder="내용" name='contents'><%= contents%></textarea>
                             </div>
                             <div class="col-lg-12 text-right" id="small-button-update">
-                                <button type="submit">문의글 등록</button> 
+                                <button type="submit">문의글 수정</button> 
                             </div>    
                         </div>
                     </form> 

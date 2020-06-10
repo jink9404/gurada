@@ -61,33 +61,38 @@
 							<button class='small-button2' type='submit'>검색</button>
 						</div>
 						<hr>
-							<div class="cart-table">
-								<table>
+						<div class="cart-table">
+							<table class='table-hover'>
+								<thead>
+									<tr>
+										<th width='300'>예약자 성함</th>
+										<th width='300'>방문날짜</th>
+										<th width='300'>방문시간</th>
+										<th width='300'>연락처</th>
+										<th width='350'>매장명</th>
+										<th width='300'>취소</th>
+									</tr>
+								</thead>
+
+								<c:forEach items="${search}" var="search">
 									<tbody>
 										<tr>
-											<td width='300'>예약자 성함</td>
-											<td width='300'>방문날짜</td>
-											<td width='300'>방문시간</td>
-											<td width='300'>연락처</td>
-											<td width='350'>매장명</td>
-											<td width='300'>취소</td>
+											<td>${search.fullName}</td>
+											<td>${search.bookingDate}</td>
+											<td>${search.time}</td>
+											<td>${search.phoneNumber}</td>
+											<td>${search.name}</td>
+											<td><a
+												href='booking-delete.do?bookingId=${search.bookingId}'>예약
+													취소</a></td>
 										</tr>
+								</c:forEach>
 
-										<c:forEach items="${search}" var="search">
-											<tr>
-												<td>${search.fullName}</td>
-												<td>${search.bookingDate}</td>
-												<td>${search.time}</td>
-												<td>${search.phoneNumber}</td>
-												<td>${search.name}</td>
-												<td><a href='booking-delete.do?bookingId=${search.bookingId}'>예약 취소</a></td>
-											</tr>
-										</c:forEach>
 
-									</tbody>
-								</table>
-								<hr/>
-							</div>
+								</tbody>
+							</table>
+							<hr />
+						</div>
 						<br />
 					</form>
 				</div>
