@@ -22,13 +22,14 @@ public class ManagementController {
 	public String saleCostView(Model model) {
 		List list = service.getSaleCost();
 		StringBuffer sendData = new StringBuffer();
+		
 		for(int i= 0 ; i<list.size();i++)
 		{
 			StringBuffer tmpStr = new StringBuffer();
 			HashMap map = (HashMap)list.get(i);
-			StringTokenizer st = new StringTokenizer((String)map.get("ORDER_DATE"),"-");
+			StringTokenizer st = new StringTokenizer((String)map.get("ORDER_DATE"),"-"); // "2020-05-10"
 			tmpStr.append("eval(dataRow = [new Date(");
-			tmpStr.append("\'"+st.nextToken()+"\', \'"+(Integer.parseInt(st.nextToken())-1)+"\',\'"+st.nextToken()+"\',\'8\'),");
+			tmpStr.append("\'"+st.nextToken()+"\', \'"+(Integer.parseInt(st.nextToken())-1)+"\',\'"+(Integer.parseInt(st.nextToken()))+"\',\'8\'),");
 			tmpStr.append((BigDecimal)map.get("MAN_COST")+","+(BigDecimal)map.get("WOMAN_COST")+","+(BigDecimal)map.get("TOTAL_COST")+"]);\n");
 			tmpStr.append("eval(data.addRow(dataRow));\n");
 			sendData.append(tmpStr);
