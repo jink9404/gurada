@@ -106,21 +106,27 @@
                                 <table>
                                     <tr>
                                         <td>
-                                        	<form>
-                                           		<button class = 'small-button2'>
+                                        	<form action="pay3.do" method="get">
+                                        		<input type="hidden" id="pdSession" name="memberNo" value="${sessionScope.memberNo}"/>
+                                        		<input type="hidden" name="price" value="${detail.price}"/>
+                                        		<input type="hidden" name="name" value="${detail.name}"/>
+                                        		<input id="quantity1" type="hidden" name="count"/>
+                                        		<input id="total2" type="hidden" name="total"/>
+                                        		<input type="hidden" name="productId" value="${detail.productId}"/>
+                                           		<button type="submit" class = 'small-button2'>
                                            		      구매&nbsp;하기
                                            		</button>
                                            </form>
                                         </td>
                                         <td>
-                                           <form action="cart.do" method="post">
+                                           <form action="cart.do" method="get">
                                         		<input type="hidden" name="name" value="${detail.name}"/>
                                            		<input type="hidden" name="price" value="${detail.price}"/>
-                                           		<input id="quantity" type="hidden" name="count" value/>
-                                           		<input id="total1" type="hidden" name="total" value/>
+                                           		<input id="quantity2" type="hidden" name="count"/>
+                                           		<input id="total3" type="hidden" name="total"/>
                                            		<input type="hidden" name="productId" value="${detail.productId}"/>
-                                           		<input type="hidden" id="pdSession" name="memberNo" value="${sessionScope.memberNo}"/> 
-                                                <input id="submit" type="submit" class= 'small-button2' value="장바구니 추가"/>
+                                           		<input type="hidden" id="pdSession1" name="memberNo" value="${sessionScope.memberNo}"/> 
+                                                <input id="submit1" type="submit" class= 'small-button2' value="장바구니 추가"/>
                                            </form>
                                         </td>
                                     </tr>

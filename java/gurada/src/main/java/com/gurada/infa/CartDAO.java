@@ -18,4 +18,6 @@ public interface CartDAO {
 	public int cartDelete(int id);  
 	
 	public int cartDelete(CartVO vo);
+	
+	public void buyProduct(CartVO vo);
 }

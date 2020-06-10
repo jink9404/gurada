@@ -11,15 +11,18 @@ proQty.on('click', '.qtybtn', function () {
         var newVal = parseInt(oldValue) + 1;
         var price = parseInt($('#price').text());
         $('#total').text(newVal*price);
-        $('#total1').val(newVal*price);
-        $('#quantity').val(newVal);
+        $('#total2').val(newVal*price);
+        $('#total3').val(newVal*price);
         $('#quantity1').val(newVal);
+        $('#quantity2').val(newVal);
     } else {
         var newVal1 = parseInt(oldValue) - 1;
         var price = parseInt($('#price').text());
         $('#total').text(newVal1*price);
-        $('#quantity').val(newVal);
-        $('#total1').text(parseInt(newVal1*price));
+        $('#quantity1').val(newVal);
+        $('#quantity2').val(newVal);
+        $('#total2').val(parseInt(newVal1*price));
+        $('#total3').val(parseInt(newVal1*price));
     	// Don't allow decrementing below zero
     	if (oldValue > 0) {
             var newVal = parseFloat(oldValue) - 1;
@@ -36,6 +39,25 @@ $('#back').click(function(){
 
 
 $('#submit').click(function(){
+	alert($('#total').val())
+	var session = $('#pdSession').val();
+	
+	if($('#product-quantity').val() == 0){
+		alert("수량을 확인하여 주십시오");
+		event.preventDefault();
+	}else{
+		if(session == ""){
+			alert("로그인 후 이용 가능합니다");
+			event.preventDefault();
+		}else{
+			alert("상품이 장바구니에 추가되었습니다");
+			return true;
+		}
+		
+	}
+});
+
+$('#submit1').click(function(){
 	var session = $('#pdSession').val();
 	
 	if($('#product-quantity').val() == 0){

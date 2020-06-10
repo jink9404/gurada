@@ -140,4 +140,6 @@ public class ProductController {
 	       model.addAttribute("viewlist",service.getProductlist(vo));
 	   }
 	   
+	 
+	   
 }

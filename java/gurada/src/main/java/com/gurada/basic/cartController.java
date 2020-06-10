@@ -24,30 +24,33 @@ public class cartController {
    // 없다면 insert 장바구니내역에 추가.
    // 있다면 update로 수량 수정.
    // 이전 페이지로 화면 전환.
-   @RequestMapping(value = "cart.do", method = RequestMethod.POST)
+   @RequestMapping(value = "/cart.do")
    public String cartInsert(CartVO vo, HttpSession session) {
+	   System.out.println("0");
       String encodedParam = null;
       try {
          encodedParam = URLEncoder.encode(vo.getName(), "UTF-8");
       } catch (Exception e) {
       }
-
       int result = cartservice.cartCheck(vo);
       if (result == 0) {
+    	  System.out.println("1");
          int result1 = cartservice.cartInsert(vo);
          if (result1 == 0) {
+        	 System.out.println("2");
         	 //장바구니 cartSelect 갱신
         	 session.setAttribute("cartSelect", cartservice.cartSelect(vo, (String) session.getAttribute("UserID")));
             return "redirect:cartSelect.do";
          }
       } else if (result != 0) {
+    	  System.out.println("3");
          int result1 = cartservice.cartUpdate(vo);
-
          if (result1 == 0) {
         	 session.setAttribute("cartSelect", cartservice.cartSelect(vo,(String) session.getAttribute("UserID")));
             return "redirect:cartSelect.do";
          }
       }
+      System.out.println("9");
       session.setAttribute("cartSelect", cartservice.cartSelect(vo, (String) session.getAttribute("UserID")));
       return "redirect:/product-page.do?productId=" + vo.getProductId() + "&name=" + encodedParam;
    }
@@ -73,4 +76,36 @@ public class cartController {
 
    }
 
+	/*
+	 * //구매하기 버튼
+	 * 
+	 * @RequestMapping("/pay3.do") public String buyProduct(CartVO vo) {
+	 * cartservice.buyProduct(vo); return "redirect:/cartselect.do"; }
+	 */
+   @RequestMapping(value = "/pay3.do")
+   public String buyProduct(CartVO vo, HttpSession session) {
+	   String encodedParam = null;
+	      try {
+	         encodedParam = URLEncoder.encode(vo.getName(), "UTF-8");
+	      } catch (Exception e) {
+	      }
+	   int result = cartservice.cartCheck(vo);
+      if (result == 0) {
+         int result1 = cartservice.cartInsert(vo);
+         
+         if (result1 == 0) {
+        	 //장바구니 cartSelect 갱신
+        	 session.setAttribute("cartSelect", cartservice.cartSelect(vo, (String) session.getAttribute("UserID")));
+            return "redirect:/cartSelect.do";
+         }
+      } else if (result != 0) {
+         int result1 = cartservice.cartUpdate(vo);
+         if (result1 == 0) {
+        	 session.setAttribute("cartSelect", cartservice.cartSelect(vo,(String) session.getAttribute("UserID")));
+            return "redirect:/cartSelect.do";
+         }
+      }
+      session.setAttribute("cartSelect", cartservice.cartSelect(vo, (String) session.getAttribute("UserID")));
+      return "redirect:/cartselect.do";
+   }
 }
