@@ -267,7 +267,7 @@ ol {
     padding-right: 45px;
     display: none;
     width: 100%;
-    background-color: black;
+    background-color:#1e1e1e;
     color: white;
     text-align: center;
 }
@@ -420,13 +420,12 @@ ol {
 	line-height: 42px;
 }
 
-.inner-header .main-menu ul li a.active:after {
+
+ .inner-header .main-menu ul li a:hover:after {
 	opacity: 1;
 }
 
-.inner-header .main-menu ul li a:hover:after {
-	opacity: 1;
-}
+.inner-header .main-menu ul li a { text-decoration:none }
 
 .inner-header .main-menu ul li a:after {
 	position: absolute;
@@ -730,8 +729,8 @@ ol {
 	color: #1e1e1e;
 }
 .features-box .single-box-item.large-box .box-text .primary-btn {
-	border-color: #282828;
-	color: #1e1e1e;
+	border-color: #D0D7DB;
+	color: #D0D7DB;
 }
 
 .features-box .single-box-item.second-box {
@@ -740,8 +739,8 @@ ol {
 
 .features-box .single-box-item.second-box .box-text {
 	position: absolute;
-	left: 56px;
-	top: 150px;
+	left: 100px;
+	top: 200px;
 }
 
 .features-box .single-box-item.second-box .box-text .trend-year {
@@ -761,8 +760,8 @@ ol {
 
 .features-box .single-box-item.large-box .box-text {
 	position: absolute;
-	left: 125px;
-	top: 250px;
+	left: 360px;
+	top: 300px;
 }
 
 .features-box .single-box-item.large-box .box-text .trend-year {
@@ -2474,7 +2473,6 @@ ol {
 .product-content .pc-meta .worh{
 	width : 100%;
 }
-
 .page-breadcrumb1{
 	width : 100%;
 }
@@ -2786,6 +2784,11 @@ td .small-button{
 .small-button button .a-href{
     color: black;
 }
+
+.small-button button a{
+    color: black;
+}
+
 .container .cart-table .a-href{
     font-size: 15px;
     color: darkblue;

@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%> 
+<%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 	
 <!DOCTYPE html>
 <html lang="zxx">
@@ -69,34 +70,30 @@
 							</tr>
 						</thead>
 						<tbody>
+						<c:set var="sum" value="0"/>
 						<c:forEach items="${cartSelect}" var="cart">
 							<tr>
 								<td class="product-col"><img
 									src="img/product/product-1.jpg" alt="">
 									<div class="p-title">
 										<h5>${cart.name} </h5>
-									</div></td>
-
+									</div>
+								</td>
 								<td class="price-col">${cart.price}</td>
-
 								<td class="quantity-col">
 									<div class="pro-qty">
 										<input type="text" value="${cart.count}" name="count"/>
 									</div>
 								</td>
-
 								<td class="price-col">${cart.total}</td>
-								
 								<td>
-								<a href='cartDelete.do?id=${cart.wishlistNo}&memberNo=${cart.memberNo}'>X</a>
+									<a href='cartDelete.do?id=${cart.wishlistNo}&memberNo=${cart.memberNo}'>X</a>
 								</td>
 							</tr>
+							<c:set var="sum" value="${sum+cart.total }"/>
 							</c:forEach>
 						</tbody>
 					</table>
-				
-
-			
 				</div>
 			</div>
 		</div>
@@ -104,6 +101,7 @@
 		<div class="cart-page">
 			<div class="container">
 				<div class="cart-table">
+				
 					<table>
 						<thead>
 							<tr>
@@ -114,10 +112,14 @@
 							</tr>
 						</thead>
 						<tbody>
+						<c:set var="sum1" value="${sum*0.1}"/>
+						<fmt:parseNumber var="test" value="${sum1}" integerOnly="true"/>
+						<c:set var="sum2" value="${sum1+sum}"/>
+						<fmt:parseNumber var="test1" value="${sum2}" integerOnly="true"/>
 							<tr>
-								<td width='250'>2000</td>
-								<td width='250'>500</td>
-								<td width='240'>25000</td>
+								<td width='250'>2500</td>
+								<td width='250'>${test}</td>
+								<td width='240'>${test1}</td>
 								<td>
                                     <a href="pay.do"><button class="btn2">결제하기</button></a>
 								</td>

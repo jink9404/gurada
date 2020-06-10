@@ -40,8 +40,6 @@
 								<li><a href='qna.do' class='a-href'>문의 게시판</a></li>
 								<li><a href='find-store.do' class='a-href'>매장 찾기</a></li>
 								<li><a href='' class='a-href'>마이페이지</a></li>
-								<li><a href='check-out.do' class='a-href'>반품 하기</a></li>
-								
 							</ul>
 						</div>
 					</div>
@@ -67,11 +65,11 @@
 			<div class="container text-center pt-5 ">
 				<p>
 					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-					회사명: 프라다 코리아 (유). &copy;
+					회사명: 구라다 코리아 (유). &copy;
 					<script>
 						document.write(new Date().getFullYear());
 					</script>
-					사업자등록번호: 213-86-18599. 대표자: 알만도 톨로메리. | 개인정보 보호책임자: 김지훈이사. <br />통신판매신고번호:
+					사업자등록번호: 213-86-18599. 공동대표 오재호,김지섭,김명진,문소희 | 개인정보 보호책임자: 김지훈이사. <br />통신판매신고번호:
 					2017-서울강남-04082. <i class="icon-heart color-danger"
 						aria-hidden="true"></i> by <a href="https://colorlib.com"
 						target="_blank">Colorlib</a>

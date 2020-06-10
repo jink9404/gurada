@@ -55,7 +55,7 @@
 					<div class="re-sh">
 					
 						<h4>수정하시려면 비밀번호를 입력해주세요</h4>
-						<input type="text" id='password1' name='password'>
+						<input type="password" id='password1' name='password'>
 						<input type='hidden' name='qnaNo' value='<%= id %>'>
 						<input type='hidden' name='title' value='<%= title%>'>
 						<input type='hidden' name='writter' value='<%=writter %>'>

@@ -52,7 +52,7 @@
 					<div class="re-sh">
 					
 						<h4>삭제하시려면 비밀번호를 입력해주세요</h4>
-						<input type="text" id='password1' name='password'>
+						<input type="password" id='password1' name='password'>
 						<input type='hidden' id='password2' value='<%=pass %>'> 
 						<input type='hidden' name='qnaNo' id='qnaNo' value='<%= id %>'>
 						<button type="submit" id="dbtn" class='small-button3'>게시글 삭제</button>
