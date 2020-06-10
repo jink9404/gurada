@@ -81,7 +81,7 @@
             
             <div class="inner-header">
                 <div class="logo">
-                    <a href="/basic/index2.jsp"><img src="./resources/img/logo.png" alt=""/></a>
+                    <a href="/basic/index2.jsp"><img src="./resources/img/logo4.png" alt=""/></a>
                 </div>
                 <div class="header-right">
                     <a><img src="./resources/img/icons/search.png" alt="" class="search-trigger"/></a>&nbsp;&nbsp;
