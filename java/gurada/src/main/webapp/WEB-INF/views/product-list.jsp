@@ -36,24 +36,24 @@
      <div class="container">
       <h1>상품관리(재고현황)</h1>
     <form action="delete.do" method="post">  
-   <table border="1">
+   <table class="table table-hover">
          <tr>
             <th></th>
-            <th bgcolor="orange" width="100">상품명</th>
-            <th bgcolor="orange" width="200">가격</th>
-            <th bgcolor="orange" width="150">사이즈</th>
-            <th bgcolor="orange" width="150">재고</th>
-            <th bgcolor="orange" width="100">성별</th>
-            <th bgcolor="orange" width="100">옷종류</th>
+            <th bgcolor="white" width="100">상품명</th>
+            <th bgcolor="white" width="200">가격</th>
+            <th bgcolor="white" width="150">사이즈</th>
+            <th bgcolor="white" width="150">재고</th>
+            <th bgcolor="white" width="100">성별</th>
+            <th bgcolor="white" width="100">옷종류</th>
             <!-- 추가 -->
-            <th bgcolor="orange" width="150">이미지</th>
+            <th bgcolor="white" width="150">이미지</th>
                      
          </tr>
         
          <c:forEach items="${prodlist}" var="list">
             <!-- 프라퍼티이름 변경 -->
             <tr>
-               <td><input type="checkbox" name="delete" value="${list.productId}"></td>
+               <td><input type="checkbox" name="delete" value="${list.productId}" style="width:15px" ></td>
                <td align="left"><a href="update.do?productId=${list.productId}">${list.name} </a></td> 
                <td>${list.price}</td>
                <td>${list.pSize}</td>
