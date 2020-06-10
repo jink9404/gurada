@@ -103,13 +103,13 @@
 			</div>
 			<div class="row" id="product-list">
             <c:forEach items="${viewlist}" var="list" begin="1" end="4">
-            <div class="col-lg-3 col-sm-6 mix all accesories bags">
-               <div class="single-product-item">
-                  <figure>
+            <div class="col-lg-3 col-sm-6 mix all accesories bags" >
+               <div class="single-product-item" >
+                  <figure style="border: 1px solid gray">
                         <a href="product-page.do?productId=${list.productId}&name=${list.name}">
                      <img src="./resources/upload/${list.pfname}" alt="">
                         </a>
-                     <div class="p-status">new</div>
+                     <div class="p-status">New</div>
                   </figure>
                   <div class="product-text">
                      <h6>${list.name} </h6>
@@ -121,11 +121,11 @@
             <c:forEach items="${viewlist}" var="list" begin="5" end="8">
             <div class="col-lg-3 col-sm-6 mix all shoes accesories">
                <div class="single-product-item">
-                  <figure>
+                  <figure style="border: 1px solid gray">
                         <a href="product-page.do?productId=${list.productId}&name=${list.name}">
-                     <img src="./resources/upload/${list.pfname}" alt="">
+                     <img src="./resources/upload/${list.pfname}"  alt="">
                         </a>
-                     <div class="p-status">new</div>
+                     <div class="p-status">New</div>
                   </figure>
                   <div class="product-text">
                      <h6>${list.name} </h6>
