@@ -24,7 +24,7 @@ public class cartController {
    // 없다면 insert 장바구니내역에 추가.
    // 있다면 update로 수량 수정.
    // 이전 페이지로 화면 전환.
-   @RequestMapping(value = "/cart.do")
+   @RequestMapping(value = "/cart.do", method=RequestMethod.POST)
    public String cartInsert(CartVO vo, HttpSession session) {
 	   System.out.println("0");
       String encodedParam = null;
@@ -82,7 +82,7 @@ public class cartController {
 	 * @RequestMapping("/pay3.do") public String buyProduct(CartVO vo) {
 	 * cartservice.buyProduct(vo); return "redirect:/cartselect.do"; }
 	 */
-   @RequestMapping(value = "/pay3.do")
+   @RequestMapping(value = "/pay3.do", method=RequestMethod.POST)
    public String buyProduct(CartVO vo, HttpSession session) {
 	   String encodedParam = null;
 	      try {

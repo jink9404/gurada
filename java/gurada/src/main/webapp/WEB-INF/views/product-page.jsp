@@ -106,7 +106,7 @@
                                 <table>
                                     <tr>
                                         <td>
-                                        	<form action="pay3.do" method="get">
+                                        	<form action="pay3.do" method="post">
                                         		<input type="hidden" id="pdSession" name="memberNo" value="${sessionScope.memberNo}"/>
                                         		<input type="hidden" name="price" value="${detail.price}"/>
                                         		<input type="hidden" name="name" value="${detail.name}"/>
@@ -119,7 +119,7 @@
                                            </form>
                                         </td>
                                         <td>
-                                           <form action="cart.do" method="get">
+                                           <form action="cart.do" method="post">
                                         		<input type="hidden" name="name" value="${detail.name}"/>
                                            		<input type="hidden" name="price" value="${detail.price}"/>
                                            		<input id="quantity2" type="hidden" name="count"/>
@@ -136,15 +136,13 @@
                     </div>  
                 </div>
                 <div class="col-lg-6">
-                    <div class="product-slider owl-carousel">
-                        <div class="product-img">
+                   <br><br><br><br>
+                    <div class="product-slider owl-carousel">              
                             <figure>
-                                <img src='/basic/resources/upload/${detail.pfname }'/>
-                                <div class="p-status">new</div>
-                        	</figure>
-                    	</div>
-                	</div>
-            	</div>
+                                <img  height="500" width="500"  src='/basic/resources/upload/${detail.pfname }'/>
+                           </figure>
+                   </div>
+               </div>
         	</div>
     	</div>
     </section>
