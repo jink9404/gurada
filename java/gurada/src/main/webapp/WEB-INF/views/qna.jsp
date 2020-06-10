@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-	<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -59,7 +59,7 @@
 						<div class="cart-page">
 							<div class="container">
 								<div class="cart-table">
-									<table>
+									<table class='table-hover'>
 										<thead>
 											<tr>
 												<th width='200'>게시번호</th>
@@ -69,52 +69,61 @@
 											</tr>
 										</thead>
 
-										<tbody>
+
 										<c:forEach items="${boardList}" var="board">
-											<tr>
-												<td>${board.qnaNo}</td>
-												<td>${board.writtenDate}</td>
-												<td>${board.writter}</td>
-												<td><a href="qna-getBoard.do?qnaNo=${board.qnaNo}" class='a-href'>${board.title}</a></td>
-											</tr>
-											</c:forEach>
-											
-										</tbody>
+											<tbody>
+												<tr>
+													<td>${board.qnaNo}</td>
+													<td>${board.writtenDate}</td>
+													<td>${board.writter}</td>
+													<td><a href="qna-getBoard.do?qnaNo=${board.qnaNo}"
+														class='a-href'>${board.title}</a></td>
+												</tr>
+											</tbody>
+										</c:forEach>
+
 									</table>
 									<hr>
-									<div class="td-a">
-										
-									</div>
+									<div class="td-a"></div>
 								</div>
 
 							</div>
 
 						</div>
-						<div style="display: block; text-align: center;">		
+						<div style="display: block; text-align: center;">
 							<c:if test="${paging.startPage != 1 and empty param.searchType }">
 								<a href="qna.do?nowPage=${paging.startPage - 1 }">&lt;</a>
 							</c:if>
-							<c:if test="${paging.startPage != 1 and not empty param.searchType }">
-								<a href="qna.do?nowPage=${paging.startPage - 1 }&searchType=${param.searchType }&value=${param.value }">&lt;</a>
+							<c:if
+								test="${paging.startPage != 1 and not empty param.searchType }">
+								<a
+									href="qna.do?nowPage=${paging.startPage - 1 }&searchType=${param.searchType }&value=${param.value }">&lt;</a>
 							</c:if>
-							<c:forEach begin="${paging.startPage }" end="${paging.endPage }" var="p">
+							<c:forEach begin="${paging.startPage }" end="${paging.endPage }"
+								var="p">
 								<c:choose>
 									<c:when test="${p == paging.nowPage }">
 										<b>${p }</b>
 									</c:when>
-									<c:when test="${p != paging.nowPage  and empty param.searchType}">
+									<c:when
+										test="${p != paging.nowPage  and empty param.searchType}">
 										<a href="qna.do?nowPage=${p }">${p }</a>
 									</c:when>
-									<c:when test="${p != paging.nowPage and not empty param.searchType}">
-										<a href="qna.do?nowPage=${p }&searchType=${param.searchType }&value=${param.value }">${p }</a>
+									<c:when
+										test="${p != paging.nowPage and not empty param.searchType}">
+										<a
+											href="qna.do?nowPage=${p }&searchType=${param.searchType }&value=${param.value }">${p }</a>
 									</c:when>
 								</c:choose>
 							</c:forEach>
-							<c:if test="${paging.endPage != paging.lastPage and empty param.searchType}">
+							<c:if
+								test="${paging.endPage != paging.lastPage and empty param.searchType}">
 								<a href="qna.do?nowPage=${paging.endPage+1 }">&gt;</a>
 							</c:if>
-							<c:if test="${paging.endPage != paging.lastPage and not empty param.searchType}">
-								<a href="qna.do?nowPage=${paging.endPage+1 }&searchType=${param.searchType }&value=${param.value }">&gt;</a>
+							<c:if
+								test="${paging.endPage != paging.lastPage and not empty param.searchType}">
+								<a
+									href="qna.do?nowPage=${paging.endPage+1 }&searchType=${param.searchType }&value=${param.value }">&gt;</a>
 							</c:if>
 						</div>
 						<div class="search-1">
@@ -122,8 +131,8 @@
 								<select class="select-2" name="searchType">
 									<option value="writter">작성자</option>
 									<option value="title">제목</option>
-								</select> <input type="text" name="value" class="input-tx">
-								<input type="submit" class='small-button2' value="검색">
+								</select> <input type="text" name="value" class="input-tx"> <input
+									type="submit" class='small-button2' value="검색">
 							</form>
 						</div>
 					</div>

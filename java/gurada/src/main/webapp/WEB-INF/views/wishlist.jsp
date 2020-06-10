@@ -113,9 +113,9 @@
 						</thead>
 						<tbody>
 						<c:set var="sum1" value="${sum*0.1}"/>
-						<fmt:parseNumber var="test" value="${sum1}" integerOnly="true"/>
+						<fmt:parseNumber var="test" value="${sum1}"/>
 						<c:set var="sum2" value="${sum1+sum}"/>
-						<fmt:parseNumber var="test1" value="${sum2}" integerOnly="true"/>
+						<fmt:parseNumber var="test1" value="${sum2}"/>
 							<tr>
 								<td width='250' id="delivery">2500</td>
 								<td width='250'>${test}</td>

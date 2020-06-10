@@ -2,6 +2,16 @@ package com.gurada.basic;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Properties;
+
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.AddressException;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -59,6 +69,30 @@ public class BoardController {
 	@RequestMapping(value = "/saveBoard.do")
 	public String insertBoard(BoardVO vo) throws IOException {
 		boardService.insertBoard(vo);
+		/*
+		 * 문의글 등록시 관리자의 메일로 전송
+		 */
+		final String user = "";
+		final String password="";
+		Properties prop = new Properties();
+		prop.put("mail.smtp.host", "192.168.0.11"); 
+		prop.put("mail.smtp.port", 25); 
+		prop.put("mail.smtp.auth", "true"); 
+		prop.put("mail.smtp.ssl.enable", "false");
+		//prop.put("mail.smtp.ssl.trust", "192.168.0.11");
+		Session session = Session.getDefaultInstance(prop, new javax.mail.Authenticator() { 
+																protected PasswordAuthentication getPasswordAuthentication() {
+																	return new PasswordAuthentication(user, password);}}
+													);
+		try {
+            MimeMessage message = new MimeMessage(session);
+            message.setFrom(new InternetAddress("Q&A"));
+            message.addRecipient(Message.RecipientType.TO, new InternetAddress("jiseobg61@gmail.com"));  //수신자메일주소
+            message.setSubject(vo.getWritter()+"님의 문의 : "+vo.getTitle()); //메일 제목을 입력
+            message.setText(vo.getContents()+"\n이 메일은 송신전용 메일입니다.");    //메일 내용을 입력
+            Transport.send(message); ////전송
+            System.out.println("message sent successfully...");
+        } catch (AddressException e) {e.printStackTrace();} catch (MessagingException e) {e.printStackTrace();}
 		return "redirect:/qna.do";
 	}
 
