@@ -31,5 +31,6 @@
 <a href="resistration.do">resistration.jsp</a>
 <a href="qna-getBoard.do">qna-getBoard.jsp</a>
 <a href="TestIntercept.do">test intercept</a>
+<a href="test.do">test</a>
 </body>
 </html>

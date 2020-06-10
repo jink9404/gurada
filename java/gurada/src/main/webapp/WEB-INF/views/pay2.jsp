@@ -54,7 +54,7 @@
 	<div class="cart-box-main">
 		<div class="container">
 		<h3>상품결제</h3>
-			<form action="payment-rs.do?total=${sum+sum1+2500}" method="post" class="needs-validation" novalidate>
+			<form action="payment-rs.do" method="post" class="needs-validation" novalidate>
 			<div class="row">
 				<div class="col-sm-6 col-lg-6 mb-3">
 					<div class="checkout-address">
@@ -119,7 +119,7 @@
 								</div>
 								<div class="custom-control custom-radio">
 									<input id="paypal" name="paymentMethod" type="radio"
-										class="custom-control-input" value="Account" required> <label
+										class="custom-control-input" value="account" required> <label
 										class="custom-control-label" for="paypal">실시간 계좌이체</label>
 								</div>
 							</div>
@@ -236,7 +236,7 @@
 												<h5>총 결제 금액</h5>
 												<c:set var="sum2" value="${sum+sum1+2500}"/>
 												<fmt:parseNumber var="test1" value="${sum2 }" integerOnly="true"/>
-												<div  class="ml-auto h5">${test1} 원</div>
+												<div  class="ml-auto h5">${test1} 원<input type="hidden" name="total" value="${test1 }"></div>
 											</div>
 											<hr>
 										</div>
