@@ -86,27 +86,15 @@
                 <div class="header-right">
                     <a><img src="./resources/img/icons/search.png" alt="" class="search-trigger"/></a>&nbsp;&nbsp;
                     <c:if test="${not empty sessionScope.UserID }">
-                    	<c:set var ="name" value="${sessionScope.UserID}"/>
-                    		<c:choose>
-                    			<c:when test="${ name eq '관리자'}">
-                    				<span><a class="glyphicon glyphicon-cloud" href="product-list.do">상품리스트</a></span>
-                    				<span><a class="glyphicon glyphicon-plus" href="resistration.do">상품등록</a></span>
-                    				<span><a class="glyphicon glyphicon-calendar" href="bookinglist.do">매장예약 현황</a></span>
-                    				<span><a class="glyphicon glyphicon-list" href="order-management.do">주문내역</a></span><br/>
-                    				<span><a class="glyphicon glyphicon-list" href="member-management.do">회원관리</a></span>
-                    			</c:when>
-                    		
-                    			<c:otherwise>
-                       				<a href="my-page.do">
-                        			<img src="./resources/img/icons/man.png" alt=""/>
-                        			</a>
-                        			<a href="cartselect.do">
-                           			<img src="./resources/img/icons/bag.png" alt=""/>
-                           			<span>${fn:length(cartSelect) }</span>
-                       				</a>&nbsp;&nbsp;&nbsp;&nbsp;
-                   				</c:otherwise>
-                    		</c:choose>
-                     </c:if> 
+       
+                       	<a href="my-page.do">
+                        <img src="./resources/img/icons/man.png" alt=""/>
+                        </a>
+                        <a href="cartselect.do">
+                        <img src="./resources/img/icons/bag.png" alt=""/>
+                        <span>${fn:length(cartSelect) }</span>
+                        </a>&nbsp;&nbsp;&nbsp;&nbsp;
+                    </c:if> 
                 </div>
                 <div class="user-access">
                    <c:if test="${empty sessionScope.UserID }">
@@ -141,6 +129,19 @@
                         </li>
                         <li><a href="find-store.do">STORE</a></li>
                         <li><a href="qna.do">QUESTIONS</a></li>
+                        <c:if test="${sessionScope.UserID eq '관리자' }">
+                         <li><a href="categories.do?category=suit&gender=man">관리</a>    
+                            <ul class="sub-menu">
+                                <li><a href="product-list.do">상품리스트</a></li>
+                                <li><a href="resistration.do">상품등록</a></li>
+                                <li><a href="bookinglist.do">매장예약 현황</a></li>
+                                <li><a href="order-management.do">주문내역</a></li>
+                                <li><a href="member-management.do">회원관리</a></li>
+                                <li><a href="test.do">매출현황</a></li>
+                            </ul>
+                        </li>
+               			</c:if>
+                        
                     </ul>
                 </nav>
             </div>
