@@ -38,4 +38,9 @@
 	delete from WISHLIST where MEMBER_NO=#{memberNo} AND PRODUCT_ID =#{productId}
 	</delete>
 	
+	<insert id="buyProduct" parameterType="cart">
+		insert into wishlist(wishlist_no, member_no, product_id, count)
+		values(seq_wishlist_no.nextval, #{memberNo}, #{productId}, #{count})
+	</insert>
+	
 </mapper>

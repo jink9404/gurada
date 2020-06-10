@@ -130,7 +130,7 @@
                         <li><a href="find-store.do">STORE</a></li>
                         <li><a href="qna.do">QUESTIONS</a></li>
                         <c:if test="${sessionScope.UserID eq '관리자' }">
-                         <li><a href="categories.do?category=suit&gender=man">관리</a>    
+                         <li><a href="product-list.do">관리</a>    
                             <ul class="sub-menu">
                                 <li><a href="product-list.do">상품리스트</a></li>
                                 <li><a href="resistration.do">상품등록</a></li>

@@ -17,4 +17,7 @@ public interface CartService {
 	public int cartDelete(int id); 
 	
 	public int cartDelete(CartVO vo);
+	
+	//구매하기버튼(wishlist table에 저장)
+	public void buyProduct(CartVO vo);
 }

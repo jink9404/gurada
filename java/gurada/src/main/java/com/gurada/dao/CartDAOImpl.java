@@ -52,4 +52,9 @@ public class CartDAOImpl implements CartDAO{
 	public int cartDelete(CartVO vo) {
 		return mybatis.delete("cart.cartDelete_transaction",vo);
 	}
+
+	@Override
+	public void buyProduct(CartVO vo) {
+		mybatis.insert("cart.buyProduct", vo);
+	}
 }
