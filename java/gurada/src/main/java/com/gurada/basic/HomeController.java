@@ -25,7 +25,6 @@ public class HomeController {
 	 */
 	@RequestMapping("/{step}.do")
 	public String changeViewPage(@PathVariable String step) {
-		System.out.println("왜 니가 요청을 받냐");
 		return step;
 	}
 	
