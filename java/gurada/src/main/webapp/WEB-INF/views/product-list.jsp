@@ -39,27 +39,25 @@
    <table class="table table-hover">
          <tr>
             <th></th>
-            <th bgcolor="white" width="100">상품명</th>
-            <th bgcolor="white" width="200">가격</th>
-            <th bgcolor="white" width="150">사이즈</th>
-            <th bgcolor="white" width="150">재고</th>
-            <th bgcolor="white" width="100">성별</th>
-            <th bgcolor="white" width="100">옷종류</th>
+            <th align="center" bgcolor="white" width="200">상품명</th>
+            <th align="center" bgcolor="white" width="100">가격</th>
+            <th align="center" bgcolor="white" width="150">사이즈</th>
+            <th align="center" bgcolor="white" width="50">재고</th>
+            <th align="center" bgcolor="white" width="100">성별</th>
+            <th align="center" bgcolor="white" width="100">카테고리</th>
             <!-- 추가 -->
             <th bgcolor="white" width="150">이미지</th>
-                     
          </tr>
-        
          <c:forEach items="${prodlist}" var="list">
             <!-- 프라퍼티이름 변경 -->
             <tr>
-               <td><input type="checkbox" name="delete" value="${list.productId}" style="width:15px" ></td>
-               <td align="left"><a href="update.do?productId=${list.productId}">${list.name} </a></td> 
-               <td>${list.price}</td>
-               <td>${list.pSize}</td>
-               <td>${list.quantity}</td>
-               <td>${list.gender}</td>
-               <td>${list.categoryId}</td>  
+               <td width="15px"><input type="checkbox" name="delete" value="${list.productId}"  ></td>
+               <td align="center"><a href="update.do?productId=${list.productId}">${list.name} </a></td> 
+               <td align="center">${list.price}</td>
+               <td align="center">${list.pSize}</td>
+               <td align="center">${list.quantity}</td>
+               <td align="center">${list.gender}</td>
+               <td align="center">${list.categoryId}</td>  
                <!-- 추가 -->
                <td>
                
@@ -79,10 +77,11 @@
       </table>
       </form>
         <br>
-       <form action="product-search.do" method="post">
-        <input type="text" name="name" placeholder="상품명을 입력하세요.">
+       <form class="productname" action="product-search.do" method="post">
+        <input type="text" name="name"  placeholder="상품명을 입력하세요.">
          <input type="submit" value="상품 검색" >    
          </form>
+         <br/><hr/><br/><br/>
      	
   
     </div>
