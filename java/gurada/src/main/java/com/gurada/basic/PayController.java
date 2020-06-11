@@ -9,7 +9,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.gurada.domain.CartVO;
+import com.gurada.domain.MemberVO;
 import com.gurada.domain.OrderVO;
+import com.gurada.infa.CartService;
 import com.gurada.infa.PayService;
 
 @Controller
@@ -17,7 +19,8 @@ public class PayController {
 	
     @Autowired 
     private PayService payservice;
-    
+    @Autowired 
+    private CartService cartservice;
     @RequestMapping("/payment.do")
     public String payMent(CartVO vo, Model model, HttpSession session){
     	vo.setMemberNo((String)session.getAttribute("memberNo"));
@@ -38,7 +41,11 @@ public class PayController {
         		int count =Integer.parseInt(productArr2[i]);
 	    		try {
 	    			payservice.payInsert(vo, count);
-	    			message="결제가 완료되었습니다.!"; 
+	    			message="결제가 완료되었습니다.!";
+	    			CartVO cVo =new CartVO();
+	    			MemberVO mVo = (MemberVO)session.getAttribute("UserIDInfo");
+	    			cVo.setMemberNo(mVo.getMemberNo());
+	    			session.setAttribute("cartSelect", cartservice.cartSelect(cVo, (String) session.getAttribute("UserID")));
 	    		}catch (Exception e) {
 					System.out.println(e.toString());
 					message="결제에 실패했습니다. <br>올바르지 않은 상품정보";
