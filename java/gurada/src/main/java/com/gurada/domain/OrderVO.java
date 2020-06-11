@@ -3,12 +3,19 @@ package com.gurada.domain;
 public class OrderVO {
 	private String orderNo;
 	private String orderDate;
+	private String count;
 	private int total;
 	private String paymentMethod;
 	private String memberNo;
 	private String productNo;
 
 
+	public String getCount() {
+		return count;
+	}
+	public void setCount(String count) {
+		this.count = count;
+	}
 	public String getMemberNo() {
 		return memberNo;
 	}
